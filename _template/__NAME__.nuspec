@@ -5,15 +5,14 @@
     <title>__NAME__</title>
     <version>__REPLACE__</version>
     <authors>__REPLACE__</authors>
-    <owners>Rob Reynolds</owners>
+    <owners>Anthony Mastrean</owners>
     <summary>__NAME__</summary>
-    <description>__NAME__ 
-| Please install with chocolatey (http://nuget.org/List/Packages/chocolatey).</description>
+    <description>__NAME__</description>
     <projectUrl>__REPLACE__</projectUrl>
     <tags>__NAME__ chocolatey admin</tags>
     <licenseUrl>__REPLACE__</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/ferventcoder/nugetpackages/raw/master/__NAME__/__NAME__.gif</iconUrl>-->
+    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/__NAME__/__NAME__/__NAME__.ext</iconUrl>-->
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
