@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>reflector</id>
+    <version>6.8.2.5</version>
+    <title>.NET Reflector</title>
+    <authors>Lutz Roeder,Red Gate Software</authors>
+    <owners>Anthony Mastrean</owners>
+    <licenseUrl>http://www.red-gate.com/messageboard/viewtopic.php?t=13414</licenseUrl>
+    <projectUrl>http://www.reflector.net/</projectUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/reflector/reflector/reflector.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>.NET Reflector is a class browser, analyzer, and decompiler for .NET assemblies. .NET Reflector 6 is the last free version of .NET Reflector but, unlike previous free editions, it will not expire or force you to update. .NET Reflector 6 is identical in functionality to the standalone version of .NET Reflector shipped with .NET Reflector 6.6. It does not include a Visual Studio add-in, or debugging functionality. We have added a welcome screen to keep you up to date with future versions. You can navigate away from the welcome screen by selecting an assembly or clicking a link of interest to open in a new browser window.</description>
+    <summary>.NET Reflector is a class browser, analyzer, and decompiler for .NET assemblies.</summary>
+    <tags>reflector disassembly chocolatey admin</tags>
+  </metadata>
+  <files>
+    <file src="content\cecil_LICENSE.txt" target="content\cecil_LICENSE.txt" />
+    <file src="content\License_DotNetReflector.txt" target="content\License_DotNetReflector.txt" />
+    <file src="content\License_DotNetReflector6.rtf" target="content\License_DotNetReflector6.rtf" />
+    <file src="content\License_DotNetReflectorPro.rtf" target="content\License_DotNetReflectorPro.rtf" />
+    <file src="content\log4net.dll" target="content\log4net.dll" />
+    <file src="content\log4net_LICENSE.txt" target="content\log4net_LICENSE.txt" />
+    <file src="content\log4net_NOTICE.txt" target="content\log4net_NOTICE.txt" />
+    <file src="content\readme.rtf" target="content\readme.rtf" />
+    <file src="content\RedGate.Reflector.Addin.dll" target="content\RedGate.Reflector.Addin.dll" />
+    <file src="content\Reflector.exe" target="content\Reflector.exe" />
+    <file src="content\Reflector.exe.config" target="content\Reflector.exe.config" />
+  </files>
+</package>
