@@ -14,6 +14,6 @@
     <tags>notepad chocolatey admin</tags>
   </metadata>
   <files>
-    <file src="tools\install.ps1" target="tools\install.ps1" />
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
