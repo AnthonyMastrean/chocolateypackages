@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>apm</id>
+    <title>Advanced Process Manipulator</title>
+    <version>1.1</version>
+    <authors>DiamondCS</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>DiamondCS Advanced Process Manipulation (APM) is an advanced process/module viewer and manipulation utility that allows unique control over target Processes by literally becoming a part of them.</summary>
+    <description>Unlike conventional process viewers, DiamondCS APM doesn't control processes by remotely sending them instructions. Instead, APM safely attaches a part of itself to the target process, essentially becoming a part of that process. Once 'inside', APM is free to perform actions on behalf of the target process. For example, if it calls the ExitProcess API function, the target process terminates.</description>
+    <tags>windows process chocolatey admin</tags>
+    <licenseUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/apm/apm/tools/license.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/apm/apm/apm.ico</iconUrl>
+  </metadata>
+</package>
