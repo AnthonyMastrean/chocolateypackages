@@ -14,8 +14,7 @@
     <tags>windows installer chocolatey admin</tags>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-    <file src="tools\msicuu2.exe" target="tools\msicuu2.exe" />
-    <file src="tools\msizap.exe" target="tools\msizap.exe" />
+    <file src="content\msicuu2.exe" target="content\msicuu2.exe" />
+    <file src="content\msizap.exe" target="content\msizap.exe" />
   </files>
 </package>
