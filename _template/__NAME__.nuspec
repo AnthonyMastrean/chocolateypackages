@@ -12,7 +12,7 @@
     <tags>__NAME__ chocolatey admin</tags>
     <licenseUrl>__REPLACE__</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/__NAME__/__NAME__/__NAME__.ext</iconUrl>-->
+    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/__BRANCH__/__DIR__/__NAME__.ext</iconUrl>-->
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
