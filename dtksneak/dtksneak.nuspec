@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>dtksneak</id>
+    <title>DTK Sneak</title>
+    <version>1.0</version>
+    <authors>Anthony Mastrean</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>The DTK Barcode Reader SDK _loves_ to pop up a licensing dialog when running in debug. It's annoying to have to babysit that dialog. This script, when running, watches for the dialog and automatically clicks the Close button.</summary>
+    <description></description>
+    <projectUrl></projectUrl>
+    <tags>dtk automation chocolatey admin</tags>
+    <licenseUrl></licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/dtksneak/dtksneak/content/dtk.ico</iconUrl>
+    <dependencies>
+      <dependency id="autohotkey" />
+    </dependencies>
+  </metadata>
+</package>
