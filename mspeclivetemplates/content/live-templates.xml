@@ -1,0 +1,46 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="91c1e27a-a4ce-4529-9321-99d03b432144" shortcut="because" description="because of" text="Because of = () =&gt; $END$;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="68defa7f-a253-44cd-9873-45b0bb5c7643" shortcut="cleanup" description="cleanup" text="Cleanup cleanup = () =&gt; $END$;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="3ab7fd51-667c-430d-8662-cf0e6ce2d932" shortcut="establish" description="establish context" text="Establish context = () =&gt; { $END$; };" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="c3c1e024-4d1c-466f-a745-faa11817ffbb" shortcut="it" description="it should" text="It should_$DOSOMETHING$ = () =&gt; $END$;" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="DOSOMETHING" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="9ea07c8c-9071-4b1d-bd7e-bc993ae0d0f7" shortcut="subject" description="subject" text="[Subject(typeof($SUBJECT$))]" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="SUBJECT" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
