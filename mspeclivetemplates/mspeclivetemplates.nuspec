@@ -8,15 +8,9 @@
     <owners>Anthony Mastrean</owners>
     <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/mspeclivetemplates/mspeclivetemplates/mspeclivetemplates.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).
-    
-subject:   [Subject(typeof($SUT$))]
-establish: Establish context = () =&amp;gt; { $END$; };
-because:   Because of = () =&amp;gt; $END$;
-it:        It should_$DOSOMETHING$ = () =&amp;gt; $END$;
-cleanup:   Cleanup cleanup = () =&amp;gt; $END$;</description>
+    <description>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).</description>
     <summary>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).</summary>
-    <tags>resharper mspec chocolatey admin</tags>
+    <tags>resharper mspec chocolatey</tags>
   </metadata>
   <files>
     <file src="content\mspec-live-templates.xml" target="content\mspec-live-templates.xml" />
