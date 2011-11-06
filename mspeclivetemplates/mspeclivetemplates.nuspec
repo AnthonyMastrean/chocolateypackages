@@ -11,15 +11,14 @@
     <description>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).
     
 subject:   [Subject(typeof($SUT$))]
-establish: Establish context = () =&gt; { $END$; };
-because:   Because of = () =&gt; $END$;
-it:        It should_$DOSOMETHING$ = () =&gt; $END$;
-cleanup:   Cleanup cleanup = () =&gt; $END$;</description>
+establish: Establish context = () =&amp;gt; { $END$; };
+because:   Because of = () =&amp;gt; $END$;
+it:        It should_$DOSOMETHING$ = () =&amp;gt; $END$;
+cleanup:   Cleanup cleanup = () =&amp;gt; $END$;</description>
     <summary>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).</summary>
     <tags>resharper mspec chocolatey admin</tags>
   </metadata>
   <files>
-    <file src="content\live-templates.xml" target="content\live-templates.xml" />
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="content\mspec-live-templates.xml" target="content\mspec-live-templates.xml" />
   </files>
 </package>
