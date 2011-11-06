@@ -1,22 +1,25 @@
 <?xml version="1.0"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mspeclivetemplates</id>
-    <title>MSpec Live Templates</title>
     <version>1.0</version>
+    <title>MSpec Live Templates</title>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).</summary>
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/mspeclivetemplates/mspeclivetemplates/mspeclivetemplates.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).
+    
 subject:   [Subject(typeof($SUT$))]
-establish: Establish context = () => { $END$; };
-because:   Because of = () => $END$;
-it:        It should_$DOSOMETHING$ = () => $END$;
-cleanup:   Cleanup cleanup = () => $END$;</description>
+establish: Establish context = () =&gt; { $END$; };
+because:   Because of = () =&gt; $END$;
+it:        It should_$DOSOMETHING$ = () =&gt; $END$;
+cleanup:   Cleanup cleanup = () =&gt; $END$;</description>
+    <summary>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).</summary>
     <tags>resharper mspec chocolatey admin</tags>
-    //<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/mspeclivetemplates/mspeclivetemplates/mspeclivetemplates.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="resharper" />
-    </dependencies>-->
   </metadata>
+  <files>
+    <file src="content\live-templates.xml" target="content\live-templates.xml" />
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
 </package>
