@@ -7,14 +7,12 @@ Start-Sleep -seconds 3
 
 Push-Location "$name"
 
-$nuspec = "$name.nuspec"
-
-Rename-Item "__NAME__.nuspec" "$nuspec"
-Start-Sleep -seconds 1
-
-Get-Content "$nuspec" `
+Get-Content "__NAME__.nuspec" `
   | %{ $_ -replace "__NAME__","$name" } `
-  | Set-Content "$nuspec"
+  | Set-Content "__NAME__.nuspec"
+
+Rename-Item "$template" "$name.nuspec"
+Start-Sleep -seconds 1
 
 git add .
 git commit -am "created new package: $name"
