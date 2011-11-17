@@ -12,7 +12,7 @@
     folder name, and to otherwise replace all the '__NAME__' tokens.
     
     .EXAMPLE
-    .\new.ps1 diffmerge
+    .\New-Package.ps1 diffmerge
     
     Create a new branch/package 'diffmerge' from the template.
 #>

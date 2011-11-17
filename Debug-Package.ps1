@@ -14,7 +14,7 @@
     directory.
     
     .EXAMPLE
-    ..\debug.ps1
+    ..\Debug-Package.ps1
     
     Invoke the debug script (located in the root directory) from in 
     this package directory.
