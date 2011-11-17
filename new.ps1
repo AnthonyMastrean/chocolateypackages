@@ -10,7 +10,7 @@ $nuspec = "$name.nuspec"
 
 Rename-Item "__NAME__.nuspec" "$nuspec"
 Get-Content "$nuspec" `
-  | %{ $_ -replace "__NAME__" "$name" } `
+  | %{ $_ -replace "__NAME__","$name" } `
   | Set-Content "$nuspec"
 
 git add .
