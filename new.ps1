@@ -6,7 +6,7 @@ Copy-Item "_template" "$name" -recurse
 
 Push-Location "$name"
 
-Rename-Item "$template" "$name.nuspec"
+Rename-Item "__NAME__.nuspec" "$name.nuspec"
 
 (Get-Content "$name.nuspec") `
   | %{ $_ -replace "__NAME__","$name" } `
