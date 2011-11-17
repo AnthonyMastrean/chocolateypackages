@@ -2,17 +2,15 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>diffmerge</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>SourceGear DiffMerge</title>
+    <version>3.3.1.1118</version>
+    <authors>SourceGear</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__ chocolatey admin</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <description>Visually compare and merge files within Windows, Mac OS X and Linux.</description>
+    <projectUrl>http://www.sourcegear.com/diffmerge/</projectUrl>
+    <tags>diff merge chocolatey admin</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/diffmerge/diffmerge/diffmerge.ext</iconUrl>-->
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/diffmerge/diffmerge/diffmerge.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
