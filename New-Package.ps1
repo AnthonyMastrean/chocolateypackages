@@ -34,5 +34,3 @@ Rename-Item "__NAME__.nuspec" "$name.nuspec"
 git add .
 git commit -am "created new package from template: $name"
 git push origin "$name"
-
-Pop-Location 
