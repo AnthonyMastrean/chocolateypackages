@@ -19,6 +19,13 @@
 
 param([string]$name)
 
+function Replace-Token([string]$token, [string]$replacement, [Parameter(ValueFromPipeline = $true)][string]$path)
+{
+    (Get-Content $path) `
+        | %{ $_ -replace $token,$replacement } `
+        | Set-Content $path
+}
+
 git checkout -b $name
 
 Copy-Item "_template" "$name" -recurse
@@ -27,9 +34,8 @@ Push-Location "$name"
 
 Rename-Item "__NAME__.nuspec" "$name.nuspec"
 
-(Get-Content "$name.nuspec") `
-  | %{ $_ -replace "__NAME__","$name" } `
-  | Set-Content "$name.nuspec"
+"$name.nuspec" | Replace-Token "__NAME__" "$name"
+"tools\chocolateyInstall.ps1" | Replace-Token "__NAME__" "$name"
 
 git add .
 git commit -am "created new package from template: $name"
