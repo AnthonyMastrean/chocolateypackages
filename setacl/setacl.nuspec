@@ -11,7 +11,7 @@
     <tags>acl setacl chocolatey admin</tags>
     <licenseUrl>http://helgeklein.com/setacl/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/setacl/setacl/setacl.ext</iconUrl>-->
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/setacl/setacl/setacl.ico</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
