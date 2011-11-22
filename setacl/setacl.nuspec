@@ -2,15 +2,14 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>setacl</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>SetACL</title>
+    <version>2.3.0</version>
+    <authors>Helge Klein</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__ chocolatey admin</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <description>Are you looking for a way to automate the management of Windows permissions? Do you need features like domain migration? Or support for paths longer than 260 character other tools cannot handle any more? In either case you have come to the right place.</description>
+    <projectUrl>http://helgeklein.com/setacl/</projectUrl>
+    <tags>acl setacl chocolatey admin</tags>
+    <licenseUrl>http://helgeklein.com/setacl/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/setacl/setacl/setacl.ext</iconUrl>-->
     <!--<dependencies>
