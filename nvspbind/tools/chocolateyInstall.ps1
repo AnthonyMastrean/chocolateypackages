@@ -21,7 +21,7 @@ try
     
     Push-Location $content
     
-    Remove-Item "nvspbind_$delete" -Force
+    Remove-Item "nvspbind_$delete.exe" -Force
     Move-Item "nvspbind_$keep.exe" "nvspbind.exe"
     
     Pop-Location
