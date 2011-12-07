@@ -12,7 +12,7 @@
     <tags>hyper-v network vsp bind protocol chocolatey admin</tags>
     <licenseUrl>http://archive.msdn.microsoft.com/nvspbind/Project/License.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/nvspbind/nvspbind/nvspbind.ext</iconUrl>-->
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/nvspbind/nvspbind/nvspbind.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
