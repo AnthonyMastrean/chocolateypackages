@@ -4,7 +4,7 @@
     <id>rdcman</id>
     <title>Remote Desktop Connection Manager</title>
     <version>2.2</version>
-    <authors>Microsoft</authors>
+    <authors>Julian Burger</authors>
     <owners>Anthony Mastrean</owners>
     <description>RDCMan manages multiple remote desktop connections. It is useful for managing server labs where you need regular access to each machine such as automated checkin systems and data centers. It is similar to the built-in MMC Remote Desktops snap-in, but more flexible.</description>
     <projectUrl>http://www.microsoft.com/download/en/details.aspx?id=21101</projectUrl>
