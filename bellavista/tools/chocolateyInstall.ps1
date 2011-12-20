@@ -1,60 +1,57 @@
-# error handling is only necessary if you need to do anything 
-# in addition to/instead of the main helpers
-#try 
-#{ 
-    $name = 'bellavista'
+function Create-Shortcut
+{
+  $shell = New-Object -ComObject 'Wscript.Shell'
+  $shortcut = $shell.CreateShortcut($shortcutPath)
+  $shortcut.TargetPath = $targetPath  
+  $shortcut.WorkingDirectory = (Split-Path $targetPath)
+  $shortcut.Save()
+}
+
+try 
+{ 
+    $name    = 'bellavista'
+    $tools   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+    $content = Join-Path (Split-Path $tools) 'content'
     
-    # main helpers - these have error handling tucked into them 
-    # so they become the only line of your script if that is all 
-    # you need.
+    # --------------------------------------------------
+    # Get the archive from the web
+    # --------------------------------------------------
+    
+    $url  = 'http://www.zezula.net/download/bellavista_en.zip'
+    Install-ChocolateyZipPackage $name $url $content
 
-    # This command will assert administrative rights. Try any of 
-    # these to get the silent EXE installer
-    #
-    #     /s /S /q /Q /quiet /silent /SILENT /VERYSILENT
-    #
-    # msi is always 
-    #
-    #	    /quiet
-    # 
-    Install-ChocolateyPackage "$name" 'EXE_OR_MSI' 'SILENT_ARGS' 'URL' '64BIT_URL_DELETE_IF_NO_64BIT' 
+    # --------------------------------------------------
+    # Move the correct executable to the content dir
+    # --------------------------------------------------
 
-    # download and unpack a zip file
-    Install-ChocolateyZipPackage "$name" 'URL' "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+    $processor = Get-WmiObject Win32_Processor
+    $is64bit = $processor.AddressWidth -eq 64
 
-    # other helpers - using any of these means you want to 
-    # uncomment the error handling up top and at bottom.
+    $86 = Join-Path $content 'Win32\BellaVista.exe'
+    $64 = Join-Path $content 'x64\BellaVista.exe'
 
-    # downloader that the main helpers use to download items
-    #Get-ChocolateyWebFile "$name" 'DOWNLOAD_TO_FILE_FULL_PATH' 'URL' '64BIT_URL_DELETE_IF_NO_64BIT'
+    $source = if($is64bit) { $64 } else { $86 }
+    $target = Join-Path $content 'BellaVista.exe'
 
-    # installer, will assert administrative rights - used by Install-ChocolateyPackage
-    #Install-ChocolateyInstallPackage "$name" 'EXE_OR_MSI' 'SILENT_ARGS' '_FULLFILEPATH_'
+    Move-Item $source $target
+    
+    Remove-Item "$content\Win32" -Force -Recurse
+    Remove-Item "$content\x64"   -Force -Recurse
 
-    # unzips a file to the specified location - auto overwrites existing content
-    #Get-ChocolateyUnzip "FULL_LOCATION_TO_ZIP.zip" "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+    # --------------------------------------------------
+    # And create a shortcut in All Programs
+    # --------------------------------------------------
 
-    # Runs processes asserting UAC, will assert administrative rights - used by Install-ChocolateyInstallPackage
-    #Run-ChocolateyProcessAsAdmin 'STATEMENTS_TO_RUN' 'Optional_Application_If_Not_PowerShell'
+    $allUsersPrograms = 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs'
+    $shortcutPath     = Join-Path $allUsersPrograms 'BellaVista.lnk'
+    $targetPath       = $target
 
-    # add specific folders to the path - any executables found in the chocolatey package folder will already be on the path. This is used in addition to that or for cases when a native installer doesn't add things to the path.
-    #Install-ChocolateyPath 'LOCATION_TO_ADD_TO_PATH' 'User_OR_Machine' # Machine will assert administrative rights
-
-    # add specific files as shortcuts to the desktop
-    #$target = Join-Path $MyInvocation.MyCommand.Definition "$name.exe"
-    #Install-ChocolateyDesktopLink $target
-
-    #------- ADDITIONAL SETUP -------#
-    # make sure to uncomment the error handling if you have additional setup to do
-
-    #$processor = Get-WmiObject Win32_Processor
-    #$is64bit = $processor.AddressWidth -eq 64
-
-    # the following is all part of error handling
-    #Write-ChocolateySuccess "$name"
-#} 
-#catch 
-#{
-    #Write-ChocolateyFailure "$name" "$($_.Exception.Message)"
-    #throw 
-#}
+    Create-Shortcut
+    
+    Write-ChocolateySuccess "$name"
+} 
+catch 
+{
+    Write-ChocolateyFailure "$name" "$($_.Exception.Message)"
+    throw 
+}
