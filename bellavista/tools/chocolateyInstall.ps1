@@ -1,10 +1,21 @@
 function Create-Shortcut
 {
-  $shell = New-Object -ComObject 'Wscript.Shell'
-  $shortcut = $shell.CreateShortcut($shortcutPath)
-  $shortcut.TargetPath = $targetPath  
-  $shortcut.WorkingDirectory = (Split-Path $targetPath)
-  $shortcut.Save()
+    param
+    (
+        [Parameter(Mandatory = $true)]
+        [string] $shortcutPath,
+        
+        [Parameter(Mandatory = $true)]
+        [string] $targetPath,
+        
+        [string] $workingDirectory = (Split-Path $targetPath)
+    )
+
+    $shell = New-Object -ComObject 'Wscript.Shell'
+    $shortcut                  = $shell.CreateShortcut($shortcutPath)
+    $shortcut.TargetPath       = $targetPath  
+    $shortcut.WorkingDirectory = $workingDirectory
+    $shortcut.Save()
 }
 
 try 
@@ -33,7 +44,7 @@ try
     $source = if($is64bit) { $64 } else { $86 }
     $target = Join-Path $content 'BellaVista.exe'
 
-    Move-Item $source $target
+    Copy-Item $source $target
     
     Remove-Item "$content\Win32" -Force -Recurse
     Remove-Item "$content\x64"   -Force -Recurse
@@ -42,11 +53,10 @@ try
     # And create a shortcut in All Programs
     # --------------------------------------------------
 
-    $allUsersPrograms = 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs'
-    $shortcutPath     = Join-Path $allUsersPrograms 'BellaVista.lnk'
-    $targetPath       = $target
+    $programs     = "$ENV:APPDATA\Microsoft\Windows\Start Menu\Programs"
+    $shortcutPath = Join-Path $programs 'BellaVista.lnk'
 
-    Create-Shortcut
+    Create-Shortcut $shortcutPath $target
     
     Write-ChocolateySuccess "$name"
 } 
