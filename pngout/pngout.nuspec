@@ -3,7 +3,7 @@
   <metadata>
     <id>pngout</id>
     <title>PNGOUT</title>
-    <version>2011.7.2</version>
+    <version>0.0.20110702</version>
     <authors>Ken Silverman</authors>
     <owners>Anthony Mastrean</owners>
     <description>PNGOUT optimizes the size of .PNG files losslessly. It uses the same deflate compressor I wrote for KZIP.EXE. With the right options, it can often beat other programs by 5-10%. That includes pngcrush -brute, optipng -o7, advpng -z4, etc.. PNGOUT is a great tool for optimizing the size of web pages or squeezing game content onto mobile devices.</description>
