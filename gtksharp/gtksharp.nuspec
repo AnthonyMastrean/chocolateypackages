@@ -2,17 +2,15 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>gtksharp</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>Gtk# (GtkSharp)</title>
+    <version>2.12.10</version>
+    <authors>Xamarin</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__ chocolatey admin</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <description>Gtk# is a Graphical User Interface Toolkit for mono and .Net. The project binds the gtk+ toolkit and assorted GNOME libraries, enabling fully native graphical Gnome application development using the Mono and .Net development frameworks.</description>
+    <projectUrl>http://www.mono-project.com/GtkSharp</projectUrl>
+    <tags>gtk gui mono .net gnome</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/gtksharp/gtksharp/gtksharp.ext</iconUrl>-->
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/gtksharp/gtksharp/gtksharp.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
