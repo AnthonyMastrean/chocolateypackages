@@ -8,6 +8,7 @@ try
     
     $target  = Join-Path $content 'pngout.exe'
 
+    New-Item $content -Type Directory
     Get-ChocolateyWebFile $name $target $url
 
     Write-ChocolateySuccess $name
