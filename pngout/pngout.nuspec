@@ -2,15 +2,14 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>pngout</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>PNGOUT</title>
+    <version>2011.7.2</version>
+    <authors>Ken Silverman</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__ chocolatey admin</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <description>PNGOUT optimizes the size of .PNG files losslessly. It uses the same deflate compressor I wrote for KZIP.EXE. With the right options, it can often beat other programs by 5-10%. That includes pngcrush -brute, optipng -o7, advpng -z4, etc.. PNGOUT is a great tool for optimizing the size of web pages or squeezing game content onto mobile devices.</description>
+    <projectUrl>http://advsys.net/ken/utils.htm</projectUrl>
+    <tags>png optimize lossless deflate web</tags>
+    <licenseUrl>http://advsys.net/ken/utils.htm#pngoutkziplicense</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/pngout/pngout/pngout.ext</iconUrl>-->
     <!--<dependencies>
