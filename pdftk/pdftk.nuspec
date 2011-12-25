@@ -2,15 +2,14 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>pdftk</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>The PDF Toolkit</title>
+    <version>1.44</version>
+    <authors>Sid Steward</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__ chocolatey admin</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <description>If PDF is electronic paper, then pdftk is an electronic staple-remover, hole-punch, binder, secret-decoder-ring, and X-Ray-glasses. Pdftk is a simple tool for doing everyday things with PDF documents.</description>
+    <projectUrl>http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/</projectUrl>
+    <tags>pdf</tags>
+    <licenseUrl>http://www.pdflabs.com/docs/pdftk-license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/pdftk/pdftk/pdftk.ext</iconUrl>-->
     <!--<dependencies>
