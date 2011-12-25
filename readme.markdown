@@ -1,4 +1,4 @@
-# NuGet Packages
+# Chocolatey Packages
 A collection of packages without a home elsewhere.
 
 ## REQUIREMENTS
