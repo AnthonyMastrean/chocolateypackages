@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>dependencywalker</id>
-    <version>2.2.6000.2</version>
+    <version>2.2.6000.3</version>
     <title>Dependency Walker</title>
     <authors>Steve Miller</authors>
     <owners>Anthony Mastrean</owners>
