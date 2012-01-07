@@ -1,4 +1,4 @@
-params([switch]$createOnly)
+param([switch]$createOnly)
 
 $nuspec  = Resolve-Path *.nuspec
 $xml     = [xml] (Get-Content $nuspec)
