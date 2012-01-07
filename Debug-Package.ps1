@@ -21,7 +21,23 @@
 #>
 
 Clear-Host
-$name = Split-Path $pwd -leaf
-Remove-Item "$ENV:CHOCOLATEYINSTALL\lib\$name*" -force -recurse
-nuget pack "$name.nuspec"
-cinst "$name" -source "$pwd"
+
+$nuspec  = Resolve-Path *.nuspec
+$xml     = [xml] (Get-Content $nuspec)
+
+$id      = $xml.package.metadata.id
+$version = $xml.package.metadata.version
+$package = "$id.$version"
+
+$install = Join-Path $ENV:CHOCOLATEYINSTALL "lib\$package"
+
+'##################################################'
+"Debugging package: $id"
+'##################################################'
+
+if(Test-Path $install) {
+    Remove-Item $install -Recurse -Force
+}
+
+nuget pack $nuspec
+cinst $id -source $pwd
