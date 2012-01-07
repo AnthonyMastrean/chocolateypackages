@@ -2,17 +2,16 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>keepass</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>KeePass Password Safe</title>
+    <version>2.18</version>
+    <authors>Dominik Reichl</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <description>KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master password or select the key file to unlock the whole database. The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish).</description>
+    <projectUrl>http://keepass.info/</projectUrl>
+    <tags>password safe</tags>
+    <licenseUrl>http://keepass.info/help/v2/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/keepass/keepass/keepass.ext</iconUrl>-->
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/keepass/keepass/keepass.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
