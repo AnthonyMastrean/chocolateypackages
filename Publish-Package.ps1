@@ -2,9 +2,10 @@ param([switch]$createOnly)
 
 $nuspec  = Resolve-Path *.nuspec
 $xml     = [xml] (Get-Content $nuspec)
+$id      = $xml.package.metadata.id
 $version = $xml.package.metadata.version
 
-git tag -a "v$version" -m "Publishing version: $version"
+git tag -a "$id.$version" -m "Publishing $id.$version"
 
 $package = Resolve-Path *.nupkg
 
