@@ -2,17 +2,16 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>imagej</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>ImageJ</title>
+    <version>1.45</version>
+    <authors>Wayne Rasband</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <summary>Image Processing and Analysis in Java</summary>
+    <description>ImageJ is a public domain Java image processing program inspired by NIH Image for the Macintosh. It can display, edit, analyze, process, save and print 8-bit, 16-bit and 32-bit images. It can read many image formats including TIFF, GIF, JPEG, BMP, DICOM, FITS and "raw". It supports "stacks", a series of images that share a single window. It is multithreaded, so time-consuming operations such as image file reading can be performed in parallel with other operations.</description>
+    <projectUrl>http://rsbweb.nih.gov/ij/</projectUrl>
+    <tags>image processing nih</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/imagej/imagej/imagej.ext</iconUrl>-->
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/imagej/imagej/imagej.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
