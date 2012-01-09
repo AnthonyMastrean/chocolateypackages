@@ -11,7 +11,7 @@
     <projectUrl>http://rsbweb.nih.gov/ij/</projectUrl>
     <tags>image processing nih</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/imagej/imagej.jdk6/imagej.jdk6.png</iconUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/imagej/imagej/imagej.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
