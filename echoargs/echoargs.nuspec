@@ -2,15 +2,14 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>echoargs</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>EchoArgs</title>
+    <version>0.0.1</version>
+    <authors>Pscx</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <summary>Echo command line arguments back out to the console for your review.</summary>
+    <description>Echo command line arguments back out to the console for your review.</description>
+    <projectUrl>http://pscx.codeplex.com/</projectUrl>
+    <tags>echo args powershell console command cmd</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/echoargs/echoargs/echoargs.ext</iconUrl>-->
     <!--<dependencies>
@@ -18,6 +17,7 @@
     </dependencies>-->
   </metadata>
   <files>
+    <file src="content\echoargs.exe" target="content\echoargs.exe" />
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
