@@ -2,20 +2,17 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>notepad2-mod</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>Notepad2-mod</title>
+    <version>4.2.25.720</version>
+    <authors>XhmikosR</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <summary>A modified version (fork) of Notepad2 based on Kai Liu's and other people's patches.</summary>
+    <description>Changes compared to the official Notepad2: Code folding, Support for bookmarks, Option to mark all occurrences of a word, Word auto-completion, Syntax highlighting support for AutoHotkey, AutoIt3, AviSynth, Bash, CMake, Inno Setup, LaTeX, Lua, NSIS, Ruby and Tcl scripts, Improved support for NFO ANSI art, Support for replacing Windows Notepad using a clean, unintrusive registry-based method, Other various minor changes and tweaks</description>
+    <projectUrl>http://code.google.com/p/notepad2-mod/</projectUrl>
+    <tags>notepad</tags>
+    <licenseUrl>http://www.opensource.org/licenses/bsd-license.php</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/notepad2-mod/notepad2-mod/notepad2-mod.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/notepad2-mod/notepad2-mod/notepad2-mod.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
