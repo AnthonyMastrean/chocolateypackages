@@ -33,13 +33,14 @@
     </Variables>
     <CustomProperties />
   </Template>
-  <Template uid="9ea07c8c-9071-4b1d-bd7e-bc993ae0d0f7" shortcut="subject" description="subject" text="[Subject(typeof($SUBJECT$))]" reformat="True" shortenQualifiedReferences="True">
+  <Template uid="9ea07c8c-9071-4b1d-bd7e-bc993ae0d0f7" shortcut="subject" description="subject" text="[Subject(typeof($SUBJECT$))]&#xD;&#xA;public class When_$GIVEN$&#xD;&#xA;{&#xD;&#xA;	$END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
     <Context>
       <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
     </Context>
     <Categories />
     <Variables>
       <Variable name="SUBJECT" expression="" initialRange="0" />
+      <Variable name="GIVEN" expression="" initialRange="0" />
     </Variables>
     <CustomProperties />
   </Template>
