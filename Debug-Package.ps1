@@ -20,7 +20,7 @@
     this package directory.
 #>
 
-function Test-Path($path) {
+function Test-NullPath($path) {
     if($path -eq $null) {
         return $false
     }
@@ -43,8 +43,8 @@ $temp    = Join-Path $ENV:TEMP "chocolatey\$id"
 
 Clear-Host
 
-if(Test-Path $nupkg) { Remove-Item $nupkg }
-if(Test-Path $temp)  { Remove-Item $temp -recurse -force }
+if(Test-NullPath $nupkg) { Remove-Item $nupkg }
+if(Test-NullPath $temp)  { Remove-Item $temp -recurse -force }
 
 nuget pack $nuspec
 
