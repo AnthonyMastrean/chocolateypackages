@@ -2,14 +2,30 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mspeclivetemplates</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>MSpec Live Templates</title>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/mspeclivetemplates/mspeclivetemplates/mspeclivetemplates.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).</description>
-    <summary>ReSharper live templates for MSpec subjects and fields (establish, because, it, cleanup).</summary>
+    <description>ReSharper live templates for MSpec types and delegates. Download and then Import in the ReSharper | Live Templates dialog.</description>
+    <summary>ReSharper live templates for MSpec types and delegates.</summary>
+    <releaseNotes>
+<![CDATA[
+v1.0.2
++ catch - _exception = Catch.Exception(() => %END%)
+
+v1.0.1
+~ subject - [Subject(typeof(%SUBJECT%))] public class When_%GIVEN% { }
+
+v1.0.0
++ subject - [Subject(typeof(%SUBJECT%))]
++ because - Because of = () => %END%;
++ it - It should_%DOSOMETHING% = () => %END%;
++ cleanup - Cleanup cleanup = () => %END%;
++ establish - Establish context = () => { %END%; };
+]]>
+    </releaseNotes>
     <tags>resharper mspec templates</tags>
   </metadata>
   <files>

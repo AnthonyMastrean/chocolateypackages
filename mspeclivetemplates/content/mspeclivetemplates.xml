@@ -7,6 +7,14 @@
     <Variables />
     <CustomProperties />
   </Template>
+  <Template uid="cfec9df0-e006-4ebd-9c1f-8bd225448747" shortcut="catch" description="" text="_exception = Catch.Exception(() =&gt; $END$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
   <Template uid="68defa7f-a253-44cd-9873-45b0bb5c7643" shortcut="cleanup" description="cleanup" text="Cleanup cleanup = () =&gt; $END$;" reformat="True" shortenQualifiedReferences="True">
     <Context>
       <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
