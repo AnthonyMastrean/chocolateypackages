@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>windows.usbdvdtool</id>
+    <id>microsoft.isobackuptool</id>
     <title>__TITLE__</title>
     <version>__VERSION__</version>
     <authors>__AUTHORS__</authors>
@@ -12,7 +12,7 @@
     <tags>__TAG__</tags>
     <licenseUrl>__LICENSEURL__</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/windows.usbdvdtool/windows.usbdvdtool/windows.usbdvdtool.ext</iconUrl>-->
+    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/microsoft.isobackuptool/microsoft.isobackuptool/microsoft.isobackuptool.ext</iconUrl>-->
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
