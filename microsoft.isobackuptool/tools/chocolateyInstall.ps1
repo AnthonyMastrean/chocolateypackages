@@ -1,7 +1,4 @@
 <#
-Liars, the /Q option does not work. This is a self-extracting CAB with an 
-MSI inside of it. I'm going to have to unpack it manually. Damn.
-
 ---------------------------
 Microsoft ISO Backup Tool
 ---------------------------
@@ -19,15 +16,18 @@ OK
 
 try 
 { 
-    $name = 'windows.usbdvdtool'
+    $name = 'microsoft.isobackuptool'
     $url  = 'http://images2.store.microsoft.com/prod/clustera/framework/w7udt/1.0/en-us/Windows7-USB-DVD-tool.exe'
     
     $tools   = Split-Path $MyInvocation.MyCommand.Definition
-    $content = Join-Path (Split-Path $tools) 'content'
-    $target  = Join-Path $content 'wudt.msi'
+    $archive = Join-Path $tools 'wudt.exe'
+    $target  = Join-Path $tools 'wudt.msi'
     
-    Install-ChocolateyZipPackage $name $url $content
-    Install-ChocolateyInstallPackage $name 'MSI' '/QUIET' $target
+    # The URL is a self-extracting CAB. I have to manually unpack it and 
+    # run the MSI inside.
+    Get-ChocolateyWebFile $name $archive $url
+    & $archive /Q /T:"$tools" /C
+    Install-ChocolateyInstallPackage $name 'MSI' '/QN' $target
 
     Write-ChocolateySuccess $name
 } 
