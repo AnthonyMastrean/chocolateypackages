@@ -20,7 +20,7 @@ if '%1'=='load' goto load
 :: We want that directory to be in the 'content directory by default.
 
 pushd %~dp0
-adom.exe %*
+"%~dp0..\lib\adom.1.1.1\content\adom.exe" %*
 popd
 goto :eof
 
