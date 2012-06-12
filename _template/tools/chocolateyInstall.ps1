@@ -17,19 +17,19 @@
     #
     #	    /quiet
     # 
-    Install-ChocolateyPackage "$name" 'EXE_OR_MSI' 'SILENT_ARGS' 'URL' '64BIT_URL_DELETE_IF_NO_64BIT' 
+    Install-ChocolateyPackage $name 'EXE_OR_MSI' 'SILENT_ARGS' 'URL' '64BIT_URL_DELETE_IF_NO_64BIT' 
 
     # download and unpack a zip file
-    Install-ChocolateyZipPackage "$name" 'URL' "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+    Install-ChocolateyZipPackage $name 'URL' "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
     # other helpers - using any of these means you want to 
     # uncomment the error handling up top and at bottom.
 
     # downloader that the main helpers use to download items
-    #Get-ChocolateyWebFile "$name" 'DOWNLOAD_TO_FILE_FULL_PATH' 'URL' '64BIT_URL_DELETE_IF_NO_64BIT'
+    #Get-ChocolateyWebFile $name 'DOWNLOAD_TO_FILE_FULL_PATH' 'URL' '64BIT_URL_DELETE_IF_NO_64BIT'
 
     # installer, will assert administrative rights - used by Install-ChocolateyPackage
-    #Install-ChocolateyInstallPackage "$name" 'EXE_OR_MSI' 'SILENT_ARGS' '_FULLFILEPATH_'
+    #Install-ChocolateyInstallPackage $name 'EXE_OR_MSI' 'SILENT_ARGS' '_FULLFILEPATH_'
 
     # unzips a file to the specified location - auto overwrites existing content
     #Get-ChocolateyUnzip "FULL_LOCATION_TO_ZIP.zip" "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
@@ -51,10 +51,10 @@
     #$is64bit = $processor.AddressWidth -eq 64
 
     # the following is all part of error handling
-    #Write-ChocolateySuccess "$name"
+    #Write-ChocolateySuccess $name
 #} 
 #catch 
 #{
-    #Write-ChocolateyFailure "$name" "$($_.Exception.Message)"
+    #Write-ChocolateyFailure $name "$($_.Exception.Message)"
     #throw 
 #}

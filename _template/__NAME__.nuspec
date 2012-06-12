@@ -9,7 +9,7 @@
     <summary>__SUMMARY__</summary>
     <description>__DESCRIPTION__</description>
     <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__ chocolatey admin</tags>
+    <tags>__TAG__</tags>
     <licenseUrl>__LICENSEURL__</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/__NAME__/__NAME__/__NAME__.ext</iconUrl>-->
