@@ -13,24 +13,26 @@ try
 @"
 @echo off
 
+set lib=%~dp0..\lib\adom.1.1.1\content
+
 if '%1'=='save' goto save
 if '%1'=='load' goto load
 
 :: ADOM writes an 'ADOM_DAT' directory in the current directory at startup. 
 :: We want that directory to be in the 'content directory by default.
 
-pushd %~dp0
-"%~dp0..\lib\adom.1.1.1\content\adom.exe" %*
+pushd %lib%
+"%lib%\adom.exe" %*
 popd
 goto :eof
 
 :save
-mkdir "%~dp0\backup"
-copy "%~dp0\adom_dat\savedg" "%~dp0\backup"
+mkdir "%lib%\backup"
+copy "%lib%\adom_dat\savedg" "%lib%\backup"
 goto :eof
 
 :load
-copy "%~dp0\backup" "%~dp0\adom_dat\savedg"
+copy "%lib%\backup" "%lib%\adom_dat\savedg"
 goto :eof
 "@ | Out-File $bat -Encoding ASCII
     
