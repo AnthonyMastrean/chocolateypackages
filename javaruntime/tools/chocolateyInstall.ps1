@@ -3,7 +3,7 @@ try
 	$name   = 'javaruntime'
 	$url    = 'http://javadl.sun.com/webapps/download/AutoDL?BundleId=64152'
 	$type   = 'EXE'
-	$silent = '/QN /NORESTART'
+	$silent = '/s'
 	
 	Install-ChocolateyPackage $name $type $silent $url
 	
