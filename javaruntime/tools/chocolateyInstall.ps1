@@ -7,7 +7,7 @@ try
 	
 	Install-ChocolateyPackage $name $type $silent $url
 	
-	$java = Join-Path ${env:ProgramFiles(x86)} 'Java\jre6'
+	$java = Join-Path ${env:ProgramFiles(x86)} 'Java\jre7'
 	$bin  = Join-Path $java 'bin'
     $cmd  = @"
 [Environment]::SetEnvironmentVariable('JAVA_HOME', "$java", 'Machine')
