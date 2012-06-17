@@ -6,6 +6,7 @@ $id      = $xml.package.metadata.id
 $version = $xml.package.metadata.version
 
 git tag -a "$id.$version" -m "Publishing $id.$version"
+git push --tags
 
 $package = Resolve-Path *.nupkg
 
