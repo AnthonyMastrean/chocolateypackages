@@ -36,6 +36,7 @@ $id      = $xml.package.metadata.id
 $version = $xml.package.metadata.version
 
 $temp    = Join-Path $ENV:TEMP "chocolatey\$id"
+$lib     = Join-Path $ENV:ChocolateyInstall "lib\$id.$version"
 
 '##################################################'
 "Debugging package: $id.$version"
@@ -45,6 +46,7 @@ Clear-Host
 
 if(Test-NullPath $nupkg) { Remove-Item $nupkg }
 if(Test-NullPath $temp)  { Remove-Item $temp -recurse -force }
+if(Test-NullPath $lib)   { Remove-Item $lib -recurse -force }
 
 nuget pack $nuspec
 
