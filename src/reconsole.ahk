@@ -1,16 +1,4 @@
 ;==================================================
-; Reconsole: Autocomplete common character pairs in your console
-;--------------------------------------------------
-; Auto complete many of the characters that commonly come in pairs, like
-;   %%
-;   ()
-;   ''
-;   ""
-;   {}
-;   []
-;==================================================
-
-;==================================================
 ; Recommendations for all new scripts for speed, compatibility, and consistency
 ;==================================================
 #NoEnv
