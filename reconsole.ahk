@@ -23,6 +23,9 @@ SetWorkingDir %A_ScriptDir%
 ;==================================================
 Menu, Tray, Tip, Reconsole
 
+;==================================================
+; Capture the keystrokes that need to be paired
+;==================================================
 #IfWinActive ahk_class ConsoleWindowClass
 
     %::Send `%`%{Left}
