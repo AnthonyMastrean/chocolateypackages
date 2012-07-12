@@ -15,7 +15,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="src\reconsole.ahk" target="content\testnamingmode.ahk" />
+    <file src="content\reconsole.ahk" target="content\reconsole.ahk" />
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
