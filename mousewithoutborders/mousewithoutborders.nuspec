@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mousewithoutborders</id>
-    <version>2.1.2.2</version>
+    <version>2.1.2.3</version>
     <title>Mouse Without Borders</title>
     <authors>Microsoft Garage,Truong Do</authors>
     <owners>Anthony Mastrean</owners>
@@ -12,6 +12,9 @@
     <description>Mouse Without Borders is a project that allows you to reach across your PC's as if they were part of one single desktop. You can move files between the 2 computers simply by dragging them from one desktop to another. In fact you can control up to four computers from a single mouse and keyboard with no extra hardware needed.</description>
     <summary>Mouse Without Borders is a project that allows you to reach across your PC's as if they were part of one single desktop.</summary>
     <releaseNotes>
+v2.1.2.0704
+* Add a mini SnagIt feature where you can capture an area on the screen of any machine then paste to any machine in the matrix. The default hotkey to use this new feature is Ctrl+Shift+S.
+
 v2.1.2.0627
 * Mini log: Gives user an easy way to generate short log for a quick triage
 
