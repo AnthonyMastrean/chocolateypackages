@@ -20,8 +20,34 @@
     this package directory.
 #>
 
+function Test-NullPath($path) {
+    if($path -eq $null) {
+        return $false
+    }
+    
+    return (Test-Path $path)
+}
+
+$nuspec  = Resolve-Path *.nuspec
+$nupkg   = Resolve-Path *.nupkg
+$xml     = [xml] (Get-Content $nuspec)
+
+$id      = $xml.package.metadata.id
+$version = $xml.package.metadata.version
+
+$temp    = Join-Path $ENV:TEMP "chocolatey\$id"
+$lib     = Join-Path $ENV:ChocolateyInstall "lib\$id.$version"
+
+'##################################################'
+"Debugging package: $id.$version"
+'##################################################'
+
 Clear-Host
-$name = Split-Path $pwd -leaf
-Remove-Item "$ENV:CHOCOLATEYINSTALL\lib\$name*" -force -recurse
-nuget pack "$name.nuspec"
-cinst "$name" -source "$pwd"
+
+if(Test-NullPath $nupkg) { Remove-Item $nupkg }
+if(Test-NullPath $temp)  { Remove-Item $temp -recurse -force }
+if(Test-NullPath $lib)   { Remove-Item $lib -recurse -force }
+
+nuget pack $nuspec
+
+cinst $id -source $pwd -force

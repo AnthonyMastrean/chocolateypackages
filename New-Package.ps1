@@ -17,7 +17,7 @@
     Create a new branch/package 'diffmerge' from the template.
 #>
 
-param([string]$name)
+param([string]$id)
 
 function Replace-Token([string]$token, [string]$replacement, [Parameter(ValueFromPipeline = $true)][string]$path)
 {
@@ -26,17 +26,17 @@ function Replace-Token([string]$token, [string]$replacement, [Parameter(ValueFro
         | Set-Content $path
 }
 
-git checkout -b $name
+git checkout -b $id
 
-Copy-Item "_template" "$name" -recurse
+Copy-Item '_template' $id -Recurse
 
-Push-Location "$name"
+Push-Location $id
 
-Rename-Item "__NAME__.nuspec" "$name.nuspec"
+Rename-Item '__NAME__.nuspec' "$id.nuspec"
 
-"$name.nuspec" | Replace-Token "__NAME__" "$name"
-"tools\chocolateyInstall.ps1" | Replace-Token "__NAME__" "$name"
+"$id.nuspec" | Replace-Token '__NAME__' $id
+"tools\chocolateyInstall.ps1" | Replace-Token '__NAME__' $id
 
 git add .
-git commit -am "created new package from template: $name"
-git push origin "$name"
+git commit -am "created new package from template: $id"
+git push origin $id
