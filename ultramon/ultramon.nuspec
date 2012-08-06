@@ -3,7 +3,7 @@
   <metadata>
     <id>ultramon</id>
     <title>UltraMon</title>
-    <version>3.1.0</version>
+    <version>3.2.1</version>
     <authors>Christian Studer</authors>
     <owners>Anthony Mastrean</owners>
     <summary>UltraMon is a utility for multi-monitor systems, designed to increase productivity and unlock the full potential of multiple monitors.</summary>
@@ -13,6 +13,44 @@
 * control application positioning with UltraMon Shortcuts
 * multi-monitor support for desktop wallpapers and screen savers
 * mirror your main monitor to secondary monitors for a presentation</description>
+    <releaseNotes>
+v3.2.1
+Fixed issues
+* Window buttons don't get added to Firefox
+
+v3.2.0
+Changes
+* Windows 2000 is no longer supported, 3.2.0 requires Windows XP SP2 or later, or Server 2003 SP1 or later.
+* If you have configured compatibility settings for 16-bit applications, you'll need to recreate those settings. This is due to a change in how 16-bit applications are handled. Please note that your settings will apply to all 16-bit applications, this was the case previously as well, but the user interface allowed setting up different settings for different 16-bit applications.
+* All binaries (executables and DLL files) are now digitally signed, previously only the setup file was signed.
+
+Fixed issues
+* Multiple entries for the same application shown in application mirroring mode for some applications, for example Windows Media Player and Excel
+* Fatal error in WndExt.cpp at lines 386, 392 and 1894 when running multiple 16-bit applications
+* Fatal error in ButtonRendererVistaComposited.cpp at line 119 when using the PlastiQ Aero theme
+* Occasional crash of UltraMon.exe when starting 32-bit application on 64-bit Windows 7 if UltraMon window buttons are disabled
+* LabVIEW 2011 not shown in list of running applications when configuring compatibility settings via UltraMon Options > Compatibility
+* UltraMon display configuration menu options such as Display Settings and Set Primary don't get disabled if the display control panel is disabled via group policy
+* Smart Taskbar: minimize task via click on task button doesn't behave the same way as on the main taskbar
+* Smart Taskbar doesn't work correctly if the shell process registry entry isn't set or uses a partial path
+* Fatal error in TaskBand.cpp at line 1136 when using Taskbar Shuffle or Taskix to reorder tasks on the UltraMon taskbar
+* Visual Studio 2003 restores to blank window after minimizing via click on task button
+* With the Smart Taskbar enabled, explorer.exe may hang when resuming from hibernation
+* Fatal or runtime error in UltraMonTaskbar.exe when using Stardock theme
+* Smart Taskbar doesn't work when using Aston Shell version 2.0.4 or RES Workspace Manager
+* Fatal error in TaskBand.cpp at line 485
+* Wallpaper manager (UltraMonDesktop.exe) may hang instead of showing an error message when trying to load a corrupted wallpaper profile
+* If a monitor is ignored, it may not be possible to enable another monitor connected to the same video card
+* UltraMon may only show two monitors instead of 3 on Windows 7 when using a docked laptop with 2 external monitors connected
+* Saving icon positions doesn't work if DeskScapes from Stardock is installed
+* Scripting: object browser and script editor Intellisense don't show new methods and properties added in version 2.7.0 of the UltraMon COM objects
+* Scripting: MonCtl.RefreshMonitorLayout crashes on Windows 7 if called before the monitor collection has been created
+* Scripting: setting the MonCtl.SelDisabled property has no effect, and documentation is wrong
+
+Known issues
+* Runtime error in Adobe Acrobat when moving maximized window if Acrobat was launched from CCH ProSystem Engagement. As a workaround, go to UltraMon Options > Compatibility, then configure settings for Adobe Acrobat and check the 'use alternative method to move maximized window' option
+* Docking hints from Xceed Docking Windows library don't work if UltraMon window buttons are enabled for the application
+    </releaseNotes>
     <projectUrl>http://www.realtimesoft.com/ultramon/</projectUrl>
     <tags>monitor multi-monitor productivity</tags>
     <licenseUrl>http://www.realtimesoft.com/ecom/lic_ag_ultramon_en.htm</licenseUrl>
