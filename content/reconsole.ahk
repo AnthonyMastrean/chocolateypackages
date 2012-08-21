@@ -10,6 +10,7 @@ SetWorkingDir %A_ScriptDir%
 ; Sexy tray icon and text
 ;==================================================
 Menu, Tray, Tip, Reconsole
+Menu, Tray, Icon, reconsole.ico,
 
 ;==================================================
 ; Capture the keystrokes that need to be paired
