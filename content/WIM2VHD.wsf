@@ -1,0 +1,2834 @@
+<package>
+<!--
+    
+    Windows Image to Virtual Hard Disk (WIM2VHD) Converter     
+    By Mike Kolitz
+
+    Copyright (C) Microsoft Corporation.  All rights reserved.
+
+    WIM2VHD and the associated documentation are provided "AS-IS". 
+    You bear the risk of using it. No express warranties, guarantees or conditions
+    are provided. It is not supported or endorsed by Microsoft Corporation and 
+    should be used at your own risk.
+
+    Please visit http://code.msdn.microsoft.com/wim2vhd for licensing information 
+    and documentation.
+
+    This script is released under the Microsoft Public License (Ms-PL).
+    http://www.microsoft.com/opensource/licenses.mspx#Ms-PL
+
+
+-->
+    <job id="main">
+        <script id="ProductBuildInformation" language="JScript">
+            var PRODUCT_MAJOR_VERSION   = 6;
+            var PRODUCT_MINOR_VERSION   = 1;
+            var PRODUCT_BUILD_VERSION   = 7600;
+            var PRODUCT_QFE_VERSION     = 0;
+            var PRODUCT_BUILD_BRANCH    = "win7_rtm";
+            var PRODUCT_BUILD_TIMESTAMP = "091016-2118";
+            var PRODUCT_BUILD_ARCH      = "amd64fre";
+            var PRODUCT_VERSION_STRING  = PRODUCT_MAJOR_VERSION + "." +
+                                          PRODUCT_MINOR_VERSION + "." +
+                                          PRODUCT_BUILD_VERSION + "." +
+                                          PRODUCT_QFE_VERSION + "." + 
+                                          PRODUCT_BUILD_ARCH + "." + 
+                                          PRODUCT_BUILD_BRANCH + "." + 
+                                          PRODUCT_BUILD_TIMESTAMP;
+            var PRODUCT_SHORT_VERSION_STRING = PRODUCT_MAJOR_VERSION + "." +
+                                               PRODUCT_MINOR_VERSION + "." +
+                                               PRODUCT_BUILD_VERSION + "." +
+                                               PRODUCT_QFE_VERSION;
+        </script>
+        <script id="logger" language="JScript">
+////////////////////////////////////////////////////////////////////////////////
+//
+//   Copyright © Microsoft Corporation.  All rights reserved.
+//
+//   File: LOGGER.JS
+//
+//   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+//   ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+//   THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+//   PARTICULAR PURPOSE.
+//
+//   Copyright © Microsoft Corporation.  All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+function
+Logger(NameOfLogFile)
+{
+    var logFileName = NameOfLogFile;
+    var fileSystem  = new ActiveXObject("Scripting.FileSystemObject");
+    var logFile     = null;
+    var errorCount  = 0;
+    var warnCount   = 0;
+    var successCount= 0;
+    
+    //
+    // Define public methods.
+    //
+    this.StartTest =
+    function(TestName)
+    {
+        try
+        {
+            logFile = fileSystem.CreateTextFile(logFileName, true);
+            var today = new Date();
+            logFile.WriteLine("Log for WIM2VHD " + PRODUCT_SHORT_VERSION_STRING + " on " +
+                               (today.getMonth() + 1) + "/" +
+                               today.getDate() + "/" +
+                               today.getYear() + " at " +
+                               today.getHours() + ":" +
+                               today.getMinutes() + ":" +
+                               today.getSeconds() + "." +
+                               today.getMilliseconds());
+            logFile.WriteLine("Copyright (C) Microsoft Corporation. All rights reserved.\r\n");
+                               
+            var hostInfo = GetHostInformation();
+            logFile.WriteLine(hostInfo);
+            WScript.Echo(hostInfo);
+        }
+        catch (exception)
+        {
+            WScript.Echo("ERROR!  Cannot initialize log file!\n" + exception.description);
+        }
+    }
+    
+    this.EndTest =
+    function()    
+    {
+        if (0 == errorCount)
+            successCount++;
+        
+        logFile.WriteLine("Summary:  Errors: " + errorCount + ", Warnings: " + warnCount + ", Successes: " + successCount);
+        WScript.Echo("Summary:  Errors: " + errorCount + ", Warnings: " + warnCount + ", Successes: " + successCount);
+    }
+    
+    this.CloseLog = 
+    function()
+    {
+        logFile.Close();
+    }
+    
+    this.LogInfo = 
+    function(text)
+    {
+        logFile.WriteLine("INFO: " + text);
+        WScript.Echo("INFO: " + text);   
+    }
+    
+    this.LogWarning =
+    function(message)
+    {
+        logFile.WriteLine("WARNING: " + message);
+        WScript.Echo("WARNING: " + message);
+        warnCount++;
+    }
+    
+    this.LogError =
+    function(message, errorCode)
+    {
+    	errorCode = errorCode & 0;
+        logFile.WriteLine("*******************************************************************************");
+        logFile.WriteLine("Error: " + errorCode + ": " + message);
+        logFile.WriteLine("*******************************************************************************");
+        WScript.Echo("*******************************************************************************");
+        WScript.Echo("Error: " + errorCode + ": " + message);
+        WScript.Echo("*******************************************************************************");
+        errorCount++;
+    }    
+}
+
+function
+GetHostInformation()
+{
+    var shell = new ActiveXObject("WScript.Shell");
+    var parsedBuild = null;
+    var BUILD       = 0;
+    var REVISION    = 1;
+    var FLAVOR      = 2;
+    var BRANCH      = 3;
+    var TIMESTAMP   = 4;
+
+    try
+    {
+        var buildString = shell.RegRead("HKLM\\software\\microsoft\\windows NT\\currentversion\\BuildLabEx");
+        var productName = shell.RegRead("HKLM\\software\\microsoft\\windows NT\\currentversion\\ProductName");
+        var currentVer  = shell.RegRead("HKLM\\software\\microsoft\\windows NT\\currentversion\\CurrentVersion");
+        var localeName  = shell.RegRead("HKCU\\Control Panel\\International\\LocaleName");   
+    }
+    catch (exception)
+    {
+        throw(new Error(exception.description));   
+    }
+    
+    // CSDVersion may not exist, so we're special-casing it.  If the request fails, we don't care.
+    // Just supply an empty-string as the default value.
+    try
+    {
+        var csdVersion  = "";
+        csdVersion = shell.RegRead("HKLM\\software\\microsoft\\windows NT\\currentversion\\CSDVersion");
+    }
+    catch (exception)
+    {}
+    
+    parsedBuild = buildString.split(".");
+    
+    return "MACHINE INFO:\r\n\tBuild="    + parsedBuild[BUILD] + 
+            "\r\n\tPlatform="             + parsedBuild[FLAVOR] + 
+            "\r\n\tOS="                   + productName +
+            "\r\n\tServicePack="          + csdVersion + 
+            "\r\n\tVersion="              + currentVer + 
+            "\r\n\tBuildLab="             + parsedBuild[BRANCH] + 
+            "\r\n\tBuildDate="            + parsedBuild[TIMESTAMP] + 
+            "\r\n\tLanguage="             + localeName + 
+            "\r\n";
+}  
+
+        </script>
+        <script id="imagemanagementservice" language="JScript">
+////////////////////////////////////////////////////////////////////////////////
+//
+//   Copyright © Microsoft Corporation.  All rights reserved.
+//
+//   File: IMAGEMANAGEMENTSERVICE.JS
+//
+//   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+//   ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+//   THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+//   PARTICULAR PURPOSE.
+//
+//   Copyright © Microsoft Corporation.  All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// ImageManagementService object.  Logical wrapper class for Image Management Service
+//
+function
+ImageManagementService(
+    Server,
+    User,
+    Password
+    )
+{
+    //
+    // Define instance fields.
+    //
+    this.m_VirtualizationNamespace  = null;
+    this.m_Cimv2Namespace           = null;
+
+    this.m_ImageManagementService   = null;
+
+
+    //
+    // Instance methods
+    //
+
+    ImageManagementService.prototype.CreateDynamicVirtualHardDisk =
+    function(
+        Path,
+        MaxInternalSize
+        )
+
+    /*++
+
+    Description:
+
+        Creates a dynamic disk
+
+    Arguments:
+
+        Path - VHD path
+        MaxInternalSize - VHD size
+
+    Return Value:
+
+        SWbemMethod.OutParameters object.
+
+    --*/
+
+    {
+        var methodName = "CreateDynamicVirtualHardDisk";
+
+        var inParams = this.m_ImageManagementService.Methods_(methodName).inParameters.SpawnInstance_();
+
+        inParams.Path  = Path;
+        inParams.MaxInternalSize = MaxInternalSize;
+
+        return this.m_ImageManagementService.ExecMethod_(methodName, inParams);
+    }
+
+    ImageManagementService.prototype.CreateFixedVirtualHardDisk =
+    function(
+        Path,
+        MaxInternalSize
+        )
+
+    /*++
+
+    Description:
+
+        Creates a fixed disk
+
+    Arguments:
+
+        Path - VHD path
+        MaxInternalSize - VHD size
+
+    Return Value:
+
+        SWbemMethod.OutParameters object.
+
+    --*/
+
+    {
+        var methodName = "CreateFixedVirtualHardDisk";
+
+        var inParams = this.m_ImageManagementService.Methods_(methodName).inParameters.SpawnInstance_();
+
+        inParams.Path  = Path;
+        inParams.MaxInternalSize = MaxInternalSize;
+
+        return this.m_ImageManagementService.ExecMethod_(methodName, inParams);
+    }
+
+    ImageManagementService.prototype.Mount =
+    function(
+        Path
+        )
+
+    /*++
+
+    Description:
+
+        Mounts a VHD
+
+    Arguments:
+
+        Path - The VHD to mount
+
+    Return Value:
+
+        SWbemMethod.OutParameters object.
+
+    --*/
+
+    {
+        var methodName = "Mount";
+
+        var inParams = this.m_ImageManagementService.Methods_(methodName).inParameters.SpawnInstance_();
+
+        inParams.Path  = Path;
+
+        return this.m_ImageManagementService.ExecMethod_(methodName, inParams);
+    }
+
+    //
+    // Utility functions
+    //
+
+    ImageManagementService.prototype.WaitForStorageJob =
+    function(
+        OutParams
+        )
+
+    /*++
+
+    Description:
+
+        WMI calls will exit with some type of return result.  Some will require
+        a little more processing before they are complete. This handles those
+        states after a wmi call.
+
+    Arguments:
+
+        OutParams - the parameters returned by the wmi call.
+
+    Return Value:
+
+        Status code
+
+    --*/
+
+    {
+        if (OutParams.ReturnValue == 4096)
+        {
+            var jobStateStarting        = 3;
+            var jobStateRunning         = 4;
+            var jobStateCompleted       = 7;
+
+            var storageJob;
+
+            do
+            {
+                WScript.Sleep(1000);
+
+                storageJob = this.m_VirtualizationNamespace.Get(OutParams.Job);
+
+            } while ((storageJob.JobState == jobStateStarting) ||
+                     (storageJob.JobState == jobStateRunning));
+
+            if (storageJob.JobState != jobStateCompleted)
+            {
+                throw(new Error(storageJob.ErrorCode,
+                                storageJob.Description + " failed: " + storageJob.ErrorDescription));
+            }
+
+            return storageJob.ErrorCode;
+        }
+
+        return OutParams.ReturnValue;
+    }
+
+    ImageManagementService.prototype.GetSingleObject =
+    function(
+        SWbemObjectSet
+        )
+
+    /*++
+
+    Description:
+
+        Takes a SWbemObjectSet which is expected to have one object and returns the object
+
+    Arguments:
+
+        SWbemObjectSet - The set.
+
+    Return Value:
+
+        The lone member of the set.  Exception thrown if Count does not equal 1.
+
+    --*/
+
+    {
+        if (SWbemObjectSet.Count != 1)
+        {
+            throw(new Error(5, "SWbemObjectSet was expected to have one item but actually had " + SWbemObjectSet.Count));
+        }
+
+        return SWbemObjectSet.ItemIndex(0);
+    }
+
+    //
+    // WMI object "getters"
+    //
+
+    function
+    ImageManagementService.prototype.GetMountedDiskDrive(
+        MountedStorageImage
+        )
+
+    /*++
+
+    Description:
+
+        This function returns the Win32_DiskDrive associated with a loopback-mounted VHD
+
+    Arguments:
+
+        MountedStorageImage - mounted VHD
+
+    Return Value:
+
+        Win32_DiskDrive object
+
+    --*/
+
+    {
+        //
+        // Even after the mount job succeeds, we can't find the disk index yet.  We must
+        //  wait for the Win32_DiskDrive WMI class to appear in the cimv2 namespace.  Under
+        //  stress this can take some time, so we wait in a loop until we find it
+        //
+        var retries = 0;
+
+        do
+        {
+            var selectString = "SELECT * FROM Win32_DiskDrive WHERE Model=\"Msft Virtual Disk SCSI Disk Device\" " +
+                                    "AND SCSIBus=\"" + MountedStorageImage.PathId + "\" " +
+                                    "AND SCSILogicalUnit=\"" + MountedStorageImage.Lun + "\" " +
+                                    "AND SCSIPort=\"" + MountedStorageImage.PortNumber + "\" " +
+                                    "AND SCSITargetId=\"" + MountedStorageImage.TargetId + "\" ";
+
+            try
+            {
+                var diskDrive = this.GetSingleObject(this.m_Cimv2Namespace.ExecQuery(selectString));
+
+                return diskDrive;
+            }
+            catch (e)
+            {
+                // Do nothing, the Win32_DiskDrive doesn't exist yet
+            }
+
+            WScript.Sleep(10000);
+            retries++;
+
+        } while (retries <= 60);
+
+        throw (new Error("Could not find the disk index of the mounted VHD after 60 retries (10 min).  VHD: " + Path));
+    }
+
+    //
+    // Aggregate functions
+    //
+
+    ImageManagementService.prototype.CreateDynamicVirtualHardDiskAndWait =
+    function(
+        Path,
+        MaxInternalSize
+        )
+
+    /*++
+
+    Description:
+
+        Creates a dynamic disk
+
+    Arguments:
+
+        Path - VHD path
+        MaxInternalSize - VHD size
+
+    Return Value:
+
+        None.
+
+    --*/
+
+    {
+        var outParams = this.CreateDynamicVirtualHardDisk(Path, MaxInternalSize);
+
+        var wmiRetValue = this.WaitForStorageJob(outParams);
+
+        if (wmiRetValue != 0)
+        {
+            throw(new Error(wmiRetValue, "CreateDynamicVirtualHardDisk failed; VHD: " + Path));
+        }
+    }
+
+
+    ImageManagementService.prototype.CreateFixedVirtualHardDiskAndWait =
+    function(
+        Path,
+        MaxInternalSize
+        )
+
+    /*++
+
+    Description:
+
+        Creates a fixed disk
+
+    Arguments:
+
+        Path - VHD path
+        MaxInternalSize - VHD size
+
+    Return Value:
+
+        None.
+
+    --*/
+
+    {
+        var outParams = this.CreateFixedVirtualHardDisk(Path, MaxInternalSize);
+
+        var wmiRetValue = this.WaitForStorageJob(outParams);
+
+        if (wmiRetValue != 0)
+        {
+            throw(new Error(wmiRetValue, "CreateFixedVirtualHardDisk failed; VHD: " + Path));
+        }
+    }
+
+    ImageManagementService.prototype.MountAndWait =
+    function(
+        Path
+        )
+
+    /*++
+
+    Description:
+
+        Mounts a VHD and returns a Msvm_MountedStorageImage object for the disk
+
+    Arguments:
+
+        Path - The VHD to mount
+
+    Return Value:
+
+        Msvm_MountedStorageImage object.  Call unmount on this object to unmount it.
+
+    --*/
+
+    {
+        var outParams = this.Mount(Path);
+
+        var wmiRetValue = this.WaitForStorageJob(outParams);
+
+        if (wmiRetValue != 0)
+        {
+            throw(new Error(wmiRetValue, "Mount failed; VHD: " + Path));
+        }
+
+        //
+        // Get Msvm_StorageJob from out parameters
+        //
+        var mountJob = this.m_VirtualizationNamespace.Get(outParams.Job);
+
+        if (mountJob == null)
+        {
+            throw(new Error("Failed to find Msvm_StorageJob after successful mount of " + Path));
+        }
+
+        var mountedStorageImage = this.GetSingleObject(
+                                        mountJob.Associators_(
+                                            "Msvm_AffectedStorageJobElement",
+                                            "Msvm_MountedStorageImage"));
+
+        return mountedStorageImage;
+    }
+
+    ImageManagementService.prototype.UnmountImage =
+    function(
+        MountedStorageImage
+        )
+
+    /*++
+
+    Description:
+
+        Unmounts a VHD
+
+    Arguments:
+
+        MountedStorageImage - The Msvm_MountedStorageImage to unmount
+
+    Return Value:
+
+        None.
+
+    --*/
+
+    {
+        var outParams = MountedStorageImage.ExecMethod_("Unmount");
+
+        if (outParams.ReturnValue != 0)
+        {
+            throw(new Error(outParams.ReturnValue, "Unmount failed; VHD: " + MountedStorageImage.Name));
+        }
+    }
+
+    //
+    // Constructor code
+    //
+
+    if (Server == null)
+    {
+        Server = WScript.CreateObject("WScript.Network").ComputerName;
+    }
+
+    //
+    // Set Namespace fields
+    //
+    try
+    {
+        var locator = new ActiveXObject("WbemScripting.SWbemLocator");
+
+        this.m_VirtualizationNamespace  = locator.ConnectServer(Server, "root\\virtualization", User, Password);
+        this.m_Cimv2Namespace           = locator.ConnectServer(Server, "root\\cimv2", User, Password);
+    }
+    catch (e)
+    {
+        this.m_VirtualizationNamespace  = null;
+        this.m_Cimv2Namespace           = null;
+
+        throw(new Error("Unable to get an instance of Virtualization namespace: " + e.description));
+    }
+
+    //
+    // Set Msvm_ImageManagementService field
+    //
+    try
+    {
+        var physicalComputerSystem =
+                this.m_VirtualizationNamespace.Get(
+                        "Msvm_ComputerSystem.CreationClassName='Msvm_ComputerSystem',Name='" + Server + "'");
+
+        this.m_ImageManagementService = this.GetSingleObject(
+                                                physicalComputerSystem.Associators_(
+                                                    "Msvm_HostedService",
+                                                    "Msvm_ImageManagementService",
+                                                    "Dependent"));
+    }
+    catch (e)
+    {
+        this.m_ImageManagementService = null;
+
+        throw(new Error("Unable to get an instance of Msvm_ImageManagementService: " + e.description));
+    }
+}
+        </script>
+        <script id="bcdhelper" language="VBScript">
+'///////////////////////////////////////////////////////////////////////////////
+'/
+'/   Copyright © Microsoft Corporation.  All rights reserved.
+'/
+'/   File: BCDHELPER.VBS
+'/
+'/   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+'/   ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+'/   THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+'/   PARTICULAR PURPOSE.
+'/
+'/   Copyright © Microsoft Corporation.  All rights reserved.
+'/
+'///////////////////////////////////////////////////////////////////////////////
+
+' BCDBOOT doesn't set the BCD information in the VHD to support both
+' both VM and Native boot.  This WMI call will setup the BCD store on
+' the VHD so that it can be used either way.
+Sub SetQualifiedPartitionDeviceElement(DiskNumber, BcdStoreFile)
+
+    Const BOOTMGR_ID               = "{9DEA862C-5CDD-4E70-ACC1-F32B344D4795}"
+    Const DEFAULT_TYPE             = &h23000003
+    Const APPLICATION_DEVICE_TYPE  = &h11000001
+    Const OS_DEVICE_TYPE           = &h21000001
+    Const MBR                      = 0
+
+    Dim BcdStoreClass
+    Dim BcdStore
+    Dim BootMgr
+    Dim DefaultBootEntry
+    Dim OSLoader
+    Dim DiskSig
+    Dim PartOffset
+
+    DiskSig = DiskSignature(DiskNumber)
+    PartOffset = PartitionOffset(DiskNumber)
+
+    TracePrint("Getting BcdStore WMI object...")
+    Set BcdStoreClass = GetObject("winmgmts:{impersonationlevel=impersonate,(Backup,Restore,SystemEnvironment)}!root/wmi:BcdStore")
+    If Not BcdStoreClass.OpenStore(BcdStoreFile, BcdStore) Then
+        ThrowException("Couldn't open the system store!")
+    End If
+
+    '
+    ' Open the "boot manager" object.
+    '
+    If Not BcdStore.OpenObject(BOOTMGR_ID, BootMgr) Then
+        ThrowException("Cannot open BCD store on the VHD")
+    End If
+
+    '
+    ' Set the boot manager's application device. Note that objects must be passed as strings.
+    '
+    TracePrint("Setting initial QPDE...")
+    If Not BootMgr.SetQualifiedPartitionDeviceElement(APPLICATION_DEVICE_TYPE, MBR, DiskSig, PartOffset) Then
+        ThrowException("Failed to set the qualified partition device element in the VHD's BCD store")
+    End If
+
+    '
+    ' Get the {default} boot entry
+    '
+    If Not BootMgr.GetElement(DEFAULT_TYPE, DefaultBootEntry) Then
+        ThrowException("Cannot get default boot entry.")
+    End If
+
+    '
+    ' Set the Application and OS Device for the default entry.
+    '
+    If Not BcdStore.OpenObject(DefaultBootEntry.Id, OSLoader) Then
+        ThrowException("Cannot open default boot entry.")
+    End If
+
+    TracePrint("Setting QPDE on Application Device...")
+    If Not OSLoader.SetQualifiedPartitionDeviceElement(APPLICATION_DEVICE_TYPE, MBR, DiskSig, PartOffset) Then
+        ThrowException("Failed to set OS Loader Application Device.")
+    End If
+
+    TracePrint("Setting QPDE on OS Device...")
+    If Not OSLoader.SetQualifiedPartitionDeviceElement(OS_DEVICE_TYPE, MBR, DiskSig, PartOffset) Then
+        ThrowException("Failed to set OS Loader OS Device.")
+    End If
+    TracePrint("Exiting SetQualifiedPartitionDeviceElement...")
+
+End Sub
+
+Function DiskSignature(DiskNumber)
+    Dim objWMIService
+    Dim objItem
+    Dim colItems
+
+    Set objWMIService = GetObject("winmgmts:\\.\root\CIMV2")
+    Set colItems = objWMIService.ExecQuery("SELECT * FROM Win32_DiskDrive WHERE Index='" & DiskNumber & "'",,48)
+    For Each objItem In colItems
+        DiskSignature = objItem.Signature
+        TracePrint("DiskSignature = " & objItem.Signature)
+    Next
+End Function
+
+Function PartitionOffset(DiskNumber)
+    Dim objWMIService
+    Dim colItems
+    Dim objItem
+
+    Set objWMIService = GetObject("winmgmts:\\.\root\CIMV2") 
+    Set colItems = objWMIService.ExecQuery("SELECT * FROM Win32_DiskPartition WHERE DiskIndex='" & DiskNumber & "'",,48)
+    For Each objItem in colItems
+        PartitionOffset = objItem.StartingOffset
+        TracePrint("PartitionOffset = " & objItem.StartingOffset)
+    Next
+End Function
+
+        </script>
+        <script id="wim2vhd" language="JScript">
+////////////////////////////////////////////////////////////////////////////////
+//
+//   Copyright © Microsoft Corporation.  All rights reserved.
+//
+//   File: WIM2VHD.JS
+//
+//   THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+//   ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+//   THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+//   PARTICULAR PURPOSE.
+//
+//   Copyright © Microsoft Corporation.  All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+var g_TracingEnabled                       = false;
+var g_tempPath                             = null;
+var g_ProductName                          = "Windows(R) Image to Virtual Hard Disk (WIM2VHD) Converter";
+var g_ScriptName                           = "WIM2VHD.WSF";
+var g_ProductVersion                       = PRODUCT_SHORT_VERSION_STRING;
+var g_Logger                               = null;
+var g_wbemFlagReturnImmediately            = 0x10;
+var g_wbemFlagForwardOnly                  = 0x20;
+var g_win7Major                            = 6;
+var g_win7Minor                            = 1;
+var g_tempKey                              = null;
+
+// Error Codes
+var ERROR_SUCCESS                          = 0x0000;  // Best.  Error code.  EVAR.
+var ERROR_DISPLAY_HELP_TEXT                = 0x0001;
+var ERROR_WSCRIPT_NOT_SUPPORTED            = 0x0002;
+var ERROR_NOT_ELEVATED                     = 0x0003;
+var ERROR_INVALID_ARGUMENT                 = 0x0004;
+var ERROR_FILE_NOT_FOUND                   = 0x0005;
+var ERROR_INVALID_METADATA                 = 0x0006;
+var ERROR_UNSUPPORTED_BUILD_TYPE           = 0x0007;
+var ERROR_UNSUPPORTED_WINDOWS_VERSION      = 0x0008;
+var ERROR_DRIVE_IS_COMPRESSED              = 0x0009;
+var ERROR_FAILURE_IN_SUPPORT_BINARY        = 0x000A;
+var ERROR_CANNOT_FIND_DISK_INDEX           = 0x000B;
+var ERROR_FILESYSTEM_TASK_FAILURE          = 0x000C;
+var ERROR_OUT_OF_DRIVE_LETTERS             = 0x000D;
+var ERROR_CREATING_BOOT_CONFIGURATION_DATA = 0x000E;
+var ERROR_UNDISCOVERABLE_MOUNT_POINT       = 0x000F;
+var ERROR_TOTALLY_GENERIC_FAILURE          = 0xFFFF;
+
+function
+Main()
+{
+    var xml                 = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");
+    var fileSystem          = new ActiveXObject("Scripting.FileSystemObject");
+    var shell               = new ActiveXObject("WScript.Shell");
+    var typeLibrary         = new ActiveXObject("Scriptlet.TypeLib");
+
+    var WINDOWS_7_BETA      = 7000;
+    var WINDOWS_BUILD       = 0;
+    var VDISK_DETAIL_BETA   = 13;
+    var VDISK_DETAIL_RC     = 15;
+    var NTFS_COMPRESSED     = 2048;
+
+    //
+    // If you want to fall back to a different language, modify this value.
+    //
+    var fallbackLanguage    = "en-us";
+
+    var imageService        = null;
+    var succeeded           = true;
+    var wimPath             = null;
+    var vhdPath             = null;
+    var skuName             = null;
+    var skuIndex            = 0;
+    var skuMajorVersionNode = null;
+    var skuMajorVersion     = 1;
+    var skuMinorVersionNode = null;
+    var skuMinorVersion     = 0;
+    var skuArchitectureNode = null;
+    var skuArchitecture     = "unknown";
+    var skuDescriptionNode  = null;
+    var skuDescription      = "Unable to read description from WIM file.";
+    var skuLanguageNode     = null;
+    var skuLanguage         = "";
+    var skuDefaultLangNode  = null;
+    var skuDefaultLang      = "";
+    var vhdSizeInMb         = null;
+    var qfeList             = null;
+    var imagexPath          = null;
+    var unattendFile        = null;
+    var tempSystemHiveLoaded= false;
+    var diskpartScript      = null;
+    var imageList           = "";
+    var mountPath           = null;
+    var bcdBootPath         = null;
+    var bcdEditPath         = null;
+    var regExePath          = null;
+    var retryCount          = 0;
+    var mountedStorageImage = false;
+    var forceClassicMount   = false;
+    var mountPathEx         = null;
+    var wimPieces           = null;
+    var wimPiece            = null;
+    var wimCommand          = "";
+    var qfeCommand          = "";
+    var useHyperV           = false;
+    var vhdTempPath         = "";
+    var bnsPieces           = null;
+    var debugPieces         = null;
+    var dbgSettings         = null;
+    var passthru            = null;
+    var vhdType             = null;
+    var critical            = 16;
+    var okOnly              = 0;
+    var unattendDestination = null;
+    var signDisk            = true;
+    var mergeFolder         = null;
+    var vdiskDetail         = 0;
+    var logFile             = null;
+    var vhdtoolPath         = null;
+    var diskpartPath        = null;
+    var returnCode          = ERROR_SUCCESS;
+
+    //
+    // If we're running under WScript, return immediately.
+    //
+    if (WScript.FullName.toLowerCase().indexOf("wscript") > -1)
+    {
+        shell.Popup(g_ProductName + " is not designed to run under WScript.\n\nPlease run " + g_ProductName + " with CScript, or set CScript as your primary script execution environment with CSCRIPT //h:cscript.", okOnly, "Incorrect Scripting Engine", critical);
+        WScript.Quit(ERROR_WSCRIPT_NOT_SUPPORTED);
+    }
+
+    //
+    // Create the unique key for this session.
+    // This key is used to create folders for temporary files as well as marking certain resources for use by
+    // a specific WIM2VHD session.
+    //
+    g_tempKey               = typeLibrary.GUID.substr(1,36);
+
+    WScript.Echo(g_ProductName);
+    WScript.Echo("Copyright (C) Microsoft Corporation. All rights reserved.");
+    WScript.Echo("Version " + g_ProductVersion);
+    WScript.Echo("\nCheck for updates at http://code.msdn.microsoft.com/wim2vhd!");
+    WScript.Echo();
+
+    //
+    // Check for a help string request.
+    //
+    if (WScript.Arguments.Named.Exists("?") || 0 == WScript.Arguments.Count())
+    {
+        WScript.Echo("Usage: " + g_ScriptName + " /wim:<wimPath> /sku:<sku>");
+        WScript.Echo("[/vhd:<vhdPath>] [/size:<vhdSizeInMb>] [/disktype:<dynamic|fixed|fastfixed>]");
+        WScript.Echo("[/unattend:<unattendXmlPath>] [/qfe:<qfe1,...,qfeN>]");
+        WScript.Echo("[/ref:<ref1,...,refN] [/dbg:<args>] [/copylocal:<localFolder>]");
+        WScript.Echo("[/passthru:<physicalDrive>] [/signdisk:<true|false>]");
+        WScript.Echo("[/mergefolder:<folderToMerge>]");
+        WScript.Echo("");
+        WScript.Echo("Required parameters:");
+        WScript.Echo("");
+        WScript.Echo("  /wim:<wimPath>");
+        WScript.Echo("");
+        WScript.Echo("    The path of the WIM file to use when creating the VHD.  For example:");
+        WScript.Echo("    X:\\sources\\install.wim");
+        WScript.Echo("");
+        WScript.Echo("    Where X: is the drive letter of your DVD ROM drive.");
+        WScript.Echo("");
+        WScript.Echo("  /sku:<skuName>|<skuIndex>");
+        WScript.Echo("");
+        WScript.Echo("    The SKU within the WIM to use when creating the VHD (e.g. \"ServerStandard\",");
+        WScript.Echo("    \"ServerDatacenterCore\", \"2\", etc.).  This value can either be passed as a");
+        WScript.Echo("    SKU name (typically the easiest method) or as a SKU index (which requires");
+        WScript.Echo("    you to have manually inspected the WIM with a tool like IMAGEX.EXE).");
+        WScript.Echo("");
+        WScript.Echo("Optional parameters:");
+        WScript.Echo("");
+        WScript.Echo("  /vhd:<vhdPath>");
+        WScript.Echo("");
+        WScript.Echo("    The path and name of the VHD to be created.  If a file with this name");
+        WScript.Echo("    already exists, it will be overwritten.  If no VHD is specified, a VHD will");
+        WScript.Echo("    be created in the current folder with a name in the following format:");
+        WScript.Echo("    <Major>.<Minor>.<Build>.<Rev>.<Arch>.<Branch>.<Timestamp>.<SKU>.<Lang>.vhd");
+        WScript.Echo("    ex:");
+        WScript.Echo("       6.1.7600.16385.x86fre.win7_rtm.090713-1255.Ultimate.en-us.vhd");
+        WScript.Echo("");
+        WScript.Echo("    NOTE: If the language cannot be determined from the WIM, no <Lang> block");
+        WScript.Echo("    will be included in the VHD name.");
+        WScript.Echo("");
+        WScript.Echo("  /size:<vhdSizeInMb>");
+        WScript.Echo("");
+        WScript.Echo("    For Fixed disks, this is the size in MB of the VHD that will be created.");
+        WScript.Echo("    For Dynamic disks, this is the maximum size in MB that the VHD can grow to");
+        WScript.Echo("    as additional space is required.");
+        WScript.Echo("    If unspecified, a default value of 40960 MB (40 GB) will be used.");
+        WScript.Echo("");
+        WScript.Echo("  /disktype:<Dynamic|Fixed|FastFixed>");
+        WScript.Echo("");
+        WScript.Echo("    Specifies what kind of VHD should be created: Dynamic, Fixed or FastFixed.");
+        WScript.Echo("    A Fixed disk allocates all of the necessary disk space for the VHD upon");
+        WScript.Echo("    creation.  A Dynamic disk only allocates the space required by files in");
+        WScript.Echo("    the VHD at any given time, and will grow as more space is required.");
+        WScript.Echo("    FastFixed provides the option to create a Fixed VHD much faster than");
+        WScript.Echo("    the Fixed option.  This functionality requires VHDTOOL.EXE, which is");
+        WScript.Echo("    available from http://code.microsoft.msdn.com/vhdtool.  This tool is");
+        WScript.Echo("    unsupported by Microsoft, and can potentially cause security concerns.");
+        WScript.Echo("    The default value is Dynamic.");
+        WScript.Echo("");
+        WScript.Echo("  /unattend:<unattendXmlPath>");
+        WScript.Echo("");
+        WScript.Echo("    The path to an unattend.xml file that will be used to automate the OOBE");
+        WScript.Echo("    portion of Windows setup the first time the VHD is booted.");
+        WScript.Echo("");
+        WScript.Echo("  /qfe:<qfe1,...,qfeN>");
+        WScript.Echo("");
+        WScript.Echo("    A comma-separated list of QFEs to apply to the VHD after the WIM is");
+        WScript.Echo("    applied.  QFEs must be in the .MSU file format, which is the default");
+        WScript.Echo("    QFE format for Windows 7.  They can also be provided in a .CAB format");
+        WScript.Echo("    if you'd prefer to extract the .CABs from the .MSU files.")
+        WScript.Echo("");
+        WScript.Echo("    To extract a CAB from an .MSU, use the following command:");
+        WScript.Echo("");
+        WScript.Echo("    expand -f:win*.cab <.MSU file> <location to extract to>");
+        WScript.Echo("");
+        WScript.Echo("  /ref:<ref1,...,refN>");
+        WScript.Echo("");
+        WScript.Echo("    A comma-separated list of WIM pieces to apply to the VHD.");
+        WScript.Echo("    A \"WIM piece\" is the result of a Split WIM, and typically has a .SWM");
+        WScript.Echo("    file extension.  The first piece of the Split WIM should be specified with");
+        WScript.Echo("    the /WIM switch. Subsequent pieces should be specified with /REF.");
+        WScript.Echo("      ex: " + g_ScriptName + " /WIM:C:\\split.swm /REF:C:\\split2.swm,c:\\split3.swm");
+        WScript.Echo("");
+        WScript.Echo("    See IMAGEX.EXE /SPLIT /? for more information.");
+        WScript.Echo("");
+        WScript.Echo("  /dbg:<protocol>,<port/channel/target>[,<baudrate>]");
+        WScript.Echo("");
+        WScript.Echo("    Configures debugging in the OS on the VHD.");
+        WScript.Echo("    examples:");
+        WScript.Echo("      /dbg:serial,1,115200 - configures serial debugging on COM1 at 115200bps");
+        WScript.Echo("      /dbg:1394,10 - configures 1394 debugging on channel 10");
+        WScript.Echo("      /dbg:usb,debugging - configures USB debugging with the target DEBUGGING");
+        WScript.Echo("");
+        WScript.Echo("  /copylocal:<localFolder>");
+        WScript.Echo("");
+        WScript.Echo("    Copies all of the files necessary to run " + g_ScriptName + " to localFolder,");
+        WScript.Echo("    eliminating the need to install the Windows AIK or OPK.  This does not");
+        WScript.Echo("    include any WIM files, just the binaries that " + g_ScriptName + " depends on.");
+        WScript.Echo("    After this operating completes, run " + g_ScriptName + " from localFolder.");
+        WScript.Echo("    If this switch is specified, no VHD will be created.");
+        WScript.Echo("");
+        WScript.Echo("  /passthru:<physicalDrive>");
+        WScript.Echo("");
+        WScript.Echo("    Applies the WIM directly to the specified drive and makes it bootable.");
+        WScript.Echo("    NOTE: The partition on the disk must be marked as ACTIVE in order to boot");
+        WScript.Echo("    successfully. This action is NOT performed by " + g_ScriptName + ".");
+        WScript.Echo("");
+        WScript.Echo("  /signdisk:<true|false>");
+        WScript.Echo("");
+        WScript.Echo("    Specifies whether or not " + g_ScriptName + " should leave a signature on the VHD");
+        WScript.Echo("    that indicates what version of " + g_ScriptName + " created the VHD, and the date");
+        WScript.Echo("    of creation.  The signature will be located at <VHD>:\\Windows\\WIM2VHD.TXT.");
+        WScript.Echo("    The default value is \"true\".");
+        WScript.Echo("");
+        WScript.Echo("  /mergefolder:<folderToMerge>");
+        WScript.Echo("");
+        WScript.Echo("    Copies the contents of folderToMerge to the root directory of the VHD.");
+        WScript.Echo("    This includes all subfiles and subfolders.  Any files that already exist on");
+        WScript.Echo("    the VHD will be overwritten.");
+        WScript.Echo("");
+
+        return ERROR_DISPLAY_HELP_TEXT;
+    }
+
+    logFile = WScript.ScriptName.replace(/.WSF$/gmi, "-" + g_tempKey + ".LOG");
+    g_Logger = new Logger(logFile);
+    g_Logger.StartTest(g_ScriptName);
+
+    try
+    {
+        //
+        // Check if we're running as an elevated administrator.
+        //
+        if (!isElevatedAdmin())
+        {
+            throw(
+                new Error(
+                    ERROR_NOT_ELEVATED,
+                    "This script must be run from an elevated command prompt and within\nan administrative context."
+            ));
+        }
+
+        //
+        // Parse the command-line arguments.
+        // Preserve default values if new ones aren't given.
+        //
+        g_TracingEnabled       = GetArgumentValue("trace",          false);
+        skuName                = GetArgumentValue("sku",            "UNSPECIFIED");
+        vhdSizeInMb            = GetArgumentValue("size",           40960); // 40 GB
+        vhdType                = GetArgumentValue("disktype",       "dynamic");
+        forceClassicMount      = GetArgumentValue("classicmount",   false);
+        signDisk               = GetArgumentValue("signdisk",       true);
+        mergeFolder            = GetArgumentValue("mergefolder",    null);
+        wimPath                = GetArgumentValue("wim");
+        vhdPath                = GetArgumentValue("vhd");
+        unattendFile           = GetArgumentValue("unattend");
+        qfeList                = GetArgumentValue("qfe");
+        wimPieces              = GetArgumentValue("ref");
+        debugPieces            = GetArgumentValue("dbg");
+        copyLocal              = GetArgumentValue("copylocal");
+        passthru               = GetArgumentValue("passthru");
+
+        switch(vhdType.toLowerCase())
+        {
+            case "dynamic":
+            case "fixed":
+            case "fastfixed":
+                break;
+
+            default:
+                throw(
+                    new Error(
+                        ERROR_INVALID_ARGUMENT,
+                        "\"" + vhdType + "\" is not a valid disk type."
+                ));
+        }
+
+        if (parseFloat(g_win7Major + "." + g_win7Minor) > GetHostWindowsVersion())
+        {
+            g_Logger.LogInfo("Running on Windows 6 - using Hyper-V and ClassicMount...");
+            useHyperV = true;
+            forceClassicMount = true;
+        }
+        else
+        {
+            //
+            // Are we running on the Beta?  If so, the output from DISKPART's DETAIL VDISK command looks a bit different
+            // than it does in RC and RTM.  Get the current build number from the registry and decide which location to use.
+            //
+            if (parseInt(shell.RegRead("HKLM\\software\\microsoft\\windows NT\\currentversion\\BuildLabEx").split(".")[WINDOWS_BUILD]) <= WINDOWS_7_BETA)
+            {
+                vdiskDetail = VDISK_DETAIL_BETA;
+            }
+            else
+            {
+                vdiskDetail = VDISK_DETAIL_RC;
+            }
+        }
+
+        if (null != debugPieces)
+        {
+            debugPieces = debugPieces.split(",");
+        }
+
+        if (null != qfeList)
+        {
+            qfeList = qfeList.split(",");
+        }
+
+        if (null != wimPieces)
+        {
+            wimPieces = wimPieces.split(",");
+        }
+
+        //
+        // Check the debug switches
+        //
+        if (null != debugPieces)
+        {
+            switch (debugPieces[0].toLowerCase().toString())
+            {
+                case "serial" :
+                    if ((null != debugPieces[1]) || (null != debugPieces[2]))
+                    {
+                        dbgSettings = "serial debugport:" + debugPieces[1] + " baudrate:" + debugPieces[2];
+                    }
+                    else
+                    {
+                        g_Logger.LogInfo("Using default serial debugging, COM1, 115200...");
+                        dbgSettings = "serial debugport:1 baudrate:115200";
+                    }
+                    break;
+
+                case "1394"   :
+                    if (null != debugPieces[1])
+                    {
+                        dbgSettings = "1394 channel:" + debugPieces[1];
+                    }
+                    else
+                    {
+                        g_Logger.LogInfo("Using default 1394 debugging, channel 21...");
+                        dbgSettings = "1394 channel:21";
+                    }
+                    break;
+
+                case "usb"    :
+                    if (null != debugPieces[1])
+                    {
+                        dbgSettings = "USB targetname:" + debugPieces[1];
+                    }
+                    else
+                    {
+                        g_Logger.LogInfo("Using default USB debugging, targetname:debugging...");
+                        dbgSettings = "USB targetname:debugging";
+                    }
+                    break;
+
+                default :
+                    throw(
+                        new Error(
+                            ERROR_INVALID_ARGUMENT,
+                            "Incorrect debug settings specified."
+                    ));
+            }
+        }
+
+        //
+        // Determine the WIM path.
+        //
+        if (null == wimPath)
+        {
+            throw(
+                new Error(
+                    ERROR_INVALID_ARGUMENT,
+                    "The /WIM argument is required."
+            ));
+        }
+        else
+        {
+            TracePrint("Looking for specified WIM file.");
+            wimPath = VerifyAndReturnFilePath(wimPath, true);
+        }
+
+        TracePrint("WIMPath: " + wimPath);
+
+        //
+        // Look through any files passed in with the /ref switch and append it to wimCommand.
+        //
+        try
+        {
+            for (wimPiece in wimPieces)
+            {
+                TracePrint("Looking for " + wimPieces[wimPiece]);
+                var piece = VerifyAndReturnFilePath(wimPieces[wimPiece], true);
+                TracePrint("Found " + piece);
+                wimCommand += " /ref \"" + piece + "\"";
+            }
+        }
+        catch (exception)
+        {
+            throw(
+                new Error(
+                    ERROR_FILE_NOT_FOUND,
+                    "Unable to assemble WIM pieces.  " + exception.description
+            ));
+        }
+
+        if (null == vhdPath)
+        {
+            //
+            // We don't have a VHD name to derive the path from.
+            // Just use the current folder.
+            //
+            vhdTempPath = fileSystem.GetAbsolutePathName(".");
+
+        }
+        else
+        {
+            try
+            {
+                var file = fileSystem.GetFile(fileSystem.GetAbsolutePathName(vhdPath));
+                TracePrint("The VHD currently exists.  It will be overwritten...");
+                vhdTempPath = file.ParentFolder.Path;
+                vhdPath = file.Path;
+
+                // Append the ".vhd" file extension to the VHD path if it's not already there.
+                if (null == vhdPath.match(new RegExp("\\.[V|v][H|h][D|d]$", "i")))
+                {
+                    vhdPath += ".vhd";
+                }
+            }
+            catch (exception)
+            {
+                //
+                // This fires if the VHD does not exist.
+                // It's perfectly fine if we run into this.  In fact, it should happen most of the time.
+                //
+                TracePrint("The VHD did not exist...");
+                vhdPath = fileSystem.GetAbsolutePathName(vhdPath);
+                vhdTempPath = fileSystem.GetParentFolderName(vhdPath);
+            }
+        }
+
+        //
+        // If the last character in vhdTempPath is not a backslash, add one before we create the full VHD path.
+        //
+        if ("\\" == vhdTempPath.charAt(vhdTempPath.length - 1))
+        {
+            vhdTempPath += g_tempKey + ".vhd";
+        }
+        else
+        {
+            vhdTempPath += "\\" + g_tempKey + ".vhd";
+        }
+        TracePrint("VHDTempPath: " + vhdTempPath);
+        TracePrint("VHDPath: " + vhdPath);
+
+        //
+        // Check the passthru drive to make sure it's valid
+        //
+        if (null != passthru)
+        {
+            g_Logger.LogWarning("Remember to mark an active partition on your passthru drive or it will not boot!");
+            try
+            {
+                passthru = fileSystem.GetDrive(passthru).Path;
+            }
+            catch (exception)
+            {
+                throw(
+                    new Error(
+                        ERROR_INVALID_ARGUMENT,
+                        "Passthru drive is invalid.\n" + exception.description
+                ));
+            }
+        }
+
+        //
+        // Try to figure out the paths for required binaries.
+        //
+        g_Logger.LogInfo("Looking for IMAGEX.EXE...");
+        imagexPath      = VerifyAndReturnFilePath(GetArgumentValue("imagex",    FindBinary(wimPath, "imagex.exe")),   true);
+        g_Logger.LogInfo("Looking for BCDBOOT.EXE...");
+        bcdBootPath     = VerifyAndReturnFilePath(GetArgumentValue("bcdboot",   FindBinary(wimPath, "bcdboot.exe")),  true);
+        g_Logger.LogInfo("Looking for BCDEDIT.EXE...");
+        bcdEditPath     = VerifyAndReturnFilePath(GetArgumentValue("bcdedit",   FindBinary(wimPath, "bcdedit.exe")),  true);
+        g_Logger.LogInfo("Looking for REG.EXE...");
+        regExePath      = VerifyAndReturnFilePath(GetArgumentValue("reg",       FindBinary(wimPath, "reg.exe")),      true);
+        g_Logger.LogInfo("Looking for DISKPART.EXE...");
+        diskpartPath    = VerifyAndReturnFilePath(GetArgumentValue("diskpart",  FindBinary(wimPath, "diskpart.exe")), true);
+
+        if (vhdType.toLowerCase() == "fastfixed") {
+
+            g_Logger.LogInfo("Looking for VHDTOOL.EXE for FastFixed disk creation...");
+            vhdtoolPath = VerifyAndReturnFilePath(GetArgumentValue("vhdtool",   FindBinary(wimPath, "vhdtool.exe")),  true);
+        }
+
+
+        //
+        // We're not actually running a conversion here, we're just copying the files locally
+        // so that we're removing any external dependencies.  This section is not safe for
+        // multiple instances, but there shouldn't be any reason why a person would run multiple
+        // instances with /copylocal copying to the same location.
+        //
+        if (null != copyLocal)
+        {
+            g_Logger.LogInfo("Copying script files to local folder " + copyLocal + "...");
+            if (!fileSystem.FolderExists(copyLocal))
+            {
+                TracePrint("Creating folder...");
+                fileSystem.CreateFolder(copyLocal);
+            }
+
+            TracePrint("Copying script...");
+            fileSystem.CopyFile(WScript.ScriptFullName, copyLocal + "\\" + WScript.ScriptName,  true);
+            TracePrint("Copying IMAGEX.EXE...");
+            fileSystem.CopyFile(imagexPath,             copyLocal + "\\imagex.exe",             true);
+            TracePrint("Copying BCDBOOT.EXE...");
+            fileSystem.CopyFile(bcdBootPath,            copyLocal + "\\bcdboot.exe",            true);
+            TracePrint("Copying BCDEDIT.EXE...");
+            fileSystem.CopyFile(bcdEditPath,            copyLocal + "\\bcdedit.exe",            true);
+            TracePrint("Copying REG.EXE...");
+            fileSystem.CopyFile(regExePath,             copyLocal + "\\reg.exe",                true);
+            TracePrint("Copying DISKPART.EXE...");
+            fileSystem.CopyFile(diskpartPath,           copyLocal + "\\diskpart.exe",           true);
+            TracePrint("Copying VHDTOOL.EXE...");
+            fileSystem.CopyFile(vhdtoolPath,            copyLocal + "\\vhdtool.exe",            true);
+            g_Logger.EndTest();
+            g_Logger.CloseLog();
+            WScript.Quit(0);
+        }
+
+        if (null != unattendFile)
+        {
+            TracePrint("Looking for " + unattendFile);
+            unattendFile = VerifyAndReturnFilePath(unattendFile, true);
+        }
+
+        TracePrint("Parsing QFE list...");
+
+        if (null != qfeList)
+        {
+            try
+            {
+                for (qfe in qfeList)
+                {
+                    // Make sure that the file exists, and store the fully qualified path in the array.
+                    TracePrint("Looking for " + qfeList[qfe]);
+                    qfeList[qfe] = VerifyAndReturnFilePath(qfeList[qfe], true);
+                    TracePrint("Full path for QFE is: " + qfeList[qfe]);
+                }
+            }
+            catch (exception)
+            {
+                throw(
+                    new Error(
+                        ERROR_FILE_NOT_FOUND,
+                        "Unable to find all QFE pieces.  " + exception.description
+                ));
+            }
+        }
+
+        TracePrint("Searching for specified SKU...");
+
+        //
+        // If the value passed to /SKU is numeric, assume it was a WIM index.
+        //
+        if (!isNaN(skuName))
+        {
+            skuIndex = skuName;
+            skuName = "UNSPECIFIED";
+        }
+
+        TracePrint("Creating temp folder...");
+
+        //
+        // Create a temporary directory.
+        //
+        g_tempPath = shell.ExpandEnvironmentStrings("%temp%") + "\\" + g_ScriptName;
+
+        if (!fileSystem.FolderExists(g_tempPath))
+        {
+            try
+            {
+                fileSystem.CreateFolder(g_tempPath);
+            }
+            catch (exception)
+            {
+                //
+                // It's possible that we hit this because a concurrent instance created the folder at the same time.  Let's check.
+                //
+                if (!fileSystem.FolderExists(g_tempPath))
+                {
+                    throw(
+                        new Error(
+                            ERROR_INVALID_ARGUMENT,
+                            "Unable to create working folder.  This usually happens when the %temp% environment/nvariable points to a directory that doesn't exist."
+                    ));
+                }
+            }
+        }
+
+        g_tempPath += "\\" + g_tempKey;
+
+        if (!fileSystem.FolderExists(g_tempPath))
+        {
+            fileSystem.CreateFolder(g_tempPath);
+        }
+
+        TracePrint("TempPath: " + g_tempPath);
+        g_Logger.LogInfo("Session key is " + g_tempKey);
+
+        //
+        // Dump the WIM metadata to XML.
+        //
+        g_Logger.LogInfo("Inspecting the WIM...");
+        ExecuteCommand("%comspec% /c \"\"" + imagexPath + "\" /INFO /XML \"" + wimPath + "\"", false, g_tempPath + "\\imagex.xml\"");
+
+        //
+        // Locate the SKU index.
+        //
+        var nodes = null;
+        var node = null;
+        var nameNode = null;
+        var matchingNodeCount = 0;
+
+        xml.async = false;
+        xml.load(g_tempPath + "\\imagex.xml");
+
+        nodes = xml.selectNodes("/WIM/IMAGE");
+
+        switch (nodes.length)
+        {
+            case 0:
+                throw(
+                    new Error(
+                        ERROR_INVALID_METADATA,
+                        "No images were found in the WIM metadata.  Either this WIM does not\n" +
+                        "contain any images, or there was an error generating or parsing the metadata."
+                ));
+                break;
+
+            case 1:
+                //
+                // Check to make sure we're running on staged bits
+                //
+                for (i = 0; i < nodes.length; i++)
+                {
+                    node = nodes[i].selectSingleNode("FLAGS");
+                    if ((null != node) && (null != (node.text).match(new RegExp("(^| +|:|,)Windows Foundation( +|$|,)", "i"))))
+                    {
+                        throw(
+                            new Error(
+                                ERROR_UNSUPPORTED_BUILD_TYPE,
+                                g_ScriptName + " cannot process unstaged or checked builds of Windows.\n" +
+                                "Please try again with a staged or free build."
+                        ));
+                    }
+                }
+                g_Logger.LogInfo("WIM contains only one image, applying it...");
+                skuIndex = 1;
+                break;
+
+            default:
+                //
+                // Check to make sure we're running on staged bits
+                //
+                for (i = 0; i < nodes.length; i++)
+                {
+                    node = nodes[i].selectSingleNode("FLAGS");
+                    if ((null != node) && (null != (node.text).match(new RegExp("(^| +|:|,)Windows Foundation( +|$|,)", "i"))))
+                    {
+                        throw(
+                            new Error(
+                                ERROR_UNSUPPORTED_BUILD_TYPE,
+                                g_ScriptName + " cannot process unstaged or checked builds of Windows.\n" +
+                                "Please try again with a staged or free build."
+                        ));
+                    }
+                }
+
+                //
+                // Look for the specified SKU if the image index is unspecified
+                //
+                if (0 == skuIndex)
+                {
+                    for (i = 0; i < nodes.length; i++)
+                    {
+                        node = nodes[i].selectSingleNode("DESCRIPTION");
+
+                        if (node) {
+
+                            //
+                            // Look for a DESCRIPTION element that contains the SKU name.
+                            //
+                            if ((node.text).match(new RegExp("(^| +|:|,)" + skuName + "( +|$|,)", "i")) != null)
+                            {
+                                nameNode = node;
+                                matchingNodeCount++;
+                            }
+
+                            imageList += "\r\n" + node.text.slice(node.text.lastIndexOf(" ") + 1);
+
+                        } else {
+                            throw(
+                                new Error(
+                                    ERROR_INVALID_METADATA,
+                                    "There are no description nodes in the WIM file, so you cannot choose an image\n" +
+                                    "based on the SKU name.  Please run this script again, and specify the image index of the\n" +
+                                    "image you want to apply.  See the online help for more information."
+                            ));
+                        }
+                    }
+
+                    if (0 == matchingNodeCount)
+                    {
+                        throw(
+                            new Error(
+                                ERROR_INVALID_ARGUMENT,
+                                "The supplied WIM does not contain a(n) \"" + skuName + "\" image.\n" +
+                                "Possible images are:" + imageList
+                        ));
+                    }
+
+                    if (1 < matchingNodeCount)
+                    {
+                        throw(
+                            new Error(
+                                ERROR_INVALID_ARGUMENT,
+                                "The supplied WIM contains more than one image that matches \"" + sku +
+                                "\".\nPlease use an image index to specify which image to use.\n\n" +
+                                "It's also possible that this is an unstaged WIM, which is not supported."
+                        ));
+                    }
+
+                    node = nameNode.selectSingleNode("../@INDEX");
+
+                    if (! node)
+                    {
+                        throw(
+                            new Error(
+                                ERROR_INVALID_ARGUMENT,
+                                "The supplied WIM contains a \"" + skuName + "\" image, but the image has no index.\n" +
+                                "This means that the impossible situation that I never planned for happened."
+                        ));
+                    }
+
+                    skuIndex = node.value;
+                } // 0 == skuIndex
+                break;
+        } // switch
+
+
+        //
+        // Determine the SKU version and architecture.
+        //
+        skuMajorVersionNode = xml.selectSingleNode("//WIM/IMAGE[@INDEX='" + skuIndex + "']/WINDOWS/VERSION/MAJOR");
+        if (skuMajorVersionNode) { skuMajorVersion = parseInt(skuMajorVersionNode.text); }
+
+        skuMinorVersionNode = xml.selectSingleNode("//WIM/IMAGE[@INDEX='" + skuIndex + "']/WINDOWS/VERSION/MINOR");
+        if (skuMinorVersionNode) { skuMinorVersion = parseInt(skuMinorVersionNode.text); }
+
+        skuLanguageNode     = xml.selectSingleNode("//WIM/IMAGE[@INDEX='" + skuIndex + "']/WINDOWS/LANGUAGES/LANGUAGE");
+        if (skuLanguageNode)     { skuLanguage     = skuLanguageNode.text;               }
+
+        skuDefaultLangNode  = xml.selectSingleNode("//WIM/IMAGE[@INDEX='" + skuIndex + "']/WINDOWS/LANGUAGES/DEFAULT");
+        if (skuDefaultLangNode)  { skuDefaultLang  = skuDefaultLangNode.text;            }
+
+        skuDescriptionNode  = xml.selectSingleNode("//WIM/IMAGE[@INDEX='" + skuIndex + "']/NAME");
+        if (skuDescriptionNode)  { skuDescription  = skuDescriptionNode.text;            }
+
+        skuArchitectureNode = xml.selectSingleNode("//WIM/IMAGE[@INDEX='" + skuIndex + "']/WINDOWS/ARCH");
+        if (skuArchitectureNode) { skuArchitecture = parseInt(skuArchitectureNode.text); }
+
+        switch (skuArchitecture)
+        {
+            case 0:
+                skuArchitecture = "x86";
+                break;
+
+            case 6:
+                skuArchitecture = "ia64"; // IA64 is not supported because EFI/GPT partitions are not supported.
+                throw (
+                    new Error(
+                        ERROR_UNSUPPORTED_BUILD_TYPE,
+                        "IA64 VHDs are not supported at this time. For more information, see:\n" +
+                        "http://code.msdn.microsoft.com/wim2vhd/WorkItem/View.aspx?WorkItemId=13"
+                ));
+
+                break;
+
+            case 9:
+                skuArchitecture = "amd64";
+                break;
+
+            default:
+                g_Logger.LogWarning("Unable to determine the SKU architecture... it may be possible to continue...");
+        }
+
+        // Are we running against a Windows 7 image?
+        if ((skuMajorVersion <= g_win7Major) && (skuMinorVersion < g_win7Minor))
+        {
+            throw(
+                new Error(
+                    ERROR_UNSUPPORTED_WINDOWS_VERSION,
+                    g_ProductName + " cannot convert Windows 6 WIMs to the VHD format."
+            ));
+        }
+
+        // If we couldn't find a language, assume our fallback language.
+        if ((null == skuLanguage) || ("" == skuLanguage))
+        {
+            skuLanguage = fallbackLanguage;
+        }
+
+        //
+        // Create and mount the VHD.
+        //
+        if (null == passthru)
+        {
+            var vhdParentFolder = fileSystem.GetFolder(fileSystem.GetParentFolderName(vhdTempPath));
+
+            if (vhdParentFolder.Attributes & NTFS_COMPRESSED) {
+                throw(
+                    new Error(
+                        ERROR_DRIVE_IS_COMPRESSED,
+                        "VHDs cannot be created in a location that is using NTFS compression.\n" +
+                        "Please choose a new location with the /VHD switch, or uncompress the folder.\n" +
+                        "(Folder: " + vhdParentFolder.Path + ")"
+                ));
+            }
+
+            if (useHyperV)
+            {
+                TracePrint("Using Hyper-V VHD Handling...");
+                imageService = new ImageManagementService();
+
+                switch (vhdType.toLowerCase())
+                {
+                    case "fixed":
+                        g_Logger.LogInfo("Creating a Fixed VHD.  This can be a time consuming process...");
+                        imageService.CreateFixedVirtualHardDiskAndWait(vhdTempPath, vhdSizeInMb * 1024 * 1024);
+                        break;
+
+                    case "dynamic":
+                        imageService.CreateDynamicVirtualHardDiskAndWait(vhdTempPath, vhdSizeInMb * 1024 * 1024);
+                        break;
+
+                    case "fastfixed":
+                        try {
+                            g_Logger.LogWarning("This function bypasses file system security!\nThe resulting VHD file _will_ contain data which currently exists on the\nphysical disk.");
+                            ExecuteCommand(
+                                vhdtoolPath + " /create " + vhdTempPath + " " + (vhdSizeInMb * 1024 * 1024),
+                                false
+                            );
+                        } catch (exception) {
+
+                            // VHDTool has a habit of creating the VHD and then failing.  This results in an invalid
+                            // VHD file sitting around and taking up space.
+                            // Catch the exception thrown in ExecuteCommand, clean up the VHD, and then rethrow.
+
+                            TracePrint("VHDTool failed.  Deleting the VHD if one was created...");
+
+                            if (fileSystem.FileExists(vhdTempPath)) {
+
+                                fileSystem.Delete(vhdTempPath);
+                            }
+
+                            throw exception
+                        }
+
+                        break;
+                }
+
+                mountedStorageImage = imageService.MountAndWait(vhdTempPath);
+                var diskIndex = imageService.GetMountedDiskDrive(mountedStorageImage).Index;
+
+                diskpartScript = fileSystem.CreateTextFile(g_tempPath + "\\diskpartSetup.txt", true, false);
+                diskpartScript.WriteLine("select disk " + diskIndex);
+                diskpartScript.WriteLine("online disk noerr");
+                diskpartScript.WriteLine("attributes disk clear readonly");
+                diskpartScript.WriteLine("create partition primary");
+                diskpartScript.WriteLine("select partition 1");
+                diskpartScript.WriteLine("active");
+                diskpartScript.WriteLine("format FS=NTFS LABEL=\"" + g_tempKey.slice(0, 12) + "\" QUICK OVERRIDE");
+
+                if (forceClassicMount)
+                {
+                    mountPath = GetNextAvailableDriveLetter();
+                    diskpartScript.WriteLine("assign letter=" + mountPath);
+                }
+                else
+                {
+                    mountPath = g_tempPath + "\\mount";
+
+                    if (!fileSystem.FolderExists(mountPath))
+                    {
+                        fileSystem.CreateFolder(mountPath);
+                    }
+
+                    diskpartScript.WriteLine("assign mount=" + mountPath);
+                }
+
+                ExecuteCommand("%comspec% /c " + diskpartPath + " /s \"" + g_tempPath + "\\diskpartSetup.txt\"", false, g_tempPath + "\\diskpartSetup.Log");
+            }
+            else  // Using native VHD Handling.
+            {
+                diskpartScript = fileSystem.CreateTextFile(g_tempPath + "\\diskpartSetup.txt", true, false);
+
+                //
+                // Create and mount the VHD.
+                //
+                switch(vhdType.toLowerCase())
+                {
+                    case "fixed":
+                        g_Logger.LogInfo("Creating a Fixed VHD.  This can be a time consuming process...");
+                        diskpartScript.WriteLine("create vdisk file=\"" + vhdTempPath + "\" maximum=" + vhdSizeInMb + " type=fixed noerr");
+                        break;
+
+                    case "dynamic":
+                        diskpartScript.WriteLine("create vdisk file=\"" + vhdTempPath + "\" maximum=" + vhdSizeInMb + " type=expandable noerr");
+                        break;
+
+                    case "fastfixed":
+                        try {
+                            g_Logger.LogWarning("This function bypasses file system security!\nThe resulting VHD file _will_ contain data which currently exists on the\nphysical disk.");
+                            ExecuteCommand(
+                                vhdtoolPath + " /create " + vhdTempPath + " " + (vhdSizeInMb * 1024 * 1024),
+                                false
+                            );
+                        } catch (exception) {
+
+                            // VHDTool has a habit of creating the VHD and then failing.  This results in an invalid
+                            // VHD file sitting around and taking up space.
+                            // Catch the exception thrown in ExecuteCommand, clean up the VHD, and then rethrow.
+
+                            TracePrint("VHDTool failed.  Deleting the VHD if one was created...");
+
+                            if (fileSystem.FileExists(vhdTempPath)) {
+
+                                fileSystem.Delete(vhdTempPath);
+                            }
+
+                            throw exception
+                        }
+
+                        break;
+                }
+
+                diskpartScript.WriteLine("select vdisk file=\"" + vhdTempPath + "\"");
+                diskpartScript.WriteLine("attach vdisk noerr");
+                diskpartScript.WriteLine("Exit");
+                diskpartScript.Close();
+                ExecuteCommand("%comspec% /c " + diskpartPath + " /s \"" + g_tempPath + "\\diskpartSetup.txt\"", false, g_tempPath + "\\diskpartSetup.log");
+                mountedStorageImage = true;
+
+                var diskIndex = 0;
+
+                do // Keep doing this until we get the disk number.
+                {
+                    //
+                    // Reuse the diskpartScript object to create another script to get info from the disk.
+                    // Use DETAIL VDISK to get the disk number once the VHD has been attached.
+                    // TODO: Investigate changing to a WMI query for this.
+                    //
+
+                    diskpartScript = fileSystem.CreateTextFile(g_tempPath + "\\diskpartGetInfo.txt", true, false);
+                    diskpartScript.WriteLine("select vdisk file=\"" + vhdTempPath + "\"");
+                    diskpartScript.WriteLine("detail vdisk");
+                    diskpartScript.WriteLine("exit");
+                    diskpartScript.Close();
+
+                    ExecuteCommand("%comspec% /c " + diskpartPath + " /s \"" + g_tempPath + "\\diskpartGetInfo.txt\"", false, g_tempPath + "\\diskpartGetInfo.Log");
+
+                    var scratchFile = fileSystem.OpenTextFile(g_tempPath + "\\diskpartGetInfo.log", 1, false);
+                    TracePrint("Getting Disk Information:  Try " + ++retryCount);
+                    try
+                    {
+                        //
+                        // To get around localized strings in DiskPart, we're going to look at the
+                        // exact line where the value appears (vdiskDetail), and get the first number after
+                        // the label/value separator (:).
+                        //
+                        diskIndex = parseInt(scratchFile.ReadAll().split("\n")[vdiskDetail].split(":")[1]);
+                    }
+                    catch (e)
+                    {
+                        TracePrint("Couldn't get disk index on try " + retryCount);
+                    }
+                    finally
+                    {
+                        scratchFile.Close();
+                    }
+                } while (0 == diskIndex && retryCount < 10)
+
+                if (0 == diskIndex)
+                {
+                    throw(
+                        new Error(
+                            ERROR_CANNOT_FIND_DISK_INDEX,
+                            "Unable to determine disk index of attached VHD."
+                    ));
+                }
+
+                //
+                // Reuse the diskpartScript object to create the script for unmounting the disk.
+                //
+                diskpartScript = fileSystem.CreateTextFile(g_tempPath + "\\diskpartTeardown.txt", true, false);
+                diskpartScript.WriteLine("select disk " + diskIndex);
+                diskpartScript.WriteLine("select partition 1");
+                diskpartScript.WriteLine("remove");
+                diskpartScript.WriteLine("select vdisk file=\"" + vhdTempPath + "\"");
+                diskpartScript.WriteLine("detach vdisk");
+                diskpartScript.WriteLine("rescan");
+                diskpartScript.WriteLine("exit");
+                diskpartScript.Close();
+
+                //
+                // Format the disk.
+                //
+                g_Logger.LogInfo("Configuring and formatting the VHD...");
+
+                //
+                // Reuse the diskpartScript object to create the script for formatting the disk.
+                //
+                diskpartScript = fileSystem.CreateTextFile(g_tempPath + "\\diskpartSetupEx.txt", true, false);
+                diskpartScript.WriteLine("select disk " + diskIndex);
+                diskpartScript.WriteLine("attributes disk clear readonly");
+                diskpartScript.WriteLine("create partition primary");
+                diskpartScript.WriteLine("select partition 1");
+                diskpartScript.WriteLine("active");
+                diskpartScript.WriteLine("rescan");
+                diskpartScript.WriteLine("format FS=NTFS LABEL=\"\" QUICK OVERRIDE");
+
+                if (forceClassicMount)
+                {
+                    TracePrint("Using Classic Mount Technique...");
+                    mountPath = GetNextAvailableDriveLetter();
+                    diskpartScript.WriteLine("assign letter=" + mountPath);
+                }
+                else
+                {
+                    TracePrint("Using New Mount Technique...");
+                    mountPath = g_tempPath + "\\mount";
+
+                    if (!fileSystem.FolderExists(mountPath))
+                    {
+                        fileSystem.CreateFolder(mountPath);
+                    }
+
+                    diskpartScript.WriteLine("assign mount=" + mountPath);
+                }
+
+                TracePrint("Closing Extended Setup Script...");
+                diskpartScript.WriteLine("exit");
+                diskpartScript.Close();
+
+                TracePrint("Running Extended Setup Script...");
+                ExecuteCommand("%comspec% /c " + diskpartPath + " /s \"" + g_tempPath + "\\diskpartSetupEx.txt\"", false, g_tempPath + "\\diskpartSetupEx.log");
+            }
+
+            //
+            // mountPathEx cannot be set until the disk is mounted.
+            // There are several values that require mountPathEx to be set, so we set them here.
+            // There are also several values that use mountPath instead of mountPathEx, since the file system
+            // is not accessible to most tools when it is specified in a \??\Volume{guid}-style format.
+            // Those are set here as well.
+            //
+            if (forceClassicMount)
+            {
+                mountPathEx = mountPath + ":";
+                wimCommand = imagexPath + " /scroll /apply \"" + wimPath + "\" " + skuIndex + " " + mountPathEx + "\\ /norpfix " + wimCommand;
+                unattendDestination = mountPathEx + "\\unattend.xml";
+                qfeCommand = "dism.exe /image:\"" + mountPathEx + "\" /sysdrivedir:\"" + mountPathEx + "\" /norestart /add-package /loglevel:4 /scratchdir:" + g_tempPath;
+            }
+            else
+            {
+                mountPathEx = GetVolumeIdFromMountPoint(mountPath);
+                wimCommand = imagexPath + " /scroll /apply \"" + wimPath + "\" " + skuIndex + " " + mountPath + "\\ /norpfix " + wimCommand;
+                unattendDestination = mountPath + "\\unattend.xml";
+                qfeCommand = "dism.exe /image:\"" + mountPath + "\" /sysdrivedir:\"" + mountPath + "\" /norestart /add-package /loglevel:4 /scratchdir:" + g_tempPath;
+            }
+        }
+        else // We're running in passthru mode.
+        {
+            diskIndex = GetDiskIndex(passthru);
+            mountPathEx = passthru;
+            mountPath = passthru;
+            wimCommand = imagexPath + " /scroll /apply \"" + wimPath + "\" " + skuIndex + " " + mountPathEx + "\\ /norpfix " + wimCommand;
+            unattendDestination = mountPathEx + "\\unattend.xml";
+            qfeCommand = "dism.exe /image:\"" + mountPathEx + "\" /sysdrivedir:\"" + mountPathEx + "\" /norestart /add-package /loglevel:4 /scratchdir:" + g_tempPath;
+        }
+
+        //
+        // Get rid of the Server 2008-style box asking to format the VHD.
+        //
+        if (shell.AppActivate("Microsoft Windows"))
+        {
+            TracePrint("Found the disk window, trying to close it...");
+            shell.SendKeys("{ESC}");
+        }
+
+        //
+        // Get rid of the Windows 7-style box.
+        //
+        if (shell.AppActivate("AutoPlay"))
+        {
+            TracePrint("Found the disk window, trying to close it...");
+            shell.SendKeys("{ESC}");
+        }
+
+        //
+        // Apply the WIM to the VHD.
+        //
+        g_Logger.LogInfo("Applying the WIM...");
+        ExecuteImageX(wimCommand);
+        TracePrint("MountPath: " + mountPath);
+        TracePrint("MountPathEx: " + mountPathEx);
+
+        //
+        // Service the VHD with the specified QFEs.
+        //
+        for (var qfe in qfeList)
+        {
+            var qfePath = fileSystem.GetFile(qfeList[qfe]);
+            g_Logger.LogInfo("Applying \"" + qfePath.Path + "\" to the VHD.");
+
+                ExecuteCommand(qfeCommand + " /packagepath:\"" + qfePath.Path + "\" /logpath:" + g_tempPath + "\\svc-" + fileSystem.GetFile(qfePath).Name + ".log");
+
+        }
+
+            //
+            // Use the best method for making the VHD Bootable
+            //
+                    g_Logger.LogInfo("Making the VHD bootable with BCDBoot...");
+
+                    if (forceClassicMount)  // Win6 or ClassicMount
+                    {
+                        //
+                        // Try to set the boot loader up with the language specified in the WIM.
+                        // If that fails, fallback.
+                        //
+                        if (0 != ExecuteCommand(bcdBootPath + " " + mountPathEx + "\\windows /l " + skuLanguage + " /s " + mountPathEx, true))
+                        {
+                            //
+                            // Boot Loader FAIL!
+                            //
+                            g_Logger.LogWarning("Failed to configure the VHD boot loader with the language  " + skuLanguage + " in Classic Mode.\nFalling back to " + fallbackLanguage + "...");
+                            ExecuteCommand(bcdBootPath + " " + mountPathEx + "\\windows /l " + fallbackLanguage + " /s " + mountPathEx);
+                        }
+                    }
+                    else
+                    {
+                        //
+                        // Try to set the boot loader up with the language specified in the WIM.
+                        // If that fails, fallback.
+                        //
+                        // BCDBoot cannot get system files from the \??\Volume{guid} format of mountPathEx, so use mountPath instead.
+                        if (0 != ExecuteCommand(bcdBootPath + " " + mountPath + "\\windows /l " + skuLanguage + " /s " + mountPathEx, true))
+                        {
+                            //
+                            // Boot Loader FAIL!
+                            //
+                            g_Logger.LogWarning("Failed to configure the VHD boot loader with the language " + skuLanguage + ".\nFalling back to " + fallbackLanguage + "...");
+                            ExecuteCommand(bcdBootPath + " " + mountPath + "\\windows /l " + fallbackLanguage +" /s " + mountPathEx);
+                        }
+
+                        //
+                        // BCDBoot just takes the path in mountPath and uses it as the root of the drive, in case that's what
+                        // the user actually wanted to do.
+                        // We don't want to do that, so we'll reset those values.
+                        //
+                        ExecuteCommand(bcdEditPath + " /store " + mountPath + "\\boot\\bcd /set {default} path \\Windows\\System32\\Winload.exe");
+                        ExecuteCommand(bcdEditPath + " /store " + mountPath + "\\boot\\bcd /set {default} systemroot \\Windows");
+                    }
+
+                    if (parseFloat(g_win7Major + "." + g_win7Minor) == GetHostWindowsVersion())
+                    {
+                        // This WMI API call only exists on Windows 7.
+                        SetQualifiedPartitionDeviceElement(diskIndex, mountPathEx + "\\boot\\bcd");
+                    }
+                    else
+                    {
+                        g_Logger.LogWarning("This VHD may not boot correctly in a Virtual Machine." +
+                            "\nFor best results, create VHDs on Windows 7 or Windows Server 2008 R2.");
+                    }
+
+                    //
+                    // If specified, add the debugger settings to the VHD BCD store
+                    // This only executes if we're not doing a legacy boot.
+                    //
+                    if (null != dbgSettings)
+                    {
+                        g_Logger.LogInfo("Configuring kernel debugging in the VHD...");
+                        ExecuteCommand(bcdEditPath + " /store " + mountPathEx + "\\boot\\bcd /set {default} debug on");
+                        ExecuteCommand(bcdEditPath + " /store " + mountPathEx + "\\boot\\bcd /dbgsettings " + dbgSettings);
+                        ExecuteCommand(bcdEditPath + " /store " + mountPathEx + "\\boot\\bcd /set {default} bootdebug on");
+                    }
+        //
+        // Copy unattend file to VHD
+        //
+        if (null != unattendFile)
+        {
+            g_Logger.LogInfo("Copying unattend file to VHD...");
+            TracePrint(unattendFile + "->" + unattendDestination);
+            fileSystem.CopyFile(unattendFile, unattendDestination, true);
+        }
+
+
+        //
+        // If the user specified a folder to copy into the VHD, we do it now.
+        //
+        if (null != mergeFolder)
+        {
+            g_Logger.LogInfo("Merging specifed folder into VHD...");
+            mergeFolder = fileSystem.GetAbsolutePathName(mergeFolder);
+
+            if (!fileSystem.FolderExists(mergeFolder))
+            {
+                g_Logger.LogWarning("Couldn't find the folder specified by /mergeFolder");
+            }
+            else
+            {
+                if (forceClassicMount)
+                {
+                    fileSystem.CopyFolder(mergeFolder, mountPathEx, true);
+                }
+                else
+                {
+                    fileSystem.CopyFolder(mergeFolder, mountPath, true);
+                }
+            }
+        }
+
+        //
+        // If we don't have a name for the VHD, generate one from data in the VHD.
+        //
+        if (null == vhdPath)
+        {
+            TracePrint("Generating VHD name...");
+                tempSystemHiveLoaded = true;
+                ExecuteCommand("REG LOAD HKLM\\" + g_tempKey + " " + mountPathEx + "\\Windows\\System32\\Config\\SOFTWARE");
+
+                vhdPath = fileSystem.GetAbsolutePathName(".");
+
+                //
+                // If the last character in vhdPath is not a backslash, add one before we create the full VHD path.
+                //
+                if ("\\" != vhdPath.charAt(vhdPath.length - 1))
+                {
+                    vhdPath += "\\";
+                }
+
+                vhdPath +=
+                    shell.RegRead("HKLM\\" + g_tempKey + "\\Microsoft\\Windows NT\\CurrentVersion\\CurrentVersion") + "." +
+                    shell.RegRead("HKLM\\" + g_tempKey + "\\Microsoft\\Windows NT\\CurrentVersion\\BuildLabEx") + "." +
+                    shell.RegRead("HKLM\\" + g_tempKey + "\\Microsoft\\Windows NT\\CurrentVersion\\EditionID");
+
+                //
+                // Determine whether the OS is Core or not.
+                //
+                if (shell.RegRead("HKLM\\" + g_tempKey + "\\Microsoft\\Windows NT\\CurrentVersion\\InstallationType") == "Server Core")
+                {
+                    vhdPath += "Core";
+                }
+
+                if (skuLanguage)
+                {
+                    vhdPath += "." + skuLanguage;
+                }
+                vhdPath += ".vhd";
+
+                ExecuteCommand("REG UNLOAD HKLM\\" + g_tempKey);
+                tempSystemHiveLoaded = false;
+        }
+
+        //
+        // Signing the disk.
+        //
+        if (signDisk)
+        {
+            TracePrint("Creating \\WINDOWS\\WIM2VHD.TXT flag...");
+            try
+            {
+                var signature = fileSystem.CreateTextFile(mountPathEx + "\\Windows\\WIM2VHD.TXT");
+                var today = new Date();
+                signature.WriteLine("Generated by " + g_ScriptName + " " + g_ProductVersion + " on " +
+                                   (today.getMonth() + 1) + "/" +
+                                    today.getDate() + "/" +
+                                    today.getYear() + " at " +
+                                    today.getHours() + ":" +
+                                    today.getMinutes() + ":" +
+                                    today.getSeconds() + "." +
+                                    today.getMilliseconds());
+                signature.Close();
+            }
+            catch (exception)
+            {
+                // This is an unimportant operation.  If it fails, continue as normal.
+            }
+        }
+
+        //
+        // Unmount the VHD.
+        //
+        g_Logger.LogInfo("Unmounting the VHD...");
+
+        if (null == passthru)
+        {
+            if (useHyperV)
+            {
+                imageService.UnmountImage(mountedStorageImage)
+            }
+            else
+            {
+                ExecuteCommand("%comspec% /c " + diskpartPath + " /s \"" + g_tempPath + "\\diskpartTeardown.txt\" > " + g_tempPath + "\\diskpartTeardown.log");
+            }
+
+            mountedStorageImage = null;
+
+            //
+            // If the file specified by vhdPath already exists, delete it.
+            //
+            if (fileSystem.FileExists(vhdPath))
+            {
+                try {
+                    TracePrint("Attempting to delete existing file.");
+                    fileSystem.DeleteFile(vhdPath, true);
+                } catch (exception) {
+                    throw(
+                        new Error(
+                            ERROR_FILESYSTEM_TASK_FAILURE,
+                            "Cannot delete " + vhdPath + ".  Cannot continue."
+                    ));
+                }
+            }
+
+            //
+            // Rename the temporary VHD.
+            //
+            TracePrint("Renaming temporary VHD...");
+            try
+            {
+                fileSystem.MoveFile(vhdTempPath, vhdPath);
+            }
+            catch (exception)
+            {
+                throw(
+                    new Error(
+                        ERROR_FILESYSTEM_TASK_FAILURE,
+                        "Can't rename the temporary VHD."
+                ));
+            }
+
+        }
+
+        succeeded = true;
+    }
+    catch (exception)
+    {
+        succeeded = false;
+        returnCode = exception.number;
+
+        g_Logger.LogError(exception.description, exception.number);
+
+        if (tempSystemHiveLoaded)
+        {
+            ExecuteCommand("%comspec% /c " + regExePath + " unload HKLM\\" + g_tempKey);
+        }
+
+        if ((mountedStorageImage) && (null == passthru))
+        {
+            g_Logger.LogInfo("Unmounting the VHD due to error...");
+
+            if (useHyperV)
+            {
+                imageService.UnmountImage(mountedStorageImage)
+            }
+            else
+            {
+                ExecuteCommand("%comspec% /c " + diskpartPath + " /s \"" + g_tempPath + "\\diskpartTeardown.txt\" > " + g_tempPath + "\\diskpartTeardownError.log");
+            }
+
+            mountedStorageImage = null;
+        }
+    }
+    finally
+    {
+        try
+        {
+            if (fileSystem.FileExists(vhdTempPath))
+            {
+                TracePrint("Trying to delete the temporary VHD file...");
+                fileSystem.DeleteFile(vhdTempPath);
+            }
+
+            if (succeeded)
+            {
+                if (fileSystem.FolderExists(g_tempPath))
+                {
+                    fileSystem.DeleteFolder(g_tempPath, true);
+                }
+            }
+            else
+            {
+                var errMsg = "In order to help resolve the issue, temporary files have\nnot been deleted.";
+
+
+
+                if (null != g_tempPath)
+                {
+                    errMsg += "  They are in:\n" + g_tempPath;
+                }
+                g_Logger.LogWarning(errMsg);
+            }
+        }
+        catch (exception)
+        {
+            g_Logger.LogWarning("Unable to delete temporary files and folders.\n" + exception.description);
+        }
+        finally
+        {
+            g_Logger.EndTest();
+        }
+    }
+
+    g_Logger.LogInfo("Done.");
+    g_Logger.CloseLog();
+
+    if (succeeded)
+    {
+        //
+        // If the file specified by vhdPath already exists, delete it.
+        //
+        if (fileSystem.FileExists(vhdPath + ".LOG"))
+        {
+            fileSystem.DeleteFile(vhdPath + ".LOG", true);
+        }
+
+        if (fileSystem.FileExists(vhdPath + ".LOG"))
+        {
+            throw(
+                new Error(
+                    ERROR_FILESYSTEM_TASK_FAILURE,
+                    "The file \"" + vhdPath + ".LOG\" cannot be overwritten.\nYour log file is:\n" + logFile + "\n"
+            ));
+        }
+        else
+        {
+            //
+            // Rename the log file to be the same as the VHD.
+            //
+            if (fileSystem.FileExists(logFile))
+            {
+                fileSystem.MoveFile(logFile, vhdPath + ".LOG");
+            }
+        }
+    }
+
+    return returnCode;
+}
+
+//
+// Parse the arguments given on the command line in comparison with the arguments we expect.
+// If an argument isn't specified, set the default value.
+//
+function
+GetArgumentValue(argumentName, defaultValue)
+{
+    var argumentValue = null;
+
+    if (WScript.Arguments.Named.Exists(argumentName))
+    {
+        if ((null != WScript.Arguments.Named(argumentName)) && ("" != WScript.Arguments.Named(argumentName)))
+        {
+            switch(WScript.Arguments.Named(argumentName).toLowerCase())
+            {
+                case "true":
+                    argumentValue = true;
+                    break;
+                case "false":
+                    argumentValue = false;
+                    break;
+                default:
+                    argumentValue = WScript.Arguments.Named(argumentName);
+                    break;
+            }
+        }
+        else
+        {
+            argumentValue = defaultValue;
+        }
+    }
+    else
+    {
+        argumentValue = defaultValue;
+    }
+
+    if (null != argumentValue)
+    {
+        TracePrint("Argument \"" + argumentName + "\" equals \"" + argumentValue + "\".");
+    }
+    else
+    {
+        TracePrint("Argument \"" + argumentName + "\" equals null.");
+    }
+
+    return argumentValue;
+}
+
+//
+// Wrapper for IMAGEX.EXE that executes the binary and reports imaging status back to the user
+// in real time.
+//
+function
+ExecuteImageX(command)
+{
+    TracePrint(command);
+    var shell = WScript.CreateObject("WScript.Shell");
+    var exec = shell.exec(command);
+    var blankLine = "                                                                               ";
+    var output = "";
+
+    while(0 == exec.status)
+    {
+        while(!exec.StdOut.AtEndOfStream)
+        {
+            var stdOutput = null
+            stdOutput = exec.StdOut.ReadLine();
+            if (stdOutput.indexOf("%") > -1)
+            {
+                WScript.StdOut.Write(stdOutput + blankLine.slice(stdOutput.length) + "\r");
+            }
+            output += stdOutput;
+        }
+    }
+    //
+    // We were writing to the same line before.  Start a new line.
+    //
+    WScript.StdOut.Write("\n");
+
+    if (0 != exec.ExitCode)
+    {
+        throw(
+            new Error(
+                ERROR_FAILURE_IN_SUPPORT_BINARY,
+                "Command \"" + command + "\" exited with error code " + exec.ExitCode + ":\n\n" + output
+        ));
+    }
+}
+
+//
+// Function to only print the specified text when running with tracing enabled.
+// This allows for more information to be displayed to the user when attempting to
+// troubleshoot a failure, but to not flood the user with text during normal operation.
+//
+function
+TracePrint(text)
+{
+    if (g_TracingEnabled)
+    {
+        g_Logger.LogInfo("(trace) " + text);
+    }
+}
+
+//
+// Function to pause the program execution at a defined point.
+// Used exclusively for debugging if used at all.
+//
+function
+TracePause()
+{
+    if (g_TracingEnabled)
+    {
+        WScript.StdOut.WriteLine("(Trace) Paused.  Press Enter to continue...")
+        WScript.StdIn.ReadLine();
+    }
+}
+
+//
+// Generic wrapper for executing an external binary and capturing the output.
+//
+function
+ExecuteCommand(command, returnExitCode, logFile)
+{
+    TracePrint(command);
+
+    var shell = WScript.CreateObject("WScript.Shell");
+    var exec = null;
+    var output = "";
+    var currentCharacter = "";
+
+    if (logFile) {
+        TracePrint("Logging to: " + logFile);
+        command = command + " >" + logFile
+    }
+
+    exec = shell.Exec(command);
+
+    while (0 == exec.Status)
+    {
+        while(!exec.StdOut.AtEndOfStream)
+        {
+            output += exec.StdOut.Read(1);
+        }
+
+        while(!exec.StdErr.AtEndOfStream)
+        {
+            output += exec.StdErr.Read(1);
+        }
+
+        WScript.Sleep(100);
+    }
+
+    var errMsg = "Command \"" + command + "\" exited with error code " + exec.ExitCode;
+    if (logFile) {
+
+        TracePrint("Getting file contents from " + logFile);
+        var logFileText = GetFileContents(logFile);
+        if (logFileText)
+        {
+            errMsg += ":\n\nThe last log file from a supporting" +
+                "\napplication may contain helpful information.  Then again, it may be totally" +
+                "\nunrelated.  In an effort to help troubleshooting, the contents of that file," +
+                "\nif available, are below:\n" + logFileText;
+        }
+    }
+
+    if (returnExitCode)
+    {
+        if (0 != exec.ExitCode)
+        {
+            g_Logger.LogWarning(errMsg);
+        }
+        return exec.ExitCode;
+    }
+    else
+    {
+        if (0 != exec.ExitCode)
+        {
+            throw(
+                new Error(
+                    ERROR_FAILURE_IN_SUPPORT_BINARY,
+                    errMsg
+            ));
+        }
+    }
+}
+
+//
+// Searches for the next available driver letter on the system.
+// Note:  This is not safe for use in multi-instance situations.
+// It is possible that two separate instances of WIM2VHD could get the same
+// drive letter at the same time.
+//
+function
+GetNextAvailableDriveLetter()
+{
+    var dictionary = WScript.CreateObject("Scripting.Dictionary");
+
+    var e = new Enumerator(GetObject("winmgmts:\\\\.\\root\\cimv2").ExecQuery("SELECT * FROM Win32_LogicalDisk"));
+
+    for (;!e.atEnd(); e.moveNext())
+    {
+        var disk = e.item();
+
+        dictionary.Add(disk.DeviceID, disk.DeviceID);
+    }
+
+    for (var i = 67; i < 90; i++)
+    {
+        var driveLetter = String.fromCharCode(i);
+
+        if (!dictionary.Exists(driveLetter + ":"))
+        {
+            return driveLetter;
+        }
+    }
+
+    throw(
+        new Error(
+            ERROR_OUT_OF_DRIVE_LETTERS,
+            "There are no available drive letters on this computer."
+    ));
+}
+
+//
+// Helper function for BCDHelper.vbs.
+//
+function
+ThrowException (message)
+{
+    throw(
+        new Error(
+            ERROR_CREATING_BOOT_CONFIGURATION_DATA,
+            message
+    ));
+}
+
+//
+// Searches a list of known paths to retrieve the binaries from.
+//
+function
+FindBinary(wimBinPath, binary)
+{
+    var shell = new ActiveXObject("WScript.Shell");
+    var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+    var aikPath = shell.ExpandEnvironmentStrings("%PROGRAMFILES%") + "\\Windows AIK\\Tools\\x86";
+    var opkPath = shell.ExpandEnvironmentStrings("%PROGRAMFILES%") + "\\Windows OPK\\Tools\\x86";
+    //
+    // Try to use the binaries designed for the architecture of the machine that
+    // WIM2VHD is running on.
+    //
+    var machineArchitecture = shell.ExpandEnvironmentStrings("%PROCESSOR_ARCHITECTURE%").toLowerCase();
+    if ("amd64".toLowerCase() == machineArchitecture.toLowerCase())
+    {
+        TracePrint("Looking for AMD64 binaries...");
+        aikPath = aikPath.toLowerCase().replace("x86", "amd64");
+        opkPath = opkPath.toLowerCase().replace("x86", "amd64");
+    }
+    else if ("ia64".toLowerCase() == machineArchitecture.toLowerCase())
+    {
+        TracePrint("Looking for IA64 binaries...");
+        aikPath = aikPath.toLowerCase().replace("x86", "ia64");
+        opkPath = opkPath.toLowerCase().replace("x86", "ia64");
+    }
+
+    /*
+    FIX: Issue Tracker Item (ITI) #6
+    WIM2VHD can't find binaries if OPK/AIK is in non-default location.
+
+    Split the PATH variable into an array, concat that array to binPaths.
+    This will make the binaries found in the path the last resort, but should
+    work around the issue
+    */
+    var pathFolder = shell.ExpandEnvironmentStrings("%PATH%").split(";");
+
+    var binPaths = new Array(
+        WScript.ScriptFullName.slice(0, WScript.ScriptFullName.lastIndexOf("\\")),
+        aikPath,
+        opkPath
+        ).concat(pathFolder);
+
+    for (var binPath in binPaths)
+    {
+        if (fileSystem.FileExists(binPaths[binPath] + "\\" + binary))
+        {
+             TracePrint("Found " + binary + " in " + binPaths[binPath]);
+             return binPaths[binPath] + "\\" + binary;
+        }
+    }
+
+    TracePrint(binary + " was not found.");
+}
+
+//
+// Get the current Windows version from the registry.
+//
+function
+GetHostWindowsVersion()
+{
+    var m_shell = WScript.CreateObject("WScript.Shell");
+    return parseFloat(m_shell.RegRead("HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\CurrentVersion"));
+}
+
+//
+// Detect whether or not we're running elevated and with admin rights by examining
+// the output from WHOAMI.EXE, which ships with Windows Server 2008 and later.
+//
+function
+isElevatedAdmin()
+{
+    var isAdmin = false;
+    var shell = WScript.CreateObject("WScript.Shell");
+    var output;
+    var outputStream;
+
+    var output = shell.Exec("whoami.exe /all");
+    outputStream = output.StdOut.ReadAll();
+    output.StdOut.Close();
+
+    // Per John Howard's blog:
+    // http://blogs.technet.com/jhoward/archive/2008/11/19/how-to-detect-uac-elevation-from-vbscript.aspx
+    // Search for the well-known SID for Mandatory Label\High Mandatory Level.
+    isAdmin = outputStream.indexOf("S-1-16-12288") > -1;
+
+    TracePrint("isAdmin?     " + isAdmin);
+
+    return (isAdmin);
+}
+
+//
+// Get the disk index for the specified disk.
+// Sadly, there is no WMI API that I could find that would directly associate a given volume
+// with its parent disk without having to parse a string.
+//
+function
+GetDiskIndex(disk)
+{
+    var objWMIService = GetObject("winmgmts:\\\\.\\root\\CIMV2");
+    var colItems      = objWMIService.ExecQuery("SELECT * FROM Win32_LogicalDiskToPartition", "WQL", g_wbemFlagReturnImmediately | g_wbemFlagForwardOnly);
+
+    var enumItems = new Enumerator(colItems);
+    for (; !enumItems.atEnd(); enumItems.moveNext())
+    {
+        var objItem = enumItems.item();
+        if (-1 < objItem.Dependent.toLowerCase().indexOf(disk.toLowerCase()))
+        {
+            var index = objItem.Antecedent.slice(objItem.Antecedent.indexOf("#") + 1, objItem.Antecedent.indexOf(","))
+            TracePrint("Disk Index is: " + index);
+            return index;
+        }
+    }
+}
+
+//
+// The VolumeId is in the format \??\Volume{guid}.
+// We use this to refer directly to the volume on the VHD that we want to prepare for boot.
+//
+function
+GetVolumeIdFromMountPoint(mountPoint)
+{
+    TracePrint("Finding Volume GUID for drive mounted at: " + mountPoint);
+    var volumeId = null;
+    var objWMIService = GetObject("winmgmts:\\\\.\\root\\CIMV2");
+    var colItems = objWMIService.ExecQuery("SELECT * FROM Win32_Volume", "WQL", g_wbemFlagReturnImmediately | g_wbemFlagForwardOnly);
+
+    var enumItems = new Enumerator(colItems);
+    for (; !enumItems.atEnd(); enumItems.moveNext())
+    {
+        var objItem = enumItems.item();
+        if ((mountPoint + "\\").toLowerCase() == objItem.Caption.toLowerCase())
+        {
+            volumeId = objItem.DeviceId.replace("\\?", "??");
+        }
+    }
+
+    if (null == volumeId)
+    {
+        throw(
+            new Error(
+                ERROR_UNDISCOVERABLE_MOUNT_POINT,
+                "Cannot derive Volume GUID from mount point."
+        ));
+    }
+
+    return volumeId.slice(0, volumeId.length - 1);
+}
+
+//
+// Grep the MountedDevices section of the registry for the MountId that corresponds
+// to the specified volumeId.  It's in binary format, so we need to turn it into a string.
+//
+function
+GetMountIdFromVolumeId(volumeId)
+{
+    var HKLM = 0x80000002;
+    var wmiLocator = new ActiveXObject("WbemScripting.SWbemLocator");
+    var wmiServer = wmiLocator.ConnectServer(null, "root\\default");
+    var stdRegProv = wmiServer.Get("StdRegProv");
+
+    var callMethod = stdRegProv.Methods_.Item("GetBinaryValue");
+    var inParam = callMethod.InParameters.SpawnInstance_();
+    inParam.hDefKey = HKLM;
+    inParam.sSubKeyName = "SYSTEM\\MountedDevices";
+    inParam.sValueName = volumeId;
+
+    var outParam = stdRegProv.ExecMethod_(callMethod.Name, inParam);
+
+    var uValue = outParam.uValue.toArray();
+
+    // We need the value as a string.
+    var mountId = "";
+    for (var i = 0; i < uValue.length; i++)
+    {
+        mountId += uValue[i].toString(16).toUpperCase();
+    }
+    if (null == mountId)
+    {
+        throw(
+            new Error(
+                ERROR_UNDISCOVERABLE_MOUNT_POINT,
+                "Unable to derive Mount ID from Volume GUID."
+        ));
+    }
+
+    return mountId;
+}
+
+//
+// Function to verify that a file exists and to get the fully qualified path
+// to the specified file.  This function will behave differently based on the
+// critical flag.  If true - if the file is critical to the operation of
+// WIM2VHD - an exception is thrown.  If false, a warning is generated.
+//
+function
+VerifyAndReturnFilePath(filePath, critical)
+{
+    if (null == filePath)
+    {
+        if (critical)
+        {
+            var errString = "A file required for " + g_ScriptName + " to run was not found.\n" +
+                            g_ScriptName + " cannot continue. Please ensure that you have the Windows 7 AIK\n" +
+                            "or OPK is installed. Additionally, try running WIM2VHD from the Deployment\n" +
+                            "Tools Command Prompt, which is installed with the AIK and OPK. You can also\n" +
+                            "copy IMAGEX.EXE and BCDBOOT.EXE into the same folder as " + g_ScriptName + "." +
+                            "\n\nIf you're attempting to use the FastFixed VHD option, please ensure that you\n" +
+                            "have downloaded VHDTOOL.EXE from http://code.msdn.microsoft.com/vhdtool,\n" +
+                            "and put it in the same folder as " + g_ScriptName + ", or somewhere in your path.";
+
+            throw(
+                new Error(
+                    ERROR_FILE_NOT_FOUND,
+                    errString
+            ));
+        }
+        else
+        {
+            var errString = "A file that " + g_ScriptName + " uses could not be found.\n" +
+                            g_ScriptName + " will attempt to continue, but there may be additional failures.";
+
+            g_Logger.LogWarning(errString);
+            return null;
+        }
+    }
+
+    var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+    try
+    {
+        return fileSystem.GetFile(fileSystem.GetAbsolutePathName(filePath)).Path;
+    }
+    catch (exception)
+    {
+        if (critical)
+        {
+            var errString = "A file required for " + g_ScriptName + " to run was not found.\n" +
+                            "The file in question is: " + filePath + "\n" +
+                            g_ScriptName + " cannot continue. Please ensure that you have the Windows 7 AIK\n" +
+                            "or OPK is installed. Additionally, try running WIM2VHD from the Deployment\n" +
+                            "Tools Command Prompt, which is installed with the AIK and OPK. You can also\n" +
+                            "copy IMAGEX.EXE and BCDBOOT.EXE into the same folder as " + g_ScriptName + "." +
+                            "\n\nIf you're attempting to use the FastFixed VHD option, please ensure that you\n" +
+                            "have downloaded VHDTOOL.EXE from http://code.msdn.microsoft.com/vhdtool,\n" +
+                            "and put it in the same folder as " + g_ScriptName + ", or somewhere in your path.";
+
+            throw(
+                new Error(
+                    ERROR_FILE_NOT_FOUND,
+                    errString
+            ));
+        }
+        else
+        {
+            var errString = "A file that " + g_ScriptName + " uses could not be found.\n" +
+                            "The file in question is: " + filePath + "\n" +
+                            g_ScriptName + " will attempt to continue, but there may be additional failures.\n\n" +
+                            exception.description;
+
+            g_Logger.LogWarning(errString);
+            return null;
+        }
+    }
+}
+
+//
+// Reads the content of a specified file and returns it.
+//
+function
+GetFileContents(fileName)
+{
+    var fso = new ActiveXObject("Scripting.FileSystemObject")
+    var logFileText = null;
+
+    if (fso.FileExists(fileName))
+    {
+        try
+        {
+            var logReader = fso.OpenTextFile(fileName)
+            logFileText   = logReader.ReadAll();
+        }
+        catch (exception)
+        {
+            // Well, we tried.  Doesn't matter, though.
+        }
+        finally
+        {
+            logReader.Close();
+        }
+    }
+
+    return logFileText;
+}
+
+WScript.Quit(Main());
+
+        </script>
+    </job>
+</package>
