@@ -2,13 +2,13 @@
 ; Test Naming Mode
 ;
 ; Enable easy BDD-styled test naming by pressing `CTRL+SHIFT+U`. That is, spaces
-; become underscores '_' automatically! You can exit this mode by pressing `Tab`,
+; become underscores `_` automatically! You can exit this mode by pressing `Tab`,
 ; `Esc`, or `Enter`. This should work nicely with tools like ReSharper that use 
 ; those same keys as template hotkeys.
 ;==================================================
 
-enabledIcon := "testnamingmode_16.ico" 
-disabledIcon := "testnamingmode_disabled_16.ico" 
+enabledIcon := "testnamingmode.ico" 
+disabledIcon := "testnamingmode_disabled.ico" 
 
 ;==================================================
 ; Recommendations for all new scripts for speed, compatibility, and consistency
