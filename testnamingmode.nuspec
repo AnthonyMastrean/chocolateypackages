@@ -2,11 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>testnamingmode</id>
-    <version>1.0.1.0</version>
+    <version>1.0.1.1</version>
     <title>Test Naming Mode</title>
     <authors>JP Boodhoo</authors>
     <owners>Anthony Mastrean</owners>
-    <projectUrl>http://goo.gl/ddc6Q</projectUrl>
+    <projectUrl>https://github.com/AnthonyMastrean/testnamingmode</projectUrl>
     <iconUrl>https://github.com/AnthonyMastrean/testnamingmode/raw/master/content/testnamingmode.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Enable easy BDD-styled test naming by pressing `CTRL+SHIFT+U`. That is, spaces become underscores `_` automatically! You can exit this mode by pressing `Tab`, `Esc`, or `Enter`. This should work nicely with tools like ReSharper that use those same keys as template hotkeys.</description>
