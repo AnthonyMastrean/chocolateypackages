@@ -9,7 +9,7 @@
     <summary>Every hard disk is too small if you just wait long enough. TreeSize Free tells you where precious disk space has gone.</summary>
     <description>Every hard disk is too small if you just wait long enough. TreeSize Free tells you where precious disk space has gone.
 
-TreeSize Free can be started from the context menu of a folder or drive and shows you the size of this folder, including its subfolders. Expand folders in an Explorer-like fashion and see the size of every subfolder. All results can also be drilled down to the file level. Scanning operations run in a thread, so you can already see results while TreeSize Free is working. The Explorer context menu is supported within TreeSize, as well as the usual drag & drop operations.
+TreeSize Free can be started from the context menu of a folder or drive and shows you the size of this folder, including its subfolders. Expand folders in an Explorer-like fashion and see the size of every subfolder. All results can also be drilled down to the file level. Scanning operations run in a thread, so you can already see results while TreeSize Free is working. The Explorer context menu is supported within TreeSize, as well as the usual drag and drop operations.
 
 The disk space tool now also includes the main feature of our discontinued freeware NTFSRatio: TreeSize Free can display the NTFS compression rate and apply the NTFS compression on directory branches.
 
