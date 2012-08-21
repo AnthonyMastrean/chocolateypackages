@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>git.difftool.diffmerge</id>
+    <version>0.0.1</version>
+    <title>git-difftool diffmerge</title>
+    <authors>Mark Embling</authors>
+    <owners>Anthony Mastrean</owners>
+    <projectUrl>http://markembling.info/2010/01/git-environment-windows</projectUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/git.difftool.diffmerge/git.difftool.diffmerge/git.difftool.diffmerge.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Configure SourceGear's DiffMerge as your diff tool in Git for Windows.</summary>
+    <tags>git diff merge diffmerge</tags>
+    <dependencies>
+      <dependency id="diffmerge" />
+      <dependency id="msysgit" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="content\diffmerge-diff.sh" target="content\diffmerge-diff.sh" />
+    <file src="content\diffmerge-merge.sh" target="content\diffmerge-merge.sh" />
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="tools\gitconfig.bat" target="tools\gitconfig.bat" />
+  </files>
+</package>
