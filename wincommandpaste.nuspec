@@ -3,7 +3,7 @@
   <metadata>
     <id>wincommandpaste</id>
     <title>Windows Command Paste</title>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Paste into any Windows console (command line, PowerShell, and Console2) with CTRL+V!</summary>
@@ -11,7 +11,7 @@
     <projectUrl>http://www.howtogeek.com/howto/25590/how-to-enable-ctrlv-for-pasting-in-the-windows-command-prompt/</projectUrl>
     <tags>autohotkey command windows prompt console paste clipboard</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/wincommandpaste/wincommandpaste/content/wincommandpaste.ico</iconUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/wincommandpaste/raw/master/content/wincommandpaste.ico</iconUrl>
     <dependencies>
       <dependency id="autohotkey" />
     </dependencies>
