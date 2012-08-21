@@ -18,8 +18,8 @@
   </metadata>
   <files>
     <file src="content\testnamingmode.ahk" target="content\testnamingmode.ahk" />
-    <file src="content\testnamingmode_16.ico" target="content\testnamingmode.ico" />
-    <file src="content\testnamingmode_disabled.ico" target="content\testnamingmode_disabled_16.ico" />
+    <file src="content\testnamingmode.ico" target="content\testnamingmode.ico" />
+    <file src="content\testnamingmode_disabled.ico" target="content\testnamingmode_disabled.ico" />
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
