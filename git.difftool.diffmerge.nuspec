@@ -7,7 +7,7 @@
     <authors>Mark Embling, Alexander Gross</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>http://markembling.info/2010/01/git-environment-windows</projectUrl>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/git.difftool.diffmerge/git.difftool.diffmerge/git.difftool.diffmerge.png</iconUrl>
+    <iconUrl>https://raw.github.com/AnthonyMastrean/git.difftool.diffmerge/master/git.difftool.diffmerge.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Configure SourceGear's DiffMerge as your diff tool in Git for Windows.</summary>
     <description>To configure your Git diff tool, you need a shell script wrapper and a few git config calls. This script does all the hard work for you! Alexander Gross fixed it for baseless diffs. Enjoy... cmd> git difftool <normal-options></description>
