@@ -2,20 +2,16 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>greenfish.iconeditor</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>Greenfish Icon Editor</title>
+    <version>3.1</version>
+    <authors>greenfish</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <summary>Greenfish Icon Editor Pro (GFIE Pro) is a powerful freeware icon, cursor, animation, icon library and image editor.</summary>
+    <description>Greenfish Icon Editor Pro (GFIE Pro) is a powerful freeware icon, cursor, animation, icon library and image editor. Layer support with advanced selection handling makes it a really professional and unique freeware tool for designing pixelgraphic images. GFIE offers high-quality filters like Bevel, Drop Shadow and Glow; supports editing animated cursors and managing icon libraries. It's lightweight (lt 5 MB unzipped) and also has a portable version - just unpack it to your USB drive and use it anywhere. A clean, customizable, multilanguage user interface makes it really easy to learn and use.</description>
+    <projectUrl>http://greenfishsoftware.blogspot.com/2012/07/greenfish-icon-editor-pro.html</projectUrl>
+    <tags>icon editor</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/greenfish.iconeditor/greenfish.iconeditor/greenfish.iconeditor.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://greenfish.tk/favicon.ico</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
