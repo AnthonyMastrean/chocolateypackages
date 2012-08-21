@@ -1,36 +1,33 @@
-try 
-{ 
-    $name    = 'wim2vhd'
-    $version = '6.1.7600.1'
-
-    $is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
-
+$name    = 'wim2vhd'
+$version = '6.1.7600.2'
+    
+try { 
     $tools   = Split-Path $MyInvocation.MyCommand.Definition
-    $x86     = Join-Path $tools 'x86\imagex.exe'
-    $x64     = Join-Path $tools 'x64\imagex.exe'
-    $imagex  = if($is64bit) { $x64 } else { $x86 }
-    
     $content = Join-Path (Split-Path $tools) 'content'
+    $imagex32 = Join-Path $tools 'imagex.exe'
+    $imagex64 = Join-Path $tools 'imagex64.exe'
+        
+    $is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
+    $imagex   = if($is64bit) { $imagex64 } else { $imagex32 }
     
-    $bat     = "$ENV:CHOCOLATEYINSTALL\bin\wim2vhd.bat"
+    # Copy the architecture correct imagex to the content directory and 
+    # get rid of the leftovers
+    Copy-Item $imagex "$content\imagex.exe"
+    Remove-Item "$tools\imagex*.exe" -force
     
-    # Copy the architecture correct imagex.exe to the content directory
-    Copy-Item $imagex $content
-    
-    # Remove the architecture staging areas
-    Resolve-Path $tools\x* | Remove-Item -force -recurse
+    $bat = "$ENV:CHOCOLATEYINSTALL\bin\wim2vhd.bat"
+    $wsf = "%DIR%..\lib\$name.$version\content\wim2vhd.wsf"
     
     # Write the custom bat file to the %chocolateyInstall% bin PATH
 @"
 @ECHO OFF
 SET DIR=%~dp0
-cscript "%DIR%..\lib\$name.$version\content\wim2vhd.wsf" %*
-"@ | Out-File $bat -encoding ASCII
+cscript "$wsf" %*
+"@ | Out-File $bat -encoding 'ASCII'
     
     Write-ChocolateySuccess $name
 } 
-catch 
-{
+catch {
     Write-ChocolateyFailure $name $($_.Exception.Message)
     throw 
 }
