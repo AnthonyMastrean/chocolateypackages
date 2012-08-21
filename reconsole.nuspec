@@ -2,11 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>reconsole</id>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <title>ReConsole</title>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>https://github.com/AnthonyMastrean/reconsole</projectUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/reconsole/raw/master/content/reconsole.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Autocomplete common character pairs in your console</description>
     <tags>autohotkey console productivity</tags>
