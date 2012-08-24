@@ -1,5 +1,5 @@
 ﻿$name   = 'mousewithoutborders'
-$url    = 'https://www.yousendit.com/directDownload?phi_action=app/directDownload&fl=SWhZekZoZ1BwaFM5TERkT1VqOE1Eak9yZWt5UmdteDRsUjJuWENHRzVZbz0&experience=bas'
+$url    = 'https://www.yousendit.com/directDownload?phi_action=app/directDownload&fl=SWhZekZoZ1BIcWVFTlpEQVZpT1JCek9yZWt5UmdteDRsUjJuWENHRzVZbz0&experience=bas'
 $type   = 'MSI'
 $silent = '/quiet'
 
