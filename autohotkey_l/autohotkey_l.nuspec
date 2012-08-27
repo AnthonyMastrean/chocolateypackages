@@ -8,7 +8,7 @@
     <owners>Anthony Mastrean</owners>
     <licenseUrl>http://l.autohotkey.net/docs/license.htm</licenseUrl>
     <projectUrl>http://www.l.autohotkey.net/</projectUrl>
-    <iconUrl>http://www.autohotkey.com/docs/images/AutoHotkey_logo_no_text.gif</iconUrl>
+    <iconUrl>https://github.com/Lexikos/AutoHotkey_L/raw/master/source/resources/icon_main.ico</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
 
