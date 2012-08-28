@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>reconsole</id>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <title>ReConsole</title>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
@@ -12,7 +12,7 @@
     <description>Autocomplete common character pairs in your console</description>
     <tags>autohotkey console productivity</tags>
     <dependencies>
-      <dependency id="autohotkey" />
+      <dependency id="autohotkey_l" />
     </dependencies>
   </metadata>
   <files>

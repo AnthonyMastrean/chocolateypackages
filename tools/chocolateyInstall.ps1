@@ -11,7 +11,7 @@ try
     $shortcut = $shell.CreateShortcut($shortcutPath)
     $shortcut.WorkingDirectory = $content
     $shortcut.TargetPath = Join-Path $content 'reconsole.ahk'
-    #$shortcut.IconLocation = Join-Path $content 'reconsole.ico'
+    $shortcut.IconLocation = Join-Path $content 'reconsole.ico'
     $shortcut.Save()
   
     & $shortcutPath
