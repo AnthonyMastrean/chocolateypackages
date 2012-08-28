@@ -23,6 +23,10 @@
     <tags>autohotkey debugging ide</tags>
     <licenseUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/license.htm</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <releaseNotes>
+v3.0.0
+* Package does not support silent install (yet!)
+    </releaseNotes>
     <!--<iconUrl></iconUrl>-->
     <dependencies>
       <dependency id="autohotkey_l" />
