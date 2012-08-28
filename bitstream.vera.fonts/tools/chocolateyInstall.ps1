@@ -8,6 +8,8 @@ $zip     = Join-Path $content 'ttf-bitstream-vera-1.10'
 Install-ChocolateyZipPackage $name $url $content
 
 try {
+    Remove-Item "$zip\**" -Exclude '*.ttf' -Recurse -Force
+
     $FONT_FOLDER = 0x14
     $shell = New-Object -ComObject Shell.Application
     $source = $shell.Namespace($zip)
