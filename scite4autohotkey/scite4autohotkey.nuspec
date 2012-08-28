@@ -25,7 +25,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <!--<iconUrl></iconUrl>-->
     <dependencies>
-      <dependency id="autohotkey" />
+      <dependency id="autohotkey_l" />
     </dependencies>
   </metadata>
   <files>
