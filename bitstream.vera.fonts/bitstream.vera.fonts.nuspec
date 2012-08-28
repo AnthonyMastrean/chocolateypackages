@@ -2,20 +2,16 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>bitstream.vera.fonts</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>Bitstream Vera Fonts</title>
+    <version>1.10</version>
+    <authors>Bitstream</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/bitstream.vera.fonts/bitstream.vera.fonts/bitstream.vera.fonts.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <summary>A Vera typeface designed by Jim Lyles from Bitstream, closely based on Bitstream's Prima.</summary>
+    <description>A Vera typeface designed by Jim Lyles from Bitstream, closely based on Bitstream's Prima.</description>
+    <projectUrl>http://www-old.gnome.org/fonts/</projectUrl>
+    <tags>bitstream vera sans mono font fonts</tags>
+    <licenseUrl>http://www-old.gnome.org/fonts/#Final_Bitstream_Vera_Fonts</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
