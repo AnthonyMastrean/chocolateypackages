@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>testnamingmode</id>
-    <version>1.0.1.1</version>
+    <version>1.0.1.2</version>
     <title>Test Naming Mode</title>
     <authors>JP Boodhoo</authors>
     <owners>Anthony Mastrean</owners>
@@ -13,7 +13,7 @@
     <summary>Enable easy BDD-styled test naming by pressing `CTRL+SHIFT+U`.</summary>
     <tags>autohotkey test naming bdd automation</tags>
     <dependencies>
-      <dependency id="autohotkey" />
+      <dependency id="autohotkey_l" />
     </dependencies>
   </metadata>
   <files>
