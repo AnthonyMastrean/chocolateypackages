@@ -7,8 +7,13 @@
     <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
     <summary>USBView is a Windows graphical user interface application that enables you to browse all USB controllers and connected USB devices on your computer.</summary>
+    <description>USBView can enumerate USB host controllers, USB hubs, and attached USB devices. It can also query information about the devices from the registry and through USB requests to the devices.
+    
+The main USBView window contains two panes. The left pane displays a connection-oriented tree view, enabling you to select any USB device.
+
+The right pane displays the USB data structures that pertain to the selected USB device. These structures include Device, Configuration, Interface, and Endpoint Descriptors, as well as the current device configuration.</description>
     <projectUrl>http://msdn.microsoft.com/en-us/library/windows/hardware/ff560019(v=vs.85).aspx</projectUrl>
-    <tags>usb</tags>
+    <tags>usb debugging ports</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/usbview/usbview/usbview.ext</iconUrl>-->
   </metadata>
