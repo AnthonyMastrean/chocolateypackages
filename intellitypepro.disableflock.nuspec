@@ -7,6 +7,7 @@
     <authors>Damian Powell, Jason Tsang</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Disable the Function Lock key on most Microsoft Intellitype Pro keyboards.</summary>
+    <description>Disable the Function Lock key on most Microsoft Intellitype Pro keyboards.</description>
     <projectUrl>http://superuser.com/questions/171369/how-can-i-disable-the-f-lock-key-on-my-natural-keyboard-4000</projectUrl>
     <tags>microsoft intellitype keyboard function lock</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
