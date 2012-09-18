@@ -3,17 +3,14 @@
   <metadata>
     <id>diffmerge</id>
     <title>SourceGear DiffMerge</title>
-    <version>3.3.1.1118</version>
+    <version>3.3.2</version>
     <authors>SourceGear</authors>
     <owners>Anthony Mastrean</owners>
     <description>Visually compare and merge files within Windows, Mac OS X and Linux.</description>
     <projectUrl>http://www.sourcegear.com/diffmerge/</projectUrl>
     <tags>diff merge chocolatey admin</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/diffmerge/diffmerge/diffmerge.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>https://raw.github.com/AnthonyMastrean/nugetpackages/diffmerge/diffmerge/diffmerge.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
