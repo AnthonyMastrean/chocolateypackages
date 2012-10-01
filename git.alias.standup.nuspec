@@ -8,7 +8,7 @@
     <owners>Anthony Mastrean</owners>
     <projectUrl>https://github.com/AnthonyMastrean/git.alias.standup#readme</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>One line summary of your commits yesterday.</description>
+    <description>One line summary of your commits from yesterday.</description>
     <tags>git alias standup</tags>
     <dependencies>
       <dependency id="git" />
