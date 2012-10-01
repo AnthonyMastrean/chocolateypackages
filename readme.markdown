@@ -1,10 +1,12 @@
-# DiffMerge in Git for Windows
-To configure your [Git][msys] [diff tool][dft], you need a shell script [wrapper][sh] and a few git config calls. This script does all the hard work for you! Alexander Gross fixed it for [baseless diffs][ag]. Enjoy...
+# Turn on Git's AutoCorrect Feature.
+This option is available only in Git 1.6.1 and later. If you mistype a command in Git 1.6, it shows you something like this:
 
-    cmd> git difftool <normal-options>
+    cmd> git com
+    git: 'com' is not a git-command. See 'git --help'.
 
- [sh]: http://markembling.info/2010/01/git-environment-windows
- [dft]: http://schacon.github.com/git/git-difftool.html
- [sdm]: http://www.sourcegear.com/diffmerge/
- [msys]: http://code.google.com/p/msysgit/
- [ag]: http://therightstuff.de/CommentView,guid,f9eb67c2-2a52-4c80-9181-3160b05cfd72.aspx
+    Did you mean this?
+         commit
+
+If you set `help.autocorrect` to 1, Git will automatically run the command if it has only one match under this scenario.
+
+    cmd> git config --global help.autocorrect 1
