@@ -1,18 +1,17 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>git.help.autocorrect</id>
+    <id>git.alias.standup</id>
     <version>0.0.1</version>
-    <title>Git AutoCorrect</title>
+    <title>Git Standup</title>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
-    <projectUrl>https://github.com/AnthonyMastrean/git.help.autocorrect#readme</projectUrl>
+    <projectUrl>https://github.com/AnthonyMastrean/git.alias.standup#readme</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>Turn on Git's autocorrect feature.</summary>
-    <description>Turn on Git's autocorrect feature. If you mistype a command, Git will automatically run the command if it has only one match under this scenario.</description>
-    <tags>git help autocorrect</tags>
+    <description>One line summary of your commits yesterday.</description>
+    <tags>git alias standup</tags>
     <dependencies>
-      <dependency id="git" version="[1.6.1,)" />
+      <dependency id="git" />
     </dependencies>
   </metadata>
   <files>
