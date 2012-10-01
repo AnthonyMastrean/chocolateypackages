@@ -1,4 +1,4 @@
-# Turn on Git's AutoCorrect Feature.
+# Turn on Git's AutoCorrect Feature
 This option is available only in Git 1.6.1 and later. If you mistype a command in Git 1.6, it shows you something like this:
 
     cmd> git com
