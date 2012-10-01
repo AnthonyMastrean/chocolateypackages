@@ -12,7 +12,7 @@
     <description>Turn on Git's autocorrect feature. If you mistype a command, Git will automatically run the command if it has only one match under this scenario.</description>
     <tags>git help autocorrect</tags>
     <dependencies>
-      <dependency id="git" />
+      <dependency id="git" version="[1.6.1,)" />
     </dependencies>
   </metadata>
   <files>
