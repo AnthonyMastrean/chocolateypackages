@@ -2,22 +2,26 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>mastrean.windows</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>Anthony Mastrean's Windows Dependencies</title>
+    <version>0.0.1</version>
+    <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <description>My preferred packages for developing on Windows.</description>
+    <projectUrl>https://github.com/AnthonyMastrean/nugetpackages/tree/mastrean.windows</projectUrl>
+    <tags>mastrean windows</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/mastrean.windows/mastrean.windows/mastrean.windows.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="7zip" />
+      <dependency id="dejavu.fonts" />
+      <dependency id="virtualclonedrive" />
+      <dependency id="googlechrome" />
+      <dependency id="keepass" />
+      <dependency id="ultramon" />
+      <dependency id="mousewithoutborders" />
+      <dependency id="notepad2-mod" />
+    </dependencies>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="content\dummy.txt" target="content\dummy.txt" />
   </files>
 </package>
