@@ -19,6 +19,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="content\dummy.txt" target="content\dummy.txt" />
   </files>
 </package>
