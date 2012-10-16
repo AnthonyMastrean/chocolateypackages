@@ -13,6 +13,7 @@
     <dependencies>
       <dependency id="ruby" version="(1.9.2, 1.9.3)" />
       <dependency id="ruby.devkit" />
+      <dependency id="ansicon" />
       <dependency id="pik" />
       <dependency id="notepad2-mod" />
       <dependency id="dejavu.fonts" />
