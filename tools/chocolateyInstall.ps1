@@ -1,7 +1,10 @@
 $name   = 'intellitypepro.disableflock'
 
 try {
-    Run-ChocolateyProcessAsAdmin '.\Disable-FunctionLock.ps1'
+    $tools  = Split-Path $MyInvocation.MyCommand.Definition
+    $target = Join-Path $tools 'Disable-FunctionLock.ps1'
+
+    Start-ChocolateyProcessAsAdmin "& `'$target`'"
     Write-ChocolateySuccess $name
 } 
 catch {

@@ -14,5 +14,6 @@
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="tools\Disable-FunctionLock.ps1" target="tools\Disable-FunctionLock.ps1" />
   </files>
 </package>
