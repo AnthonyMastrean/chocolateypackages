@@ -1,37 +1,30 @@
-#requires -version 2
-set-strictmode -version latest
+Set-StrictMode -version latest
 
-$matchRegex = "^\s*<C(302|203|204|307|308|309|900|901|902|401|311|310)\s.*$"
-$fileName = "$env:ProgramFiles\Microsoft IntelliType Pro\commands.xml"
-$backupFileName = $fileName -replace "\.xml$", ".original.xml"
+$commands_path = "$env:ProgramFiles\Microsoft IntelliType Pro\commands.xml"
+$backup_path = $commands_path -replace "\.xml$", ".original.xml"
 
-if (-not (test-path $backupFileName)) {
-    write-verbose "Backing up commands.xml"
-    cp $fileName $backupFileName
+if(-not(Test-Path $backup_path)) {
+  Write-Verbose 'Backing up commands.xml'
+  Copy-Item $commands_path $backup_path
 }
 
-$file = (get-content $fileName) -replace $matchRegex, ""
+$key_codes_regex = "^\s*<C(302|203|204|307|308|309|900|901|902|401|311|310)\s.*$"
+$xml = [xml] (Get-Content $commands_path) -replace $key_codes_regex, ""
+$standard_support = $xml.DPGCmd.ALL.Application | ?{ $_.UniqueName -eq 'StandardSupport' }
+$next_f_key = 1
+$key_codes = @(302, 203, 204, 307, 308, 309, 900, 901, 902, 401, 311, 310)
 
-$xml = [xml]$file
-$allAppsStd = $xml.DPGCmd.ALL.Application |
-    ?{ $_.UniqueName -eq "StandardSupport" }
+$key_codes | %{
+  $element = "C{0}" -f $_
+  $f_key = "F{0}" -f $next_f_key
 
-$nextFKey = 1
-$keyCodes = @(302, 203, 204, 307, 308, 309, 900, 901, 902, 401, 311, 310)
+  $next_f_key++
 
-$keyCodes |
-    %{
-        $elemName = "C{0}" -f $_
-        $fkey = "F{0}" -f $nextFKey
+  $new = $xml.CreateElement($element)
+  $new.SetAttribute('Type', '5')
+  $new.SetAttribute('KeySeq', $f_key)
 
-        $nextFKey++
+  $standard_support.AppendChild($new) | Out-Null
+}
 
-        $new = $xml.CreateElement($elemName)
-
-        $new.SetAttribute("Type", "5")
-        $new.SetAttribute("KeySeq", $fkey)
-
-        $allAppsStd.AppendChild($new) | out-null
-    }
-
-$xml.Save($fileName)
+$xml.Save($commands_path)
