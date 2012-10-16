@@ -2,20 +2,21 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>mastrean.autohotkey</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>Anthony Mastrean's AutoHotkey Dependencies</title>
+    <version>0.0.1</version>
+    <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <description>My preferred packages for working with AutoHotkey.</description>
+    <projectUrl>https://github.com/AnthonyMastrean/nugetpackages/tree/mastrean.autohotkey</projectUrl>
+    <tags>mastrean autohotkey</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/mastrean.autohotkey/mastrean.autohotkey/mastrean.autohotkey.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="autohotkey_l" />
+      <dependency id="notepad2-mod" />
+      <dependency id="dejavu.fonts" />
+      <dependency id="scite4autohotkey" />
+      <dependency id="testnamingmode" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
