@@ -13,7 +13,7 @@
     <dependencies>
       <dependency id="dejavu.fonts" />
       <dependency id="diffmerge" />
-      <dependency id="resharper" version="(7.0, 8.0)" />
+      <dependency id="resharper" version="[7.0, 8.0)" />
       <dependency id="testnamingmode" />
       <dependency id="wincommandpaste" />
       <dependency id="log4netlivetemplates" />
