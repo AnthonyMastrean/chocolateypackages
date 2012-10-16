@@ -3,7 +3,7 @@
   <metadata>
     <id>mastrean.windows</id>
     <title>Anthony Mastrean's Windows Dependencies</title>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <description>My preferred packages for developing on Windows.</description>
@@ -16,9 +16,11 @@
       <dependency id="virtualclonedrive" />
       <dependency id="googlechrome" />
       <dependency id="keepass" />
-      <dependency id="ultramon" />
+      <dependency id="ultramon" version="[3.0, 4.0)" />
       <dependency id="mousewithoutborders" />
       <dependency id="notepad2-mod" />
+      <dependency id="wincommandpaste" />
+      <dependency id="adobereader" />
     </dependencies>
   </metadata>
   <files>
