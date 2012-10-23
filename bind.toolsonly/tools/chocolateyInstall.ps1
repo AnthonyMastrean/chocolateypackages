@@ -1,5 +1,5 @@
 $name = 'bind.toolsonly'
-$url  = 'http://www.isc.org/software/bind/992/download/bind992zip'
+$url  = 'http://ftp.isc.org/isc/bind9/9.9.2/BIND9.9.2.zip'
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $temp    = Join-Path (Split-Path $tools) 'temp'
