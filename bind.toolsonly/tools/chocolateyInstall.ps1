@@ -1,39 +1,38 @@
-$name   = 'bind.toolsonly'
-$url    = '__URL__'
-$url64  = '__URL64__'
-$silent = '/Q'
+$name = 'bind.toolsonly'
+$url  = 'http://www.isc.org/software/bind/992/download/bind992zip'
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
-#$content = Join-Path (Split-Path $tools) 'content'
+$tools   = Split-Path $MyInvocation.MyCommand.Definition
+$temp    = Join-Path (Split-Path $tools) 'temp'
+$content = Join-Path (Split-Path $tools) 'content'
 
-Install-ChocolateyPackage $name 'EXE_OR_MSI' $silent $url $url64
-#Install-ChocolateyZipPackage $name $url $tools
+$keep = @(
+  'arpaname.exe',
+  'bindevt.dll',
+  'dig.exe',
+  'host.exe',
+  'libbind9.dll',
+  'libdns.dll',
+  'libeay32.dll',
+  'libisc.dll',
+  'libisccc.dll',
+  'libisccfg.dll',
+  'liblwres.dll',
+  'libxml2.dll',
+  'nslookup.exe',
+  'nsupdate.exe',
+  'readme1st.txt'
+) | %{ Join-Path $temp $_ }
 
-#try {
-    # downloader that the main helpers use to download items
-    #Get-ChocolateyWebFile $name 'DOWNLOAD_TO_FILE_FULL_PATH' $url $url64
+try {
+  Install-ChocolateyZipPackage $name $url $temp
+  
+  New-Item $content -Type Directory
+  Move-Item -Path $keep -Destination $content
+  Remove-Item $temp -Force -Recurse
 
-    # installer, will assert administrative rights - used by Install-ChocolateyPackage
-    #Install-ChocolateyInstallPackage $name 'EXE_OR_MSI' $silent '_FULLFILEPATH_'
-
-    # unzips a file to the specified location - auto overwrites existing content
-    #Get-ChocolateyUnzip "FULL_LOCATION_TO_ZIP.zip" $tools
-
-    # Runs processes asserting UAC, will assert administrative rights - used by Install-ChocolateyInstallPackage
-    #Run-ChocolateyProcessAsAdmin 'STATEMENTS_TO_RUN' 'Optional_Application_If_Not_PowerShell'
-
-    # add specific folders to the path - any executables found in the chocolatey package folder will already be on the path. This is used in addition to that or for cases when a native installer doesn't add things to the path.
-    #Install-ChocolateyPath 'LOCATION_TO_ADD_TO_PATH' 'User_OR_Machine' # Machine will assert administrative rights
-
-    # add specific files as shortcuts to the desktop
-    #$target = Join-Path $MyInvocation.MyCommand.Definition "$name.exe"
-    #Install-ChocolateyDesktopLink $target
-
-    #$is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
-
-    #Write-ChocolateySuccess $name
-#} 
-#catch {
-    #Write-ChocolateyFailure $name $($_.Exception.Message)
-    #throw 
-#}
+  Write-ChocolateySuccess $name
+} 
+catch {
+  Write-ChocolateyFailure $name $($_.Exception.Message)
+  throw 
+}
