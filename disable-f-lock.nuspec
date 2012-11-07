@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>intellitypepro.disableflock</id>
-    <title>Disable F-Lock</title>
+    <id>disable-f-lock</id>
+    <title>Disable F-Lock (IntelliType)</title>
     <version>0.0.1</version>
     <authors>Damian Powell, Jason Tsang</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>Disable the Function Lock key on most Microsoft Intellitype Pro keyboards.</summary>
-    <description>Disable the Function Lock key on most Microsoft Intellitype Pro keyboards.</description>
+    <summary>Disable the Function Lock key on most Microsoft IntelliType Pro keyboards.</summary>
+    <description>Disable the Function Lock key on most Microsoft IntelliType Pro keyboards.</description>
     <projectUrl>http://superuser.com/questions/171369/how-can-i-disable-the-f-lock-key-on-my-natural-keyboard-4000</projectUrl>
-    <tags>microsoft intellitype keyboard function lock</tags>
+    <tags>microsoft IntelliType keyboard function lock</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
   <files>
