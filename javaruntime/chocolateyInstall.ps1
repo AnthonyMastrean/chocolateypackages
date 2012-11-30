@@ -16,7 +16,7 @@ try {
 	
   Install-ChocolateyPath $bin 'Machine'
   Start-ChocolateyProcessAsAdmin @"
-[Environment]::SetEnvironmentVariable('JAVA_HOME', "$java", 'Machine')
+[Environment]::SetEnvironmentVariable('JAVA_HOME', '$java', 'Machine')
 "@
 	
   Write-ChocolateySuccess $name
