@@ -54,6 +54,6 @@ Bugfixes:
     <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/keepass/keepass/keepass.png</iconUrl>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
