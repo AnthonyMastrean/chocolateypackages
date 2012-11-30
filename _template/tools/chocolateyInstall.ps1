@@ -1,38 +1,23 @@
-﻿# error handling is only necessary if you need to do anything 
-# in addition to/instead of the main helpers
-#try 
-#{ 
-    $name = '__NAME__'
-    
-    # main helpers - these have error handling tucked into them 
-    # so they become the only line of your script if that is all 
-    # you need.
+﻿$name   = '__NAME__'
+$url    = '__URL__'
+$url64  = '__URL64__'
+$silent = '/Q'
 
-    # This command will assert administrative rights. Try any of 
-    # these to get the silent EXE installer
-    #
-    #     /s /S /q /Q /quiet /silent /SILENT /VERYSILENT
-    #
-    # msi is always 
-    #
-    #	    /quiet
-    # 
-    Install-ChocolateyPackage $name 'EXE_OR_MSI' 'SILENT_ARGS' 'URL' '64BIT_URL_DELETE_IF_NO_64BIT' 
+$tools = Split-Path $MyInvocation.MyCommand.Definition
+#$content = Join-Path (Split-Path $tools) 'content'
 
-    # download and unpack a zip file
-    Install-ChocolateyZipPackage $name 'URL' "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+Install-ChocolateyPackage $name 'EXE_OR_MSI' $silent $url $url64
+#Install-ChocolateyZipPackage $name $url $tools
 
-    # other helpers - using any of these means you want to 
-    # uncomment the error handling up top and at bottom.
-
+#try {
     # downloader that the main helpers use to download items
-    #Get-ChocolateyWebFile $name 'DOWNLOAD_TO_FILE_FULL_PATH' 'URL' '64BIT_URL_DELETE_IF_NO_64BIT'
+    #Get-ChocolateyWebFile $name 'DOWNLOAD_TO_FILE_FULL_PATH' $url $url64
 
     # installer, will assert administrative rights - used by Install-ChocolateyPackage
-    #Install-ChocolateyInstallPackage $name 'EXE_OR_MSI' 'SILENT_ARGS' '_FULLFILEPATH_'
+    #Install-ChocolateyInstallPackage $name 'EXE_OR_MSI' $silent '_FULLFILEPATH_'
 
     # unzips a file to the specified location - auto overwrites existing content
-    #Get-ChocolateyUnzip "FULL_LOCATION_TO_ZIP.zip" "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+    #Get-ChocolateyUnzip "FULL_LOCATION_TO_ZIP.zip" $tools
 
     # Runs processes asserting UAC, will assert administrative rights - used by Install-ChocolateyInstallPackage
     #Run-ChocolateyProcessAsAdmin 'STATEMENTS_TO_RUN' 'Optional_Application_If_Not_PowerShell'
@@ -44,17 +29,11 @@
     #$target = Join-Path $MyInvocation.MyCommand.Definition "$name.exe"
     #Install-ChocolateyDesktopLink $target
 
-    #------- ADDITIONAL SETUP -------#
-    # make sure to uncomment the error handling if you have additional setup to do
+    #$is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
 
-    #$processor = Get-WmiObject Win32_Processor
-    #$is64bit = $processor.AddressWidth -eq 64
-
-    # the following is all part of error handling
     #Write-ChocolateySuccess $name
 #} 
-#catch 
-#{
-    #Write-ChocolateyFailure $name "$($_.Exception.Message)"
+#catch {
+    #Write-ChocolateyFailure $name $($_.Exception.Message)
     #throw 
 #}
