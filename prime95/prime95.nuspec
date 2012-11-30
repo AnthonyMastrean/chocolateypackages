@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>prime95</id>
-    <version>26.6.3</version>
+    <version>27.7</version>
     <title>Great Internet Mersenne Prime Search</title>
     <authors>George Woltman</authors>
     <owners>Anthony Mastrean</owners>
@@ -10,11 +10,11 @@
     <projectUrl>http://mersenne.org</projectUrl>
     <iconUrl>https://github.com/anthonymastrean/nugetpackages/raw/prime95/prime95/prime95.ico</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>This program is used to find Mersenne Prime numbers.  See http://www.utm.edu/research/primes/mersenne.shtml for a good description of Mersenne primes.  Mersenne numbers can be proved composite (not prime) by either finding a factor or by running a Lucas-Lehmer primality test.</description>
+    <description>This program is used to find Mersenne Prime numbers. See http://www.utm.edu/research/primes/mersenne.shtml for a good description of Mersenne primes. Mersenne numbers can be proved composite (not prime) by either finding a factor or by running a Lucas-Lehmer primality test.</description>
     <summary>This program is used to find Mersenne Prime numbers.</summary>
-    <tags>prime gimps chocolatey admin</tags>
+    <tags>prime gimps</tags>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
