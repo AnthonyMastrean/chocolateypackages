@@ -1,6 +1,7 @@
 $name   = 'javaruntime'
-$url    = 'http://javadl.sun.com/webapps/download/AutoDL?BundleId=64152'
-$url64  = 'http://javadl.sun.com/webapps/download/AutoDL?BundleId=64153'
+# Find download URLs at http://www.java.com/en/download/manual.jsp
+$url    = 'http://javadl.sun.com/webapps/download/AutoDL?BundleId=69474'  
+$url64  = 'http://javadl.sun.com/webapps/download/AutoDL?BundleId=69476'
 $type   = 'EXE'
 $silent = '/s'
 $java   = Join-Path $env:ProgramFiles 'Java\jre7'
