@@ -3,7 +3,7 @@
   <metadata>
     <id>mastrean.ruby</id>
     <title>Anthony Mastrean's Ruby Dependencies</title>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <description>My preferred packages for developing with Ruby.</description>
@@ -11,7 +11,7 @@
     <tags>mastrean ruby</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-      <dependency id="ruby" version="(1.9.2, 1.9.3)" />
+      <dependency id="ruby" version="1.9.3" />
       <dependency id="ruby.devkit" />
       <dependency id="ansicon" />
       <dependency id="pik" />
