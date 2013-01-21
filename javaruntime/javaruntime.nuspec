@@ -3,11 +3,14 @@
   <metadata>
     <id>javaruntime</id>
     <title>Java Runtime (JRE)</title>
-    <version>7.0.9</version>
+    <version>7.0.11</version>
     <authors>Oracle</authors>
     <owners>Anthony Mastrean</owners>
     <description>Java allows you to play online games, chat with people around the world, calculate your mortgage interest, and view images in 3D, just to name a few. It's also integral to the intranet applications and other e-business solutions that are the foundation of corporate computing.</description>
     <releaseNotes>
+v7.0.11
+* Major security flaw fixed, please update to this version.
+
 v7.0.5.1
 * This package will install x86 on all systems and x64 on 64-bit systems.
     </releaseNotes>
