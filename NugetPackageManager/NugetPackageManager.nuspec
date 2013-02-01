@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>nuget-package-manager</id>
+    <id>NugetPackageManager</id>
     <title>NuGet Package Manager</title>
     <version>2.2.31210.9045</version>
     <authors>Microsoft</authors>
