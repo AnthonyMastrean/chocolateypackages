@@ -8,7 +8,7 @@
     <owners>Anthony Mastrean</owners>
     <summary>Regions Suck. You need this.</summary>
     <description>Automatically expand regions when opening a file. Prevent regions from being closed while collapsing other code blocks, and blend the region text into the background, making it less noticable. See Tools->Options->Disable Regions for options.</description>
-    <projectUrl>http://visualstudiogallery.msdn.microsoft.com/0ca60d35-1e02-43b7-bf59-ac7deb9afbca?SRC=VSIDE</projectUrl>
+    <projectUrl>http://visualstudiogallery.msdn.microsoft.com/0ca60d35-1e02-43b7-bf59-ac7deb9afbca</projectUrl>
     <tags>vsix visualstudio regions</tags>
     <licenseUrl>http://visualstudiogallery.msdn.microsoft.com/site/0ca60d35-1e02-43b7-bf59-ac7deb9afbca/eula?licenseType=None</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
