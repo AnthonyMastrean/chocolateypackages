@@ -1,5 +1,5 @@
 $name   = 'windows.sdk'
-$url    = 'http://download.microsoft.com/download/7/A/B/7ABD2203-C472-4036-8BA0-E505528CCCB7/winsdk_web.exe'
+$url    = 'http://download.microsoft.com/download/2/E/9/2E911956-F90F-4BFB-8231-E292A7B6F287/GRMSDK_EN_DVD.iso'
 $kind   = 'EXE'
 $silent = '-q -params:ADDLOCAL=ALL'
 
