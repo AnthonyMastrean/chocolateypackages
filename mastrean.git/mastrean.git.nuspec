@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>mastrean.git</id>
+    <title>Anthony Mastrean's Git Dependencies</title>
+    <version>0.0.1</version>
+    <authors>Anthony Mastrean</authors>
+    <owners>Anthony Mastrean</owners>
+    <description>My preferred packages for developing with Git.</description>
+    <projectUrl>https://github.com/AnthonyMastrean/nugetpackages/tree/mastrean.git</projectUrl>
+    <tags>mastrean git</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="git" />
+      <dependency id="git.difftool.diffmerge" />
+      <dependency id="git.help.autocorrect" />
+      <dependency id="git.alias.standup" />
+      <dependency id="dejavu.fonts" />
+      <dependency id="diffmerge" />
+      <dependency id="reconsole" />
+      <dependency id="notepad2-mod" />
+      <dependency id="wincommandpaste" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="content\dummy.txt" target="content\dummy.txt" />
+  </files>
+</package>
