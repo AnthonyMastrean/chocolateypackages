@@ -1,0 +1,20 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="db0e3c40-85e3-4b4e-a726-c913510cb9d5" shortcut="logger" description="log4net static logger" text="private static readonly ILog Log = LogManager.GetLogger(typeof($classname$));" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="classname" expression="typeName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="8bd6aee5-9a98-4924-9bf8-0dbbbb5c5852" shortcut="configurator" description="log4net app.config configuration" text="log4net.Config.XmlConfigurator.ConfigureAndWatch(new FileInfo(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile));" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
