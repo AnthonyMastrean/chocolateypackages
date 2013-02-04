@@ -3,7 +3,7 @@
   <metadata>
     <id>mastrean.dotnet</id>
     <title>Anthony Mastrean's .NET Dependencies</title>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <description>My preferred packages for working with .NET.</description>
@@ -16,8 +16,10 @@
       <dependency id="resharper" version="[7.0, 8.0)" />
       <dependency id="testnamingmode" />
       <dependency id="wincommandpaste" />
+      <dependency id="reconsole" />
       <dependency id="log4netlivetemplates" />
       <dependency id="mspeclivetemplates" />
+      <dependency id="mastrean.vsix" />
     </dependencies>
   </metadata>
   <files>
