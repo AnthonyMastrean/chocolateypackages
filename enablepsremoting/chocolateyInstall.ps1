@@ -1,7 +1,7 @@
 ﻿$name   = 'enablepsremoting'
 
 try {
-  Enable-PsRemoting -Force
+  Start-ChocolateyProcessAsAdmin "Enable-PsRemoting -Force"
   Write-ChocolateySuccess $name
 } 
 catch {
