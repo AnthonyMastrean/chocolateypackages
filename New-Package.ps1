@@ -7,9 +7,9 @@
     out a new branch. Then, replace all the '__NAME__' tokens. And, 
     finally, commit the new files and push the branch to 'origin'.
     
-    .PARAMETER name
-    The name of this package. It will be used to create the branch,
-    folder name, and to otherwise replace all the '__NAME__' tokens.
+    .PARAMETER id
+    The id of this package. It will be used to create the branch,
+    folder id, and to otherwise replace all the '__NAME__' tokens.
     
     .EXAMPLE
     .\New-Package.ps1 diffmerge
@@ -19,24 +19,26 @@
 
 param([string]$id)
 
-function Replace-Token([string]$token, [string]$replacement, [Parameter(ValueFromPipeline = $true)][string]$path)
-{
-    (Get-Content $path) `
-        | %{ $_ -replace $token,$replacement } `
-        | Set-Content $path
+function Replace-Token {
+  param(
+    [string]$token,     
+    [string]$replacement, 
+    [Parameter(ValueFromPipeline = $true)]
+    [string]$path
+  )
+
+  (Get-Content $path) `
+    | %{ $_ -replace $token,$replacement } `
+    | Set-Content $path
 }
 
 git checkout -b $id
 
 Copy-Item '_template' $id -Recurse
-
 Push-Location $id
-
 Rename-Item '__NAME__.nuspec' "$id.nuspec"
+Get-ChildItem | Replace-Token '__NAME__' $id
 
-"$id.nuspec" | Replace-Token '__NAME__' $id
-"tools\chocolateyInstall.ps1" | Replace-Token '__NAME__' $id
-
-git add .
-git commit -am "created new package from template: $id"
+git add -A
+git commit -am "new package: $id"
 git push origin $id
