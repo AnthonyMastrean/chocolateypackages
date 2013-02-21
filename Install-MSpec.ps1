@@ -1,7 +1,6 @@
-# TODO: handle multiple matching packages, get the latest one
-# TODO: support choosing an mspec version
+# TODO: support choosing an mspec version?
 
-$mspec = Resolve-Path "$pwd\packages\Machine.Specifications.*"
+$mspec = @(Resolve-Path "$pwd\packages\Machine.Specifications.*") | Sort-Object | Select-Last 1
 $tools = Join-Path $mspec 'tools'
 
 # TODO: find your installed resharper version by default
