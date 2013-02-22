@@ -9,8 +9,6 @@ And, from your solution root (assuming you're using NuGet)
 
     cmd> Install-MSpec
 
-This will find your version of ReSharper, the latest version of MSpec in that solution's `packages` directory, and execute the appropriate integration batch file.
-
-You'll have to press `Enter` to get the script to finish, as there's a hardcoded `Pause` in there.
+This will find your version of ReSharper, the latest version of MSpec in that solution's `packages` directory, and execute the appropriate integration batch file. You'll have to press `Enter` to get the script to finish, as there's a hardcoded `Pause` in there.
 
  [1]: https://github.com/machine/machine.specifications#resharper
