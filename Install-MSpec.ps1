@@ -8,10 +8,11 @@ function Get-LatestItem([string]$path) {
 }
 
 # TODO: support choosing an mspec version?
-# TODO: find your installed resharper version by default
 # TODO: support choosing a resharper version?
 
+$rsh   = Get-LatestItem -Path 'C:\Program Files (x86)\JetBrains\ReSharper\v*'
+$vers  = ($rsh -split '\\' | Select-Object -Last 1 ) -split 'v' | Select-Object -Last 1
 $mspec = Get-LatestItem -Path 'packages\Machine.Specifications.*'
-$bat   = Get-LatestItem -Path (Join-Path $mspec 'tools\InstallResharperRunner.*.bat')
+$bat   = Get-LatestItem -Path (Join-Path $mspec "tools\InstallResharperRunner.$vers.bat")
 
 & $bat
