@@ -21,6 +21,6 @@ In your rakefile,
     
 And enjoy the benefits of automatic tasks like
 
-    build_all
-    install_all
-    publish_all
+    cpack_all
+    cinst_all
+    cpush_all
