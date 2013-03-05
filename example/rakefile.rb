@@ -1,1 +1,1 @@
-require 'chocolatey/rake'
+require '../lib/chocolatey/rake'
