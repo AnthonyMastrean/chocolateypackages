@@ -1,9 +1,7 @@
 # Chocolatey::Rake
-
-TODO: Write a gem description
+Rake tasks for Chocolatey packages.
 
 ## Installation
-
 Add this line to your application's Gemfile:
 
     gem 'chocolatey-rake'
@@ -17,13 +15,12 @@ Or install it yourself as:
     $ gem install chocolatey-rake
 
 ## Usage
+In your rakefile, 
 
-TODO: Write usage instructions here
+    require 'chocolatey/rake'
+    
+And enjoy the benefits of automatic tasks like
 
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+    build_all
+    install_all
+    publish_all
