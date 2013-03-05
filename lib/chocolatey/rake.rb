@@ -7,33 +7,33 @@ specs    = FileList['**/*.nuspec']
 packages = FileList['**/*.nupkg']
 names    = specs.pathmap '%n'
 
-task_names         = names.gsub '-', '_'
-build_task_names   = task_names.map { |name| "cpack_#{name}" }
-install_task_names = task_names.map { |name| "cinst_#{name}" }
-publish_task_names = task_names.map { |name| "cpush_#{name}" }
+task_names  = names.gsub '-', '_'
+cpack_names = task_names.map { |name| "cpack_#{name}" }
+cinst_names = task_names.map { |name| "cinst_#{name}" }
+cpush_names = task_names.map { |name| "cpush_#{name}" }
 
-task :cpack_all => build_task_names
+task :cpack_all => cpack_names
 
-specs.zip(names, build_task_names) do |spec, name, build|
-  exec build do |cmd|
+specs.zip(names, cpack_names) do |spec, name, cpack|
+  exec cpack do |cmd|
     cmd.command = 'cpack'
-    cmd.parameters = spec
+    cmd.parameters = [ spec ]
   end
 end
 
-task :cinst_all => install_task_names
+task :cinst_all => cinst_names
 
-packages.zip(names, build_task_names, install_task_names) do |pkg, name, build, install|
-  exec install => [ build ] do |cmd|
+packages.zip(names, cpack_names, cinst_names) do |pkg, name, cpack, cinst|
+  exec cinst => [ cpack ] do |cmd|
     cmd.command = 'cinst'
     cmd.parameters = [ name, "-source #{here}" ]
   end
 end
 
-task :cpush_all => publish_task_names
+task :cpush_all => cpush_names
 
-packages.zip(names, build_task_names, publish_task_names) do |pkg, name, build, publish|
-  exec publish => [ build ] do |cmd|
+packages.zip(names, cpack_names, cpush_names) do |pkg, name, cpack, cpush|
+  exec cpush => [ cpack ] do |cmd|
     cmd.command = 'cpush'
     cmd.parameters = [ pkg ]
   end
