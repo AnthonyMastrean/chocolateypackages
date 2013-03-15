@@ -1,0 +1,18 @@
+<?xml version="1.0"?> 
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mspec-version-switcher</id>
+    <version>0.0.1</version>
+    <title>MSpec Version Switcher</title>
+    <authors>Anthony Mastrean</authors>
+    <owners>Anthony Mastrean</owners>
+    <projectUrl>http://www.omnyx.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Switch MSpec/ReSharper integration for the current project.</description>
+    <tags>mspec resharper integration</tags>
+  </metadata>
+  <files>
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="Install-MSpec.ps1" target="tools\Install-MSpec.ps1" />
+  </files>
+</package>
