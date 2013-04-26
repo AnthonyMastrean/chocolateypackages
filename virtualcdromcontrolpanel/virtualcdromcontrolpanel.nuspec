@@ -2,20 +2,16 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>virtualcdromcontrolpanel</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>Virtual CD-ROM Control Panel</title>
+    <version>2.0</version>
+    <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <summary>This utility enables users of Windows XP, Windows Vista, and Windows 7 to mount ISO disk image files as virtual CD-ROM drives.</summary>
+    <description>The Virtual CD-ROM Control Panel utility enables users of Windows XP, Vista, and 7 to mount ISO disk image files as virtual CD-ROM drives. This can be highly useful for reading disk images to install software or recover backup files. Notes: This tool is not supported by Microsoft; use at your own risk. Windows 8 users do NOT need this tool. Windows 8 natively supports ISO files. In Windows 8, you can simply open an ISO file and Windows automatically assigns it a drive letter and reads it as a virtual drive.</description>
+    <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=38780</projectUrl>
+    <tags>cdrom virtual mount iso</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/virtualcdromcontrolpanel/virtualcdromcontrolpanel/virtualcdromcontrolpanel.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://i.microsoft.com/global/ImageStore/PublishingImages/logos/56x56/windows_symbol_clr_56x56.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
