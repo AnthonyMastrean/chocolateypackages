@@ -2,21 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mousewithoutborders</id>
-    <version>2.1.2.1024</version>
+    <version>2.1.2.1212</version>
     <title>Mouse Without Borders</title>
     <authors>Microsoft Garage,Truong Do</authors>
     <owners>Anthony Mastrean</owners>
-    <projectUrl>https://getsatisfaction.com/mouse_without_borders</projectUrl>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/mousewithoutborders/mousewithoutborders/mousewithoutborders.ico</iconUrl>
+    <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=35460</projectUrl>
+    <iconUrl>http://wscont1.apps.microsoft.com/winstore/1x/248825a3-bdef-4bd1-bf88-ccffb3515128/Icon.21655.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Mouse Without Borders is a project that allows you to reach across your PC's as if they were part of one single desktop. You can move files between the 2 computers simply by dragging them from one desktop to another. In fact you can control up to four computers from a single mouse and keyboard with no extra hardware needed.</description>
-    <summary>Mouse Without Borders is a project that allows you to reach across your PC's as if they were part of one single desktop.</summary>
-    <releaseNotes>
-* Mini SnagIt feature (Ctrl+Shift+S)
-* Customize keyboard layout
-* Personalize Logon Screen for Windows 8
-* Some more options and hotkeys, mouse hover each one on the Settings form for more details. Note: There are three Tabs on the Settings form.
-    </releaseNotes>
+    <description>Mouse without Borders is a product that makes you the captain of your computer fleet by allowing you to control up to four computers from a single mouse and keyboard. This means that with Mouse without Borders you can copy text or drag and drop files across computers.</description>
+    <summary>Mouse without Borders is a project that allows you to reach across your PC's as if they were part of one single desktop.</summary>
     <tags>microsoft garage mouse monitor</tags>
   </metadata>
   <files>
