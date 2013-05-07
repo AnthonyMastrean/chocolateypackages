@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>sqljdbc</id>
+    <title>__TITLE__</title>
+    <version>__VERSION__</version>
+    <authors>__AUTHORS__</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>__SUMMARY__</summary>
+    <description>__DESCRIPTION__</description>
+    <projectUrl>__PROJECTURL__</projectUrl>
+    <tags>__TAG__</tags>
+    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/sqljdbc/sqljdbc/sqljdbc.ext</iconUrl>-->
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+  </metadata>
+  <files>
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
