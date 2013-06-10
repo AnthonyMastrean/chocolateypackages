@@ -16,8 +16,8 @@ Menu, Tray, Tip, Press CTRL+V to paste in any console window!
 ; If the window is a console, capture CTRL+V!
 ;==================================================
 #IfWinActive ahk_class ConsoleWindowClass
-	^v::Send !{Space}EP
-	^c::Send !{Space}EY
+  ^v::Send !{Space}EP
+  ^!c::Send !{Space}EY
 #IfWinActive
 
 #IfWinActive ahk_class Console_2_Main
