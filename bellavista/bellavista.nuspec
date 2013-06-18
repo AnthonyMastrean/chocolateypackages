@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>bellavista</id>
+    <title>BellaVista</title>
+    <version>1.1.0.66</version>
+    <authors>Ladislav Zezula</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>An easy-to-use tool for configuring Windows for a developer.</summary>
+    <description>Many system developers complain about repetitive settings of their testing Windows workstations to make them usable for testing software. Number of dialogs you need to go through is bigger on Windows Vista or newer, where the necessary dialogs are often hidden one level deeper than in Windows XP. BellaVista is a tool that gathers necessary settings to one place, speeding configuration up. The settings include:
+* Setting up debugging boot configuration
+* Configuring crash dump
+* Disabling UAC, file and registry virtualization, and Shutdown Event Tracker
+* Setting environment variables
+* Configuring DbgPrint filters</description>
+    <projectUrl>http://www.zezula.net/en/fstools/bellavista.html</projectUrl>
+    <tags>windows boot configuration</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/bellavista/bellavista/bellavista.ico</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
