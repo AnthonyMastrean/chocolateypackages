@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>prime95</id>
+    <version>27.7</version>
+    <title>Great Internet Mersenne Prime Search</title>
+    <authors>George Woltman</authors>
+    <owners>Anthony Mastrean</owners>
+    <licenseUrl>http://www.mersenne.org/legal/#EULA</licenseUrl>
+    <projectUrl>http://mersenne.org</projectUrl>
+    <iconUrl>https://github.com/anthonymastrean/nugetpackages/raw/prime95/prime95/prime95.ico</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This program is used to find Mersenne Prime numbers. See http://www.utm.edu/research/primes/mersenne.shtml for a good description of Mersenne primes. Mersenne numbers can be proved composite (not prime) by either finding a factor or by running a Lucas-Lehmer primality test.</description>
+    <summary>This program is used to find Mersenne Prime numbers.</summary>
+    <releaseNotes>
+v27.7
+* The FFT assembly code has been rewritten for better speed on Intel's newer CPUs supporting AVX instructions. Sandy Bridge and Ivy Bridge CPUs (Core i3/i5/i7-2xxx and 3xxx models) should see a huge performance increase.
+    </releaseNotes>
+    <tags>prime gimps</tags>
+  </metadata>
+  <files>
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
