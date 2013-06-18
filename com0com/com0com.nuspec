@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>com0com</id>
+    <title>Null-Modem Emulator</title>
+    <version>3.0.0</version>
+    <authors>Vyacheslav Frolov</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>The Null-modem emulator (com0com) is a kernel-mode virtual serial port driver for Windows.</summary>
+    <description>The Null-modem emulator (com0com) is a kernel-mode virtual serial port driver for Windows. You can create an unlimited number of virtual COM port pairs and use any pair to connect one COM port based application to another. The HUB for communications (hub4com) allows to receive data and signals from one COM or TCP port, modify and send it to a number of other COM or TCP ports and vice versa.</description>
+    <releaseNotes>
+Features
+* com0com: baud rate emulation
+* com0com: pinouts customization
+* com0com: noised line emulation
+* com0com: paired port settings monitoring (baud rate, data bits, stop bits, parity)
+* com0com: hiding 'unavailable' ports from user
+    </releaseNotes>
+    <projectUrl>http://sourceforge.net/projects/com0com/</projectUrl>
+    <tags>com serial serialport emulator telnet</tags>
+    <licenseUrl>http://sourceforge.net/directory/os:windows/license:gpl/freshness:recently-updated/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://a.fsdn.com/con/icons/co/com0com%40sf.net/com0com.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
