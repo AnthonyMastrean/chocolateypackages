@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>treesize.free</id>
+    <title>TreeSize (Free)</title>
+    <version>2.7</version>
+    <authors>JAM Software</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Every hard disk is too small if you just wait long enough. TreeSize Free tells you where precious disk space has gone.</summary>
+    <description>Every hard disk is too small if you just wait long enough. TreeSize Free tells you where precious disk space has gone.
+
+TreeSize Free can be started from the context menu of a folder or drive and shows you the size of this folder, including its subfolders. Expand folders in an Explorer-like fashion and see the size of every subfolder. All results can also be drilled down to the file level. Scanning operations run in a thread, so you can already see results while TreeSize Free is working. The Explorer context menu is supported within TreeSize, as well as the usual drag and drop operations.
+
+The disk space tool now also includes the main feature of our discontinued freeware NTFSRatio: TreeSize Free can display the NTFS compression rate and apply the NTFS compression on directory branches.
+
+Start up TreeSize Free as an Administrator to calculate the sizes of directories for which access is ordinarily not granted. Since the content of the files will not be read automatically during this procedure, Windows security remains guaranteed.</description>
+    <projectUrl>http://www.jam-software.com/treesize_free/</projectUrl>
+    <tags>explorer treesize size tree</tags>
+    <licenseUrl>http://www.jam-software.com/company/freeware_license.shtml</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <iconUrl>http://www.jam-software.com/img/eyes/TreeSizeFree-eye.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
