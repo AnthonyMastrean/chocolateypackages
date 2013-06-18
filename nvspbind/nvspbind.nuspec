@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>nvspbind</id>
+    <version>6.1.7725.0</version>
+    <title>Hyper-V Network VSP Bind Application</title>
+    <authors>Keith Mange</authors>
+    <owners>Anthony Mastrean</owners>
+    <licenseUrl>http://archive.msdn.microsoft.com/nvspbind/Project/License.aspx</licenseUrl>
+    <projectUrl>http://archive.msdn.microsoft.com/nvspbind</projectUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/nvspbind/nvspbind/nvspbind.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>nvspbind is a tool for modifying network bindings from the command line. It is especially useful in Server Core environments with the Hyper-V role enabled. It can be used to set the correct bindings for NICs used in Virtual Networks. It can also be used to enable or disable specific bindings on any NIC and to query and change the NIC connection order. It utilizes the INetCfg APIs documented on MSDN. Most options are documented in the readme and nvpsbind.txt which download with the install. To get help run 'nvspbind.exe /?'</description>
+    <summary>nvspbind is a tool for modifying network bindings from the command line. It is especially useful in Server Core environments with the Hyper-V role enabled.</summary>
+    <tags>hyper-v network vsp bind protocol chocolatey admin</tags>
+  </metadata>
+  <files>
+    <file src="content\nvspbind_x64.exe" target="content\nvspbind_x64.exe" />
+    <file src="content\nvspbind_x86.exe" target="content\nvspbind_x86.exe" />
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
