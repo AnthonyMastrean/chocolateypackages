@@ -3,7 +3,7 @@
   <metadata>
     <id>bind.toolsonly</id>
     <title>BIND (Tools Only)</title>
-    <version>9.9.2</version>
+    <version>9.9.3</version>
     <authors>ISC</authors>
     <owners>Anthony Mastrean</owners>
     <summary>BIND is by far the most widely used DNS software on the Internet.</summary>
@@ -13,6 +13,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
