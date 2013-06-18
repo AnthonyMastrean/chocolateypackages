@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>isorecorder</id>
+    <title>ISO Recorder</title>
+    <version>3.1</version>
+    <authors>Alex Feinman</authors>
+    <owners>Anthony Mastrean</owners>
+    <description>ISO Recorder is a tool (power toy) for Windows XP, 2003 and now Windows Vista, that allows (depending on the Windows version) to burn CD and DVD images (DVD support is only available on Windows Vista), copy disks, make images of the existing data CDs and DVDs and create ISO images from a content of a disk folder.</description>
+    <projectUrl>http://alexfeinman.com/isorecorder.htm</projectUrl>
+    <tags>iso disk recorder admin</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/isorecorder/isorecorder/isorecorder.ext</iconUrl>-->
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+  </metadata>
+  <files>
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
