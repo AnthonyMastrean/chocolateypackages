@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>IndentGuides</id>
+    <title>Indent Guides</title>
+    <version>12.1</version>
+    <authors>Steve Dower</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Adds vertical lines at each indent level.</summary>
+    <description>Displays indent guides in Visual Studio text editor windows.
+
+Guides can be displayed at the indent specified in your settings, regardless of tabs or spaces, or wherever text has been indented to.
+
+There are three styles of guides: solid, dotted and dashed, available in thin and thick varieties and customizable color. The default is dotted teal, as shown in the image. Each indent level can have a different style and color.
+
+The deepest guide that includes the block with the caret is displayed in a different color or a glow, to help you find the start and end of your code. Guides can be shown and customized for any language in Visual Studio. It reads the spaces, not the code.</description>
+    <projectUrl>http://visualstudiogallery.msdn.microsoft.com/e792686d-542b-474a-8c55-630980e72c30</projectUrl>
+    <tags>vsix visualstudio indent guide</tags>
+    <licenseUrl>http://visualstudiogallery.msdn.microsoft.com/site/e792686d-542b-474a-8c55-630980e72c30/eula?licenseType=None</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>

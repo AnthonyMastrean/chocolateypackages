@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>MarkdownMode</id>
+    <title>Markdown Mode</title>
+    <version>2.4</version>
+    <authors>Noah Richards</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>A language service for editing Markdown files.</summary>
+    <description>This extension provides support for editing files that use the Markdown syntax.  In the current version, it supports the following features:
+* Syntax highlighting (for Markdown and HTML)
+* A live preview window of the file you are editing
+* A rudimentary margin with buttons for showing the preview window and copying the HTML-ized version of the file you are editing to the clipboard.</description>
+    <projectUrl>http://visualstudiogallery.msdn.microsoft.com/0855e23e-4c4c-4c82-8b39-24ab5c5a7f79</projectUrl>
+    <tags>vsix visualstudio markdown</tags>
+    <licenseUrl>http://visualstudiogallery.msdn.microsoft.com/site/0855e23e-4c4c-4c82-8b39-24ab5c5a7f79/eula?licenseType=None</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
