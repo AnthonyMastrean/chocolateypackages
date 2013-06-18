@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>liquibase</id>
+    <title>Liquibase</title>
+    <version>2.0.5</version>
+    <authors>Liquibase</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>An open source library for tracking, managing, and applying database changes.</summary>
+    <description>An open source library for tracking, managing, and applying database changes.</description>
+    <projectUrl>http://www.liquibase.org/index.html</projectUrl>
+    <tags>db change management</tags>
+    <licenseUrl>https://github.com/liquibase/liquibase/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl></iconUrl>-->
+    <dependencies>
+      <dependency id="javaruntime" version="[6.0,8.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
