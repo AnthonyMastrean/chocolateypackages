@@ -23,16 +23,13 @@
     <tags>autohotkey debugging ide</tags>
     <licenseUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/license.htm</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <releaseNotes>
-v3.0.0
-* Package does not support silent install (yet!)
-    </releaseNotes>
+    <releaseNotes>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/changelog.htm</releaseNotes>
     <!--<iconUrl></iconUrl>-->
     <dependencies>
       <dependency id="autohotkey_l" />
     </dependencies>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
