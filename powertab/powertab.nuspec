@@ -2,20 +2,21 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>powertab</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>PowerTab</title>
+    <version>0.99.6.1</version>
+    <authors>idvorkin, JasonMArcher</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <summary>Powertab is an extension of the PowerShell tab expansion feature.</summary>
+    <description>Powertab is an extension of the PowerShell tab expansion feature.</description>
+    <releaseNotes>
+    v0.99.6.1
+    * Earlier versions incorrectly incorrectly installed to $PSHOME\Modules. Please remove the 'PowerTab' sub-directory or it will may load first when you call Import-Module.
+    </releaseNotes>
+    <projectUrl>http://powertab.codeplex.com/</projectUrl>
+    <tags>powershell module tabexpansion</tags>
+    <licenseUrl>http://powertab.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/powertab/powertab/powertab.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://upload.wikimedia.org/wikipedia/en/7/7f/Windows_PowerShell_icon.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
