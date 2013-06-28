@@ -3,7 +3,7 @@
   <metadata>
     <id>NugetPackageManager</id>
     <title>NuGet Package Manager</title>
-    <version>2.2.31210.9045</version>
+    <version>2.6</version>
     <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
     <summary>A collection of tools to automate the process of downloading, installing, upgrading, configuring, and removing packages from a VS Project.</summary>
