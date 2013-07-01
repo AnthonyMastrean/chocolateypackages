@@ -3,7 +3,7 @@
   <metadata>
     <id>tfpt</id>
     <title>TFS Power Tools</title>
-    <version>11.0</version>
+    <version>11.0.0.1</version>
     <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Power Tools are a set of enhancements, tools, and command-line utilities that increase productivity of Team Foundation Server scenarios.</summary>
