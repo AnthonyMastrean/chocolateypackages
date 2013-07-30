@@ -1,6 +1,4 @@
 function Publish-ChocolateyPackage {
-  param([switch]$createOnly)
-
   $nuspec  = Resolve-Path *.nuspec
   $xml     = [xml] (Get-Content $nuspec)
   $id      = $xml.package.metadata.id
@@ -14,5 +12,5 @@ function Publish-ChocolateyPackage {
 
   $package = Resolve-Path *.nupkg
 
-  cpush $package "$(if($createOnly) { '-CreateOnly' })"
+  cpush $package
 }
