@@ -2,7 +2,7 @@
 $url    = 'http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.4813.exe'
 $url64  = 'http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.4813-x64.exe'
 $kind   = 'EXE'
-$silent = '/Q'
+$silent = '--unattended --shared --auto-install=yes'
 
 Install-ChocolateyPackage $name $kind $silent $url $url64
 
