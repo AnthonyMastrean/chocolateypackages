@@ -1,25 +1,54 @@
-﻿$name   = '__NAME__'
-$url    = '__URL__'
-$url64  = '__URL64__'
+﻿$name   = 'miktex'
+$url    = 'http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.4813.exe'
+$url64  = 'http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.4813-x64.exe'
+$kind   = 'EXE'
 $silent = '/Q'
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
-#$content = Join-Path (Split-Path $tools) 'content'
+Install-ChocolateyPackage $name $kind $silent $url $url64
 
-Install-ChocolateyPackage $name 'EXE_OR_MSI' $silent $url $url64
-#Install-ChocolateyZipPackage $name $url $tools
 
-#try {
-  #$is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
-  
-  #Get-ChocolateyWebFile $name 'DOWNLOAD_TO_FILE_FULL_PATH' $url $url64
-  #Install-ChocolateyInstallPackage $name 'EXE_OR_MSI' $silent '_FULLFILEPATH_'
-  #Get-ChocolateyUnzip "FULL_LOCATION_TO_ZIP.zip" $tools
-  #Start-ChocolateyProcessAsAdmin 'STATEMENTS_TO_RUN' 'Optional_Application_If_Not_PowerShell'
+<#
+---------------------------
+MiKTeX Setup Wizard
+---------------------------
+Usage: setupwiz [OPTIONS]
 
-  #Write-ChocolateySuccess $name
-#} 
-#catch {
-  #Write-ChocolateyFailure $name $($_.Exception.Message)
-  #throw 
-#}
+Options:
+
+  --allow-unattended-reboot
+  --auto-install=yes
+  --auto-install=no
+  --auto-install=ask
+  --common-config=DIR
+  --common-data=DIR
+  --common-install=DIR
+  --common-roots=DIRS
+  --download-only
+  --dry-run
+  --help
+  --install-from-local-repository
+  --local-package-repository=DIR
+  --no-additional-roots
+  --no-registry
+  --package-set=SET
+  --paper-size=A4
+  --paper-size=Letter
+  --portable
+  --private
+  --program-folder=NAME
+  --remote-package-repository=URL
+  --shared
+  --unattended
+  --user-config=DIR
+  --user-data=DIR
+  --user-install=DIR
+  --user-roots=DIRS
+
+
+setupwiz reads its arguments from setupwiz.opt, if such a file exists.
+
+See the MiKTeX Manual for more information.
+---------------------------
+OK   
+---------------------------
+#>

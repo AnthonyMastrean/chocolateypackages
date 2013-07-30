@@ -2,20 +2,17 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>miktex</id>
-    <title>__TITLE__</title>
-    <version>__VERSION__</version>
-    <authors>__AUTHORS__</authors>
+    <title>MiKTeX</title>
+    <version>2.9.4813</version>
+    <authors>Christian Schenk</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>__SUMMARY__</summary>
-    <description>__DESCRIPTION__</description>
-    <projectUrl>__PROJECTURL__</projectUrl>
-    <tags>__TAG__</tags>
-    <licenseUrl>__LICENSEURL__</licenseUrl>
+    <summary>MiKTeX (pronounced mick-tech) is an up-to-date implementation of TeX/LaTeX and related programs for Windows (all current variants).</summary>
+    <description>TeX is a typesetting system written by Donald Ervin Knuth who says that it is "intended for the creation of beautiful books - and especially for books that contain a lot of mathematics".</description>
+    <projectUrl>http://miktex.org/</projectUrl>
+    <tags>latex windows</tags>
+    <licenseUrl>http://miktex.org/copying</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl></iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://miktex.org/favicon.ico</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
