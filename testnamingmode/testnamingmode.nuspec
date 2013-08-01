@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>testnamingmode</id>
+    <version>1.0.1.2</version>
+    <title>Test Naming Mode</title>
+    <authors>JP Boodhoo</authors>
+    <owners>Anthony Mastrean</owners>
+    <projectUrl>https://github.com/AnthonyMastrean/testnamingmode</projectUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/testnamingmode/raw/master/content/testnamingmode.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Enable easy BDD-styled test naming by pressing `CTRL+SHIFT+U`. That is, spaces become underscores `_` automatically! You can exit this mode by pressing `Tab`, `Esc`, or `Enter`. This should work nicely with tools like ReSharper that use those same keys as template hotkeys.</description>
+    <summary>Enable easy BDD-styled test naming by pressing `CTRL+SHIFT+U`.</summary>
+    <tags>autohotkey test naming bdd automation</tags>
+    <dependencies>
+      <dependency id="autohotkey_l" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="content\testnamingmode.ahk" target="content\testnamingmode.ahk" />
+    <file src="content\testnamingmode.ico" target="content\testnamingmode.ico" />
+    <file src="content\testnamingmode_disabled.ico" target="content\testnamingmode_disabled.ico" />
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
