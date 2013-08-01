@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>reconsole</id>
+    <version>0.0.4</version>
+    <title>ReConsole</title>
+    <authors>Anthony Mastrean</authors>
+    <owners>Anthony Mastrean</owners>
+    <projectUrl>https://github.com/AnthonyMastrean/reconsole</projectUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/reconsole/raw/master/content/reconsole.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Autocomplete common character pairs in your console</description>
+    <tags>autohotkey console productivity</tags>
+    <dependencies>
+      <dependency id="autohotkey_l" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="content\reconsole.ahk" target="content\reconsole.ahk" />
+    <file src="content\reconsole.ico" target="content\reconsole.ico" />
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
