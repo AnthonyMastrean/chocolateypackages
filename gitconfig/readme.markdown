@@ -1,2 +1,2 @@
 # Git Tools
-My git tools/automation chocolatey packages.
+Git tools, settings, and automation [chocolatey](http://chocolatey.org/) packages.
