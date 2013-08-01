@@ -3,7 +3,7 @@
   <metadata>
     <id>bellavista</id>
     <title>BellaVista</title>
-    <version>1.1.0.66</version>
+    <version>1.1.0.73</version>
     <authors>Ladislav Zezula</authors>
     <owners>Anthony Mastrean</owners>
     <summary>An easy-to-use tool for configuring Windows for a developer.</summary>
@@ -16,9 +16,9 @@
     <projectUrl>http://www.zezula.net/en/fstools/bellavista.html</projectUrl>
     <tags>windows boot configuration</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/bellavista/bellavista/bellavista.ico</iconUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/chocolateypackages/blob/7a3e5b402f3055a06adc9a55a9d44867b03c8ccf/bellavista/bellavista.ico</iconUrl>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
