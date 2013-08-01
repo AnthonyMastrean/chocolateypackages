@@ -16,7 +16,7 @@
     <projectUrl>http://www.zezula.net/en/fstools/bellavista.html</projectUrl>
     <tags>windows boot configuration</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/ccf645b412d1f7dbc1d756b2f2c36ad6223bdce8/bellavista/bellavista.png</iconUrl>
+    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/c0388970da0f0de87ae45e43f7d1830cd2ac3024/bellavista/bellavista.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
