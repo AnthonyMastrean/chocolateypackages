@@ -1,0 +1,4 @@
+# Windows Image to Virtual Hard Disk Converter (WIM2VHD)
+The [Windows Image to Virtual Hard Disk][src] (WIM2VHD) command-line tool allows you to create sysprepped VHD images from any Windows 7 installation source. VHDs created by WIM2VHD will boot directly to the Out Of Box Experience, ready for your first-use customizations. You can also automate the OOBE by supplying your own unattend.xml file, making the possibilities limitless. Fresh squeezed, organically grown, free-range VHDs - just like Mom used to make - that work with Virtual PC, Virtual Server, Microsoft Hyper-V, and Windows 7's new Native VHD-Boot functionality!
+
+ [src]: http://archive.msdn.microsoft.com/wim2vhd

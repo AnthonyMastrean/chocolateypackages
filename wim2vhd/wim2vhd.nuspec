@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>wim2vhd</id>
+    <version>6.1.7600.2</version>
+    <title>Windows Image to Virtual Hard Disk Converter (WIM2VHD)</title>
+    <authors>Mike Kolitz</authors>
+    <owners>Anthony Mastrean</owners>
+    <licenseUrl>http://msdn.microsoft.com/en-us/library/ff648068.aspx</licenseUrl>
+    <projectUrl>http://archive.msdn.microsoft.com/wim2vhd</projectUrl>
+    <iconUrl>https://raw.github.com/AnthonyMastrean/wim2vhd/master/wim2vhd.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Create sysprepped VHD images from any Windows 7 installation source.</summary>
+    <description>The Windows Image to Virtual Hard Disk (WIM2VHD) command-line tool allows you to create sysprepped VHD images from any Windows 7 installation source. VHDs created by WIM2VHD will boot directly to the Out Of Box Experience, ready for your first-use customizations. You can also automate the OOBE by supplying your own unattend.xml file, making the possibilities limitless. Fresh squeezed, organically grown, free-range VHDs - just like Mom used to make - that work with Virtual PC, Virtual Server, Microsoft Hyper-V, and Windows 7's new Native VHD-Boot functionality!</description>
+    <tags>vhd sysprep wim imagex</tags>
+  </metadata>
+  <files>
+    <file src="content\WIM2VHD.wsf" target="content\WIM2VHD.wsf" />
+    <file src="tools\imagex.exe" target="tools\imagex.exe" />
+    <file src="tools\imagex64.exe" target="tools\imagex64.exe" />
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
