@@ -1,28 +1,28 @@
 function New-ChocolateyPackage {
   <#
       .SYNOPSIS
-      Create a new Chocolatey package from the template.
+      Create a new Chocolatey package skeleton.
       
       .DESCRIPTION
-      Copy the template to a new location, by package ID. Replace all 
-      the '__NAME__' tokens. Commit the new files and push.
+      Create a new Chocolatey package skeleton the way I like it.
       
       .PARAMETER id
-      The id of this package.
+      The ID of this package.
       
       .EXAMPLE
-      .\New-ChocolateyPackage.ps1 diffmerge
-      
-      Create a new package 'diffmerge' from the template.
+      PS> New-ChocolateyPackage diffmerge
   #>
-  param([string]$id)
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$id
+  )
 
-  Copy-Item '_template' $id -Recurse
-  Push-Location $id
-  Rename-Item '__NAME__.nuspec' "$id.nuspec"
-  Get-ChildItem | Replace-Token '__NAME__' $id
-
-  git add -A
-  git commit -am "new package: $id"
-  git push
+  Copy-Item (Join-Path $module_root 'template') .\$id -Force -Recurse
+  
+  Move-Item .\$id\*.nuspec .\$id\$id.nuspec
+  
+  Get-ChildItem .\$id -Recurse | Select-Object -Expand FullName | Replace-Token '__NAME__' $id
+  Get-ChildItem .\$id -Recurse | Select-Object -Expand FullName | Replace-Token '__OWNER__' $ENV:USERNAME
+  
+  Push-Location .\$id
 }

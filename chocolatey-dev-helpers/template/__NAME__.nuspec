@@ -5,7 +5,7 @@
     <title>__TITLE__</title>
     <version>__VERSION__</version>
     <authors>__AUTHORS__</authors>
-    <owners>Anthony Mastrean</owners>
+    <owners>__OWNER__</owners>
     <summary>__SUMMARY__</summary>
     <description>__DESCRIPTION__</description>
     <projectUrl>__PROJECTURL__</projectUrl>
