@@ -1,13 +1,10 @@
 function New-ChocolateyPackage {
   <#
       .SYNOPSIS
-      Create a new Chocolatey package skeleton.
-      
-      .DESCRIPTION
-      Create a new Chocolatey package skeleton the way I like it.
-      
+      Create a new Chocolatey package skeleton from the template.
+
       .PARAMETER id
-      The ID of this package.
+      The ID of the new package.
       
       .EXAMPLE
       PS> New-ChocolateyPackage diffmerge
