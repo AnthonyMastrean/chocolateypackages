@@ -1,25 +1,32 @@
 function New-ChocolateyPackage {
   <#
-      .SYNOPSIS
-      Create a new Chocolatey package skeleton from the template.
+    .SYNOPSIS
+    Create a new Chocolatey package.
 
-      .PARAMETER id
-      The ID of the new package.
-      
-      .EXAMPLE
-      PS> New-ChocolateyPackage diffmerge
+    .DESCRIPTION
+    Create a new Chocolatey package from the skeleton in the template 
+    directory. Create the named folder, rename the nuspec, and replace
+    basic tokens in the scripts.
+
+    .PARAMETER id
+    The ID of the package to create.
+    
+    .EXAMPLE
+    PS> New-ChocolateyPackage diffmerge
   #>
   param(
     [Parameter(Mandatory = $true)]
     [string]$id
   )
 
-  Copy-Item (Join-Path $module_root 'template') .\$id -Force -Recurse
+  $here = Join-Path $pwd $id
+
+  Copy-Item (Join-Path $module_root 'template') $here -Force -Recurse
   
-  Move-Item .\$id\*.nuspec .\$id\$id.nuspec
+  Move-Item $here\*.nuspec $here\$id.nuspec
   
-  Get-ChildItem .\$id -Recurse | Select-Object -Expand FullName | Replace-Token '__NAME__' $id
-  Get-ChildItem .\$id -Recurse | Select-Object -Expand FullName | Replace-Token '__OWNER__' $ENV:USERNAME
+  Get-ChildItem $here -Recurse | Select-Object -Expand FullName | Replace-Token '__NAME__' $id
+  Get-ChildItem $here -Recurse | Select-Object -Expand FullName | Replace-Token '__OWNER__' $ENV:USERNAME
   
-  Push-Location .\$id
+  Push-Location $here
 }

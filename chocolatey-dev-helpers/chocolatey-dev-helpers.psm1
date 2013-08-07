@@ -30,4 +30,12 @@ function Test-NullPath {
   return (Test-Path $path)
 }
 
-Export-ModuleMember -Function New-ChocolateyPackage, Reset-ChocolateyPackage, Test-ChocolateyPackage, Publish-ChocolateyPackage
+function Get-PackageMetadata {
+  [xml](Get-Content $pwd\*.nuspec)
+}
+
+Export-ModuleMember -Function New-ChocolateyPackage, `
+                              Pack-ChocolateyPackage, `
+                              Install-ChocolateyPackage, `
+                              Reset-ChocolateyPackage, `
+                              Push-ChocolateyPackage
