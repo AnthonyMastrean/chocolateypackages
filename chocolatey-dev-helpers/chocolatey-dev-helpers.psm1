@@ -1,29 +1,33 @@
 $here = Split-Path $MyInvocation.MyCommand.Definition
 
-. $here\lib\New-ChocolateyPackage.ps1
-. $here\lib\Clean-ChocolateyPackage.ps1
-. $here\lib\Debug-ChocolateyPackage.ps1
-. $here\lib\Publish-ChocolateyPackage.ps1
+Get-ChildItem $here\lib\*.ps1 | %{ . $_.FullName }
 
 function Replace-Token {
   param(
+    [Parameter(Mandatory = $true)]
     [string]$token, 
+    [Parameter(Mandatory = $true)]
     [string]$replacement, 
     [Parameter(ValueFromPipeline = $true)]
     [string]$path
   )
   
   (Get-Content $path) `
-    | %{ $_ -replace $token, $replacement }   
+    | %{ $_ -replace $token, $replacement } `
     | Set-Content $path
 }
 
-function Test-NullPath($path) {
-    if($path -eq $null) { 
-      return $false 
-    }
-    
-    return (Test-Path $path)
+function Test-NullPath {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$path
+  )
+
+  if($path -eq $null) { 
+    return $false 
+  }
+  
+  return (Test-Path $path)
 }
 
-Export-ModuleMember -Function New-ChocolateyPackage, Clean-ChocolateyPackage, Test-ChocolateyPackage, Publish-ChocolateyPackage
+Export-ModuleMember -Function New-ChocolateyPackage, Reset-ChocolateyPackage, Test-ChocolateyPackage, Publish-ChocolateyPackage

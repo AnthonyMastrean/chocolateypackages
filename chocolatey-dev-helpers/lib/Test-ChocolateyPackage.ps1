@@ -1,7 +1,7 @@
-function Debug-ChocolateyPackage {
+function Test-ChocolateyPackage {
 <#
     .SYNOPSIS
-    Debug a Chocolatey package.
+    Tests a Chocolatey package.
     
     .DESCRIPTION
     This script will debug the current package. It expects that you 
@@ -15,7 +15,7 @@ function Debug-ChocolateyPackage {
     directory.
     
     .EXAMPLE
-    .\Debug-ChocolateyPackage.ps1
+    .\Test-ChocolateyPackage.ps1
     
     Invoke the debug script (located in the root directory) from in 
     this package directory.
