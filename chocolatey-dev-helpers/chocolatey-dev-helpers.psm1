@@ -37,5 +37,4 @@ function Get-PackageMetadata {
 Export-ModuleMember -Function New-ChocolateyPackage, `
                               Pack-ChocolateyPackage, `
                               Install-ChocolateyPackage, `
-                              Reset-ChocolateyPackage, `
                               Push-ChocolateyPackage

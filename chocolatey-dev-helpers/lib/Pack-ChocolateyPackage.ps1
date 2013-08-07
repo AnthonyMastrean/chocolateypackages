@@ -11,8 +11,9 @@ function Pack-ChocolateyPackage {
     PS> Pack-ChocolateyPackage
   #>
 
-  $xml = Get-PackageMetadata
-  $id = $xml.package.metadata.id
+  $xml    = Get-PackageMetadata
+  $id     = $xml.package.metadata.id
+  $nuspec = Join-Path $pwd "$id.nuspec"
 
-  cpack $pwd\$id.nuspec
+  cpack $nuspec
 }

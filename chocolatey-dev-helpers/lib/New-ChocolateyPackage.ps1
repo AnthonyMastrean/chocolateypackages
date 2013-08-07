@@ -19,14 +19,17 @@ function New-ChocolateyPackage {
     [string]$id
   )
 
-  $here = Join-Path $pwd $id
+  $template = Join-Path $module_root 'template'
+  $package  = Join-Path $pwd $id
+  $wildcard = Join-Path $package '*.nuspec'
+  $nuspec   = Join-Path $package "$id.nuspec"
 
-  Copy-Item (Join-Path $module_root 'template') $here -Force -Recurse
+  Copy-Item $template $package -Force -Recurse
   
-  Move-Item $here\*.nuspec $here\$id.nuspec
+  Move-Item $wildcard $nuspec
   
-  Get-ChildItem $here -Recurse | Select-Object -Expand FullName | Replace-Token '__NAME__' $id
-  Get-ChildItem $here -Recurse | Select-Object -Expand FullName | Replace-Token '__OWNER__' $ENV:USERNAME
+  Get-ChildItem $package -Recurse | Select-Object -Expand FullName | Replace-Token '__NAME__' $id
+  Get-ChildItem $package -Recurse | Select-Object -Expand FullName | Replace-Token '__OWNER__' $ENV:USERNAME
   
-  Push-Location $here
+  Push-Location $package
 }

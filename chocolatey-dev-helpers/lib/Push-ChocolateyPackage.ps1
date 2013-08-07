@@ -15,6 +15,7 @@ function Push-ChocolateyPackage {
   $xml     = Get-PackageMetadata
   $id      = $xml.package.metadata.id
   $version = $xml.package.metadata.version
+  $nupkg   = Join-Path $pwd "$id.$version.nupkg"
 
   git add .
   git add -u
@@ -22,5 +23,5 @@ function Push-ChocolateyPackage {
   git tag -a "$id.$version" -m "Publishing $id.$version"
   git push --tags
 
-  cpush $pwd\$id.$version.nupkg
+  cpush $nupkg
 }
