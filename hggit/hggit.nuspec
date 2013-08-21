@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>hggit</id>
+    <title>Hg-Git Mercurial Plugin</title>
+    <version>0.0.0.0-HEAD</version>
+    <authors>durin42</authors>
+    <owners>amastrean</owners>
+    <summary>This is the Hg-Git plugin for Mercurial</summary>
+    <description>This is the Hg-Git plugin for Mercurial, adding the ability to push and pull to/from a Git server repository from Hg. This means you can collaborate on Git based projects from Hg, or use a Git server as a collaboration point for a team with developers using both Git and Hg.</description>
+    <projectUrl>https://bitbucket.org/durin42/hg-git</projectUrl>
+    <tags>hg git</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="hg" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
