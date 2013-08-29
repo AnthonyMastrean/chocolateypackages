@@ -3,7 +3,7 @@
   <metadata>
     <id>modernmix</id>
     <title>ModernMix</title>
-    <version>1.10</version>
+    <version>1.10.1</version>
     <authors>Stardock</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Run Modern (Metro) apps in a window on
@@ -12,6 +12,7 @@ your desktop with ModernMix™</summary>
     <projectUrl>http://www.stardock.com/products/modernmix/index.asp</projectUrl>
     <tags>windows windows-8 metro fullscreen</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/f0ee4e084545e78f59348bb40ec603311a8257a1/modernmix/modernmix.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
