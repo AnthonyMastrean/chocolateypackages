@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>dejavufonts</id>
+    <version>2.33</version>
+    <title>DejaVu Fonts</title>
+    <authors>DejaVu</authors>
+    <owners>Anthony Mastrean</owners>
+    <licenseUrl>http://dejavu-fonts.org/wiki/License</licenseUrl>
+    <projectUrl>http://dejavu-fonts.org/wiki/Main_Page</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>The DejaVu fonts are a font family based on the Bitstream Vera Fonts. Its purpose is to provide a wider range of characters while maintaining the original look and feel.</description>
+    <summary>The DejaVu fonts are a font family based on the Bitstream Vera Fonts. Its purpose is to provide a wider range of characters while maintaining the original look and feel.</summary>
+    <tags>dejavu sans serif mono font fonts</tags>
+  </metadata>
+  <files>
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
