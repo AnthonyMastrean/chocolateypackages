@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>windows.sdk</id>
+    <id>windows7-sdk-net40</id>
     <title>Microsoft Windows SDK for Windows 7 and .NET Framework 3.5 SP1</title>
     <version>7.1</version>
     <authors>Microsoft</authors>
