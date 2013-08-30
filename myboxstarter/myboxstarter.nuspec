@@ -11,7 +11,7 @@
     <projectUrl>http://myget.org/</projectUrl>
     <tags>boxstarter</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl></iconUrl>
+    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/a939112ea1564c2e39df5d0397c06b8e5a417f4f/myboxstarter/myboxstarter.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
