@@ -19,6 +19,7 @@
   <files>
     <file src="tools\diffmerge-diff.sh" target="tools\diffmerge-diff.sh" />
     <file src="tools\diffmerge-merge.sh" target="tools\diffmerge-merge.sh" />
+    <file src="tools\gitconfig.bat" target="tools\gitconfig.bat" />
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>

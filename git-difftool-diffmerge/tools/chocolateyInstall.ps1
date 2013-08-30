@@ -1,19 +1,12 @@
 ﻿$name = "git.difftool.diffmerge"
 
-$tools   = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) "content"
-
-$diff    = Join-Path $content "diffmerge-diff.sh"
-$merge   = Join-Path $content "diffmerge-merge.sh"
+$tools = Split-Path $MyInvocation.MyCommand.Definition
+$bat   = Join-Path $tools "gitconfig.bat"
+$diff  = Join-Path $tools "diffmerge-diff.sh"
+$merge = Join-Path $tools "diffmerge-merge.sh"
 
 try { 
-  git config --global diff.tool diffmerge
-  git config --global difftool.diffmerge.cmd "`"`"$diff`" `"`$LOCAL`" `"`$REMOTE`"`""
-  git config --global merge.tool diffmerge
-  git config --global mergetool.diffmerge.cmd "`"`"$merge`" `"`$PWD/`$LOCAL`" `"`$PWD/`$BASE`" `"`$PWD/`$REMOTE`" `"`$PWD/`$MERGED`"`""
-  git config --global mergetool.diffmerge.trustExitCode false
-  git config --global mergetool.diffmerge.keepBackup false
-
+  & $bat $diff $merge
   Write-ChocolateySuccess $name
 } 
 catch {
