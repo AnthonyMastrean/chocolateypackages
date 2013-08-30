@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>imagej.jdk6</id>
-    <title>ImageJ (Bundled with Java 6)</title>
+    <id>imagej-jdk6</id>
+    <title>ImageJ (with Java 6)</title>
     <version>1.45</version>
     <authors>Wayne Rasband</authors>
     <owners>Anthony Mastrean</owners>
@@ -11,12 +11,9 @@
     <projectUrl>http://rsbweb.nih.gov/ij/</projectUrl>
     <tags>image processing nih</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/imagej/imagej/imagej.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/5af998eafa4f801eb979f9ac85f0d09de34ac834/imagej/imagej.png</iconUrl>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
