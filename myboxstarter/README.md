@@ -1,7 +1,11 @@
- 1. Download the BoxStarter package
- 1. Copy it to a thumbdrive
- 1. Copy the built myboxstarter package to the same 
- 1. Plug that into the new machine
- 1. Execute the following in a command shell
+ 1. Download the [latest source][1] from [boxstarter.org](http://boxstarter.org)
+ 1. Unzip and copy it to a removable drive
+ 1. Build your boxstarter chocolatey package
+ 1. Copy the package to the same directory on your removable drive
+ 1. Plug the drive into a new machine
+ 1. Run the following in a command shell
  
         box/starter/path> boxstarter myboxstarter -localrepo %cd%
+
+
+ [1]: https://boxstarter.codeplex.com/SourceControl/latest
