@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>underscore</id>
+    <version>1.0.0</version>
+    <title>Underscore Mode for Windows</title>
+    <authors>Anthony Mastrean</authors>
+    <owners>Anthony Mastrean</owners>
+    <projectUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/underscore</projectUrl>
+    <iconUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/underscore/tools/underscore_on.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Make the spacebar insert underscores instead of spaces. Enter underscore mode by pressing `CTRL+SHIFT+U`. Exit underscore mode by pressing `Tab`, `Esc`, or `Enter`.
+    </description>
+    <summary>Replace the spacebar and spaces with underscores!</summary>
+    <tags>underscore spacebar</tags>
+  </metadata>
+  <files>
+    <file src="bin\underscore.exe" target="tools\underscore.exe" />
+    <file src="bin\underscore.exe.gui" target="tools\underscore.exe.gui" />
+    <file src="tools\chocolateyInstall-compiled.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
