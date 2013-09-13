@@ -1,4 +1,10 @@
-﻿Update-ExecutionPolicy Unrestricted
+function Invoke-GitClone($remote, $path) {
+  Push-Location $path
+  git clone $_
+  Pop-Location
+}
+
+Update-ExecutionPolicy Unrestricted
 Install-WindowsUpdates -AcceptEula
 Enable-RemoteDesktop
 
@@ -14,22 +20,20 @@ Get-WindowsOptionalFeature -Online `
   | ?{ $_.FeatureName -match "IIS" } `
   | Enable-WindowsOptionalFeature -Online -All -NoRestart
 
-$profile_path = Join-Path $ENV:USERPROFILE "Documents\WindowsPowerShell"
-$modules_path = Join-Path $profile_path "Modules"
+$ps_profile_path = Join-Path $ENV:USERPROFILE "Documents\WindowsPowerShell"
+$ps_modules_path = Join-Path $profile_path "Modules"
 
-$modules = @(
+New-Item $ps_modules_path -Type Directory
+
+Invoke-GitClone -remote git@github.com:AnthonyMastrean/WindowsPowerShell.git -path $ps_profile_path
+
+@(
   "git@github.com:AnthonyMastrean/remember.git",
   "git@github.com:AnthonyMastrean/powertab.git",
   "git@github.com:dahlbyk/posh-git.git",
   "git@github.com:dahlbyk/posh-hg.git",
   "git@github.com:Iristyle/Posh-VsVars.git",
-)
-
-git clone git@github.com:AnthonyMastrean/WindowsPowerShell.git $profile_path
-New-Item $modules_path -Type Directory
-Push-Location $modules_path
-$modules | %{ git clone $_ }
-Pop-Location
+) | %{ Invoke-GitClone -remote $_ -path $ps_modules_path }
 
 Install-ChocolateyPinnedTaskBarItem "${ENV:PROGRAMFILES(X86)}\Google\Chrome\Application"
 Install-ChocolateyPinnedTaskBarItem "$ENV:WINDIR\System32\WindowsPowerShell\v1.0\powershell.exe"
