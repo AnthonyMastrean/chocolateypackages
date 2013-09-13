@@ -10,6 +10,10 @@ cinst all -source https://myget.org/F/fullblowndotnet
 
 cinst Microsoft-Hyper-V-All -source windowsFeatures
 
+Get-WindowsOptionalFeature -Online `
+  | ?{ $_.FeatureName -match "IIS" } `
+  | Enable-WindowsOptionalFeature -Online -All -NoRestart
+
 $profile_path = Join-Path $ENV:USERPROFILE "Documents\WindowsPowerShell"
 $modules_path = Join-Path $profile_path "Modules"
 
