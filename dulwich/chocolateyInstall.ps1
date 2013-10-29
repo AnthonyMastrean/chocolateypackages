@@ -9,12 +9,7 @@ $hg      = Join-Path $ENV:PROGRAMFILES "Mercurial\library.zip"
 Install-ChocolateyZipPackage $name $url $content
 
 try {
-  Start-ChocolateyProcessAsAdmin "
-`$shell = New-Object -ComObject shell.application; 
-`$zip = `$shell.NameSpace(`"$hg`"); 
-`$zip.CopyHere(`"$dulwich`");
-"
-  
+  Start-ChocolateyProcessAsAdmin "(New-Object -ComObject shell.application).NameSpace(`"$hg`").CopyHere(`"$dulwich`")"
   Write-ChocolateySuccess $name
 } 
 catch {
