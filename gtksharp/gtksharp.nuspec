@@ -11,11 +11,8 @@
     <tags>gtk gui mono .net gnome</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/gtksharp/gtksharp/gtksharp.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
   </files>
 </package>
