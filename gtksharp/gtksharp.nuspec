@@ -3,14 +3,14 @@
   <metadata>
     <id>gtksharp</id>
     <title>Gtk# (GtkSharp)</title>
-    <version>2.12.10</version>
+    <version>2.12.10.1</version>
     <authors>Xamarin</authors>
     <owners>Anthony Mastrean</owners>
     <description>Gtk# is a Graphical User Interface Toolkit for mono and .Net. The project binds the gtk+ toolkit and assorted GNOME libraries, enabling fully native graphical Gnome application development using the Mono and .Net development frameworks.</description>
     <projectUrl>http://www.mono-project.com/GtkSharp</projectUrl>
     <tags>gtk gui mono .net gnome</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/gtksharp/gtksharp/gtksharp.png</iconUrl>
+    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/3db883466989384f07890745b2718363c490a016/gtksharp/gtksharp.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
