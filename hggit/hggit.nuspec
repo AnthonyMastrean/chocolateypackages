@@ -13,6 +13,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="hg" />
+      <dependency id="dulwich" />
     </dependencies>
   </metadata>
   <files>
