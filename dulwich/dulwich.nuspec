@@ -13,6 +13,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl></iconUrl>-->
     <dependencies>
+      <dependency id="7zip.commandline" />
       <dependency id="hg" version="[2.0,3.0)" />
     </dependencies>
   </metadata>
