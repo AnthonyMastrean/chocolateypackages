@@ -10,8 +10,6 @@ Enable-RemoteDesktop
 
 cinst binroot
 cinst visualstudio2012premium
-cinst start8
-cinst modernmix
 cinst all -source https://myget.org/F/fullblowndotnet
 
 cinst Microsoft-Hyper-V-All -source windowsFeatures
