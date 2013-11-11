@@ -8,12 +8,19 @@ Update-ExecutionPolicy Unrestricted
 Install-WindowsUpdates -AcceptEula
 Enable-RemoteDesktop
 
+# gotta have my c:\bin setup before any other packages
 cinst binroot
-cinst visualstudio2012premium
+
+# without an MSDN license, I default to the express packages
+cinst VisualStudio2012WDX
+cinst VisualStudioExpress2012Web
+cinst VisualStudioExpress2012Windows8
+
+# and then everything common that I like ;)
 cinst all -source https://myget.org/F/fullblowndotnet
 
+# enable all Hyper-V and IIS features for convenience
 cinst Microsoft-Hyper-V-All -source windowsFeatures
-
 Get-WindowsOptionalFeature -Online `
   | ?{ $_.FeatureName -match "IIS" } `
   | Enable-WindowsOptionalFeature -Online -All -NoRestart
