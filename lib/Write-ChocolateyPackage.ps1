@@ -1,14 +1,14 @@
-function Pack-ChocolateyPackage {
+function Write-ChocolateyPackage {
   <#
     .SYNOPSIS
-    Build the Chocolatey package.
+    Build the Chocolatey package from the spec.
     
     .DESCRIPTION
     Build the Chocolatey package that is defined by the nuspec in the
     working directory. Leans heavily on the cpack command.
     
     .EXAMPLE
-    PS> Pack-ChocolateyPackage
+    PS> Write-ChocolateyPackage
   #>
 
   $xml    = Get-PackageMetadata
