@@ -1,4 +1,4 @@
-﻿$name   = "javaruntime"
+﻿$name   = "javaruntime-platformspecific"
 $type   = "exe"
 $silent = "/s REBOOT=Suppress JAVAUPDATE=0"
 $java   = Join-Path $ENV:PROGRAMFILES "Java\jre7"
