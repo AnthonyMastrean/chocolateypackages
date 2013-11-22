@@ -1,6 +1,6 @@
 ﻿$name   = "javaruntime"
 $type   = "exe"
-$silent = "/s REBOOT=Suppress"
+$silent = "/s REBOOT=Suppress JAVAUPDATE=0"
 $java   = Join-Path $ENV:PROGRAMFILES "Java\jre7"
 $bin    = Join-Path $java "bin"
 
@@ -9,14 +9,8 @@ $url    = "http://javadl.sun.com/webapps/download/AutoDL?BundleId=81819"
 $url64  = "http://javadl.sun.com/webapps/download/AutoDL?BundleId=81821"
 
 try {	
-  Install-ChocolateyPackage $name $type $silent $url
-	
-  if(Get-ProcessorBits 64) { 
-    Install-ChocolateyPackage $name $type $silent $url64
-  }
-	
+  Install-ChocolateyPackage $name $type $silent $url $url64
   Install-ChocolateyPath $bin "Machine"
-  
   Start-ChocolateyProcessAsAdmin @"
 [Environment]::SetEnvironmentVariable("JAVA_HOME", "$java", "Machine")
 "@
@@ -24,6 +18,6 @@ try {
   Write-ChocolateySuccess $name
 }
 catch {
-	Write-ChocolateyFailure $name $($_.Exception.Message)
+	Write-ChocolateyFailure $name $_.Exception.Message
 	return
 }
