@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>tsunami</id>
+    <title>Tsunami</title>
+    <version>1.2.3278</version>
+    <authors>Earthquake Enterprises</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Tsunami enhances applications and workflows with the power of Type Safe Scripting.</summary>
+    <description>Tsunami enhances applications and workflows with the power of Type Safe Scripting.</description>
+    <projectUrl>http://tsunami.io/</projectUrl>
+    <tags>excel fsharp</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://pbs.twimg.com/profile_images/3338581929/2b11c680af2b0e2d849e20f6d421e009_bigger.png</iconUrl>
+    <!-- I would love to depend on an Excel virtual package -->
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+  </metadata>
+</package>
