@@ -11,7 +11,7 @@ Install-ChocolateyPackage $name $kind $silent $url $url64
 #Install-ChocolateyZipPackage $name $url $tools
 
 #try {
-  #$is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
+  #$x64 = Get-ProcessorBits 64
   
   #Get-ChocolateyWebFile $name "DOWNLOAD_TO_FILE_FULL_PATH" $url $url64
   #Install-ChocolateyInstallPackage $name "EXE_OR_MSI" $silent "_FULLFILEPATH_"
@@ -21,6 +21,6 @@ Install-ChocolateyPackage $name $kind $silent $url $url64
   #Write-ChocolateySuccess $name
 #} 
 #catch {
-  #Write-ChocolateyFailure $name $($_.Exception.Message)
+  #Write-ChocolateyFailure $name $_.Exception.Message
   #throw 
 #}
