@@ -13,9 +13,6 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString("https://get.
 scoop install sudo
 scoop install concfg
 
-# gotta have my c:\bin setup before any other packages
-cinst binroot
-
 # without an MSDN license, I default to the express packages
 cinst VisualStudio2012WDX
 cinst VisualStudioExpress2012Web
