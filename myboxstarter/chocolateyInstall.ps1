@@ -4,7 +4,7 @@ function Invoke-GitClone($url, $path) {
   Pop-Location
 }
 
-Update-ExecutionPolicy Unrestricted
+Update-ExecutionPolicy -Policy Unrestricted
 Enable-RemoteDesktop
 
 # scoop!
