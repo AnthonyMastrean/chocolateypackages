@@ -57,7 +57,7 @@ Invoke-GitClone -url "git@github.com:AnthonyMastrean/WindowsPowerShell.git" -pat
    "git@github.com:AnthonyMastrean/chocolatey-dev.git",
    "git@github.com:dahlbyk/posh-git.git",
    "git@github.com:dahlbyk/posh-hg.git",
-   "git@github.com:Iristyle/Posh-VsVars.git" ) | %{ Invoke-GitClone -url $_ -path $ps_modules_path }
+   "git@github.com:AnthonyMastrean/Posh-VsVars.git" ) | %{ Invoke-GitClone -url $_ -path $ps_modules_path }
 
 Install-ChocolateyPinnedTaskBarItem "${ENV:PROGRAMFILES(X86)}\Google\Chrome\Application"
 Install-ChocolateyPinnedTaskBarItem "$ENV:WINDIR\System32\WindowsPowerShell\v1.0\powershell.exe"
