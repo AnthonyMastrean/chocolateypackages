@@ -12,7 +12,25 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString("https://get.
 scoop install sudo
 scoop install concfg
 
-# enable fancy Windows features
+# apps
+cinst 7zip
+cinst ansicon
+cinst dejavufonts
+cinst dropbox
+cinst f.lux
+cinst git
+cinst git-difftool-diffmerge
+cinst googlechrome
+cinst notepad2
+cinst nuget.commandline
+cinst nugetpackageexplorer
+cinst reconsole
+cinst ruby -x86
+cinst ruby.devkit
+cinst testnamingmode
+cinst wincommandpaste
+
+# fancy Windows features
 cinst Microsoft-Hyper-V-All -source windowsFeatures
 cinst IIS-WebServerRole -source windowsfeatures
 
@@ -20,9 +38,11 @@ cinst IIS-WebServerRole -source windowsfeatures
 cinst VisualStudio2012WDX
 cinst VisualStudioExpress2012Web
 cinst VisualStudioExpress2012Windows8
-
-# everything else
-cinst all -source https://myget.org/F/fullblowndotnet
+cinst IHateRegions
+cinst IndentGuides
+cinst NugetPackageManager
+cinst PerfWatsonMonitor
+cinst VSColorOutput
 
 $ps_profile_path = Join-Path $ENV:USERPROFILE "Documents\WindowsPowerShell"
 $ps_modules_path = Join-Path $profile_path "Modules"
