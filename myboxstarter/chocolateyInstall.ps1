@@ -1,4 +1,4 @@
-function Invoke-GitClone($url, $path) {
+function Invoke-GitClone($url, $path = ".") {
   Push-Location $path
   git clone $url
   Pop-Location
