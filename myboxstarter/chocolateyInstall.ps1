@@ -44,13 +44,13 @@ cinst NugetPackageManager
 cinst PerfWatsonMonitor
 cinst VSColorOutput
 
-$ps_profile_path = Join-Path $ENV:USERPROFILE "Documents\WindowsPowerShell"
-$ps_modules_path = Join-Path $profile_path "Modules"
+$ps_profile_path = Split-Path $profile
+$ps_modules_path = Join-Path $ps_profile_path "Modules"
 
-New-Item $ps_modules_path -Type Directory
+New-Item $ps_modules_path -Type Directory -Force
 
 # my PowerShell profile
-Invoke-GitClone -url git@github.com:AnthonyMastrean/WindowsPowerShell.git -path $ps_profile_path
+Invoke-GitClone -url "git@github.com:AnthonyMastrean/WindowsPowerShell.git" -path $ps_profile_path
 
 # and all my fave Modules
 @(
