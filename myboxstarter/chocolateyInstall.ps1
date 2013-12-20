@@ -44,15 +44,14 @@ cinst NugetPackageManager
 cinst PerfWatsonMonitor
 cinst VSColorOutput
 
+# clone my PowerShell profile and modules
 $ps_profile_path = Split-Path $profile
 $ps_modules_path = Join-Path $ps_profile_path "Modules"
 
 New-Item $ps_modules_path -Type Directory -Force
 
-# my PowerShell profile
 Invoke-GitClone -url "git@github.com:AnthonyMastrean/WindowsPowerShell.git" -path $ps_profile_path
 
-# and all my fave Modules
 @(
   "git@github.com:AnthonyMastrean/remember.git",
   "git@github.com:AnthonyMastrean/powertab.git",
@@ -62,7 +61,6 @@ Invoke-GitClone -url "git@github.com:AnthonyMastrean/WindowsPowerShell.git" -pat
   "git@github.com:Iristyle/Posh-VsVars.git",
 ) | %{ Invoke-GitClone -url $_ -path $ps_modules_path }
 
-# pinned applicatin shortcuts
 Install-ChocolateyPinnedTaskBarItem "${ENV:PROGRAMFILES(X86)}\Google\Chrome\Application"
 Install-ChocolateyPinnedTaskBarItem "$ENV:WINDIR\System32\WindowsPowerShell\v1.0\powershell.exe"
 Install-ChocolateyPinnedTaskBarItem "$ENV:PROGRAMFILES\Notepad2\notepad2.exe"
