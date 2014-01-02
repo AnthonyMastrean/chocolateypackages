@@ -31,8 +31,9 @@ cinst testnamingmode
 cinst wincommandpaste
 
 # fancy Windows features
-cinst Microsoft-Hyper-V-All -source windowsFeatures
-cinst IIS-WebServerRole -source windowsfeatures
+cinst Microsoft-Hyper-V-All -source WindowsFeatures
+cinst Microsoft-Hyper-V-Management-PowerShell -source WindowsFeatures
+cinst IIS-WebServerRole -source Windowsfeatures
 
 # no MSDN license here
 cinst VisualStudio2012WDX
