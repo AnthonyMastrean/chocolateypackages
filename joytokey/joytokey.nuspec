@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>joytokey</id>
+    <title>Joy To Key</title>
+    <version>5.4.2</version>
+    <authors>JTKSOFT</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>JoyToKey enables PC game controllers to emulate a mouse and the keyboard input.</summary>
+    <description>JoyToKey enables PC game controllers to emulate a mouse and the keyboard input, so that windows applications and web games can be controlled with your favorite joysticks! Whenever joystick buttons and sticks are pressed, JoyToKey converts them into keyboard strokes and/or mouse movements so that the targeted application will work as if you are using a real keyboard and a mouse!</description>
+    <projectUrl>http://joytokey.net/</projectUrl>
+    <tags>joystick gaming</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+</package>
