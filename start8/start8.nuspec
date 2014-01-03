@@ -3,7 +3,7 @@
   <metadata>
     <id>start8</id>
     <title>Start8</title>
-    <version>1.20.2</version>
+    <version>1.31</version>
     <authors>Stardock</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The Windows® 8 start menu returns with Start8™!</summary>
@@ -13,7 +13,4 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/f0ee4e084545e78f59348bb40ec603311a8257a1/start8/start8.png</iconUrl>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

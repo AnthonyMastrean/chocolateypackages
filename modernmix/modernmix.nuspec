@@ -3,18 +3,14 @@
   <metadata>
     <id>modernmix</id>
     <title>ModernMix</title>
-    <version>1.10.2</version>
+    <version>1.12</version>
     <authors>Stardock</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>Run Modern (Metro) apps in a window on
-your desktop with ModernMix™</summary>
+    <summary>Run Modern (Metro) apps in a window on your desktop with ModernMix™</summary>
     <description>ModernMix is a revolutionary new program that lets you run Windows® 8 "Modern" apps in a window on the desktop. Windows 8 Modern apps, also known as Metro or RT apps, will use the full screen on your display regardless of how much of the screen they really need. As a result, that weather app, mail program or stock ticker is going to use the entirety of your computer display.</description>
     <projectUrl>http://www.stardock.com/products/modernmix/index.asp</projectUrl>
     <tags>windows windows-8 metro fullscreen</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/f0ee4e084545e78f59348bb40ec603311a8257a1/modernmix/modernmix.png</iconUrl>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>
