@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>modernmix</id>
@@ -6,8 +6,8 @@
     <version>1.12</version>
     <authors>Stardock</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>Run Modern (Metro) apps in a window on your desktop with ModernMix™</summary>
-    <description>ModernMix is a revolutionary new program that lets you run Windows® 8 "Modern" apps in a window on the desktop. Windows 8 Modern apps, also known as Metro or RT apps, will use the full screen on your display regardless of how much of the screen they really need. As a result, that weather app, mail program or stock ticker is going to use the entirety of your computer display.</description>
+    <summary>Run Modern (Metro) apps in a window on your desktop with ModernMixâ„¢</summary>
+    <description>ModernMix is a revolutionary new program that lets you run WindowsÂ® 8 "Modern" apps in a window on the desktop. Windows 8 Modern apps, also known as Metro or RT apps, will use the full screen on your display regardless of how much of the screen they really need. As a result, that weather app, mail program or stock ticker is going to use the entirety of your computer display.</description>
     <projectUrl>http://www.stardock.com/products/modernmix/index.asp</projectUrl>
     <tags>windows windows-8 metro fullscreen</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

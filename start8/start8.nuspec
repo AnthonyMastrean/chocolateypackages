@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>start8</id>
@@ -6,8 +6,8 @@
     <version>1.31</version>
     <authors>Stardock</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>The Windows® 8 start menu returns with Start8™!</summary>
-    <description>Microsoft Windows® 8 is shipped without the "Start" menu. Stardock heard the cries from Windows 8 users. We put the "Start" menu back in Windows 8. We accurately recreated the most used desktop feature billions of users depend on every day and packed it with additional functionality.</description>
+    <summary>The WindowsÂ® 8 start menu returns with Start8â„¢!</summary>
+    <description>Microsoft WindowsÂ® 8 is shipped without the "Start" menu. Stardock heard the cries from Windows 8 users. We put the "Start" menu back in Windows 8. We accurately recreated the most used desktop feature billions of users depend on every day and packed it with additional functionality.</description>
     <projectUrl>http://www.stardock.com/products/start8/</projectUrl>
     <tags>windows windows-8 start-menu</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
