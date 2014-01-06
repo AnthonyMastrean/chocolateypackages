@@ -50,11 +50,11 @@ Invoke-GitClone -url "git@github.com:AnthonyMastrean/WindowsPowerShell.git" -pat
 
 @( 
   "git@github.com:AnthonyMastrean/remember.git",
-   "git@github.com:AnthonyMastrean/powertab.git",
-   "git@github.com:AnthonyMastrean/chocolatey-dev.git",
-   "git@github.com:dahlbyk/posh-git.git",
-   "git@github.com:dahlbyk/posh-hg.git",
-   "git@github.com:AnthonyMastrean/Posh-VsVars.git" 
+  "git@github.com:AnthonyMastrean/powertab.git",
+  "git@github.com:AnthonyMastrean/chocolatey-dev.git",
+  "git@github.com:dahlbyk/posh-git.git",
+  "git@github.com:dahlbyk/posh-hg.git",
+  "git@github.com:AnthonyMastrean/Posh-VsVars.git" 
  ) | %{ Invoke-GitClone -url $_ -path (Join-Path (Split-Path $profile) "Modules") }
 
 Install-ChocolateyPinnedTaskBarItem "${ENV:PROGRAMFILES(X86)}\Google\Chrome\Application"
