@@ -5,9 +5,7 @@ $kind   = "EXE"
 
 $tools  = Split-Path $MyCommand.MyInvocation.Definition
 $answer = Join-Path $tools "collabnetsvn.txt"
-$target = Join-Path (Get-BinRoot) "collabnetsvn"
 
-$silent = "/S /Answerfile=`"$answer`" /D=`"$target`""
+$silent = "/S /Answerfile=`"$answer`"
 
 Install-ChocolateyPackage $name $kind $silent $url $url64
-Install-ChocolateyPath $target "Machine"
