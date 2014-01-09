@@ -2,21 +2,16 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>collabnetsvn</id>
-    <title>CollabNet SVN</title>
-    <version>4.0</version>
+    <title>CollabNet SVN Command Line Client</title>
+    <version>1.8.5</version>
     <authors>CollabNet</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>Access TeamForge, Subversion and Lab Management functionality from within a rich and powerful Windows client and take advantage of integration with Microsoft Office applications</summary>
-    <description>Access TeamForge, Subversion and Lab Management functionality from within a rich and powerful Windows client and take advantage of integration with Microsoft Office applications. If you and your team members prefer to stay in a familiar desktop environment, CollabNet Desktop - Microsoft Windows Edition provides a familiar interface, native document editing capabilities, and rich drag-and-drop capabilities.
-
-Built on the same underlying framework as the CollabNet Desktop - Visual Studio Edition, developers can use this desktop, together with their Subversion client of choice, for their development tasks such as source code commits, merging, and conflict resolution. The desktop also includes a powerful Subversion merge client that simplifies the process of merging changes between branches.</description>
-    <projectUrl>http://www.collab.net/products/integrations/desktops/windows</projectUrl>
+    <summary>Includes all Subversion command-line binaries.</summary>
+    <description>Includes all Subversion command-line binaries.</description>
+    <projectUrl>http://www.collab.net/downloads/subversion</projectUrl>
     <tags>collabnet svn client</tags>
-    <licenseUrl>http://www.collab.net/lightbox/download_info/95/110</licenseUrl>
+    <licenseUrl>http://www.collab.net/lightbox/download_info/2644/358</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://blogs.collab.net/wp-content/uploads/2012/09/collabnet_icon_wp_cloud.png</iconUrl>
-    <dependencies>
-      <dependency id="collabnetsvn.install" version="[4.0, 5.0)" />
-    </dependencies>
   </metadata>
 </package>
