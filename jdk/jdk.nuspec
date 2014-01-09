@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>jdk</id>
+    <title>Java SE Development Kit</title>
+    <version>7.0.45</version>
+    <authors>Oracle</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>The JDK is a development environment for building applications, applets, and components using the Java programming language.</summary>
+    <description>The JDK is a development environment for building applications, applets, and components using the Java programming language. The JDK includes tools useful for developing and testing programs written in the Java programming language and running on the Java platform.</description>
+    <projectUrl>http://www.java.com/</projectUrl>
+    <tags>oracle java jdk</tags>
+    <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/Iristyle/ChocolateyPackages/raw/master/JDK7/jdk7_logo.jpg</iconUrl>
+  </metadata>
+</package>
