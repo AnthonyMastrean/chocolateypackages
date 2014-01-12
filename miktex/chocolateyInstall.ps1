@@ -1,6 +1,6 @@
 ﻿$name   = 'miktex'
-$url    = 'http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.4813.exe'
-$url64  = 'http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.4813-x64.exe'
+$url    = 'http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.5105.exe'
+$url64  = 'http://mirrors.ctan.org/systems/win32/miktex/setup/basic-miktex-2.9.5105-x64.exe'
 $kind   = 'EXE'
 $silent = '--unattended --shared --auto-install=yes'
 
