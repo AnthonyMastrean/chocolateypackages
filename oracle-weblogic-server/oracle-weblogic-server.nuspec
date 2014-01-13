@@ -6,17 +6,13 @@
     <version>12.1.2</version>
     <authors>Oracle</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>
-        Oracle WebLogic Server 12c is the industry's best application server for building and deploying enterprise Java EE applications with support for new features for lowering cost of operations, improving performance, enhancing scalability and supporting the Oracle Applications portfolio.
-    </summary>
-    <description>
-        Oracle WebLogic Server 12c is the industry's best application server for building and deploying enterprise Java EE applications with support for new features for lowering cost of operations, improving performance, enhancing scalability and supporting the Oracle Applications portfolio.
-    </description>
+    <summary>Oracle WebLogic Server 12c is the industry's best application server for building and deploying enterprise Java EE applications.</summary>
+    <description>Oracle WebLogic Server 12c is the industry's best application server for building and deploying enterprise Java EE applications with support for new features for lowering cost of operations, improving performance, enhancing scalability and supporting the Oracle Applications portfolio.</description>
     <projectUrl>http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html</projectUrl>
     <tags>oracle web server</tags>
     <licenseUrl>http://www.oracle.com/technetwork/licenses/wls-dev-license-1703567.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl></iconUrl>-->
+    <iconUrl>http://oracle.com/favicon.ico</iconUrl>
     <dependencies>
       <dependency id="jdk7" version="7.0" />
     </dependencies>
