@@ -1,4 +1,4 @@
-try 
+﻿try 
 { 
     $name    = 'sikuli'
     $url     = 'http://launchpad.net/sikuli/sikuli-x/x1.0-rc3/+download/Sikuli-X-1.0rc3%20%28r905%29-win32.zip'

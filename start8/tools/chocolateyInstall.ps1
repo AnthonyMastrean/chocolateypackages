@@ -1,4 +1,4 @@
-$name   = "start8"
+﻿$name   = "start8"
 $url    = "http://stardock.cachefly.net/Start8_setup.exe"
 $kind   = "EXE"
 $silent = "/SILENT /NOREBOOT"

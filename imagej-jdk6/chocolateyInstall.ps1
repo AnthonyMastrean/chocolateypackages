@@ -1,4 +1,4 @@
-$name   = "imagej-jdk6"
+﻿$name   = "imagej-jdk6"
 $url    = "http://rsbweb.nih.gov/ij/download/win32/ij145-jdk6-setup.exe"
 $url64  = "http://rsbweb.nih.gov/ij/download/win32/ij145-jdk6-64bit-setup.exe"
 $kind   = "EXE"

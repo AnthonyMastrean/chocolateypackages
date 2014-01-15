@@ -1,4 +1,4 @@
-try 
+﻿try 
 { 
     $name    = 'pngout'
     $url     = 'http://advsys.net/ken/util/pngout.exe'

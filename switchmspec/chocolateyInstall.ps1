@@ -1,4 +1,4 @@
-$name  = 'mspec-version-switcher'
+﻿$name  = 'mspec-version-switcher'
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 $path  = Join-Path $tools 'Install-MSpec.ps1'
 

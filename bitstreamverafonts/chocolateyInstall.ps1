@@ -1,4 +1,4 @@
-$name = "bitstreamverafonts"
+﻿$name = "bitstreamverafonts"
 $url  = "http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/ttf-bitstream-vera-1.10.zip"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition

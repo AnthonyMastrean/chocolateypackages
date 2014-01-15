@@ -1,4 +1,4 @@
-$name = 'win.explorer.separateprocess'
+﻿$name = 'win.explorer.separateprocess'
 $key  = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
     
 try { 

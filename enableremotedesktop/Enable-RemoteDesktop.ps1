@@ -1,4 +1,4 @@
-param([switch]$LowSecurity)
+﻿param([switch]$LowSecurity)
 
 $terminal = 'HKLM:\System\CurrentControlSet\Control\Terminal Server'
 $rdp      = 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp'

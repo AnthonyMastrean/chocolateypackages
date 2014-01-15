@@ -1,1 +1,1 @@
-Install-ChocolateyPackage 'gtksharp' 'MSI' '/quiet' 'http://download.xamarin.com/Installer/gtk-sharp-2.12.20.msi'
+﻿Install-ChocolateyPackage 'gtksharp' 'MSI' '/quiet' 'http://download.xamarin.com/Installer/gtk-sharp-2.12.20.msi'

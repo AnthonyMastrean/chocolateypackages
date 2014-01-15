@@ -1,4 +1,4 @@
-$name = "dejavufonts"
+﻿$name = "dejavufonts"
 $url  = "http://downloads.sourceforge.net/project/dejavu/dejavu/2.33/dejavu-fonts-ttf-2.33.zip"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition

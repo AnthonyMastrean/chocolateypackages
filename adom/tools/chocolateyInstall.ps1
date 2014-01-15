@@ -1,4 +1,4 @@
-$name = 'adom'
+﻿$name = 'adom'
 $url  = 'http://www.adom.de/adom/download/windows/111/adom_winbeta4.zip'
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition

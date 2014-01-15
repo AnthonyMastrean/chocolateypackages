@@ -1,4 +1,4 @@
-$name    = "cmake.portable"
+﻿$name    = "cmake.portable"
 $url     = "http://www.cmake.org/files/v2.8/cmake-2.8.12.1-win32-x86.zip"
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) "content"

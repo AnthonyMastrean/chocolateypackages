@@ -1,4 +1,4 @@
-$name   = 'resharper-nuget-61'
+﻿$name   = 'resharper-nuget-61'
 $url    = 'http://download.jetbrains.com/resharper/plugins/resharper-nuget.1.2.zip'
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
