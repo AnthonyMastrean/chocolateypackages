@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>ag</id>
+    <title>The Silver Searcher</title>
+    <version>0.18.1</version>
+    <authors>Krzysztof Kowalczyk, Geoff Greer</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>The Silver Searcher is like grep or ack, except faster.</summary>
+    <description>The Silver Searcher is like grep or ack, except faster. It's written in super-optimized C (like grep) and it's intelligent about entirely skipping files that you don't want to waste time searching (like ack).</description>
+    <projectUrl>http://blog.kowalczyk.info/software/the-silver-searcher-for-windows.html</projectUrl>
+    <tags>ag ack search grep</tags>
+    <licenseUrl>https://github.com/kjk/the_silver_searcher/blob/76544feebd8020c841b76b3c6ec62799997024e0/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+</package>
