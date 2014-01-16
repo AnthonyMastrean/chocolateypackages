@@ -1,4 +1,4 @@
-$name   = 'ultramon'
+﻿$name   = 'ultramon'
 $type   = 'MSI'
 $silent = '/quiet'
 $url_32 = 'http://www.realtimesoft.com/files/UltraMon_3.2.2_en_x32.msi'

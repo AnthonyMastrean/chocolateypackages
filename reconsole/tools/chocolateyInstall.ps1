@@ -1,4 +1,4 @@
-$name    = 'reconsole'
+﻿$name    = 'reconsole'
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
     

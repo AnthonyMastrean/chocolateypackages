@@ -1,4 +1,4 @@
-$name   = "joytokey"
+﻿$name   = "joytokey"
 $url    = "http://joytokey.net/download/JoyToKey_en.zip"
 $tools  = Split-Path $MyInvocation.MyCommand.Definition
 $gui    = Join-Path $tools "JoyToKey_en\JoyToKey.exe.gui"

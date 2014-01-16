@@ -1,4 +1,4 @@
-function Get-LatestItem([string]$path) { 
+﻿function Get-LatestItem([string]$path) { 
   $item = @(Resolve-Path $path) | Sort-Object | Select-Object -Last 1  
   if(-not(Test-Path $path)) {
     throw "path not found: $path"

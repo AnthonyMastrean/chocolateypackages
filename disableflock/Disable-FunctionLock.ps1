@@ -1,4 +1,4 @@
-Set-StrictMode -version latest
+﻿Set-StrictMode -version latest
 
 $possible_paths = @(
   "$ENV:ProgramFiles\Microsoft IntelliType Pro\commands.xml",

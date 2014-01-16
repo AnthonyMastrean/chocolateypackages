@@ -1,4 +1,4 @@
-$name = 'bellavista'
+﻿$name = 'bellavista'
 $url  = 'http://www.zezula.net/download/bellavista_en.zip'
 
 $is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64

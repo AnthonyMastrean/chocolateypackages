@@ -1,4 +1,4 @@
-$name    = 'wim2vhd'
+﻿$name    = 'wim2vhd'
 $version = '6.1.7600.2'
     
 try { 

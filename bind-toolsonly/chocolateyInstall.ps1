@@ -1,4 +1,4 @@
-$name = "bind-toolsonly"
+﻿$name = "bind-toolsonly"
 $url  = "http://ftp.isc.org/isc/bind9/9.9.3-P1/BIND9.9.3-P1.zip"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition

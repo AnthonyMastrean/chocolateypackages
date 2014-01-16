@@ -1,4 +1,4 @@
-function Create-Shortcut
+﻿function Create-Shortcut
 {
 	$shell = New-Object -ComObject 'Wscript.Shell'
 	$shortcut = $shell.CreateShortcut($shortcutPath)

@@ -1,4 +1,4 @@
-try 
+﻿try 
 { 
     $name = 'nvspbind'
     

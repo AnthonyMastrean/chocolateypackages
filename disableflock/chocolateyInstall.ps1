@@ -1,4 +1,4 @@
-$name   = 'disable-f-lock'
+﻿$name   = 'disable-f-lock'
 
 $tools  = Split-Path $MyInvocation.MyCommand.Definition
 $target = Join-Path $tools 'Disable-FunctionLock.ps1'

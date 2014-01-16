@@ -1,4 +1,4 @@
-$name = 'isowriter'
+﻿$name = 'isowriter'
 
 $tools   = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
