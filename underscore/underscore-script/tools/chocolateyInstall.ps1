@@ -1,5 +1,5 @@
-﻿$name    = "underscore"
-$startup = "$ENV:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
+﻿$name    = "underscore-script"
+$startup = Join-Path $ENV:APPDATA "Microsoft\Windows\Start Menu\Programs\Startup"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) "content"

@@ -3,16 +3,14 @@
   <metadata>
     <id>underscore</id>
     <version>1.0.0</version>
-    <title>Underscore Mode for Windows</title>
+    <title>Underscore Mode</title>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/underscore</projectUrl>
-    <iconUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/underscore/tools/underscore_on.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/underscore.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-      Make the spacebar insert underscores instead of spaces. Enter underscore mode by pressing `CTRL+SHIFT+U`. Exit underscore mode by pressing `Tab`, `Esc`, or `Enter`.
-    </description>
-    <summary>Replace the spacebar and spaces with underscores!</summary>
+    <description>Make the spacebar insert underscores instead of spaces. Enter underscore mode by pressing `CTRL+SHIFT+U`. Exit underscore mode by pressing `Tab`, `Esc`, or `Enter`.</description>
+    <summary>Replace the spaces with underscores!</summary>
     <tags>underscore spacebar</tags>
     <dependencies>
       <dependency id="underscore-compiled" />

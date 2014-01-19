@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>underscore</id>
+    <id>underscore-script</id>
     <version>1.0.0</version>
-    <title>Underscore Mode for Windows</title>
+    <title>Underscore Mode</title>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/underscore</projectUrl>
-    <iconUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/underscore/tools/underscore_on.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/underscore.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-      Make the spacebar insert underscores instead of spaces. Enter underscore mode by pressing `CTRL+SHIFT+U`. Exit underscore mode by pressing `Tab`, `Esc`, or `Enter`.
-    </description>
-    <summary>Replace the spacebar and spaces with underscores!</summary>
+    <description>Make the spacebar insert underscores instead of spaces. Enter underscore mode by pressing `CTRL+SHIFT+U`. Exit underscore mode by pressing `Tab`, `Esc`, or `Enter`.</description>
+    <summary>Replace spaces with underscores!</summary>
     <tags>underscore spacebar</tags>
     <dependencies>
-      <dependency id="autohotkey_l" />
+      <dependency id="autohotkey" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="lib\underscore.ahk" target="tools\underscore.ahk" />
-    <file src="lib\underscore_on.ico" target="tools\underscore_on.ico" />
-    <file src="lib\underscore_off.ico" target="tools\underscore_off.ico" />
-    <file src="tools\chocolateyInstall-script.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>
