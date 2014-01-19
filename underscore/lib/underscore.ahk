@@ -32,34 +32,34 @@ set(on) {
 ; Toggle
 ;==================================================
 ^+u:: 
-set(!enabled) 
-return 
+  set(!enabled) 
+  return 
 
 $Escape:: 
-if (enabled) { 
-  set(!enabled) 
-} 
-Send, {Escape} 
-return 
+  if (enabled) { 
+    set(!enabled) 
+  } 
+  Send, {Escape} 
+  return 
 
 ^[:: 
-if (enabled) { 
-  set(!enabled) 
-} 
-Send, ^[ 
-return 
+  if (enabled) { 
+    set(!enabled) 
+  } 
+  Send, ^[ 
+  return 
 
 $Enter:: 
-if (enabled) { 
-  set(!enabled) 
-} else { 
-  Send, {Enter} 
-} 
-return 
+  if (enabled) { 
+    set(!enabled) 
+  } else { 
+    Send, {Enter} 
+  } 
+  return 
 
 $Space:: 
-if (enabled) { 
-  Send, _ 
-} else { 
-  Send, {Space} 
-} 
+  if (enabled) { 
+    Send, _ 
+  } else { 
+    Send, {Space} 
+  } 
