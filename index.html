@@ -6,7 +6,11 @@
   <body>
     <ul class="icons">
       {% for icon in site.data.icons %}
-        <li><a href="/chocolateypackages/{{ icon.path }}">{{ icon.name }}</a></li>
+        <li>
+          <a href="/chocolateypackages/{{ icon.path }}">
+            {{ icon.name }}
+          </a>
+        </li>
       {% endfor %}
     </ul>
   </body>
