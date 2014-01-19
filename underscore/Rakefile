@@ -1,17 +1,22 @@
 require "albacore"
+require "./lib/underscore.rb"
 
-specs = FileList["*.nuspec"]
+specs = FileList["**/*.nuspec"]
 
-file "bin/underscore.exe.gui"
+task :default => [:compile]
 
-desc "compile the script into an exe"
-exec :compile => ["bin/underscore.exe.gui"] do |cmd| 
-  cmd.command = (File.join ENV["PROGRAMFILES"], "AutoHotkey/Compiler/ahk2exe.exe")
-  cmd.parameters = [
-    "/in", "lib/underscore.ahk", 
-    "/out", "bin/underscore.exe", 
-    "/icon", "lib/underscore_on.ico"
-  ]
+desc "Compile the script"
+ahk_compile :compile => [:output] do |cmd| 
+  cmd.in = "underscore-script/tools/underscore.ahk"
+  cmd.icon = "underscore-script/tools/underscore_on.ico"
+  cmd.out = "underscore-compiled/tools/underscore.exe"
+end
+
+output :output do |out|
+  out.from "underscore-script/tools"
+  out.to "underscore-compiled/tools"
+  out.file "underscore_off.ico"
+  out.file "underscore_on.ico"
 end
 
 specs.each do |spec|
@@ -21,5 +26,5 @@ specs.each do |spec|
   end
 end
 
-desc "build all chocolatey packages"
+desc "Build all of the packages"
 task :build => [:compile, specs].flatten

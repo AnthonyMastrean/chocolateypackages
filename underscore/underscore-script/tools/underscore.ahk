@@ -16,7 +16,7 @@ set(false)
 ; Stash and update the state
 ;==================================================
 set(on) { 
-  local icon := on ? "underscore_on.ico" : "underscore_off.ico" 
+  local icon := on ? "underscore_on.png" : "underscore_off.png" 
   local state := on ? "ON" : "OFF" 
 
   enabled := on 
