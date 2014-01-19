@@ -10,7 +10,7 @@ set(state) {
   tip := enabled ? "ON" : "OFF"
 
   Menu Tray, Icon, %icon%
-  Menu Tray, Tip, %tip%
+  Menu Tray, Tip, Underscore: %tip%
 }
 
 set(false) 
