@@ -1,9 +1,9 @@
 - name: apm
-  path: icons/apm.ico
+  path: icons/apm.png
 - name: bellavista
   path: icons/bellavista.png
 - name: calibre
-  path: icons/calibre.ico
+  path: icons/calibre.png
 - name: dashlane
   path: icons/dashlane.png
 - name: diffmerge
@@ -21,7 +21,7 @@
 - name: monodevelop
   path: icons/monodevelop.png
 - name: msicuu2
-  path: icons/msicuu2.ico
+  path: icons/msicuu2.png
 - name: notepad2-mod
   path: icons/notepad2-mod.png
 - name: notepad2
@@ -29,22 +29,22 @@
 - name: nvspbind
   path: icons/nvspbind.png
 - name: prime95
-  path: icons/prime95.ico
+  path: icons/prime95.png
 - name: setacl
-  path: icons/setacl.ico
+  path: icons/setacl.png
 - name: start8
   path: icons/start8.png
 - name: ultramon
-  path: icons/ultramon.ico
+  path: icons/ultramon.png
 - name: unfreez
-  path: icons/unfreez.ico
+  path: icons/unfreez.png
 - name: ungit
   path: icons/ungit.png
 - name: usbview
-  path: icons/usbview.ico
+  path: icons/usbview.png
 - name: wim2vhd
   path: icons/wim2vhd.png
 - name: wincommandpaste
-  path: icons/wincommandpaste.ico
+  path: icons/wincommandpaste.png
 - name: wudt
-  path: icons/wudt.ico
+  path: icons/wudt.png
