@@ -22,8 +22,8 @@ output :out_compile do |out|
   out.keep_to
   out.from "lib/underscore"
   out.to "underscore-compiled/tools"
-  out.file "underscore_off.png"
-  out.file "underscore_on.png"
+  out.file "underscore_off.ico"
+  out.file "underscore_on.ico"
 end
 
 output :out_script do |out|
@@ -31,6 +31,6 @@ output :out_script do |out|
   out.from "lib/underscore"
   out.to "underscore-script/tools"
   out.file "underscore.ahk"
-  out.file "underscore_off.png"
-  out.file "underscore_on.png"
+  out.file "underscore_off.ico"
+  out.file "underscore_on.ico"
 end
