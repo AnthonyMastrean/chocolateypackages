@@ -2,31 +2,9 @@
   <head/>
   <body>
     <ul class="icons">
-      <li><a href="/chocolateypackages/icons/apm.ico">apm</a></li>
-      <li><a href="/chocolateypackages/icons/bellavista.png">bellavista</a></li>
-      <li><a href="/chocolateypackages/icons/calibre.ico">calibre</a></li>
-      <li><a href="/chocolateypackages/icons/dashlane.png">dashlane</a></li>
-      <li><a href="/chocolateypackages/icons/diffmerge.png">diffmerge</a></li>
-      <li><a href="/chocolateypackages/icons/greenfishiconeditor.png">greenfishiconeditor</a></li>
-      <li><a href="/chocolateypackages/icons/gtksharp.png">gtksharp</a></li>
-      <li><a href="/chocolateypackages/icons/imagej.png">imagej</a></li>
-      <li><a href="/chocolateypackages/icons/log4netlivetemplates.png">log4netlivetemplates</a></li>
-      <li><a href="/chocolateypackages/icons/modernmix.png">modernmix</a></li>
-      <li><a href="/chocolateypackages/icons/monodevelop.png">monodevelop</a></li>
-      <li><a href="/chocolateypackages/icons/msicuu2.ico">msicuu2</a></li>
-      <li><a href="/chocolateypackages/icons/notepad2-mod.png">notepad2-mod</a></li>
-      <li><a href="/chocolateypackages/icons/notepad2.png">notepad2</a></li>
-      <li><a href="/chocolateypackages/icons/nvspbind.png">nvspbind</a></li>
-      <li><a href="/chocolateypackages/icons/prime95.ico">prime95</a></li>
-      <li><a href="/chocolateypackages/icons/setacl.ico">setacl</a></li>
-      <li><a href="/chocolateypackages/icons/start8.png">start8</a></li>
-      <li><a href="/chocolateypackages/icons/ultramon.ico">ultramon</a></li>
-      <li><a href="/chocolateypackages/icons/unfreez.ico">unfreez</a></li>
-      <li><a href="/chocolateypackages/icons/ungit.png">ungit</a></li>
-      <li><a href="/chocolateypackages/icons/usbview.ico">usbview</a></li>
-      <li><a href="/chocolateypackages/icons/wim2vhd.png">wim2vhd</a></li>
-      <li><a href="/chocolateypackages/icons/wincommandpaste.ico">wincommandpaste</a></li>
-      <li><a href="/chocolateypackages/icons/wudt.ico">wudt</a></li>
+      {% for icon in site.data.icons %}
+        <li><a href="/chocolateypackages/{{ icon.path }}">{{ icon.name }}</a></li>
+      {% endfor %}
     </ul>
   </body>
 </html>

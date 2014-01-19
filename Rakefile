@@ -1,7 +1,9 @@
-ul = FileList["icons/*.*"].pathmap("<li><a href=\"/chocolateypackages/icons/%f\">%n</a></li>").join("\n")
+require "yaml"
 
 task :default do 
-  text = File.read("index.html")
-  text.gsub!("<ul class=\"icons\" />", "<ul class=\"icons\">\n#{ul}\n</ul>")
-  File.write("index.html", text)
+  icons = Dir["icons/*.*"]
+  hash = icons.map { |path| { name: File.basename(path, File.extname(path)), path: path } }
+  yaml = hash.to_yaml
+  
+  File.write("_data/icons.yaml", yaml)
 end
