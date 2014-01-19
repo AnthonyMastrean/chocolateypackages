@@ -1,4 +1,4 @@
-ul = FileList["icons/*.*"].pathmap("<li><a href=\"/icons/%f\">%n</a></li>").join("\n")
+ul = FileList["icons/*.*"].pathmap("<li><a href=\"/chocolateypackages/icons/%f\">%n</a></li>").join("\n")
 
 task :default do 
   text = File.read("index.html")
