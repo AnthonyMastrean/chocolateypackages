@@ -5,18 +5,21 @@ specs = FileList["**/*.nuspec"]
 
 task :default => [:compile]
 
+directory "underscore-compiled/tools"
+
 desc "Compile the script"
-ahk_compile :compile => [:output] do |cmd| 
+ahk_compile :compile => ["underscore-compiled/tools", :output] do |cmd| 
+  cmd.command = File.join(ENV["SYSTEMDRIVE"], "Program Files/AutoHotkey/Compiler/ahk2exe.exe")
   cmd.in = "underscore-script/tools/underscore.ahk"
-  cmd.icon = "underscore-script/tools/underscore_on.ico"
+  cmd.icon = "underscore.ico"
   cmd.out = "underscore-compiled/tools/underscore.exe"
 end
 
 output :output do |out|
   out.from "underscore-script/tools"
   out.to "underscore-compiled/tools"
-  out.file "underscore_off.ico"
-  out.file "underscore_on.ico"
+  out.file "underscore_off.png"
+  out.file "underscore_on.png"
 end
 
 specs.each do |spec|

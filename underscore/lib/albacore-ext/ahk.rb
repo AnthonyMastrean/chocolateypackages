@@ -33,6 +33,7 @@ class AhkCompiler
     File.exist?(installed_command) ? installed_command : "ahk2exe"
   end
 
+  # In x86 Ruby, ENV["PROGRAMFILES"] always resolves to "Program Files (x86)"
   def installed_command
     ENV["PROGRAMFILES"] ? File.join(ENV["PROGRAMFILES"], "AutoHotkey/Compiler/ahk2exe.exe") : ""
   end
