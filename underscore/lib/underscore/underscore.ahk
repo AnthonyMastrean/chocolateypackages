@@ -3,51 +3,24 @@
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
-enabled := false 
-set(enabled) 
+set(state) {
+  global enabled := state
 
-set(on) { 
-  enabled := on 
+  icon := enabled ? "underscore_on.ico" : "underscore_off.ico"
+  tip := enabled ? "ON" : "OFF"
 
-  path  := enabled ? "underscore_on.ico" : "underscore_off.ico"
-  state := enabled ? "ON" : "OFF"
+  Menu Tray, Icon, %icon%
+  Menu Tray, Tip, %tip%
+}
 
-  Menu, Tray, Icon, %path%
-  Menu, Tray, Tip, %state%
+set(false) 
 
-  Send {Shift Up} 
-} 
+^+u::set(!enabled)
 
-; Toggle
-^+u:: 
-  set(!enabled) 
-  return 
+#If enabled
 
-$Escape:: 
-  if (enabled) { 
-    set(!enabled) 
-  } 
-  Send, {Escape} 
-  return 
+Space::Send _ 
 
-^[:: 
-  if (enabled) { 
-    set(!enabled) 
-  } 
-  Send, ^[ 
-  return 
-
-$Enter:: 
-  if (enabled) { 
-    set(!enabled) 
-  } else { 
-    Send, {Enter} 
-  } 
-  return 
-
-$Space:: 
-  if (enabled) { 
-    Send, _ 
-  } else { 
-    Send, {Space} 
-  } 
+~Escape::
+~Tab::
+~Enter::set(!enabled) 
