@@ -7,9 +7,8 @@
     <ul class="icons">
     {% for icon in site.data.icons %}
       <li>
-        <img src="/chocolateypackages/{{ icon.path }}" height="32" />
         <a href="/chocolateypackages/{{ icon.path }}">
-          {{ icon.name }}
+          <img src="/chocolateypackages/{{ icon.path }}" height="32" alt="{{icon.name}}" />
         </a>
       </li>
     {% endfor %}
