@@ -1,36 +1,24 @@
-;==================================================
-; Underscore Mode for Windows
-;==================================================
 #NoEnv
 #SingleInstance force 
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
-;==================================================
-; Initialize off
-;==================================================
 enabled := false 
-set(false) 
+set(enabled) 
 
-;==================================================
-; Stash and update the state
-;==================================================
 set(on) { 
-  local icon := on ? "underscore_on.png" : "underscore_off.png" 
-  local state := on ? "ON" : "OFF" 
-
   enabled := on 
 
-  ; Sexy tray icon and text
-  Menu, Tray, Icon, %icon%, 
-  Menu, Tray, Tip, Underscore Mode is %state% 
+  path  := enabled ? "underscore_on.ico" : "underscore_off.ico"
+  state := enabled ? "ON" : "OFF"
+
+  Menu, Tray, Icon, %path%
+  Menu, Tray, Tip, %state%
 
   Send {Shift Up} 
 } 
 
-;==================================================
 ; Toggle
-;==================================================
 ^+u:: 
   set(!enabled) 
   return 
