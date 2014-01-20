@@ -11,7 +11,7 @@ class AhkCompiler
                 :icon
 
   def initialize
-    @command = default_command
+    @command = installed_command
     super()
   end
 
@@ -29,12 +29,8 @@ class AhkCompiler
     p
   end
 
-  def default_command
-    File.exist?(installed_command) ? installed_command : "ahk2exe"
-  end
-
   # In x86 Ruby, ENV["PROGRAMFILES"] always resolves to "Program Files (x86)"
   def installed_command
-    ENV["PROGRAMFILES"] ? File.join(ENV["PROGRAMFILES"], "AutoHotkey/Compiler/ahk2exe.exe") : ""
+    File.join(ENV["SYSTEMDRIVE"], "Program Files/AutoHotkey/Compiler/ahk2exe.exe")
   end
 end
