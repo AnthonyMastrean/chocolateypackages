@@ -9,11 +9,11 @@ set(state) {
   icon := enabled ? "underscore_on.ico" : "underscore_off.ico"
   tip := enabled ? "ON" : "OFF"
 
-  Menu Tray, Icon, %icon%
+  Menu Tray, Icon, %icon%,, 0
   Menu Tray, Tip, Underscore: %tip%
 }
 
-set(false) 
+set(false)
 
 ^+u::set(!enabled)
 

@@ -7,9 +7,9 @@
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/underscore</projectUrl>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/underscore.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/underscore.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Make the spacebar insert underscores instead of spaces. Enter underscore mode by pressing `CTRL+SHIFT+U`. Exit underscore mode by pressing `Tab`, `Esc`, or `Enter`.</description>
+    <description>Make the spacebar insert underscores instead of spaces. Enter underscore mode by pressing CTRL+SHIFT+U. Exit underscore mode by pressing Tab, Esc, or Enter.</description>
     <summary>Replace spaces with underscores!</summary>
     <tags>underscore spacebar</tags>
   </metadata>

@@ -14,7 +14,7 @@ task :build   => [:out_script, :out_compile, :compile]
 ahk_compile :compile => [ignore, :out_compile] do |cmd| 
   cmd.command = File.join(ENV["SYSTEMDRIVE"], "Program Files/AutoHotkey/Compiler/ahk2exe.exe")
   cmd.in = "lib/underscore/underscore.ahk"
-  cmd.icon = "underscore.ico"
+  cmd.icon = "lib/underscore/underscore_on.ico"
   cmd.out = "underscore-compiled/tools/underscore.exe"
 end
 
