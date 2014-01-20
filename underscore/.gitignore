@@ -1,5 +1,1 @@
 *.nupkg
-underscore-compiled/tools/*
-!underscore-compiled/tools/chocolateyInstall.ps1
-underscore-script/tools/*
-!underscore-script/tools/chocolateyInstall.ps1

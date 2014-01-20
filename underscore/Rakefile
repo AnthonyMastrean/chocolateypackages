@@ -1,36 +1,31 @@
 require "albacore"
 require "./lib/underscore.rb"
 
-ignore = "underscore-compiled/tools/underscore.exe.gui"
 specs = FileList["**/*.nuspec"]
 
-file ignore
+desc "Compile the package output"
+task :default => [:package]
 
-task :default => [:build]
-
-desc "Build the compiled and script packages"
-task :build   => [:out_script, :out_compile, :compile]
-
-ahk_compile :compile => [ignore, :out_compile] do |cmd| 
-  cmd.command = File.join(ENV["SYSTEMDRIVE"], "Program Files/AutoHotkey/Compiler/ahk2exe.exe")
-  cmd.in = "lib/underscore/underscore.ahk"
-  cmd.icon = "lib/underscore/underscore_on.ico"
+ahk_compile :compile do |cmd| 
+  cmd.in = "underscore-script/tools/underscore.ahk"
+  cmd.icon = "underscore-script/tools/underscore_on.ico"
   cmd.out = "underscore-compiled/tools/underscore.exe"
 end
 
-output :out_compile do |out|
+output :output do |out|
   out.keep_to
-  out.from "lib/underscore"
+  out.from "underscore-script/tools"
   out.to "underscore-compiled/tools"
   out.file "underscore_off.ico"
   out.file "underscore_on.ico"
 end
 
-output :out_script do |out|
-  out.keep_to
-  out.from "lib/underscore"
-  out.to "underscore-script/tools"
-  out.file "underscore.ahk"
-  out.file "underscore_off.ico"
-  out.file "underscore_on.ico"
+desc "Build all of the packages"
+task :package => specs
+
+specs.each do |spec|
+  exec spec => [:compile, :output] do |cmd|
+    cmd.command = "cpack"
+    cmd.parameters = [spec]
+  end
 end
