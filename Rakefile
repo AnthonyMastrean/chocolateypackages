@@ -6,12 +6,12 @@ task :default => [:generate]
 
 desc "Publish the gh-pages site"
 task :publish => [:optimize, :generate] do 
-  system "git pull"
   system "git add -A"
   system "git commit -m \"Site generated at #{Time.now.utc}\""
   system "git checkout gh-pages"
   system "git merge -s subtree master"
   system "git push origin master gh-pages"
+  system "git checkout master"
 end
 
 directory "public/_data"
