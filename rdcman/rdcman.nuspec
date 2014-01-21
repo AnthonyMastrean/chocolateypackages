@@ -10,10 +10,7 @@
     <projectUrl>http://www.microsoft.com/download/en/details.aspx?id=21101</projectUrl>
     <tags>remote desktop connection admin</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/rdcman/rdcman/rdcman.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/rdcman.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

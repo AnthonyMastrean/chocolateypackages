@@ -11,7 +11,6 @@
     <projectUrl>https://github.com/jelmer/dulwich</projectUrl>
     <tags>hg git python</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl></iconUrl>-->
     <dependencies>
       <dependency id="7zip.commandline" />
       <dependency id="hg" version="[2.0,3.0)" />

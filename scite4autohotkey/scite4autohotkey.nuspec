@@ -24,7 +24,6 @@
     <licenseUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/license.htm</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <releaseNotes>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/changelog.htm</releaseNotes>
-    <!--<iconUrl></iconUrl>-->
     <dependencies>
       <dependency id="autohotkey_l" />
     </dependencies>

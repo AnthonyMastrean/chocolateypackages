@@ -11,10 +11,6 @@
     <tags>png optimize lossless deflate web</tags>
     <licenseUrl>http://advsys.net/ken/utils.htm#pngoutkziplicense</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/pngout/pngout/pngout.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

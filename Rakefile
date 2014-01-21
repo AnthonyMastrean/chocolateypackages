@@ -49,9 +49,18 @@ task "public/_data/icons.yaml" do |t|
 end
 
 desc "Optimize all of the icons"
-task :optimize do 
+task :optimize_all do 
+  puts "Optimizing all PNGs will take a while (status is hidden)..."
   icons.each do |path|
     system "pngout \"#{path}\" /q"
+  end
+end
+
+desc "Optimize only new icons"
+task :optimize do
+  added = `git ls-files --others --exclude-standard -- *.png`.split("\n")
+  added.each do |path|
+    system "pngout \"#{path}\""
   end
 end
 

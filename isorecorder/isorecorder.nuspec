@@ -10,10 +10,7 @@
     <projectUrl>http://alexfeinman.com/isorecorder.htm</projectUrl>
     <tags>iso disk recorder admin</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/isorecorder/isorecorder/isorecorder.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/isorecorder.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

@@ -11,10 +11,7 @@
     <tags>pdf</tags>
     <licenseUrl>http://www.pdflabs.com/docs/pdftk-license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/pdftk/pdftk/pdftk.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/pdftk.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

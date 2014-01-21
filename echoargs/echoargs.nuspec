@@ -11,10 +11,6 @@
     <projectUrl>http://pscx.codeplex.com/</projectUrl>
     <tags>echo args powershell console command cmd</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/echoargs/echoargs/echoargs.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
   </metadata>
   <files>
     <file src="content\echoargs.exe" target="content\echoargs.exe" />

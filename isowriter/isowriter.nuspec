@@ -10,10 +10,7 @@
     <projectUrl>http://alexfeinman.com/ISOWriter.htm</projectUrl>
     <tags>iso disk writer</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/isowriter/isowriter/isowriter.ext</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/isowriter.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

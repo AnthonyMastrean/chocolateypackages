@@ -10,7 +10,6 @@
     <description>Configure DiffMerge as the SVN diff-cmd and merge-tool-cmd.</description>
     <tags>svn diff merge tool</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl></iconUrl>-->
     <dependencies>
       <dependency id="collabnetsvn" />
       <dependency id="diffmerge" />
