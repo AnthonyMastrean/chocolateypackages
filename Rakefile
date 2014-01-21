@@ -1,8 +1,29 @@
+require "fileutils"
 require "yaml"
 
 icons = Dir["public/icons/*"]
 
 task :default => [:generate]
+
+desc "One-time setup of gh-pages"
+task :setup, [:folder] do |t, args|
+  # http://jgoodall.me/posts/2012/10/26/keep-gh-pages-in-sync-with-master/
+  
+  raise "gh-pages branch already exists" if File.exist?(".git/refs/heads/gh-pages")
+
+  args.with_defaults(:folder => "public")
+
+  system "git checkout -b gh-pages"
+  
+  FileList["*"].exclude(args[:folder]).each { |path| FileUtils.rm_rf(path) }
+  FileUtils.cp_r(File.join(args[:folder], "."), ".")
+  FileUtils.rm_rf(args[:folder])
+  
+  system "git add -A"
+  system "git commit -am \"setup gh-pages\""
+  system "git push origin master gh-pages"
+  system "git checkout master"
+end
 
 desc "Publish the gh-pages site"
 task :publish => [:optimize, :generate] do 
