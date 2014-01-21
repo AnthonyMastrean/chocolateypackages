@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Hewlett-Packard\HP HotKey Support]
+"VolumeOSD"=dword:00000000
+"AmbientLightSensorOSD"=dword:00000000
+"BrightnessOSD"=dword:00000000
+"CapsLockOSD"=dword:00000000
+"NumLockOSD"=dword:00000000
+"ScrollLockOSD"=dword:00000000
