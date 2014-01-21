@@ -1,0 +1,67 @@
+--- !ruby/object:Rake::FileList
+pending_add: []
+pending: false
+exclude_patterns:
+- !ruby/regexp /(^|[\/\\])CVS([\/\\]|$)/
+- !ruby/regexp /(^|[\/\\])\.svn([\/\\]|$)/
+- !ruby/regexp /\.bak$/
+- !ruby/regexp /~$/
+exclude_procs:
+- !ruby/object:Proc {}
+items:
+- name: apm
+  path: public/icons/apm.png
+- name: bellavista
+  path: public/icons/bellavista.png
+- name: calibre
+  path: public/icons/calibre.png
+- name: collabnetsvn
+  path: public/icons/collabnetsvn.png
+- name: dashlane
+  path: public/icons/dashlane.png
+- name: diffmerge
+  path: public/icons/diffmerge.png
+- name: greenfishiconeditor
+  path: public/icons/greenfishiconeditor.png
+- name: gtksharp
+  path: public/icons/gtksharp.png
+- name: hp-hotkeysupport-off
+  path: public/icons/hp-hotkeysupport-off.png
+- name: imagej
+  path: public/icons/imagej.png
+- name: log4netlivetemplates
+  path: public/icons/log4netlivetemplates.png
+- name: modernmix
+  path: public/icons/modernmix.png
+- name: monodevelop
+  path: public/icons/monodevelop.png
+- name: msicuu2
+  path: public/icons/msicuu2.png
+- name: notepad2-mod
+  path: public/icons/notepad2-mod.png
+- name: notepad2
+  path: public/icons/notepad2.png
+- name: nvspbind
+  path: public/icons/nvspbind.png
+- name: prime95
+  path: public/icons/prime95.png
+- name: setacl
+  path: public/icons/setacl.png
+- name: start8
+  path: public/icons/start8.png
+- name: ultramon
+  path: public/icons/ultramon.png
+- name: underscore
+  path: public/icons/underscore.png
+- name: unfreez
+  path: public/icons/unfreez.png
+- name: ungit
+  path: public/icons/ungit.png
+- name: usbview
+  path: public/icons/usbview.png
+- name: wim2vhd
+  path: public/icons/wim2vhd.png
+- name: wincommandpaste
+  path: public/icons/wincommandpaste.png
+- name: wudt
+  path: public/icons/wudt.png
