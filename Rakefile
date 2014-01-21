@@ -7,7 +7,9 @@ task :default => [:generate]
 
 desc "Publish the gh-pages site"
 task :publish => [:optimize, :generate] do 
-
+  system "git checkout gh-pages"
+  system "git merge -s subtree master"
+  system "git push origin master gh-pages"
 end
 
 directory "public/_data"
