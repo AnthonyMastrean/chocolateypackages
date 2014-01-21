@@ -1,7 +1,7 @@
 require "fileutils"
 require "yaml"
 
-icons = FileList["public/icons/*"]
+icons = Dir["public/icons/*"]
 
 task :default => [:generate]
 
@@ -12,8 +12,8 @@ end
 
 directory "public/_data"
 
-file "public/_data/icons.yaml" do |t|
-  File.write("public/_data/icons.yaml", icons.map { |path| { "name" => File.basename(path, File.extname(path)), "path" => path } }.to_yaml)
+task "public/_data/icons.yaml" do |t|
+  File.write(t.name, icons.map { |path| { "name" => File.basename(path, File.extname(path)), "path" => path } }.to_yaml)
 end
 
 desc "Optimize all of the icons"
