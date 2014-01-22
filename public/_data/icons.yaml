@@ -9,6 +9,8 @@
   path: /chocolateypackages/icons/collabnetsvn.png
 - name: dashlane
   path: /chocolateypackages/icons/dashlane.png
+- name: dependencywalker
+  path: /chocolateypackages/icons/dependencywalker.png
 - name: diffmerge
   path: /chocolateypackages/icons/diffmerge.png
 - name: greenfishiconeditor
@@ -23,10 +25,12 @@
   path: /chocolateypackages/icons/isorecorder.png
 - name: isowriter
   path: /chocolateypackages/icons/isowriter.png
+- name: jdk
+  path: /chocolateypackages/icons/jdk.png
+- name: jpegoptim
+  path: /chocolateypackages/icons/jpegoptim.png
 - name: liquibase
   path: /chocolateypackages/icons/liquibase.png
-- name: log4netlivetemplates
-  path: /chocolateypackages/icons/log4netlivetemplates.png
 - name: modernmix
   path: /chocolateypackages/icons/modernmix.png
 - name: monodevelop
@@ -45,10 +49,18 @@
   path: /chocolateypackages/icons/prime95.png
 - name: rdcman
   path: /chocolateypackages/icons/rdcman.png
+- name: reflector
+  path: /chocolateypackages/icons/reflector.png
+- name: resourcesextract
+  path: /chocolateypackages/icons/resourcesextract.png
 - name: setacl
   path: /chocolateypackages/icons/setacl.png
+- name: sikuli
+  path: /chocolateypackages/icons/sikuli.png
 - name: start8
   path: /chocolateypackages/icons/start8.png
+- name: tsunami
+  path: /chocolateypackages/icons/tsunami.png
 - name: ultramon
   path: /chocolateypackages/icons/ultramon.png
 - name: underscore
