@@ -1,31 +1,34 @@
-require "albacore"
-require "./lib/underscore.rb"
+require "fileutils"
 
-specs = FileList["**/*.nuspec"]
+ahk2exe = File.join(ENV["SYSTEMDRIVE"], "Program Files/AutoHotkey/Compiler/ahk2exe.exe")
 
-desc "Compile the package output"
+script   = "underscore-script/content/underscore.ahk"
+icon     = "underscore-script/content/underscore_on.ico"
+exe      = "underscore-compiled/content/underscore.exe"
+content  = ["underscore_on.ico", "underscore_off.ico"]
+
+specs    = FileList["**/*.nuspec"]
+packages = FileList["*.nupkg"]
+
 task :default => [:package]
 
-ahk_compile :compile do |cmd| 
-  cmd.in = "underscore-script/tools/underscore.ahk"
-  cmd.icon = "underscore-script/tools/underscore_on.ico"
-  cmd.out = "underscore-compiled/tools/underscore.exe"
-end
-
-output :output do |out|
-  out.keep_to
-  out.from "underscore-script/tools"
-  out.to "underscore-compiled/tools"
-  out.file "underscore_off.ico"
-  out.file "underscore_on.ico"
-end
-
 desc "Build all of the packages"
-task :package => specs
+task :package => [exe] do
+  specs.each { |name| system "cpack #{name}" }
+end
 
-specs.each do |spec|
-  exec spec => [:compile, :output] do |cmd|
-    cmd.command = "cpack"
-    cmd.parameters = [spec]
+desc "Publish all of the packages"
+task :publish => [:package] do
+  packages.each { |name| system "cpush #{name}" }
+end
+
+file exe do
+  content.each do |name| 
+    source      = File.join("underscore-script/content", name)
+    destination = File.join("underscore-compiled/content", name)
+
+    FileUtils.cp_r(source, destination)
   end
+  
+  system "\"#{ahk2exe}\" /in #{script} /out #{exe} /icon #{icon}"
 end
