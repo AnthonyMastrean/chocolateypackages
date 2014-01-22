@@ -3,16 +3,20 @@
   path: /chocolateypackages/icons/apm.png
 - name: bellavista
   path: /chocolateypackages/icons/bellavista.png
-- name: calibre
-  path: /chocolateypackages/icons/calibre.png
 - name: collabnetsvn
   path: /chocolateypackages/icons/collabnetsvn.png
+- name: com0com
+  path: /chocolateypackages/icons/com0com.png
 - name: dashlane
   path: /chocolateypackages/icons/dashlane.png
 - name: dependencywalker
   path: /chocolateypackages/icons/dependencywalker.png
 - name: diffmerge
   path: /chocolateypackages/icons/diffmerge.png
+- name: dtksneak
+  path: /chocolateypackages/icons/dtksneak.png
+- name: ftprog
+  path: /chocolateypackages/icons/ftprog.png
 - name: greenfishiconeditor
   path: /chocolateypackages/icons/greenfishiconeditor.png
 - name: gtksharp
@@ -35,6 +39,8 @@
   path: /chocolateypackages/icons/modernmix.png
 - name: monodevelop
   path: /chocolateypackages/icons/monodevelop.png
+- name: mousewithoutborders
+  path: /chocolateypackages/icons/mousewithoutborders.png
 - name: msicuu2
   path: /chocolateypackages/icons/msicuu2.png
 - name: notepad2-mod
@@ -49,6 +55,8 @@
   path: /chocolateypackages/icons/prime95.png
 - name: rdcman
   path: /chocolateypackages/icons/rdcman.png
+- name: reconsole
+  path: /chocolateypackages/icons/reconsole.png
 - name: reflector
   path: /chocolateypackages/icons/reflector.png
 - name: resourcesextract
