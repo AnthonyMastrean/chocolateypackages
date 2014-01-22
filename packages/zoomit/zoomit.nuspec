@@ -13,7 +13,4 @@
     <licenseUrl>http://technet.microsoft.com/en-us/sysinternals/bb469936</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

@@ -3,17 +3,14 @@
   <metadata>
     <id>setacl</id>
     <title>SetACL</title>
-    <version>2.3.0</version>
+    <version>2.3.0.1</version>
     <authors>Helge Klein</authors>
     <owners>Anthony Mastrean</owners>
     <description>Are you looking for a way to automate the management of Windows permissions? Do you need features like domain migration? Or support for paths longer than 260 character other tools cannot handle any more? In either case you have come to the right place.</description>
     <projectUrl>http://helgeklein.com/setacl/</projectUrl>
-    <tags>acl setacl chocolatey admin</tags>
+    <tags>acl setacl</tags>
     <licenseUrl>http://helgeklein.com/setacl/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/setacl.png</iconUrl>
   </metadata>
-  <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

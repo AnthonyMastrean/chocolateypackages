@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>apm</id>
-    <version>1.1.0.1</version>
+    <version>1.1.0.2</version>
     <title>Advanced Process Manipulator</title>
     <authors>DiamondCS</authors>
     <owners>Anthony Mastrean</owners>

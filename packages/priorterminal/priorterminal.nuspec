@@ -11,7 +11,4 @@
     <tags>prior robot terminal com</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

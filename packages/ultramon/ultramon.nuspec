@@ -3,7 +3,7 @@
   <metadata>
     <id>ultramon</id>
     <title>UltraMon</title>
-    <version>3.2.2</version>
+    <version>3.2.2.1</version>
     <authors>Christian Studer</authors>
     <owners>Anthony Mastrean</owners>
     <summary>UltraMon is a utility for multi-monitor systems, designed to increase productivity and unlock the full potential of multiple monitors.</summary>
@@ -13,18 +13,10 @@
 * control application positioning with UltraMon Shortcuts
 * multi-monitor support for desktop wallpapers and screen savers
 * mirror your main monitor to secondary monitors for a presentation</description>
-    <releaseNotes>
-Support for Windows 8 final version (RTM release):
-* The window buttons match the look of the native buttons
-* Smart Taskbar is disabled by default due to the built-in multi-monitor taskbar
-    </releaseNotes>
     <projectUrl>http://www.realtimesoft.com/ultramon/</projectUrl>
     <tags>monitor multi-monitor productivity</tags>
     <licenseUrl>http://www.realtimesoft.com/ecom/lic_ag_ultramon_en.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/ultramon.png</iconUrl>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

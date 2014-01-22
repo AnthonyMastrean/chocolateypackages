@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>notepad2</id>
-    <version>4.2.25.2</version>
+    <version>4.2.25.3</version>
     <title>Notepad2</title>
     <authors>Florian Balmer</authors>
     <owners>Anthony Mastrean</owners>
@@ -11,9 +11,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A fast and light-weight Notepad-like text editor with syntax highlighting.</description>
     <summary>A fast and light-weight Notepad-like text editor with syntax highlighting.</summary>
-    <tags>notepad chocolatey admin</tags>
+    <tags>notepad</tags>
   </metadata>
-  <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

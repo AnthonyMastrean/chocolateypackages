@@ -3,7 +3,7 @@
   <metadata>
     <id>wincommandpaste</id>
     <title>Windows Command Paste</title>
-    <version>1.0.6</version>
+    <version>1.0.6.1</version>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Paste into any Windows console (command line, PowerShell, and Console2) with CTRL+V!</summary>
@@ -13,12 +13,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/wincommandpaste.png</iconUrl>
     <dependencies>
-      <dependency id="autohotkey_l" />
+      <dependency id="autohotkey" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-    <file src="wincommandpaste.ahk" target="content\wincommandpaste.ahk" />
-    <file src="wincommandpaste.ico" target="content\wincommandpaste.ico" />
-  </files>
 </package>

@@ -8,7 +8,7 @@
     <owners>Anthony Mastrean</owners>
     <summary>The DTK Barcode Reader SDK _loves_ to pop up a licensing dialog when running in debug. It's annoying to have to babysit that dialog. This script, when running, watches for the dialog and automatically clicks the Close button.</summary>
     <description>The DTK Barcode Reader SDK _loves_ to pop up a licensing dialog when running in debug. It's annoying to have to babysit that dialog. This script, when running, watches for the dialog and automatically clicks the Close button.</description>
-    <tags>dtk automation chocolatey admin</tags>
+    <tags>dtk automation</tags>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/dtksneak.png</iconUrl>
     <dependencies>
       <dependency id="autohotkey" />
