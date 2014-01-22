@@ -11,7 +11,7 @@
     <tags>mono ide .net</tags>
     <licenseUrl>http://www.gnu.org/licenses/lgpl-2.1.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/monodevelop/monodevelop/monodevelop.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/monodevelop.png</iconUrl>
     <dependencies>
       <dependency id="gtksharp" version="2.12.10" />
     </dependencies>

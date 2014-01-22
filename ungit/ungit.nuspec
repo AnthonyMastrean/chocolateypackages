@@ -12,7 +12,7 @@
     <tags>git</tags>
     <licenseUrl>https://github.com/FredrikNoren/ungit#license-mit</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/0deb08d1047a6b217381fa04d34a43434f3dd056/ungit/ungit.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/ungit.png</iconUrl>
     <dependencies>
       <dependency id="git" version="[1.8,2.0)" />
       <dependency id="nodejs.install" version="[0.10,1.0)" />

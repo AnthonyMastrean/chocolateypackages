@@ -11,7 +11,7 @@
     <projectUrl>http://rsbweb.nih.gov/ij/</projectUrl>
     <tags>image processing nih</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/5af998eafa4f801eb979f9ac85f0d09de34ac834/imagej/imagej.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/imagej.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

@@ -3,20 +3,14 @@
   <metadata>
     <id>calibre</id>
     <title>Calibre</title>
-    <version>0.8.32</version>
+    <version>0.8.32.1</version>
     <authors>Kovid Goyal</authors>
     <owners>Anthony Mastrean</owners>
-    <description>calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.</description>
+    <description>Calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.</description>
     <projectUrl>http://calibre-ebook.com/</projectUrl>
     <tags>ebook</tags>
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/calibre/calibre/calibre.ico</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/calibre.png</iconUrl>
   </metadata>
-  <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

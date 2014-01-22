@@ -10,7 +10,7 @@
     <projectUrl>http://www.mono-project.com/GtkSharp</projectUrl>
     <tags>gtk gui mono .net gnome</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/3db883466989384f07890745b2718363c490a016/gtksharp/gtksharp.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/gtksharp.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

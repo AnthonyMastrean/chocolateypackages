@@ -15,7 +15,7 @@ The right pane displays the USB data structures that pertain to the selected USB
     <projectUrl>http://msdn.microsoft.com/en-us/library/windows/hardware/ff560019(v=vs.85).aspx</projectUrl>
     <tags>usb debugging ports</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/usbview/usbview/usbview.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/usbview.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

@@ -3,16 +3,13 @@
   <metadata>
     <id>diffmerge</id>
     <title>SourceGear DiffMerge</title>
-    <version>4.1.0</version>
+    <version>4.1.0.1</version>
     <authors>SourceGear</authors>
     <owners>Anthony Mastrean</owners>
     <description>Visually compare and merge files within Windows, Mac OS X and Linux.</description>
     <projectUrl>http://www.sourcegear.com/diffmerge/</projectUrl>
-    <tags>diff merge chocolatey admin</tags>
+    <tags>diff merge</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/nugetpackages/diffmerge/diffmerge/diffmerge.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/diffmerge.png</iconUrl>
   </metadata>
-  <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

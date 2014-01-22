@@ -7,13 +7,13 @@
     <authors>JP Boodhoo</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>https://github.com/AnthonyMastrean/testnamingmode</projectUrl>
-    <iconUrl>https://github.com/AnthonyMastrean/testnamingmode/raw/master/content/testnamingmode.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/testnamingmode.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Enable easy BDD-styled test naming by pressing `CTRL+SHIFT+U`. That is, spaces become underscores `_` automatically! You can exit this mode by pressing `Tab`, `Esc`, or `Enter`. This should work nicely with tools like ReSharper that use those same keys as template hotkeys.</description>
     <summary>Enable easy BDD-styled test naming by pressing `CTRL+SHIFT+U`.</summary>
     <tags>autohotkey test naming bdd automation</tags>
     <dependencies>
-      <dependency id="autohotkey_l" />
+      <dependency id="autohotkey" />
     </dependencies>
   </metadata>
   <files>

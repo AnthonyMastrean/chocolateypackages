@@ -11,6 +11,6 @@
     <projectUrl>http://www.stardock.com/products/start8/</projectUrl>
     <tags>windows windows-8 start-menu</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/f0ee4e084545e78f59348bb40ec603311a8257a1/start8/start8.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/start8.png</iconUrl>
   </metadata>
 </package>

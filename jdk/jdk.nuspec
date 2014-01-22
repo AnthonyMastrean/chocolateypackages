@@ -12,6 +12,6 @@
     <tags>oracle java jdk</tags>
     <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/Iristyle/ChocolateyPackages/raw/master/JDK7/jdk7_logo.jpg</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/jdk</iconUrl>
   </metadata>
 </package>

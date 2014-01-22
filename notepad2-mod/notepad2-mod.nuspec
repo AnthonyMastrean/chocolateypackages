@@ -12,7 +12,7 @@
     <tags>notepad notepad2</tags>
     <licenseUrl>http://www.opensource.org/licenses/bsd-license.php</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/notepad2-mod/notepad2-mod/notepad2-mod.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/notepad2-mod.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

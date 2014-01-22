@@ -11,7 +11,7 @@
     <projectUrl>http://www.howtogeek.com/howto/25590/how-to-enable-ctrlv-for-pasting-in-the-windows-command-prompt/</projectUrl>
     <tags>autohotkey command windows prompt console paste clipboard</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/wincommandpaste/raw/master/content/wincommandpaste.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/wincommandpaste.png</iconUrl>
     <dependencies>
       <dependency id="autohotkey_l" />
     </dependencies>

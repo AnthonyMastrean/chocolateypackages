@@ -11,7 +11,7 @@
 You can use ResourcesExtract in user interface mode, or alternatively, you can run ResourcesExtract in command-line mode without displaying any user interface.</description>
     <projectUrl>http://www.nirsoft.net/utils/resources_extract.html</projectUrl>
     <tags>resources extract chocolatey admin</tags>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/resourcesextract/resourcesextract/resourcesextract.gif</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/resourcesextract.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

@@ -8,7 +8,7 @@
     <owners>Anthony Mastrean</owners>
     <licenseUrl>http://msdn.microsoft.com/en-us/library/ff648068.aspx</licenseUrl>
     <projectUrl>http://archive.msdn.microsoft.com/wim2vhd</projectUrl>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/wim2vhd/master/wim2vhd.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/wim2vhd.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <summary>Create sysprepped VHD images from any Windows 7 installation source.</summary>
     <description>The Windows Image to Virtual Hard Disk (WIM2VHD) command-line tool allows you to create sysprepped VHD images from any Windows 7 installation source. VHDs created by WIM2VHD will boot directly to the Out Of Box Experience, ready for your first-use customizations. You can also automate the OOBE by supplying your own unattend.xml file, making the possibilities limitless. Fresh squeezed, organically grown, free-range VHDs - just like Mom used to make - that work with Virtual PC, Virtual Server, Microsoft Hyper-V, and Windows 7's new Native VHD-Boot functionality!</description>

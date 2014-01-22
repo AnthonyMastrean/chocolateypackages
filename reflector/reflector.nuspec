@@ -8,7 +8,7 @@
     <owners>Anthony Mastrean</owners>
     <licenseUrl>http://www.red-gate.com/messageboard/viewtopic.php?t=13414</licenseUrl>
     <projectUrl>http://www.reflector.net/</projectUrl>
-    <iconUrl>https://github.com/AnthonyMastrean/nugetpackages/raw/reflector/reflector/reflector.jpg</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/reflector.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET Reflector is a class browser, analyzer, and decompiler for .NET assemblies. .NET Reflector 6 is the last free version of .NET Reflector but, unlike previous free editions, it will not expire or force you to update. .NET Reflector 6 is identical in functionality to the standalone version of .NET Reflector shipped with .NET Reflector 6.6. It does not include a Visual Studio add-in, or debugging functionality. We have added a welcome screen to keep you up to date with future versions. You can navigate away from the welcome screen by selecting an assembly or clicking a link of interest to open in a new browser window.</description>
     <summary>.NET Reflector is a class browser, analyzer, and decompiler for .NET assemblies.</summary>

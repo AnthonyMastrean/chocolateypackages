@@ -17,7 +17,7 @@ The copy of the ISO file that the Windows 7 USB/DVD Download tool creates is boo
     <projectUrl>http://wudt.codeplex.com/</projectUrl>
     <tags>usb dvd iso backup</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/chocolateypackages/raw/2bcb1b8e0f3d6ab1910f5f35577c74b06f3d82f9/wudt/wudt.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/wudt.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

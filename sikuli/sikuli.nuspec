@@ -12,7 +12,7 @@
     <tags>automate test ui gui screenshot script</tags>
     <licenseUrl>http://sikuli.org/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/sikuli/sikuli/raw/569a5f2edbef1a7c975013d57df1c8d14d0971b4/art-work/ide-icon2.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/sikuli.png</iconUrl>
     <dependencies>
       <dependency id="javaruntime" version="6.0" />
     </dependencies>

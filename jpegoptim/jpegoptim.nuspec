@@ -7,7 +7,7 @@
     <authors>Timo Kokkonen,Pornel</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>http://pornel.net/jpegoptim</projectUrl>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/nugetpackages/jpegoptim/jpegoptim/jpegoptim.gif</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/jpegoptim.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Utility to optimize jpeg files. Provides lossless optimization (based on optimizing the Huffman tables) and "lossy" optimization based on setting maximum quality factor.</description>
     <summary>Utility to optimize jpeg files. Provides lossless optimization (based on optimizing the Huffman tables) and "lossy" optimization based on setting maximum quality factor.</summary>

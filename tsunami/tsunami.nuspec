@@ -11,10 +11,6 @@
     <projectUrl>http://tsunami.io/</projectUrl>
     <tags>excel fsharp</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://pbs.twimg.com/profile_images/3338581929/2b11c680af2b0e2d849e20f6d421e009_bigger.png</iconUrl>
-    <!-- I would love to depend on an Excel virtual package -->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/tsunami.png</iconUrl>
   </metadata>
 </package>

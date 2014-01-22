@@ -11,6 +11,6 @@
     <projectUrl>http://www.stardock.com/products/modernmix/index.asp</projectUrl>
     <tags>windows windows-8 metro fullscreen</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/f0ee4e084545e78f59348bb40ec603311a8257a1/modernmix/modernmix.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/modernmix.png</iconUrl>
   </metadata>
 </package>

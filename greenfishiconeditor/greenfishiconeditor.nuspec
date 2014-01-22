@@ -12,7 +12,7 @@
     <tags>icon editor</tags>
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/AnthonyMastrean/chocolateypackages/81fdf0afffa145e93f6a87542607b43b5d6a7ec4/greenfishiconeditor/greenfishiconeditor.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/greenfishiconeditor.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />

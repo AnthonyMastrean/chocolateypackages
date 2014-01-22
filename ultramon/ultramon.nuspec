@@ -22,7 +22,7 @@ Support for Windows 8 final version (RTM release):
     <tags>monitor multi-monitor productivity</tags>
     <licenseUrl>http://www.realtimesoft.com/ecom/lic_ag_ultramon_en.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/AnthonyMastrean/chocolateypackages/raw/master/ultramon/ultramon.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/ultramon.png</iconUrl>
   </metadata>
   <files>
     <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
