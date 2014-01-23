@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>mpress</id>
+    <title>MATCODE Compressor</title>
+    <version>2.19</version>
+    <authors>MATCODE Software</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>MPRESS is a free, high-performance executable packer for PE32/PE32+/.NET/MAC-DARWIN executable formats!</summary>
+    <description>MPRESS makes programs and libraries smaller, and decrease start time when the application loaded from a slow removable media or from the network. It uses in-place decompression technique, which allows to decompress the executable without memory overhead or other drawbacks; it also protects programs against reverse engineering by non-professional hackers. Programs compressed with MPRESS run exactly as before, with no runtime performance penalties.</description>
+    <projectUrl>http://www.matcode.com/mpress.htm</projectUrl>
+    <tags>mpress packer compress</tags>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypacakges/icons/mpress.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+</package>
