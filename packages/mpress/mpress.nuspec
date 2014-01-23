@@ -10,7 +10,7 @@
     <description>MPRESS makes programs and libraries smaller, and decrease start time when the application loaded from a slow removable media or from the network. It uses in-place decompression technique, which allows to decompress the executable without memory overhead or other drawbacks; it also protects programs against reverse engineering by non-professional hackers. Programs compressed with MPRESS run exactly as before, with no runtime performance penalties.</description>
     <projectUrl>http://www.matcode.com/mpress.htm</projectUrl>
     <tags>mpress packer compress</tags>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypacakges/icons/mpress.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/mpress.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
 </package>
