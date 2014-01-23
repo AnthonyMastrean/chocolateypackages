@@ -41,6 +41,8 @@
   path: /chocolateypackages/icons/monodevelop.png
 - name: mousewithoutborders
   path: /chocolateypackages/icons/mousewithoutborders.png
+- name: mpress
+  path: /chocolateypackages/icons/mpress.png
 - name: msicuu2
   path: /chocolateypackages/icons/msicuu2.png
 - name: notepad2-mod
