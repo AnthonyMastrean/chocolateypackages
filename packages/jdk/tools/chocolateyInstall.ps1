@@ -10,16 +10,13 @@ $java   = Join-Path $ENV:PROGRAMFILES "Java\jdk1.7.0_45"
 $bin    = Join-Path $java "bin"
 
 try {
-  $is64bit = Get-ProcessorBits 64
-
-  $dl = if($is64bit) { $url64 } else { $url }
+  $dl = if(Get-ProcessorBits 64) { $url64 } else { $url }
 
   Write-Host "Downloading file from $dl"
 
+  [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
   $client = New-Object "System.Net.WebClient"
-  $client.Headers.Add("Cookie", "gpw_e24=http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html")
-  $client.Headers.Add("Cookie", "oraclelicense=accept-dbindex-cookie")
-  $client.Headers.Add("Cookie", "oraclelicensejdk-7u45-oth-JPR=accept-securebackup-cookie")
+  $client.Headers.Add("Cookie", "gpw_e24=http://www.oracle.com")
   $client.DownloadFile($dl, $temp)
   
   Install-ChocolateyInstallPackage $name $kind $silent $temp
@@ -32,6 +29,6 @@ try {
   Write-ChocolateySuccess $name
 }
 catch {
-  Write-ChocolateyFailure $name $($_.Exception.Message)
+  Write-ChocolateyFailure $name $_.Exception.Message
   return
 }
