@@ -13,4 +13,5 @@
     <licenseUrl>http://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/sqljdbc.png</iconUrl>
+  </metadata>
 </package>
