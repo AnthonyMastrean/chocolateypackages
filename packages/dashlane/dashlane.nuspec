@@ -3,7 +3,7 @@
   <metadata>
     <id>dashlane</id>
     <title>Dashlane</title>
-    <version>__VERSION__</version>
+    <version>2.3.3</version>
     <authors>Dashlane</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The world's best password manager and secure digital wallet.</summary>
@@ -15,9 +15,6 @@ Securely store your payment types in Dashlane’s online wallet. Get express che
     <projectUrl>https://www.dashlane.com/</projectUrl>
     <tags>password safe secure password-manager digital-wallet</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl></iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/dashlane.png</iconUrl>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>
