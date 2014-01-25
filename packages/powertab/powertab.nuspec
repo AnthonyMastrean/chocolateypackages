@@ -3,7 +3,7 @@
   <metadata>
     <id>powertab</id>
     <title>PowerTab</title>
-    <version>0.99.6.1</version>
+    <version>0.99.6</version>
     <authors>idvorkin, JasonMArcher</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Powertab is an extension of the PowerShell tab expansion feature.</summary>
