@@ -11,6 +11,6 @@
     <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=10176</projectUrl>
     <tags>office communicator sdk</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://i.microsoft.com/global/ImageStore/PublishingImages/logos/56x56/office_symbol_clr_56x56.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/ocsdk.png</iconUrl>
   </metadata>
 </package>

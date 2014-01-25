@@ -12,6 +12,6 @@
     <tags>java ide jetbrains idea</tags>
     <licenseUrl>http://www.jetbrains.org/display/IJOS/License+Information</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.jetbrains.com/img/logos/intellijIdea.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/intellijidea.png</iconUrl>
   </metadata>
 </package>

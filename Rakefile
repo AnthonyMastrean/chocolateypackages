@@ -1,4 +1,5 @@
 require "fileutils"
+require "open-uri"
 require "yaml"
 
 icons = Dir["public/icons/*"]

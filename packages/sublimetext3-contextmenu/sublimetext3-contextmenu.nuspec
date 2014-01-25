@@ -3,14 +3,14 @@
   <metadata>
     <id>sublimetext3-contextmenu</id>
     <title>Sublime Text 3 - Context Menu Shortcuts</title>
-    <version>1.0</version>
+    <version>1.0.0.1</version>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Add "Open Folder as Sublime Project" to the context menu for folders and folder backgrounds.</summary>
     <description>Add "Open Folder as Sublime Project" to the context menu for folders and folder backgrounds.</description>
     <tags>sublime open context-menu</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.sublimetext.com/favicon.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/sublimetext3-contextmenu.png</iconUrl>
     <dependencies>
       <dependency id="sublimetext3" version="[3.0, 4.0)" />
     </dependencies>
