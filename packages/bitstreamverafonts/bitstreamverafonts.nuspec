@@ -13,7 +13,4 @@
     <licenseUrl>http://www-old.gnome.org/fonts/#Final_Bitstream_Vera_Fonts</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

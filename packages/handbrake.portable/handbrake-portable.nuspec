@@ -12,9 +12,6 @@
     <tags>handbrake video transcoder encoder</tags>
     <licenseUrl>https://github.com/HandBrake/HandBrake/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://handbrake.fr/img/logo.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/handbrake.png</iconUrl>
   </metadata>
-  <files>
-    <file src="chocolateyInstall-portable.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

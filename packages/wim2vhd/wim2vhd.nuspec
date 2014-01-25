@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>wim2vhd</id>
-    <version>6.1.7600.2</version>
+    <version>6.1.7600.3</version>
     <title>Windows Image to Virtual Hard Disk Converter (WIM2VHD)</title>
     <authors>Mike Kolitz</authors>
     <owners>Anthony Mastrean</owners>

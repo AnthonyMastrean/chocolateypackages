@@ -11,9 +11,6 @@
     <projectUrl>http://visualstudiogallery.msdn.microsoft.com/c255a1e4-04ba-4f68-8f4e-cd473d6b971f</projectUrl>
     <tags>tfs powertools</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://i.microsoft.com/global/ImageStore/PublishingImages/logos/56x56/microsoft_logo_56x56.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/tfpt.png</iconUrl>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

@@ -3,7 +3,7 @@
   <metadata>
     <id>ftprog</id>
     <title>FTDI EEPROM Programming Utility</title>
-    <version>2.6.8.1</version>
+    <version>2.6.8</version>
     <authors>FTDI</authors>
     <owners>Anthony Mastrean</owners>
     <summary>FT_PROG is a free EEPROM programming utility for use with FTDI devices.</summary>

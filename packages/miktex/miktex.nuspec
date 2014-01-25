@@ -12,9 +12,6 @@
     <tags>latex windows</tags>
     <licenseUrl>http://miktex.org/copying</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://miktex.org/favicon.ico</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/miktex.png</iconUrl>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

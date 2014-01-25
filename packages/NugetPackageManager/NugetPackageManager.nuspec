@@ -13,7 +13,4 @@
     <licenseUrl>http://visualstudiogallery.msdn.microsoft.com/site/27077b70-9dad-4c64-adcf-c7cf6bc9970c/eula?licenseType=None</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

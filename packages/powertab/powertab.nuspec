@@ -16,9 +16,6 @@
     <tags>powershell module tabexpansion</tags>
     <licenseUrl>http://powertab.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://upload.wikimedia.org/wikipedia/en/7/7f/Windows_PowerShell_icon.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/powertab.png</iconUrl>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

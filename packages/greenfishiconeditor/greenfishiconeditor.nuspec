@@ -14,7 +14,4 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/greenfishiconeditor.png</iconUrl>
   </metadata>
-  <files>
-    <file src="chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>

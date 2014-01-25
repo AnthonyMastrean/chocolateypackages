@@ -12,7 +12,7 @@
     <tags>apache ldap activedirectory</tags>
     <licenseUrl>http://www.apache.org/licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://directory.apache.org/images/studio-icon_128x128.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/apachedirectorystudio.png</iconUrl>
     <dependencies>
       <dependency id="javaruntime" version="7.0" />
     </dependencies>

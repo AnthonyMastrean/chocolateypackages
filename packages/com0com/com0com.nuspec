@@ -3,7 +3,7 @@
   <metadata>
     <id>com0com</id>
     <title>Null-Modem Emulator</title>
-    <version>3.0.0.1</version>
+    <version>3.0.0</version>
     <authors>Vyacheslav Frolov</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The Null-modem emulator (com0com) is a kernel-mode virtual serial port driver for Windows.</summary>
