@@ -25,12 +25,16 @@
   path: /chocolateypackages/icons/hp-hotkeysupport-off.png
 - name: imagej
   path: /chocolateypackages/icons/imagej.png
+- name: intellijidea
+  path: /chocolateypackages/icons/intellijidea.png
 - name: isorecorder
   path: /chocolateypackages/icons/isorecorder.png
 - name: isowriter
   path: /chocolateypackages/icons/isowriter.png
 - name: jdk
   path: /chocolateypackages/icons/jdk.png
+- name: joytokey
+  path: /chocolateypackages/icons/joytokey.png
 - name: jpegoptim
   path: /chocolateypackages/icons/jpegoptim.png
 - name: liquibase
@@ -51,6 +55,8 @@
   path: /chocolateypackages/icons/notepad2.png
 - name: nvspbind
   path: /chocolateypackages/icons/nvspbind.png
+- name: ocsdk
+  path: /chocolateypackages/icons/ocsdk.png
 - name: pdftk
   path: /chocolateypackages/icons/pdftk.png
 - name: prime95
@@ -69,8 +75,12 @@
   path: /chocolateypackages/icons/sikuli.png
 - name: start8
   path: /chocolateypackages/icons/start8.png
+- name: sublimetext3-contextmenu
+  path: /chocolateypackages/icons/sublimetext3-contextmenu.png
 - name: tsunami
   path: /chocolateypackages/icons/tsunami.png
+- name: uccapisdk
+  path: /chocolateypackages/icons/uccapisdk.png
 - name: ultramon
   path: /chocolateypackages/icons/ultramon.png
 - name: underscore
