@@ -1,4 +1,6 @@
 ---
+- name: apachedirectorystudio
+  path: /chocolateypackages/icons/apachedirectorystudio.png
 - name: apm
   path: /chocolateypackages/icons/apm.png
 - name: bellavista
@@ -21,6 +23,8 @@
   path: /chocolateypackages/icons/greenfishiconeditor.png
 - name: gtksharp
   path: /chocolateypackages/icons/gtksharp.png
+- name: handbrake
+  path: /chocolateypackages/icons/handbrake.png
 - name: hp-hotkeysupport-off
   path: /chocolateypackages/icons/hp-hotkeysupport-off.png
 - name: imagej
@@ -39,6 +43,8 @@
   path: /chocolateypackages/icons/jpegoptim.png
 - name: liquibase
   path: /chocolateypackages/icons/liquibase.png
+- name: miktex
+  path: /chocolateypackages/icons/miktex.png
 - name: modernmix
   path: /chocolateypackages/icons/modernmix.png
 - name: monodevelop
@@ -59,6 +65,8 @@
   path: /chocolateypackages/icons/ocsdk.png
 - name: pdftk
   path: /chocolateypackages/icons/pdftk.png
+- name: powertab
+  path: /chocolateypackages/icons/powertab.png
 - name: prime95
   path: /chocolateypackages/icons/prime95.png
 - name: rdcman
@@ -73,10 +81,14 @@
   path: /chocolateypackages/icons/setacl.png
 - name: sikuli
   path: /chocolateypackages/icons/sikuli.png
+- name: sqljdbc
+  path: /chocolateypackages/icons/sqljdbc.png
 - name: start8
   path: /chocolateypackages/icons/start8.png
 - name: sublimetext3-contextmenu
   path: /chocolateypackages/icons/sublimetext3-contextmenu.png
+- name: tfpt
+  path: /chocolateypackages/icons/tfpt.png
 - name: tsunami
   path: /chocolateypackages/icons/tsunami.png
 - name: uccapisdk
