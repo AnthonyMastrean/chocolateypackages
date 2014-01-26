@@ -1,2 +1,0 @@
-# Launch Windows Explorer in a Separate Process
-Having a folder open in a separate process will allow multiple instances of the open folder window to be running with each instance running with a separate explorer.exe process. If one of these instances should close or crash, the other instances would be completely unaffected by it.
