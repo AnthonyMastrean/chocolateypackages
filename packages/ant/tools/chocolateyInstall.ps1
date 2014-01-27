@@ -7,9 +7,9 @@ Install-ChocolateyZipPackage -PackageName $name -Url $url -UnzipLocation (Get-Bi
 
 try {
   Install-ChocolateyPath -PathToInstall $bin -PathType "Machine"
-  Start-ChocolateyProcessAsAdmin -Minimized -Statements @"
-[System.Environment]::SetEnvironmentVariable("ANT_HOME", $root, "Machine")
-[System.Environment]::SetEnvironmentVariable("ANT_OPTS", "-Xms256M -Xmx512M", "Machine")
+  Start-ChocolateyProcessAsAdmin @"
+[System.Environment]::SetEnvironmentVariable('ANT_HOME', '$root', 'Machine');
+[System.Environment]::SetEnvironmentVariable('ANT_OPTS', '-Xms256M -Xmx512M', 'Machine');
 "@
 
   Write-ChocolateySuccess $name
