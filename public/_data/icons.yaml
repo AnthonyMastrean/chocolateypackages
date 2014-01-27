@@ -1,4 +1,6 @@
 ---
+- name: ant
+  path: /chocolateypackages/icons/ant.png
 - name: apachedirectorystudio
   path: /chocolateypackages/icons/apachedirectorystudio.png
 - name: apm
@@ -63,6 +65,8 @@
   path: /chocolateypackages/icons/nvspbind.png
 - name: ocsdk
   path: /chocolateypackages/icons/ocsdk.png
+- name: oracle
+  path: /chocolateypackages/icons/oracle.png
 - name: pdftk
   path: /chocolateypackages/icons/pdftk.png
 - name: powertab
