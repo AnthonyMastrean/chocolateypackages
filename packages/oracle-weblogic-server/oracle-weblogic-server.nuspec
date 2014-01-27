@@ -14,7 +14,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://oracle.com/favicon.ico</iconUrl>
     <dependencies>
-      <dependency id="jdk7" version="7.0" />
+      <dependency id="jdk" version="7.0" />
     </dependencies>
   </metadata>
 </package>
