@@ -12,7 +12,7 @@
     <tags>__TAG__</tags>
     <licenseUrl>__LICENSEURL__</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl></iconUrl>-->
+    <!--<iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/__NAME__.png</iconUrl>-->
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->

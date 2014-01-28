@@ -1,6 +1,6 @@
-$module_root = Split-Path $MyInvocation.MyCommand.Definition
+$here = Split-Path $MyInvocation.MyCommand.Definition
 
-Get-ChildItem $module_root\lib\*.ps1 | %{ . $_.FullName }
+Get-ChildItem $here\lib\*.ps1 | %{ . $_.FullName }
 
 function Replace-Token {
   param(
