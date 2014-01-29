@@ -20,11 +20,8 @@ try {
   $client.DownloadFile($dl, $temp)
   
   Install-ChocolateyInstallPackage $name $kind $silent $temp
-  
   Install-ChocolateyPath $bin "Machine"
-  Start-ChocolateyProcessAsAdmin @"
-[Environment]::SetEnvironmentVariable('JAVA_HOME', '$java', 'Machine');
-"@
+  Install-ChocolateyEnvironmentVariable "JAVA_HOME" $java "Machine"
         
   Write-ChocolateySuccess $name
 }
