@@ -45,6 +45,8 @@
   path: /chocolateypackages/icons/jpegoptim.png
 - name: liquibase
   path: /chocolateypackages/icons/liquibase.png
+- name: microsoftoffice
+  path: /chocolateypackages/icons/microsoftoffice.png
 - name: miktex
   path: /chocolateypackages/icons/miktex.png
 - name: modernmix
