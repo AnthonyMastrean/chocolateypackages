@@ -43,6 +43,8 @@
   path: /chocolateypackages/icons/joytokey.png
 - name: jpegoptim
   path: /chocolateypackages/icons/jpegoptim.png
+- name: keepass
+  path: /chocolateypackages/icons/keepass.png
 - name: liquibase
   path: /chocolateypackages/icons/liquibase.png
 - name: microsoftoffice
