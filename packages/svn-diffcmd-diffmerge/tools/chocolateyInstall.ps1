@@ -1,8 +1,13 @@
-﻿$name   = "svn-diffcmd-diffmerge"
-$tools  = Split-Path $MyInvocation.MyCommand.Definition
-$diff   = Join-Path $tools "diff.bat"
-$merge  = Join-Path $tools "merge.bat"
-$config = Join-Path (Resolve-Path ~) ".subversion\config"
+﻿$name    = "svn-diffcmd-diffmerge"
+
+$tools   = Split-Path $MyInvocation.MyCommand.Definition
+$content = Join-Path (Split-Path $tools) "content"
+
+$diff    = Join-Path $content "diff.bat"
+$diff3   = Join-Path $content "diff3.bat"
+$merge   = Join-Path $content "merge.bat"
+
+$config  = Join-Path (Resolve-Path ~) ".subversion\config"
 
 try {
   (Get-Content $config) `
