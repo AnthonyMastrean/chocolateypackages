@@ -3,7 +3,7 @@
   <metadata>
     <id>collabnetsvn</id>
     <title>CollabNet SVN Command Line Client</title>
-    <version>1.8.5</version>
+    <version>1.8.5.1</version>
     <authors>CollabNet</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Includes all Subversion command-line binaries.</summary>
