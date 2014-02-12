@@ -8,7 +8,7 @@
     <owners>Anthony Mastrean</owners>
     <summary>A modified version (fork) of Notepad2 based on Kai Liu's and other people's patches.</summary>
     <description>Changes compared to the official Notepad2: Code folding, Support for bookmarks, Option to mark all occurrences of a word, Word auto-completion, Syntax highlighting support for AutoHotkey, AutoIt3, AviSynth, Bash, CMake, Inno Setup, LaTeX, Lua, NSIS, Ruby and Tcl scripts, Improved support for NFO ANSI art, Support for replacing Windows Notepad using a clean, unintrusive registry-based method, Other various minor changes and tweaks</description>
-    <projectUrl>http://code.google.com/p/notepad2-mod/</projectUrl>
+    <projectUrl>http://xhmikosr.github.io/notepad2-mod/</projectUrl>
     <tags>notepad notepad2</tags>
     <licenseUrl>http://www.opensource.org/licenses/bsd-license.php</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
