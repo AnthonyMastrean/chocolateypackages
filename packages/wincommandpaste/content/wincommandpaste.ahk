@@ -1,20 +1,11 @@
-;==================================================
-; Recommended settings for all new scripts
-;==================================================
 #NoEnv
 #SingleInstance force 
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
-;======================================================================
-; Now give it a sexy icon!
-;======================================================================
 Menu, Tray, Icon, wincommandpaste.ico, 
-Menu, Tray, Tip, Press CTRL+V to paste in any console window!
+Menu, Tray, Tip, Paste in any console window with CTRL + V
 
-;==================================================
-; If the window is a console, capture CTRL+V!
-;==================================================
 #IfWinActive ahk_class ConsoleWindowClass
   ^v::Send !{Space}EP
 #IfWinActive
