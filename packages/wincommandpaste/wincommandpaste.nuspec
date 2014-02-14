@@ -3,7 +3,7 @@
   <metadata>
     <id>wincommandpaste</id>
     <title>Windows Command Paste</title>
-    <version>1.0.6.1</version>
+    <version>1.0.6.2</version>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Paste into any Windows console (command line, PowerShell, and Console2) with CTRL+V!</summary>
