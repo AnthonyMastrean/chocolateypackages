@@ -1,33 +1,27 @@
-﻿function Create-Shortcut
-{
-	$shell = New-Object -ComObject 'Wscript.Shell'
-	$shortcut = $shell.CreateShortcut($shortcutPath)
-	$shortcut.TargetPath = $targetPath  
-	$shortcut.WorkingDirectory = $content
-	$shortcut.IconLocation = $iconPath
-	$shortcut.Save()
-}
-
-try 
-{
-    $name = 'wincommandpaste'
+$name    = "wincommandpaste"
  
-    $startup      = "$ENV:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
+$startup = "$ENV:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
 
-    $tools        = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
-    $content      = Join-Path (Split-Path $tools) 'content'
+$tools   = Split-Path $MyInvocation.MyCommand.Definition
+$content = Join-Path (Split-Path $tools) "content"
 
-    $targetPath   = Join-Path "$content" 'wincommandpaste.ahk'
-    $iconPath     = Join-Path "$content" 'wincommandpaste.ico'
-    $shortcutPath = Join-Path "$startup" 'wincommandpaste.lnk'
+$target  = Join-Path $content "wincommandpaste.ahk"
+$icon    = Join-Path $content "wincommandpaste.ico"
+$link    = Join-Path $startup "wincommandpaste.lnk"
 
-    Create-Shortcut
-    & $shortcutPath
+
+try {
+	$shell = New-Object -ComObject "Wscript.Shell"
+	$shortcut = $shell.CreateShortcut($link)
+	$shortcut.TargetPath = $target  
+	$shortcut.WorkingDirectory = $content
+	$shortcut.IconLocation = $icon
+	$shortcut.Save()
+	
+	& $link
   
-    Write-ChocolateySuccess $name
-} 
-catch 
-{
-    Write-ChocolateyFailure $name "$($_.Exception.Message)"
-    throw 
+  Write-ChocolateySuccess $name
+} catch {
+  Write-ChocolateyFailure $name $_.Exception.Message
+  throw 
 }
