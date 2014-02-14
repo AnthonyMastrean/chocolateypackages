@@ -6,10 +6,10 @@
     <version>1.0.6.2</version>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>Paste into any Windows console (command line, PowerShell, and Console2) with CTRL+V!</summary>
-    <description>You can set the edit mode of your console to allow right-click pasting. Or use the built-in key sequence: ALT+Space, E, P. Or, you can install this package and get an AutoHotKey script that makes CTRL+V work in any console window.</description>
+    <summary>Use the common "paste" shortcut, CTRL + V, in any Windows console!</summary>
+    <description>This package uses AutoHotkey to remap the dreadful Windows-console-paste key combination, ALT + Space, E, P, to the more commonly used "paste" shortcut, CTRL + V. It's known to work in the "command prompt" (cmd.exe), PowerShell, Console2, & Git Bash (mingw).</description>
     <projectUrl>http://www.howtogeek.com/howto/25590/how-to-enable-ctrlv-for-pasting-in-the-windows-command-prompt/</projectUrl>
-    <tags>autohotkey command windows prompt console paste clipboard</tags>
+    <tags>clipboard paste command prompt console</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/wincommandpaste.png</iconUrl>
     <dependencies>
