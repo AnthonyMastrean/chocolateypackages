@@ -1,0 +1,37 @@
+require "fileutils"
+
+ahk2exe = File.join(ENV["SYSTEMDRIVE"], "Program Files/AutoHotkey/Compiler/ahk2exe.exe")
+
+script   = "wincommandpaste-script/content/wincommandpaste.ahk"
+icon     = "wincommandpaste-script/content/wincommandpaste.ico"
+exe      = "wincommandpaste-compiled/content/wincommandpaste.exe"
+content  = ["wincommandpaste.ico"]
+
+specs    = FileList["**/*.nuspec"]
+packages = FileList["*.nupkg"]
+
+task :default => [:package]
+
+desc "Build all of the packages"
+task :package => [exe] do
+  specs.each { |name| system "cpack #{name}" }
+end
+
+desc "Publish all of the packages"
+task :publish => [:package] do
+  packages.each { |name| system "cpush #{name}" }
+end
+
+directory "wincommandpaste-compiled/content"
+
+file exe => "wincommandpaste-compiled/content" do
+  content.each do |name| 
+    source      = File.join("wincommandpaste-script/content", name)
+    destination = File.join("wincommandpaste-compiled/content", name)
+
+    FileUtils.cp_r(source, destination)
+  end
+  
+  system "\"#{ahk2exe}\" /in \"#{script}\" /out \"#{exe}\" /icon \"#{icon}\""
+  system "mpress -q \"#{exe}\""
+end

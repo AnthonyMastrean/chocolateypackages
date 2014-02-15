@@ -1,4 +1,4 @@
-$name    = "wincommandpaste"
+$name    = "wincommandpaste-script"
  
 $startup = "$ENV:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
 
