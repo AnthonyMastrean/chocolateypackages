@@ -1,19 +1,16 @@
 require "fileutils"
 
-ahk2exe = File.join(ENV["SYSTEMDRIVE"], "Program Files/AutoHotkey/Compiler/ahk2exe.exe")
-
 script   = "underscore-script/content/underscore.ahk"
 icon     = "underscore-script/content/underscore_on.ico"
 exe      = "underscore-compiled/content/underscore.exe"
-content  = ["underscore_on.ico", "underscore_off.ico"]
 
 specs    = FileList["**/*.nuspec"]
 packages = FileList["*.nupkg"]
 
-task :default => [:package]
+task :default => [:compile]
 
 desc "Build all of the packages"
-task :package => [exe] do
+task :package => [:compile] do
   specs.each { |name| system "cpack #{name}" }
 end
 
@@ -22,13 +19,8 @@ task :publish => [:package] do
   packages.each { |name| system "cpush #{name}" }
 end
 
-file exe do
-  content.each do |name| 
-    source      = File.join("underscore-script/content", name)
-    destination = File.join("underscore-compiled/content", name)
-
-    FileUtils.cp_r(source, destination)
-  end
-  
-  system "\"#{ahk2exe}\" /in #{script} /out #{exe} /icon #{icon}"
+desc "Compile the script to exe"
+task :compile do
+  system "ahk2exe /in \"#{script}\" /out \"#{exe}\" /icon \"#{icon}\""
+  system "mpress -q \"#{exe}\""
 end

@@ -7,10 +7,10 @@ exe      = "wincommandpaste-compiled/content/wincommandpaste.exe"
 specs    = FileList["**/*.nuspec"]
 packages = FileList["*.nupkg"]
 
-task :default => [:package]
+task :default => [:compile]
 
 desc "Build all of the packages"
-task :package => [exe] do
+task :package => [:compile] do
   specs.each { |name| system "cpack #{name}" }
 end
 
@@ -19,9 +19,8 @@ task :publish => [:package] do
   packages.each { |name| system "cpush #{name}" }
 end
 
-directory "wincommandpaste-compiled/content"
-
-file exe => "wincommandpaste-compiled/content" do
+desc "Compile the script to ahk"
+task :compile do
   system "ahk2exe /in \"#{script}\" /out \"#{exe}\" /icon \"#{icon}\""
   system "mpress -q \"#{exe}\""
 end

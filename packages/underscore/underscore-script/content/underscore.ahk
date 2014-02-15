@@ -3,6 +3,9 @@
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
+FileInstall, underscore_on.ico, underscore_on.ico
+FileInstall, underscore_off.ico, underscore_off.ico
+
 set(state) {
   global enabled := state
 
