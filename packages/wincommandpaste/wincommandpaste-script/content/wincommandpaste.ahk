@@ -3,6 +3,8 @@
 SendMode Input
 SetWorkingDir %A_ScriptDir%
 
+FileInstall, wincommandpaste.ico, wincommandpaste.ico
+
 Menu, Tray, Icon, wincommandpaste.ico, 
 Menu, Tray, Tip, Paste in any console window with CTRL + V
 
