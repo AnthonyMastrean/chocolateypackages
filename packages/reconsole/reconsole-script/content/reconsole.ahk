@@ -10,11 +10,10 @@ Menu, Tray, Icon, reconsole.ico,
 
 #IfWinActive ahk_class ConsoleWindowClass
 
-    %::Send `%`%{Left}
-    (::Send (){Left}
-    "::Send ""{Left}
-    '::Send ''{Left}
-    {::Send {{}{}}{Left}
-    [::Send []{Left}
+    (::Send, (){Left}
+    "::Send, ""{Left}
+    '::Send, ''{Left}
+    {::Send, {{}{}}{Left}
+    [::Send, []{Left}
 
 #IfWinActive
