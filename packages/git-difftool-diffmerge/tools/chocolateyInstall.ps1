@@ -1,15 +1,12 @@
-﻿$name = "git.difftool.diffmerge"
+﻿$name  = "git-difftool-diffmerge"
 
 $tools = Split-Path $MyInvocation.MyCommand.Definition
-$bat   = Join-Path $tools "gitconfig.bat"
-$diff  = Join-Path $tools "diffmerge-diff.sh"
-$merge = Join-Path $tools "diffmerge-merge.sh"
+$bat   = Join-Path $tools "git-difftool-diffmerge.bat"
 
 try { 
-  & $bat $diff $merge
+  & $bat
   Write-ChocolateySuccess $name
-} 
-catch {
-  Write-ChocolateyFailure $name $($_.Exception.Message)
+} catch {
+  Write-ChocolateyFailure $name $_.Exception.Message
   throw 
 }

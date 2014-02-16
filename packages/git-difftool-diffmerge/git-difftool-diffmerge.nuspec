@@ -2,15 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>git-difftool-diffmerge</id>
-    <version>1.0.0</version>
-    <title>git-difftool diffmerge</title>
-    <authors>Mark Embling, Alexander Gross</authors>
+    <version>2.0.0</version>
+    <title>DiffMerge for Git</title>
+    <authors>SourceGear</authors>
     <owners>Anthony Mastrean</owners>
-    <projectUrl>http://markembling.info/2010/01/git-environment-windows</projectUrl>
+    <projectUrl>https://sourcegear.com/diffmerge/webhelp/sec__git__windows__msysgit.html</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>Configure SourceGear's DiffMerge as your diff tool in Git for Windows.</summary>
-    <description>To configure your Git diff tool, you need a shell script wrapper and a few git config calls. This script does all the hard work for you! Alexander Gross fixed it for baseless diffs. Enjoy... cmd> git difftool [normal-options]</description>
-    <tags>git diff merge diffmerge</tags>
+    <summary>Use SourceGear DiffMerge as your Git diff and merge tool.</summary>
+    <description>Use SourceGear DiffMerge as your Git diff and merge tool.</description>
+    <tags>git diff difftool merge mergetool diffmerge</tags>
     <dependencies>
       <dependency id="diffmerge" />
       <dependency id="git" />
