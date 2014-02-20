@@ -17,6 +17,8 @@
   path: /chocolateypackages/icons/dependencywalker.png
 - name: diffmerge
   path: /chocolateypackages/icons/diffmerge.png
+- name: divvy
+  path: /chocolateypackages/icons/divvy.png
 - name: dtksneak
   path: /chocolateypackages/icons/dtksneak.png
 - name: ftprog
