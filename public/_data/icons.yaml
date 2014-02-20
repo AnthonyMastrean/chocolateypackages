@@ -5,6 +5,8 @@
   path: /chocolateypackages/icons/apachedirectorystudio.png
 - name: apm
   path: /chocolateypackages/icons/apm.png
+- name: autohotkey
+  path: /chocolateypackages/icons/autohotkey.png
 - name: bellavista
   path: /chocolateypackages/icons/bellavista.png
 - name: collabnetsvn
