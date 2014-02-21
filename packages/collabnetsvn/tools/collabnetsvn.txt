@@ -1,7 +1,0 @@
-upgrade =0
-Autoupdater =False
-Enable_Proxy =1
-Proxy_Hostname =10.2.0.82
-Proxy_Port =3128
-Proxy_Username =user1
-Proxy_Password =collabnet
