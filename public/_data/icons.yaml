@@ -9,8 +9,6 @@
   path: /chocolateypackages/icons/autohotkey.png
 - name: bellavista
   path: /chocolateypackages/icons/bellavista.png
-- name: collabnetsvn
-  path: /chocolateypackages/icons/collabnetsvn.png
 - name: com0com
   path: /chocolateypackages/icons/com0com.png
 - name: dashlane
