@@ -3,7 +3,7 @@
   <metadata>
     <id>zoomit</id>
     <title>ZoomIt</title>
-    <version>4.42</version>
+    <version>4.50</version>
     <authors>Mark Russinovich</authors>
     <owners>Anthony Mastrean</owners>
     <summary>ZoomIt is a screen zoom and annotation tool for technical presentations that include application demonstrations.</summary>
