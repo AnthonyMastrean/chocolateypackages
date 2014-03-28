@@ -30,6 +30,4 @@ function New-ChocolateyPackage {
   
   Get-ChildItem $package -Recurse | Select-Object -Expand FullName | Replace-Token "__NAME__" $id
   Get-ChildItem $package -Recurse | Select-Object -Expand FullName | Replace-Token "__OWNER__" $ENV:USERNAME
-  
-  Push-Location $package
 }

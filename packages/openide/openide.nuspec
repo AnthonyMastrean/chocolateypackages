@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>openide</id>
+    <title>OpenIDE</title>
+    <version>0.9.2</version>
+    <authors>Continuous Tests</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>A set of tools for providing basic developer IDE features around your favorite editor.</summary>
+    <description>OpenIDE is an easily extensible tool for developers. It ties together the terminal, text editor and the ability to build and optionally share your extensions. You can write scripts reacting to editor events, file system changes and more.</description>
+    <projectUrl>https://github.com/continuoustests/OpenIDE</projectUrl>
+    <tags>ide editor open</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+</package>
