@@ -1,5 +1,5 @@
 ﻿$name   = "keepass.install"
-$url    = "http://downloads.sourceforge.net/project/keepass/KeePass%202.x/2.25/KeePass-2.25-Setup.exe"
+$url    = "http://downloads.sourceforge.net/project/keepass/KeePass%202.x/2.26/KeePass-2.26-Setup.exe"
 $kind   = "EXE"
 $silent = "/VERYSILENT"
 

@@ -1,5 +1,5 @@
 ﻿$name    = "keepass.portable"
-$url     = "http://downloads.sourceforge.net/project/keepass/KeePass%202.x/2.25/KeePass-2.25.zip"
+$url     = "http://downloads.sourceforge.net/project/keepass/KeePass%202.x/2.26/KeePass-2.26.zip"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) "content"
