@@ -3,7 +3,7 @@
   <metadata>
     <id>setacl</id>
     <title>SetACL</title>
-    <version>2.3.0.1</version>
+    <version>3.6.0</version>
     <authors>Helge Klein</authors>
     <owners>Anthony Mastrean</owners>
     <description>Are you looking for a way to automate the management of Windows permissions? Do you need features like domain migration? Or support for paths longer than 260 character other tools cannot handle any more? In either case you have come to the right place.</description>
