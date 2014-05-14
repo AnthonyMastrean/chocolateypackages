@@ -1,18 +1,28 @@
 require "fileutils"
 require "open-uri"
+require "rexml/document"
 require "yaml"
+
+def output(nuspec)
+  name = nuspec.pathmap("%n")
+  doc = REXML::Document.new(File.open(nuspec))
+  version = REXML::XPath.first(doc, "/package/metadata/version").text
+
+  return "output/#{name}.#{version}.nupkg"
+end
 
 NUSPECS = FileList["packages/**/*.nuspec"]
 
 desc "Pack all the nuspecs"
-multitask :pack => NUSPECS.pathmap("output/%n.nupkg")
+multitask :pack => NUSPECS.map{ |nuspec| output(nuspec) }
 
 directory "output"
 
 NUSPECS.each do |nuspec|
-  nupkg = nuspec.pathmap("output/%n.nupkg")
-  file nupkg => ["output", nuspec] do |task|
-    system("nuget pack #{nuspec} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity normal")
+  nupkg = output(nuspec)
+
+  file nupkg => [nuspec, "output"] do |task|
+    system("nuget pack #{task.prerequisites.first} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity normal")
   end
 end
 
