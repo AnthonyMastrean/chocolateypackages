@@ -2,6 +2,20 @@ require "fileutils"
 require "open-uri"
 require "yaml"
 
+NUSPECS = FileList["packages/**/*.nuspec"]
+
+desc "Pack all the nuspecs"
+multitask :pack => NUSPECS.pathmap("output/%n.nupkg")
+
+directory "output"
+
+NUSPECS.each do |nuspec|
+  nupkg = nuspec.pathmap("output/%n.nupkg")
+  file nupkg => ["output", nuspec] do |task|
+    system("nuget pack #{nuspec} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity normal")
+  end
+end
+
 icons = Dir["public/icons/*"]
 
 task :default => [:generate]
@@ -67,17 +81,3 @@ end
 
 desc "Generate the gh-pages site"
 task :generate => ["public/_data/icons.yaml"]
-
-NUSPECS = FileList["packages/**/*.nuspec"]
-
-desc "Pack all the nuspecs"
-task :pack => NUSPECS.pathmap("output/%n.nupkg")
-
-directory "output"
-
-NUSPECS.each do |nuspec|
-  nupkg = nuspec.pathmap("output/%n.nupkg")
-  file nupkg => ["output", nuspec] do |task|
-    system("nuget pack #{nuspec} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity quiet")
-  end
-end
