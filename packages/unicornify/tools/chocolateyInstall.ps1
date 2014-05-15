@@ -5,6 +5,7 @@ $content = Join-Path (Split-Path $tools) "content"
 $target = Join-Path $content "unicornify.exe"
 
 try {
+  New-Item $content -Type Directory -Force
   Get-ChocolateyWebFile $name $target $url
   Write-ChocolateySuccess $name
 } 

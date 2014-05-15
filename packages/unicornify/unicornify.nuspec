@@ -16,5 +16,6 @@ Unicorns are always generated based on a single (hexadecimal) number. Usually, t
     <tags>unicorn png</tags>
     <licenseUrl>https://bitbucket.org/balpha/go-unicornify/src/tip/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/unicornify.png</iconUrl>
   </metadata>
 </package>
