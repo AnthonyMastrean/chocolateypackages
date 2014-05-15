@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>unicornify</id>
+    <title>Unicornify</title>
+    <version>0.0.0.1</version>
+    <authors>Benjamin Dumke-von der Ehe</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>This is a command line tool that generates (pretty much) the same unicorn avatar images as the Unicornify web service, just in better quality.</summary>
+    <description>
+This is a command line tool that generates (pretty much) the same unicorn avatar images as the Unicornify web service, just in better quality.
+
+Unicorns are always generated based on a single (hexadecimal) number. Usually, this number is generated from an email address (by taking the MD5 hash, just like Gravatar). For example, the number corresponding to the address mail@example.com is 7daf6c79d4802916d83f6266e24850af.
+    </description>
+    <projectUrl>https://bitbucket.org/balpha/go-unicornify</projectUrl>
+    <tags>unicorn png</tags>
+    <licenseUrl>https://bitbucket.org/balpha/go-unicornify/src/tip/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+</package>
