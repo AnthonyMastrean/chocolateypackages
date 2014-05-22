@@ -1,5 +1,4 @@
 require "fileutils"
-require "open-uri"
 require "rexml/document"
 require "yaml"
 
@@ -61,8 +60,8 @@ task :setup do |task, args|
 end
 
 NUSPECS.zip NUPKGS do |nuspec, nupkg|
-  file nupkg => [nuspec, "output"] do |task|
-    system "nuget pack #{task.prerequisites.first} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity normal"
+  file nupkg => ["output", nuspec] do
+    system "nuget pack #{nuspec} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity normal"
   end
 end
 
