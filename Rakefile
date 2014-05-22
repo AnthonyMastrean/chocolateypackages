@@ -1,32 +1,39 @@
 require "fileutils"
 require "open-uri"
+require "rexml/document"
 require "yaml"
 
-icons = Dir["public/icons/*"]
+def output(nuspec)
+  name = File.basename(nuspec, ".nuspec")
+  doc = REXML::Document.new(File.open(nuspec))
+  version = REXML::XPath.first(doc, "/package/metadata/version").text
 
-task :default => [:generate]
-
-desc "One-time setup of gh-pages"
-task :setup, [:folder] do |t, args|
-  # http://jgoodall.me/posts/2012/10/26/keep-gh-pages-in-sync-with-master/
-  
-  raise "gh-pages branch already exists" if File.exist?(".git/refs/heads/gh-pages")
-
-  args.with_defaults(:folder => "public")
-
-  system "git checkout -b gh-pages"
-  
-  FileList["*"].exclude(args[:folder]).each { |path| FileUtils.rm_rf(path) }
-  FileUtils.cp_r(File.join(args[:folder], "."), ".")
-  FileUtils.rm_rf(args[:folder])
-  
-  system "git add -A"
-  system "git commit -am \"setup gh-pages\""
-  system "git push origin master gh-pages"
-  system "git checkout master"
+  return "#{name}.#{version}.nupkg"
 end
 
-desc "Publish the gh-pages site"
+NUSPECS = FileList["packages/**/*.nuspec"]
+NUPKGS = NUSPECS.map{ |nuspec| File.join("output", output(nuspec)) }
+
+ICONS = FileList["public/icons/*.png"]
+
+directory "output"
+
+task :default => [:pack]
+
+desc "Pack all the nuspecs"
+multitask :pack => NUPKGS
+
+desc "Optimize new icons"
+task :optimize do
+  `git ls-files --others --exclude-standard -- *.png`.split("\n").each do |path|
+    system "pngout \"#{path}\"" /q
+  end
+end
+
+desc "Generate the site"
+task :generate => ["public/_data/icons.yaml"]
+
+desc "Publish the site"
 task :publish => [:optimize, :generate] do 
   system "git add -A"
   system "git commit -m \"Site generated at #{Time.now.utc}\""
@@ -36,34 +43,36 @@ task :publish => [:optimize, :generate] do
   system "git checkout master"
 end
 
-directory "public/_data"
+desc "Setup gh-pages"
+task :setup do |task, args|
+  # http://jgoodall.me/posts/2012/10/26/keep-gh-pages-in-sync-with-master/
+  raise "gh-pages exists!" if File.exist?(".git/refs/heads/gh-pages")
 
-task "public/_data/icons.yaml" do |t|  
-  data = icons.map do |path| 
-    f = File.basename(path)
-    n = File.basename(path, File.extname(path))
+  system "git checkout -b gh-pages"
+  
+  FileList["*"].exclude("public").each{ |path| FileUtils.rm_rf(path) }
+  FileUtils.cp_r(File.join("public", "."), ".")
+  FileUtils.rm_rf("public")
+  
+  system "git add -A"
+  system "git commit -am \"setup gh-pages\""
+  system "git push origin master gh-pages"
+  system "git checkout master"
+end
+
+NUSPECS.zip NUPKGS do |nuspec, nupkg|
+  file nupkg => [nuspec, "output"] do |task|
+    system "nuget pack #{task.prerequisites.first} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity normal"
+  end
+end
+
+file "public/_data/icons.yaml" => ICONS do |task|
+  data = ICONS.map do |path| 
+    file = File.basename(path)
+    name = File.basename(path, File.extname(path))
     
-    { "name" => n, "path" => "/chocolateypackages/icons/#{f}" }
+    { "name" => name, "path" => "/chocolateypackages/icons/#{file}" }
   end
   
-  File.write(t.name, data.to_yaml)
+  File.write(task.name, data.to_yaml)
 end
-
-desc "Optimize all of the icons"
-task :optimize_all do 
-  puts "Optimizing all PNGs will take a while (status is hidden)..."
-  icons.each do |path|
-    system "pngout \"#{path}\" /q"
-  end
-end
-
-desc "Optimize only new icons"
-task :optimize do
-  added = `git ls-files --others --exclude-standard -- *.png`.split("\n")
-  added.each do |path|
-    system "pngout \"#{path}\""
-  end
-end
-
-desc "Generate the gh-pages site"
-task :generate => ["public/_data/icons.yaml"]
