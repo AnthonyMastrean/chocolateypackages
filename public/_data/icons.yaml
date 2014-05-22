@@ -1,4 +1,14 @@
----
+--- !ruby/object:Rake::FileList
+pending_add: []
+pending: false
+exclude_patterns:
+- !ruby/regexp /(^|[\/\\])CVS([\/\\]|$)/
+- !ruby/regexp /(^|[\/\\])\.svn([\/\\]|$)/
+- !ruby/regexp /\.bak$/
+- !ruby/regexp /~$/
+exclude_procs:
+- !ruby/object:Proc {}
+items:
 - name: ant
   path: /chocolateypackages/icons/ant.png
 - name: apachedirectorystudio
