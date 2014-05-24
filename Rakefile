@@ -1,6 +1,14 @@
+require "erb"
 require "fileutils"
+require "ostruct"
 require "rexml/document"
 require "yaml"
+
+class ErbBinding < OpenStruct
+  def get_binding()
+    binding()
+  end
+end
 
 def output(nuspec)
   name = File.basename(nuspec, ".nuspec")
@@ -10,68 +18,85 @@ def output(nuspec)
   return "#{name}.#{version}.nupkg"
 end
 
-NUSPECS = FileList["packages/**/*.nuspec"]
-NUPKGS = NUSPECS.map{ |nuspec| File.join("output", output(nuspec)) }
+task :default => ["package:all"]
 
-ICONS = FileList["public/icons/*.png"]
+namespace :package do
+  NUSPECS = FileList["packages/**/*.nuspec"]
+  NUPKGS = NUSPECS.map{ |nuspec| File.join("output", output(nuspec)) }
+  
+  directory "output"
+  
+  desc "Package all of the specs"
+  multitask :all => NUPKGS
 
-directory "output"
+  desc "Start a new package"
+  task :new, [:id, :version, :title] do |task, args|
+    args.with_defaults(:title => args[:id], :owner => ENV["username"])
 
-task :default => [:pack]
+    FileUtils.cp_r("template", "packages/#{args[:id]}")
+    FileUtils.mv("packages/#{args[:id]}/template.nuspec", "packages/#{args[:id]}/#{args[:id]}.nuspec")
 
-desc "Pack all the nuspecs"
-multitask :pack => NUPKGS
+    Dir["packages/#{args[:id]}/**/*"].select{ |path| File.file?(path) }.each do |path|
+      erb = ERB.new(File.read(path))
+      binding = ErbBinding.new(args)
+      content = erb.result(binding.get_binding())
 
-desc "Optimize new icons"
-task :optimize do
-  `git ls-files --others --exclude-standard -- *.png`.split("\n").each do |path|
-    system "pngout \"#{path}\"" /q
+      File.write(path, content)
+    end
+  end
+
+  NUSPECS.zip NUPKGS do |nuspec, nupkg|
+    file nupkg => ["output", nuspec] do
+      system "nuget pack #{nuspec} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity normal"
+    end
   end
 end
 
-desc "Generate the site"
-task :generate => ["public/_data/icons.yaml"]
+namespace :web do
+  ICONS = FileList["public/icons/*.png"]
 
-desc "Publish the site"
-task :publish => [:optimize, :generate] do 
-  system "git add -A"
-  system "git commit -m \"Site generated at #{Time.now.utc}\""
-  system "git checkout gh-pages"
-  system "git merge -s subtree master"
-  system "git push origin master gh-pages"
-  system "git checkout master"
-end
-
-desc "Setup gh-pages"
-task :setup do |task, args|
-  # http://jgoodall.me/posts/2012/10/26/keep-gh-pages-in-sync-with-master/
-  raise "gh-pages exists!" if File.exist?(".git/refs/heads/gh-pages")
-
-  system "git checkout -b gh-pages"
-  
-  FileList["*"].exclude("public").each{ |path| FileUtils.rm_rf(path) }
-  FileUtils.cp_r(File.join("public", "."), ".")
-  FileUtils.rm_rf("public")
-  
-  system "git add -A"
-  system "git commit -am \"setup gh-pages\""
-  system "git push origin master gh-pages"
-  system "git checkout master"
-end
-
-NUSPECS.zip NUPKGS do |nuspec, nupkg|
-  file nupkg => ["output", nuspec] do
-    system "nuget pack #{nuspec} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity normal"
+  desc "Publish the website"
+  task :publish => [:optimize, :generate] do 
+    system "git add -A"
+    system "git commit -m \"Site generated at #{Time.now.utc}\""
+    system "git checkout gh-pages"
+    system "git merge -s subtree master"
+    system "git push origin master gh-pages"
+    system "git checkout master"
   end
-end
 
-file "public/_data/icons.yaml" => ICONS do |task|
-  data = ICONS.map do |path| 
-    file = File.basename(path)
-    name = File.basename(path, File.extname(path))
+  task :optimize do
+    `git ls-files --others --exclude-standard -- *.png`.split("\n").each do |path|
+      system "pngout \"#{path}\"" /q
+    end
+  end
+
+  task :generate => ["public/_data/icons.yaml"]
+
+  file "public/_data/icons.yaml" => ICONS do |task|
+    data = ICONS.map do |path| 
+      file = File.basename(path)
+      name = File.basename(path, File.extname(path))
+      
+      {"name" => name, "path" => "/chocolateypackages/icons/#{file}"}
+    end
     
-    { "name" => name, "path" => "/chocolateypackages/icons/#{file}" }
+    File.write(task.name, data.to_yaml)
   end
-  
-  File.write(task.name, data.to_yaml)
+
+  desc "Setup the gh-pages website"
+  task :setup do |task, args|
+    raise "gh-pages exists!" if File.exist?(".git/refs/heads/gh-pages")
+
+    system "git checkout -b gh-pages"
+    
+    FileList["*"].exclude("public").each{ |path| FileUtils.rm_rf(path) }
+    FileUtils.cp_r(File.join("public", "."), ".")
+    FileUtils.rm_rf("public")
+    
+    system "git add -A"
+    system "git commit -am \"setup gh-pages\""
+    system "git push origin master gh-pages"
+    system "git checkout master"
+  end
 end
