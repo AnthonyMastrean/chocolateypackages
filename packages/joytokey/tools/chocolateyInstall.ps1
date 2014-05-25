@@ -1,10 +1,10 @@
-$name   = "joytokey"
-$url    = "http://joytokey.net/download/JoyToKey_en.zip"
+$name = "joytokey"
+$url = "http://joytokey.net/download/JoyToKey_en.zip"
 
-$tools  = Split-Path $MyInvocation.MyCommand.Definition
+$tools = Split-Path $MyInvocation.MyCommand.Definition
 $cotent = Join-Path (Split-Path $tools) "content"
 
-$gui    = Join-Path $content "JoyToKey_en\JoyToKey.exe.gui"
+$gui = Join-Path $content "JoyToKey_en\JoyToKey.exe.gui"
 
 Install-ChocolateyZipPackage $name $url $content
 
