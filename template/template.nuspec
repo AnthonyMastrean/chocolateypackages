@@ -5,7 +5,7 @@
     <title><%= title %></title>
     <version><%= version %></version>
     <authors><%= authors %></authors>
-    <owners><%= owner %></owners>
+    <owners>Anthony Mastrean</owners>
     <summary><%= summary %></summary>
     <description><%= description %></description>
     <projectUrl><%= project_url %></projectUrl>

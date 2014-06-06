@@ -31,7 +31,7 @@ namespace :package do
 
   desc "Start a new package"
   task :new, [:id, :version, :title] do |task, args|
-    args.with_defaults(:title => args[:id], :owner => ENV["username"])
+    args.with_defaults(:title => args[:id])
 
     FileUtils.cp_r("template", "packages/#{args[:id]}")
     FileUtils.mv("packages/#{args[:id]}/template.nuspec", "packages/#{args[:id]}/#{args[:id]}.nuspec")
