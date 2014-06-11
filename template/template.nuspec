@@ -10,7 +10,7 @@
     <description><%= description %></description>
     <projectUrl><%= project_url %></projectUrl>
     <tags><%= tags %></tags>
-    <licenseUrl><%= license_url %></licenseUrl>
+    <!-- <licenseUrl><%= license_url %></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/<%= id %>.png</iconUrl>-->
     <!--<dependencies>
