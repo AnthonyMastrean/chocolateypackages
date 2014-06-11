@@ -53,7 +53,7 @@ namespace :package do
 end
 
 namespace :web do
-  ICONS = FileList["public/icons/*.png"]
+  ICONS = Dir["public/icons/*.png"]
 
   desc "Publish the website"
   task :publish => [:optimize, :generate] do 
