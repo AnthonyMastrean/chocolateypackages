@@ -99,6 +99,8 @@ items:
   path: /chocolateypackages/icons/reflector.png
 - name: resourcesextract
   path: /chocolateypackages/icons/resourcesextract.png
+- name: screenhero
+  path: /chocolateypackages/icons/screenhero.png
 - name: setacl
   path: /chocolateypackages/icons/setacl.png
 - name: sikuli
