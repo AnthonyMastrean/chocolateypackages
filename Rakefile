@@ -4,12 +4,6 @@ require "ostruct"
 require "rexml/document"
 require "yaml"
 
-class ErbBinding < OpenStruct
-  def get_binding()
-    binding()
-  end
-end
-
 def output(nuspec)
   name = File.basename(nuspec, ".nuspec")
   doc = REXML::Document.new(File.open(nuspec))
@@ -37,9 +31,9 @@ namespace :package do
     FileUtils.mv("packages/#{args[:id]}/template.nuspec", "packages/#{args[:id]}/#{args[:id]}.nuspec")
 
     Dir["packages/#{args[:id]}/**/*"].select{ |path| File.file?(path) }.each do |path|
-      erb = ERB.new(File.read(path))
-      binding = ErbBinding.new(args)
-      content = erb.result(binding.get_binding())
+      template = ERB.new(File.read(path))
+      binder = OpenStruct.new(args)
+      content = template.result(binder.instance_eval { binding })
 
       File.write(path, content)
     end
