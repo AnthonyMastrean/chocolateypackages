@@ -49,6 +49,8 @@
   path: /chocolateypackages/icons/keepass.png
 - name: liquibase
   path: /chocolateypackages/icons/liquibase.png
+- name: lolcommits
+  path: /chocolateypackages/icons/lolcommits.png
 - name: microsoft
   path: /chocolateypackages/icons/microsoft.png
 - name: microsoftoffice
