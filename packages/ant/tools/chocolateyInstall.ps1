@@ -1,19 +1,17 @@
-﻿$name = "ant"
-$url  = "http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.3-bin.zip"
-$root = Join-Path (Get-BinRoot) "apache-ant-1.9.3"
-$bin  = Join-Path $root "bin"
+﻿$id = "ant"
+$url = "http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.zip"
+$root = Join-Path (Get-BinRoot) "apache-ant-1.9.4"
+$bin = Join-Path $root "bin"
 
-Install-ChocolateyZipPackage -PackageName $name -Url $url -UnzipLocation (Get-BinRoot)
+Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation (Get-BinRoot)
 
 try {
   Install-ChocolateyPath -PathToInstall $bin -PathType "Machine"
-  Start-ChocolateyProcessAsAdmin @"
-[System.Environment]::SetEnvironmentVariable('ANT_HOME', '$root', 'Machine');
-[System.Environment]::SetEnvironmentVariable('ANT_OPTS', '-Xms256M -Xmx512M', 'Machine');
-"@
-
-  Write-ChocolateySuccess $name
+  Install-ChocolateyEnvironmentVariable -VariableType "Machine" -VariableName "ANT_HOME" -VariableValue $root
+  Install-ChocolateyEnvironmentVariable -VariableType "Machine" -VariableName "ANT_OPTS" -VariableValue "-Xms256M -Xmx512M"
+  
+  Write-ChocolateySuccess $id
 } catch {
-  Write-ChocolateyFailure $name $_.Exception.Message
+  Write-ChocolateyFailure $id $_.Exception.Message
   throw
 }
