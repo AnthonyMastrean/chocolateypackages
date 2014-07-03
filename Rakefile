@@ -54,6 +54,7 @@ namespace :web do
     system "git add -A"
     system "git commit -m \"Site generated at #{Time.now.utc}\""
     system "git checkout gh-pages"
+    system "git pull --no-rebase"
     system "git merge -s subtree master"
     system "git push origin master gh-pages"
     system "git checkout master"
