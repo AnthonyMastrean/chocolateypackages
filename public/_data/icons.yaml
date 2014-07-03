@@ -75,6 +75,8 @@
   path: /chocolateypackages/icons/nvspbind.png
 - name: ocsdk
   path: /chocolateypackages/icons/ocsdk.png
+- name: openra
+  path: /chocolateypackages/icons/openra.png
 - name: oracle
   path: /chocolateypackages/icons/oracle.png
 - name: pdftk
