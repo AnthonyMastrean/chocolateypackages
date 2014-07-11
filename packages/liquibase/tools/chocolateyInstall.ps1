@@ -1,6 +1,6 @@
 ﻿$name   = 'liquibase'
-$url    = 'http://downloads.sourceforge.net/project/liquibase/Liquibase%20Core/liquibase-3.0.0-beta1-bin.zip'
-
+$url    = 'http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.2.0-bin.zip/download'
+           
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
 $bat     = Join-Path $content 'liquibase.bat'
