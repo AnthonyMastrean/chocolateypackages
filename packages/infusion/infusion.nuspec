@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>infusion</id>
+    <title>inFusion</title>
+    <version>1.8.5</version>
+    <authors>intooitus</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>inFusion puts you in full control of architecture and design quality</summary>
+    <description>Whether you own, are responsible for, or are acquiring software projects in C/C++ or Java, inFusion puts you in full control of architecture and design quality. inFusion makes quality assurance of multi-million LOC systems not merely practical, but effective, successfully handling both object oriented and procedural style code.</description>
+    <projectUrl>http://www.intooitus.com/products/infusion</projectUrl>
+    <tags>code quality architecture design insight semantics refactoring</tags>
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/infusion.png</iconUrl>
+    <dependencies>
+      <dependency id="javaruntime" version="[7.0,8.0)" />
+    </dependencies>
+  </metadata>
+</package>
