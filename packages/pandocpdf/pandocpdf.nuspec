@@ -10,7 +10,7 @@
     <description>Pandoc with MiKTeX for PDF support on Windows.</description>
     <projectUrl>http://johnmacfarlane.net/pandoc/installing.html</projectUrl>
     <tags>pandoc pdf latex</tags>
-    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <licenseUrl>https://github.com/jgm/pandoc/blob/884693fea8d2721746c27f370835608d5242fed9/COPYRIGHT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="pandoc" version="[1.0, 2.0)" />
