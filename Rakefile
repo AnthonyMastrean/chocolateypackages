@@ -62,7 +62,7 @@ namespace :web do
 
   task :optimize do
     `git ls-files --others --exclude-standard -- *.png`.split("\n").each do |path|
-      system "pngout \"#{path}\" /q"
+      system "pngout \"#{path}\""
     end
   end
 
