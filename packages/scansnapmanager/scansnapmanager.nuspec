@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>scansnapmanager</id>
+    <title>Fujitsu ScanSnap Manager</title>
+    <version>5.1.30</version>
+    <authors>Fujitsu</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Turn documents into digital data by just pressing the [Scan] button.</summary>
+    <description>By converting paper documents cluttering up your desk into PDF or JPEG files, you can 
+conveniently view, edit, manage and archive the documents in your computer.</description>
+    <projectUrl>http://www.fujitsu.com/global/support/computing/peripheral/scanners/ssfaq/</projectUrl>
+    <tags>scan snap digital image scanner pdf jpg</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/scansnapmanager.png</iconUrl>
+  </metadata>
+</package>
