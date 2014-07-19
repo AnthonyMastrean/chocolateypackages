@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>dvdshrink</id>
+    <title>DVD Shrink</title>
+    <version>3.2.0</version>
+    <authors>DVD Shrink Team</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>DVDShrink is software to backup DVD discs.</summary>
+    <description>
+DVDShrink is software to backup DVD discs. You can use this software in conjunction with DVD burning software of your choice, to make a backup copy of any DVD video disc.
+
+DVDShrink will also burn your backup DVD, if you have installed the latest version of Nero. You can also download a demo version of Nero here. If you already possess alternative burning software and prefer to stick with it, then you can still use DVD Shrink. The output from DVDShrink can be saved as files on your hard drive, which you can then burn with software of your choice.
+
+Most DVDs are designed to prevent you from making copies.
+
+The first preventative measure is encryption. Commercial DVD titles are often encrypted, which prevents you from either copying them to your hard drive, or if you manage to do so, being able to play the resulting files. DVDShrink overcomes this problem with built-in decryption algorithms.
+
+The next problem is not so easy. Most DVD video titles are simply too large to fit, without modification, onto a single recordable DVD-R disk. DVDShrink overcomes this problem by compressing or "shrinking" the data from your original DVD.
+
+DVDShrink also allows you to re-author your DVD. You can make your own compilation from one or more source DVDs, or select only the parts of a DVD which you intend to view, thus preserving more space on your backup for the highest quality viewing.
+    </description>
+    <projectUrl>http://www.dvdshrink.org/</projectUrl>
+    <tags>dvd shrink rip ripping</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/dvdshrink.png</iconUrl>
+    </metadata>
+</package>
