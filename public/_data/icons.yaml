@@ -9,6 +9,8 @@
   path: /chocolateypackages/icons/autohotkey.png
 - name: bellavista
   path: /chocolateypackages/icons/bellavista.png
+- name: codecity
+  path: /chocolateypackages/icons/codecity.png
 - name: com0com
   path: /chocolateypackages/icons/com0com.png
 - name: dashlane
@@ -21,6 +23,8 @@
   path: /chocolateypackages/icons/divvy.png
 - name: dtksneak
   path: /chocolateypackages/icons/dtksneak.png
+- name: dvdshrink
+  path: /chocolateypackages/icons/dvdshrink.png
 - name: ftprog
   path: /chocolateypackages/icons/ftprog.png
 - name: greenfishiconeditor
@@ -33,6 +37,8 @@
   path: /chocolateypackages/icons/hp-hotkeysupport-off.png
 - name: imagej
   path: /chocolateypackages/icons/imagej.png
+- name: infusion
+  path: /chocolateypackages/icons/infusion.png
 - name: intellijidea
   path: /chocolateypackages/icons/intellijidea.png
 - name: isorecorder
