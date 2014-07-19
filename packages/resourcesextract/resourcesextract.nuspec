@@ -3,7 +3,7 @@
   <metadata>
     <id>resourcesextract</id>
     <title>Resources Extract</title>
-    <version>1.17.0.1</version>
+    <version>1.18</version>
     <authors>Nir Sofer</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Extract resource files (bitmaps, icons, html files, and more) from dll files</summary>
