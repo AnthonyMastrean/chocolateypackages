@@ -5,6 +5,11 @@ $kind = "EXE"
 $temp = Join-Path $ENV:TEMP (Join-Path "Chocolatey" $id)
 $setup = Join-Path $temp "Manager\setup.exe"
 
+# What a weird installer... a self-extracting EXE with no discernable command line switches.
+# It extracts into the current directory and Chocolatey does not push into the TEMP directory
+# by default. Then it's a basic InstallShield installer (requiring a response file, .ISS, to
+# install silently)
+#
 New-Item $temp -Type Directory -Force | Out-Null
 Push-Location $temp
 
