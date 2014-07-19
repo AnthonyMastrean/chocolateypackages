@@ -1,6 +1,10 @@
 ﻿$id = "dvdshrink"
-$url = "http://fs40.filehippo.com/7497/86c4c175ec984d718dcde80f4f2cc4cc/dvdshrink32setup.exe"
+$url = "http://download1us.softpedia.com/dl/543e64fecbd49a63cb63ccd0b348dc7d/53cab72f/100004128/software/cd_dvd_tools/dvdshrink32setup.zip"
 $kind = "EXE"
 $silent = "/VERYSILENT"
 
-Install-ChocolateyPackage $id $kind $silent $url
+$tools = Split-Path $MyInvocation.MyCommand.Definition
+$setup = Join-Path $tools "dvdshrink32setup.exe"
+
+Install-ChocolateyZipPackage $id $url $tools
+Install-ChocolateyInstallPackage $id $kind $silent $setup
