@@ -11,6 +11,6 @@
     <projectUrl>https://www.adobe.com/products/digital-editions.html</projectUrl>
     <tags>adobe digital ereader epub book</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/adobe.png</iconUrl>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/adobedigitaleditions.png</iconUrl>
   </metadata>
 </package>
