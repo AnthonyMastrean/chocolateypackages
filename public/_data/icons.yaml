@@ -103,6 +103,8 @@
   path: /chocolateypackages/icons/reflector.png
 - name: resourcesextract
   path: /chocolateypackages/icons/resourcesextract.png
+- name: scansnapmanager
+  path: /chocolateypackages/icons/scansnapmanager.png
 - name: screenhero
   path: /chocolateypackages/icons/screenhero.png
 - name: setacl
