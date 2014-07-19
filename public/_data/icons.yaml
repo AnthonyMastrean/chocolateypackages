@@ -1,4 +1,6 @@
 ---
+- name: adobe
+  path: /chocolateypackages/icons/adobe.png
 - name: ant
   path: /chocolateypackages/icons/ant.png
 - name: apachedirectorystudio
