@@ -14,4 +14,4 @@ Install-ChocolateyZipPackage $id $url $content
 New-Item $ignore32 -Type "File" -Force
 New-Item $ignore64 -Type "File" -Force
 
-Generate-BinFile $clink
+Generate-BinFile -Name "clink" -Path $clink
