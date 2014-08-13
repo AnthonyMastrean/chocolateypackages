@@ -3,7 +3,7 @@
   <metadata>
     <id>jdk</id>
     <title>Java SE Development Kit</title>
-    <version>7.0.45.2</version>
+    <version>7.0.67</version>
     <authors>Oracle</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The JDK is a development environment for building applications, applets, and components using the Java programming language.</summary>
