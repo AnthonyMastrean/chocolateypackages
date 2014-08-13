@@ -13,6 +13,8 @@
   path: /chocolateypackages/icons/autohotkey.png
 - name: bellavista
   path: /chocolateypackages/icons/bellavista.png
+- name: clink
+  path: /chocolateypackages/icons/clink.png
 - name: codecity
   path: /chocolateypackages/icons/codecity.png
 - name: com0com
