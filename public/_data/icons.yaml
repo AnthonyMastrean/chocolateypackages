@@ -41,6 +41,8 @@
   path: /chocolateypackages/icons/handbrake.png
 - name: hp-hotkeysupport-off
   path: /chocolateypackages/icons/hp-hotkeysupport-off.png
+- name: icofx2
+  path: /chocolateypackages/icons/icofx2.png
 - name: imagej
   path: /chocolateypackages/icons/imagej.png
 - name: infusion
