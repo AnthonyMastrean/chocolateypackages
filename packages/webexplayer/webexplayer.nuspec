@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>webexplayer</id>
+    <title>Cisco WebEx Recorder and Player</title>
+    <version>3.29</version>
+    <authors>Cisco WebEx</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Watch, share, and edit WebEx recordings!</summary>
+    <description>
+        If you receive an email with a link to a WebEx recording, just click on the link to watch it. There's no player required. Or if you've downloaded a file, get the WebEx Player below (file types are .ARF or .WRF) for your operating system.
+
+        Sharing is easy. You can post a link anywhere and your visitors can view the WebEx. Want to edit? Download the file and convert it to .WMV and edit like any video.
+
+        There are two types of WebEx recording files — .ARF and .WRF. Choose the right player for your recording.
+    </description>
+    <projectUrl>http://www.webex.com/play-webex-recording.html</projectUrl>
+    <tags>webex wrf recorder player</tags>
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/webex.png</iconUrl>
+  </metadata>
+</package>
