@@ -139,6 +139,8 @@
   path: /chocolateypackages/icons/unicornify.png
 - name: usbview
   path: /chocolateypackages/icons/usbview.png
+- name: webex
+  path: /chocolateypackages/icons/webex.png
 - name: wim2vhd
   path: /chocolateypackages/icons/wim2vhd.png
 - name: wincommandpaste
