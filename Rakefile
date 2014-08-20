@@ -1,6 +1,7 @@
 require "erb"
 require "fileutils"
 require "ostruct"
+require "rake/clean"
 require "rexml/document"
 require "yaml"
 
@@ -11,6 +12,8 @@ def output(nuspec)
 
   return "#{name}.#{version}.nupkg"
 end
+
+CLOBBER.include("output")
 
 task :default => ["package:all"]
 
