@@ -9,7 +9,7 @@
     <summary>cloc counts blank lines, comment lines, and physical lines of source code in many programming languages.</summary>
     <description>cloc counts blank lines, comment lines, and physical lines of source code in many programming languages. Given two versions of a code base, cloc can compute differences in blank, comment, and source lines. It is written entirely in Perl with no dependencies outside the standard distribution of Perl v5.6 and higher (code from some external modules is embedded within cloc) and so is quite portable.</description>
     <projectUrl>http://cloc.sourceforge.net/</projectUrl>
-    <tags>loc cloc lines code</tags>
+    <tags>loc sloc cloc count lines code</tags>
     <licenseUrl>http://cloc.sourceforge.net/#License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/cloc.png</iconUrl>
