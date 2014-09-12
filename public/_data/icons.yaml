@@ -35,6 +35,8 @@
   path: /chocolateypackages/icons/dvdshrink.png
 - name: ftprog
   path: /chocolateypackages/icons/ftprog.png
+- name: glasswire
+  path: /chocolateypackages/icons/glasswire.png
 - name: greenfishiconeditor
   path: /chocolateypackages/icons/greenfishiconeditor.png
 - name: gtksharp
