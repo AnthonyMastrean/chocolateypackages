@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>multimc</id>
+    <title>MultiMC 5</title>
+    <version>0.4.2</version>
+    <authors>MultiMC Contributors</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Manage Minecraft instances with ease</summary>
+    <description>MultiMC is a free, open source launcher for Minecraft, managed by @Forkk13, @peterixxx and @drayshak. It allows you to have multiple, separate instances of Minecraft (each with their own mods, texture packs, saves, etc) and helps you manage them and their associated options with a simple interface.</description>
+    <projectUrl>http://multimc.org/</projectUrl>
+    <tags>minecraft mod forge pack</tags>
+    <licenseUrl>https://github.com/MultiMC/MultiMC5#license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/multimc.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+  </metadata>
+</package>
