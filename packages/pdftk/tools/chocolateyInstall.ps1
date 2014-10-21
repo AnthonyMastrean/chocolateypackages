@@ -1,6 +1,6 @@
-﻿$name    = 'pdftk'
-$url     = 'http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk-1.44-win.zip'
-$tools   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$content = Join-Path (Split-Path $tools) 'content'
+﻿$name = "pdftk"
+$url = "https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_free-2.02-win-setup.exe"
+$kind = "EXE"
+$silent = "/VERYSILENT"
 
-Install-ChocolateyZipPackage $name $url $content
+Install-ChocolateyPackage $name $kind $silent $url
