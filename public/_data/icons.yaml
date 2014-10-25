@@ -43,6 +43,8 @@
   path: /chocolateypackages/icons/gtksharp.png
 - name: handbrake
   path: /chocolateypackages/icons/handbrake.png
+- name: harmony
+  path: /chocolateypackages/icons/harmony.png
 - name: hp-hotkeysupport-off
   path: /chocolateypackages/icons/hp-hotkeysupport-off.png
 - name: icofx2
