@@ -119,6 +119,8 @@
   path: /chocolateypackages/icons/scansnapmanager.png
 - name: screenhero
   path: /chocolateypackages/icons/screenhero.png
+- name: screentogif
+  path: /chocolateypackages/icons/screentogif.png
 - name: setacl
   path: /chocolateypackages/icons/setacl.png
 - name: sikuli
