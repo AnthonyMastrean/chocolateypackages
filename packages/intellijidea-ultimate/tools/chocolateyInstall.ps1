@@ -1,5 +1,5 @@
 ﻿$name = "intellijidea-ultimate"
-$url = "http://download.jetbrains.com/idea/ideaIU-13.1.5.exe"
+$url = "http://download.jetbrains.com/idea/ideaIU-14.0.1.exe"
 $kind = "EXE"
 $silent = "/S"
 
