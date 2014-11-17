@@ -3,12 +3,12 @@
   <metadata>
     <id>adobedigitaleditions</id>
     <title>Adobe Digital Editions</title>
-    <version>3.0.1</version>
+    <version>4.0.2</version>
     <authors>Adobe</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>Adobe Digital Editions software offers an engaging way to view and manage eBooks and other digital publications.</summary>
-    <description>Adobe Digital Editions software offers an engaging way to view and manage eBooks and other digital publications. Use it to download and purchase digital content, which can be read both online and offline. Transfer copy-protected eBooks from your personal computer to other computers or devices. Organize your eBooks into a custom library and annotate pages. Digital Editions also supports industry-standard eBook formats, including PDF/A and EPUB.</description>
-    <projectUrl>https://www.adobe.com/products/digital-editions.html</projectUrl>
+    <summary>Optimize your reading experience with this free reading app, now with EPUB 3 support.</summary>
+    <description>Readers want choice, flexibility, and ease — to buy or borrow books and read them on their preferred reading devices.  Adobe Digital Editions software offers an engaging way to view and manage media rich eBooks and other digital publications. Use it to download and purchase digital content, which can be read both online and offline. Transfer copy-protected eBooks from your personal computer to other computers or devices. Organize your eBooks into a custom library and annotate pages.</description>
+    <projectUrl>http://www.adobe.com/solutions/ebook/digital-editions.html</projectUrl>
     <tags>adobe digital ereader epub book</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/adobedigitaleditions.png</iconUrl>
