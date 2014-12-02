@@ -14,7 +14,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/sikuli.png</iconUrl>
     <dependencies>
-      <dependency id="javaruntime" version="[6.0, 7.0)" />
+      <dependency id="javaruntime" />
     </dependencies>
   </metadata>
 </package>
