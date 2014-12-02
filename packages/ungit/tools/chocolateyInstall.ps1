@@ -1,5 +1,5 @@
 ﻿$name = "ungit"
-$version = "0.8.1"
+$version = "0.8.4"
 
 try {
   npm install -g ungit@$version
