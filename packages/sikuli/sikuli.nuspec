@@ -3,7 +3,7 @@
   <metadata>
     <id>sikuli</id>
     <title>Project SIKULI</title>
-    <version>1.0.3</version>
+    <version>1.0-rc3</version>
     <authors>Tsung Hsiang Chang, Tom Yeh</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Sikuli is a visual technology to automate and test graphical user interfaces (GUI) using images (screenshots).</summary>
