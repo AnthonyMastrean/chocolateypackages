@@ -58,7 +58,7 @@ namespace :web do
       system "git add -A"
       system "git commit -m \"Site generated at #{Time.now.utc}\""
       system "git pull origin gh-pages"
-      system "git push -u origin gh-pages"
+      system "git push origin gh-pages"
     end
   end
   
