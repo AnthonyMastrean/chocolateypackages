@@ -55,9 +55,9 @@ namespace :web do
   desc "Publish the package icon website"
   task :publish => [:optimize, :generate, :copy] do
     FileUtils.cd("_deploy") do
-      system "git pull origin gh-pages"
       system "git add -A"
       system "git commit -m \"Site generated at #{Time.now.utc}\""
+      system "git pull origin gh-pages"
       system "git push -u origin gh-pages"
     end
   end
