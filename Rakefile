@@ -13,7 +13,7 @@ def output(nuspec)
   return "#{name}.#{version}.nupkg"
 end
 
-CLOBBER.include("output")
+CLOBBER.include("output/*.nupkg")
 
 task :default => ["package:all"]
 
