@@ -3,7 +3,7 @@
   <metadata>
     <id>handbrake</id>
     <title>HandBrake</title>
-    <version>0.9.9</version>
+    <version>0.10.0</version>
     <authors>The Handbrake Team</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The open source video transcoder.</summary>
