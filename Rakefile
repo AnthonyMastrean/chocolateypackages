@@ -63,7 +63,7 @@ namespace :web do
   end
   
   task :optimize do
-    `git ls-files --others --exclude-standard -- *.png`.split("\n").each do |path|
+    `git ls-files --others --modified --exclude-standard -- *.png`.split("\n").each do |path|
       system "pngout \"#{path}\""
     end
   end
@@ -95,6 +95,7 @@ namespace :web do
       system "git commit -m \"Website init\""
       system "git branch -m gh-pages"
       system "git remote add origin #{args[:url]}"
+      system "git push -u origin gh-pages"
     end
   end
 end
