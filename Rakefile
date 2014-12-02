@@ -52,17 +52,16 @@ end
 namespace :web do
   ICONS = Dir["public/icons/*.png"]
 
-  desc "Publish the website"
-  task :publish => [:optimize, :generate] do 
-    system "git add -A"
-    system "git commit -m \"Site generated at #{Time.now.utc}\""
-    system "git checkout gh-pages"
-    system "git pull --no-rebase"
-    system "git merge -s subtree master"
-    system "git push origin master gh-pages"
-    system "git checkout master"
+  desc "Publish the package icon website"
+  task :publish => [:optimize, :generate, :copy] do
+    FileUtils.cd("_deploy") do
+      system "git pull origin gh-pages"
+      system "git add -A"
+      system "git commit -m \"Site generated at #{Time.now.utc}\""
+      system "git push -u origin gh-pages"
+    end
   end
-
+  
   task :optimize do
     `git ls-files --others --exclude-standard -- *.png`.split("\n").each do |path|
       system "pngout \"#{path}\""
@@ -70,6 +69,11 @@ namespace :web do
   end
 
   task :generate => ["public/_data/icons.yaml"]
+
+  task :copy do 
+    FileUtils.rm_rf("_deploy/*")
+    FileUtils.cp_r("public/.", "_deploy")
+  end
 
   file "public/_data/icons.yaml" => ICONS do |task|
     data = ICONS.map do |path| 
@@ -82,19 +86,15 @@ namespace :web do
     File.write(task.name, data.to_yaml)
   end
 
-  desc "Setup the gh-pages website"
-  task :setup do |task, args|
-    raise "gh-pages exists!" if File.exist?(".git/refs/heads/gh-pages")
-
-    system "git checkout -b gh-pages"
-    
-    FileList["*"].exclude("public").each{ |path| FileUtils.rm_rf(path) }
-    FileUtils.cp_r(File.join("public", "."), ".")
-    FileUtils.rm_rf("public")
-    
-    system "git add -A"
-    system "git commit -am \"setup gh-pages\""
-    system "git push origin master gh-pages"
-    system "git checkout master"
+  desc "Setup the package icon website"
+  task :setup, [:url] do |task, args|
+    FileUtils.cd("_deploy") do
+      system "git init"
+      system "echo 'Coming Soon!' > index.html"
+      system "git add ."
+      system "git commit -m \"Website init\""
+      system "git branch -m gh-pages"
+      system "git remote add origin #{args[:url]}"
+    end
   end
 end

@@ -1,2 +1,4 @@
 *.nupkg
 *.sublime-workspace
+
+_deploy
