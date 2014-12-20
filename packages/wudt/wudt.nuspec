@@ -3,7 +3,7 @@
   <metadata>
     <id>wudt</id>
     <title>Windows 7 USB/DVD Download Tool (WUDT)</title>
-    <version>1.0.30</version>
+    <version>1.0.30.1</version>
     <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The Windows 7 USB/DVD Download tool allows you to create a copy of your Windows 7 ISO file on a USB flash drive or a DVD.</summary>
