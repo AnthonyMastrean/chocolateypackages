@@ -2,13 +2,13 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>sikuli</id>
-    <title>Project SIKULI</title>
-    <version>1.0-rc3</version>
-    <authors>Tsung Hsiang Chang, Tom Yeh</authors>
+    <title>SikuliX</title>
+    <version>1.1.0-nightly</version>
+    <authors>Tsung Hsiang Chang, Tom Yeh, Raimund Hocke</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Sikuli is a visual technology to automate and test graphical user interfaces (GUI) using images (screenshots).</summary>
     <description>Sikuli is a visual technology to automate and test graphical user interfaces (GUI) using images (screenshots). Sikuli includes Sikuli Script, a visual scripting API for Jython, and Sikuli IDE, an integrated development environment for writing visual scripts with screenshots easily. Sikuli Script automates anything you see on the screen without internal API's support. You can programmatically control a web page, a Windows/Linux/Mac OS X desktop application, or even an iphone or android application running in a simulator or via VNC.</description>
-    <projectUrl>http://sikuli.org/</projectUrl>
+    <projectUrl>http://www.sikulix.com/</projectUrl>
     <tags>automate test ui gui screenshot script</tags>
     <licenseUrl>http://sikuli.org/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

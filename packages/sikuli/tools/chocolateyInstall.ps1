@@ -1,34 +1,24 @@
-﻿$name    = 'sikuli'
-$url     = 'http://launchpad.net/sikuli/sikulix/x1.0-rc3/+download/Sikuli-X-1.0rc3%20%28r905%29-win32.zip'
+﻿$name = "sikuli"
+$url = "http://nightly.sikuli.de/sikulixsetup-1.1.0.jar"
+$kind = "jar"
+$silent = "options 1.1"
 
-$tools   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) 'content'
+$tools = Split-Path -parent $MyInvocation.MyCommand.Definition
+$content = Join-Path (Split-Path $tools) "content"
 
-$sikuli  = Join-Path $content 'Sikuli-X-1.0rc3 (r905)-win32\Sikuli-IDE'
-$86      = Join-Path $sikuli 'sikuli-ide.bat'
-$64      = Join-Path $sikuli 'sikuli-ide-w.bat'
-$icon    = Join-Path $sikuli 'ide-icon.ico' 
+$setup = Join-Path $content "sikulixsetup-1.1.0.jar"
 
-$is64bit = Get-ProcessorBits 64
-$target  = @{$true = $64; $false = $86}[$is64bit]
-$desktop = [Environment]::GetFolderPath("Desktop")
-$link    = Join-Path $desktop 'Sikuli IDE.lnk'
+try {
+  New-Item $content -Type Directory -Force | Out-Null
 
-try 
-{     
-    Install-ChocolateyZipPackage $name $url $content
-	
-    $shell = New-Object -ComObject "Wscript.Shell"
-    $shortcut = $shell.CreateShortcut($link)
-    $shortcut.TargetPath = $target
-    $shortcut.WorkingDirectory = $sikuli
-    $shortcut.IconLocation = $icon
-    $shortcut.Save()
+  Get-ChocolateyWebFile $name $setup $url
+  
+  Push-Location $content
+  Start-Process -Wait $setup $options
+  Pop-Location
 
-    Write-ChocolateySuccess $name
-} 
-catch 
-{
-    Write-ChocolateyFailure $name $_.Exception.Message
-    throw 
+  Write-ChocolateySuccess $name
+} catch {
+  Write-ChocolateyFailure $name $_.Exception.Message
+  throw
 }
