@@ -1,6 +1,6 @@
 ﻿$name = "sikuli"
 $url = "http://nightly.sikuli.de/sikulixsetup-1.1.0.jar"
-$kind = "jar"
+$kind = "exe"
 $silent = "options 1.1"
 
 $tools = Split-Path -parent $MyInvocation.MyCommand.Definition
@@ -14,7 +14,7 @@ try {
   Get-ChocolateyWebFile $name $setup $url
   
   Push-Location $content
-  Start-Process -Wait $setup $options
+  Install-ChocolateyInstallPackage $name $kind $silent $setup
   Pop-Location
 
   Write-ChocolateySuccess $name
