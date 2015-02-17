@@ -12,6 +12,6 @@
     <tags>apache ant build script xml</tags>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/ant.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/TomOne/various/15bfa88ded6d8e658091e4e3ef38ed77c4f79671/apache-ant.svg</iconUrl>
   </metadata>
 </package>
