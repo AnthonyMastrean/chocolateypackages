@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>keypose</id>
+    <title>KeyPosé</title>
+    <version>1.0.0</version>
+    <authors>Magnus Jungsbluth</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Visual Keylogging</summary>
+    <description>How often have you found yourself recording a screencast annoyed by the fact that only the mouse is visible? I haven’t seen any screen recording software that provided an easy way to display shortcuts on screen as you type.
+
+Most of the fancy UI stuff happens in OS X land (see Mouseposé ) but I needed the functionality under Windows. Microsoft introduced the layered window api in Windows 2000 which makes it possible to create alpha-blended windows with any shape.
+
+So on a chilly afternoon I sat down and wrote a litte utility that implements a global key logger which diplays all shortcuts and keystrokes as you type – on screen and with a semi-transparent overlay. This makes it very easy to show any shortcuts you use if you for example record a software demo.</description>
+    <projectUrl>http://jungsbluth.de/magnus/blog/2008/08/01/keypose-flavour-your-screencasts-with-shortcuts/</projectUrl>
+    <tags>screencast keyboard keypress logger</tags>
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/keypose.png</iconUrl>-->
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+  </metadata>
+</package>
