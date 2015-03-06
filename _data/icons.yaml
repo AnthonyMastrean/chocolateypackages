@@ -3,6 +3,12 @@
   path: /chocolateypackages/icons/adobe.png
 - name: adobedigitaleditions
   path: /chocolateypackages/icons/adobedigitaleditions.png
+- name: adom-alt1
+  path: /chocolateypackages/icons/adom-alt1.png
+- name: adom-alt2
+  path: /chocolateypackages/icons/adom-alt2.png
+- name: adom
+  path: /chocolateypackages/icons/adom.png
 - name: ant
   path: /chocolateypackages/icons/ant.png
 - name: apachedirectorystudio
