@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>adom-tiles</id>
+    <title>Ancient Domains of Mystery</title>
+    <version>1.2.0-pre23</version>
+    <authors>Thomas Biskup</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>ADOM (Ancient Domains Of Mystery) is one of the most successful roguelike games ever created, boasting a brilliant mix of story, RPG, exploration, and intensely strategic and flexible combat. </summary>
+    <description>
+      ADOM (Ancient Domains Of Mystery) is one of the most successful roguelike games ever created, with downloads in the millions and many more every day. ADOM was the first roguelike to add a true role-playing experience to the roguelike genre, and boasts a brilliant mix of story, RPG, exploration, and intensely strategic and flexible combat. ADOM has been in development since 1994. In 2012 its development was revitalized with an immensely successful crowdfunding campaign on Indiegogo (see the link to the bottom right), now allowing us to offer ADOM both with ASCII and graphical modes allowing you to choose freely, and hopefully in the future also both as Steam- and Non-Steam versions.
+
+      ADOM is primarily known for being the first roguelike to include vibrant towns, NPC dialog, and quests, but it offers more than just a rich story line in a complex fantasy world:
+
+       * a huge game world with hundreds of locations such as towns, randomized dungeons, elemental temples, graveyards, ancient ruins, towers and other secrets
+       * loads of races (dwarves, drakelings, mist elves, hurthlings, orcs, trolls, ratlings and many others) and even more classes (fighters, elementalists, assassins, chaos knights, duelists and much more) allowing for infinite play styles
+       * hundreds of monsters and items, many with enhanced random features
+       * a corruption system forcing you to balance lust for power with fear of damnation (corruptions slowly transform you into a vile monster but at the same time grant inhuman benefits - most of the time)
+       * spells, prayers, mindcraft, alchemy, crafting and more
+       * dozens of quests and branching story lines
+       * numerous wildly different endings that might alter reality itself (simply drive Chaos away or slay a god or even become an immortal yourself, and others more)!
+    </description>
+    <projectUrl>http://www.ancardia.com/</projectUrl>
+    <tags>roguelike</tags>
+    <licenseUrl>http://www.ancardia.com/download/doc/current/adom_readme1st.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/adom.png</iconUrl>
+  </metadata>
+</package>
