@@ -9,6 +9,8 @@
   path: /chocolateypackages/icons/adom-alt2.png
 - name: adom
   path: /chocolateypackages/icons/adom.png
+- name: angband
+  path: /chocolateypackages/icons/angband.png
 - name: ant
   path: /chocolateypackages/icons/ant.png
 - name: apachedirectorystudio
