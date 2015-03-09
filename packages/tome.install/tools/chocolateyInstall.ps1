@@ -7,8 +7,15 @@ $launcher = Join-Path $content "t-engine-launcher.exe"
 
 . $tools\bins.ps1
 
-New-Item $content -Type "Directory" -Force | Out-Null
+try {
+  New-Item $content -Type "Directory" -Force | Out-Null
 
-Get-ChocolateyWebFile $id $launcher $url
+  Get-ChocolateyWebFile $id $launcher $url
 
-New-GuiBin -Name $launcher
+  New-GuiBin -Name $launcher
+
+  Write-ChocolateySuccess $id
+} catch {
+  Write-ChocolateyFailure $id $_.Exception.Message
+  throw
+}

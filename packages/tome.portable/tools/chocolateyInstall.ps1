@@ -13,9 +13,16 @@ $spawn = Join-Path $content "t-engine4-windows-1.2.5\cef3spawn.exe"
 
 Install-ChocolateyZipPackage $id $url $content
 
-New-GuiBin -Name $tengine
-New-GuiBin -Name $launcher
-New-IgnoreBin -Name $spawn
+try {
+  New-GuiBin -Name $tengine
+  New-GuiBin -Name $launcher
+  New-IgnoreBin -Name $spawn
 
-New-Shortcut -Link $name -Target $launcher -SpecialFolder "CommonDesktop"
-New-Shortcut -Link $name -Target $launcher -SpecialFolder "CommonPrograms"
+  New-Shortcut -Link $name -Target $launcher -SpecialFolder "CommonDesktop"
+  New-Shortcut -Link $name -Target $launcher -SpecialFolder "CommonPrograms"
+
+  Write-ChocolateySuccess $id
+} catch {
+  Write-ChocolateyFailure $id $_.Exception.Message
+  throw
+}
