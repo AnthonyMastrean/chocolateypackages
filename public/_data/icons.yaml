@@ -99,6 +99,8 @@
   path: /chocolateypackages/icons/msicuu2.png
 - name: multimc
   path: /chocolateypackages/icons/multimc.png
+- name: nethack
+  path: /chocolateypackages/icons/nethack.png
 - name: notepad2-mod
   path: /chocolateypackages/icons/notepad2-mod.png
 - name: notepad2
