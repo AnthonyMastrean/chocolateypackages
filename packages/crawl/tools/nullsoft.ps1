@@ -28,7 +28,7 @@
 
   .LINK
 
-  https://gist.githubusercontent.com/AnthonyMastrean/a7405c9d234c97305361/raw/eab94aeb23e096d90ead3f574824570dc15180d1/nullsoft.ps1
+  https://github.com/AnthonyMastrean/chocolateypackages/blob/1b8671c6a7ca2f068524e663afd372db98bff844/helpers/nullsoft.ps1
 #>
 function Get-NullsoftUninstaller {
   [CmdletBinding()]

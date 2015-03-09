@@ -75,7 +75,7 @@
 
   .LINK
 
-  https://gist.githubusercontent.com/AnthonyMastrean/998af59e3ea55c87d44a/raw/80f5d54732356a01a908896c082919aa0b33ac9b/shortcut.ps1
+  https://github.com/AnthonyMastrean/chocolateypackages/blob/1b8671c6a7ca2f068524e663afd372db98bff844/helpers/shortcut.ps1
 #>
 function New-Shortcut {
   [CmdletBinding()]
