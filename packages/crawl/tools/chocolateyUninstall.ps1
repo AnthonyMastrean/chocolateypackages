@@ -6,6 +6,6 @@ $tools = Split-Path $MyInvocation.MyCommand.Definition
 
 . $tools\nullsoft.ps1
 
-$target = Get-NullsoftUninstaller -Name "Crawl"
+$uninstaller = Get-NullsoftUninstaller -Name "Crawl"
 
-Uninstall-ChocolateyPackage $id $kind $silent $target
+Uninstall-ChocolateyPackage $id $kind $silent $uninstaller

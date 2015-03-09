@@ -1,11 +1,9 @@
 $id = "nethack"
-
-$link = "NetHack"
-$folder = "CommonPrograms"
+$name = "NetHack for Windows"
 
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 
 . $tools\shortcut.ps1
 
-Remove-Shortcut -Link "$link (Tiles)" -SpecialFolder $folder
-Remove-Shortcut -Link $link -SpecialFolder $folder
+Remove-Shortcut -Link "$name (Tiles)" -SpecialFolder "CommonPrograms"
+Remove-Shortcut -Link "$name (Classic)" -SpecialFolder "CommonPrograms"
