@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>angband</id>
+    <title>Angband</title>
+    <version>3.5.1</version>
+    <authors>Angband Developers, Andi Sidwell</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Angband is a free, single-player dungeon exploration game. You play an adventurer: seeking riches, fighting monsters, and preparing for a final battle with Morgoth, the Lord of Darkness.</summary>
+    <description>
+        Angband is basically a complex single player dungeon simulation. A player creates a character, choosing from a variety of races and classes, and then plays that character over a period of days, weeks, even months.
+
+        The player will begin his adventure on the town level where he may acquire supplies, weapons, armor, and magical devices by buying from various shop owners. Then the player can descend into the Pits of Angband, where he will explore the many levels of the dungeon, gaining experience by killing fierce creatures, collecting powerful objects and valuable treasure, and returning to town occasionally to buy and sell supplies. Eventually, as the player grows more experienced, he may attempt to win the game by defeating Morgoth, the Lord of Darkness, who resides far below the surface.
+
+        Note that Angband is a very complex game, and it may be difficult to grasp everything at first, especially if you have never played a "roguelike" game before. You should probably browse through all of the "online help files", especially this one, before beginning any serious adventuring...
+    </description>
+    <projectUrl>http://rephial.org/</projectUrl>
+    <tags>roguelike</tags>
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/angband.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+  </metadata>
+</package>
