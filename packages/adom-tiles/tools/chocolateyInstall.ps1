@@ -7,7 +7,7 @@ $dl_match = '<a id="dlbutton" href="(?<chunk>.*?)">'
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) "content"
 
-$link = "adom"
+$link = "Adom"
 $folder = "CommonPrograms"
 $target = Join-Path $content "adom\Adom.exe"
 $description = "Ancient Domains of Mystery"

@@ -1,4 +1,8 @@
-$id = "adom"
-$link = Join-Path ([System.Environment]::GetFolderPath("CommonPrograms")) "adom.lnk"
+$id = "adom-tiles"
+$tools = Split-Path $MyInvocation.MyCommand.Definition
+$link = "Adom"
+$folder = "CommonPrograms"
 
-Remove-Item $link -Force
+. $tools\shortcut.ps1
+
+Remove-Shortcut -Link $link -SpecialFolder $folder
