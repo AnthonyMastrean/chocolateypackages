@@ -12,6 +12,7 @@ $folder = "CommonPrograms"
 $target = Join-Path $content "adom\Adom.exe"
 $description = "Ancient Domains of Mystery"
 
+. $tools\bins.ps1
 . $tools\shortcut.ps1
 
 try {
@@ -24,6 +25,8 @@ try {
   $dl_url = "http://www30.zippyshare.com$($matches['chunk'])"
 
   Install-ChocolateyZipPackage $id $dl_url $content
+
+  New-GuiBin -Name $target
 
   New-Shortcut -Link $link -Target $target -SpecialFolder $folder -Description $description
 
