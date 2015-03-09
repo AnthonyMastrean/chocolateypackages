@@ -145,6 +145,8 @@
   path: /chocolateypackages/icons/sublimetext3-contextmenu.png
 - name: tfpt
   path: /chocolateypackages/icons/tfpt.png
+- name: tome
+  path: /chocolateypackages/icons/tome.png
 - name: tsunami
   path: /chocolateypackages/icons/tsunami.png
 - name: uccapisdk
