@@ -29,6 +29,8 @@
   path: /chocolateypackages/icons/codecity.png
 - name: com0com
   path: /chocolateypackages/icons/com0com.png
+- name: crawl
+  path: /chocolateypackages/icons/crawl.png
 - name: dashlane
   path: /chocolateypackages/icons/dashlane.png
 - name: dependencywalker
