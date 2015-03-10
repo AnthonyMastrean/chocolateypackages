@@ -1,0 +1,34 @@
+Available video driver: windows
+Available video driver: dummy
+LuaVM:	Lua 5.1
+[DO RESIZE] 700x350
+[cURL] Creating cURL thread
+[BSPatch] Creating BSPatch thread
+Running lua loader code...
+OS: WINDOWS
+BITNESS: 32
+[ENGINE] Setting requested FPS to 30 (33 ms)
+OS String: windows
+Self path: c:\programdata\chocolatey\lib\tome.portable.1.2.5\content\t-engine4-windows-1.2.5
+Self file: t-engine-launcher.exe
+Install folder default to:	c:\program files (x86)\tome
+WebCore config: library(c:\programdata\chocolatey\lib\tome.portable.1.2.5\content\t-engine4-windows-1.2.5\te4-web.dll) spawn(c:\programdata\chocolatey\lib\tome.portable.1.2.5\content\t-engine4-windows-1.2.5\cef3spawn.exe)
+Loading WebCore: loaded!
+Running webview check
+Running webview...
+Webview with	490	160	http://te4.org/tooltip-launcher
+Updating 	table: 02059A50	nil	nil
+Setting resolution to 700x350
+Getting newest launcher version path
+[cURL] Adding new request: http://te4.org/get-updater/13/windows, now 1
+[cURL] Starting download: http://te4.org/get-updater/13/windows
+[cURL] Downloaded successfully
+[cURL] Confirming finish...confirmed: http://te4.org/get-updater/13/windows
+Launcher is up-to-date
+current ToME engine version: 1.2.5
+[cURL] Adding new request: http://te4.org/get-patch/1.2.5/windows, now 2
+[cURL] Deleting request: http://te4.org/get-updater/13/windows now 1
+[cURL] Starting download: http://te4.org/get-patch/1.2.5/windows
+[cURL] Downloaded successfully
+[cURL] Confirming finish...confirmed: http://te4.org/get-patch/1.2.5/windows
+[cURL] Deleting request: http://te4.org/get-patch/1.2.5/windows now 0
