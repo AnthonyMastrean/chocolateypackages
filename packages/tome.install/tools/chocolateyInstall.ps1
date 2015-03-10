@@ -14,6 +14,21 @@ try {
 
   New-GuiBin -Name $launcher
 
+  Write-Host @"
+The ToME launcher will now be displayed. Please do not change the default 
+install directory or Chocolatey will be unable to manage uninstall.
+
+You may exit and re-run the launcher from a console later
+
+  > t-engine-launcher
+
+But, after the first successful install/configuration, ToME will move the 
+launcher to the install directory and this shortcut will no longer work! You 
+will have to run ToME from the desktop or Start Menu shortcuts.
+"@
+
+  & $launcher
+
   Write-ChocolateySuccess $id
 } catch {
   Write-ChocolateyFailure $id $_.Exception.Message
