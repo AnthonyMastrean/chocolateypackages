@@ -3,16 +3,15 @@ $url = "https://www.itefix.net/dl/cwRsync_5.4.1_x86_Free.zip"
 
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) "content"
-$ssh = Join-Path $content "cwRsync_5.4.1_x86_Free\ssh.exe"
-$keygen = Join-Path $content "cwRsync_5.4.1_x86_Free\ssh-keygen.exe"
+$cw_home = Join-Path $content "cwRsync_5.4.1_x86_Free"
 
 . $tools\bins.ps1
 
 Install-ChocolateyZipPackage $id $url $content
 
 try {
-  New-IgnoreBin -Name $ssh
-  New-IgnoreBin -Name $keygen
+  Get-ChildItem $cw_home\*.exe | %{ New-IgnoreBin -Name $_.fullname }
+  Install-ChocolateyPath $cw_home "Machine"
 
   Write-ChocolateySuccess $id
 } catch {

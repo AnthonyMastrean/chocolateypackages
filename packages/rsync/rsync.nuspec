@@ -14,8 +14,6 @@
         sets of files are present at one of the ends of the link beforehand.  At
         first glance this may seem impossible because the calculation of diffs
         between two files normally requires local access to both files.
-
-        This is a repackaging of the cwRsync Free Edition that exposes only the Windows rsync.exe file.
     </description>
     <projectUrl>https://www.itefix.net/content/cwrsync-free-edition</projectUrl>
     <tags>rsync</tags>
