@@ -14,9 +14,11 @@
         sets of files are present at one of the ends of the link beforehand.  At
         first glance this may seem impossible because the calculation of diffs
         between two files normally requires local access to both files.
+
+        This packages provides rsync.exe, ssh.exe, and ssh-keygen.exe.
     </description>
     <projectUrl>https://www.itefix.net/content/cwrsync-free-edition</projectUrl>
-    <tags>rsync</tags>
+    <tags>rsync ssh ssh-keygen</tags>
     <licenseUrl>https://www.itefix.net/content/cwrsync-licenseversion</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/rsync.png</iconUrl>-->
