@@ -1,14 +1,12 @@
 <#
   .SYNOPSIS
 
-  Get the uninstaller EXE location for a Nullsoft installer.
+  Get the uninstaller location for most Windows software.
 
   .DESCRIPTION
 
-  Nullsoft installers do not participate in all the niceties of the MSI system.
-  Nor does the 64-bit Windows registry make it any easier. This function can
-  find the correct uninstaller EXE given just an application name or partial
-  name. Find the name from the Programs and Features Control Panel window.
+  This function finds the correct uninstaller given just an application name.
+  Find the name from the Programs and Features Control Panel window.
 
   .PARAMETER Name
 
@@ -24,13 +22,13 @@
 
   .EXAMPLE
 
-  PS> Uninstall-ChocolateyPackage "foo" "EXE" "/S" (Get-NullsoftUninstaller -Name "Foo")
+  PS> Uninstall-ChocolateyPackage "foo" "EXE" "/S" (Get-Uninstaller -Name "Foo")
 
   .LINK
 
-  https://gist.githubusercontent.com/AnthonyMastrean/a7405c9d234c97305361/raw/eab94aeb23e096d90ead3f574824570dc15180d1/nullsoft.ps1
+  https://github.com/AnthonyMastrean/chocolateypackages/blob/master/helpers/uninstall.ps1
 #>
-function Get-NullsoftUninstaller {
+function Get-Uninstaller {
   [CmdletBinding()]
   param(
     [Parameter(Mandatory = $true)]
