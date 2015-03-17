@@ -2,21 +2,24 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>wudt</id>
-    <title>Windows 7 USB/DVD Download Tool (WUDT)</title>
-    <version>1.0.30.1</version>
+    <title>Windows 7 USB/DVD Download Tool</title>
+    <version>1.0.30.2</version>
     <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The Windows 7 USB/DVD Download tool allows you to create a copy of your Windows 7 ISO file on a USB flash drive or a DVD.</summary>
-    <description>The Windows 7 USB/DVD Download tool allows you to create a copy of your Windows 7 ISO file on a USB flash drive or a DVD. To create a bootable DVD or USB flash drive, download the ISO file and then run the Windows 7 USB/DVD Download tool. Once this is done, you can install Windows 7 directly from the USB flash drive or DVD. 
+    <description>
+The Windows 7 USB/DVD Download tool allows you to create a copy of your Windows 7 ISO file on a USB flash drive or a DVD. To create a bootable DVD or USB flash drive, download the ISO file and then run the Windows 7 USB/DVD Download tool. Once this is done, you can install Windows 7 directly from the USB flash drive or DVD.
 
-The ISO file contains all the Windows 7 installation files combined into a single uncompressed file. When you download the ISO file, you need to copy it to some medium in order to install Windows 7. This tool allows you to create a copy of the ISO file to a USB flash drive or a DVD. To install Windows 7 from your USB flash drive or DVD, all you need to do is insert the USB flash drive into your USB port or insert your DVD into your DVD drive and run Setup.exe from the root folder on the drive. 
+The ISO file contains all the Windows 7 installation files combined into a single uncompressed file. When you download the ISO file, you need to copy it to some medium in order to install Windows 7. This tool allows you to create a copy of the ISO file to a USB flash drive or a DVD. To install Windows 7 from your USB flash drive or DVD, all you need to do is insert the USB flash drive into your USB port or insert your DVD into your DVD drive and run Setup.exe from the root folder on the drive.
 
-Note: You cannot install Windows 7 from the ISO file until you copy it to a USB flash drive or DVD with the Windows 7 USB/DVD Download tool and install from there. 
+Note: You cannot install Windows 7 from the ISO file until you copy it to a USB flash drive or DVD with the Windows 7 USB/DVD Download tool and install from there.
 
-The copy of the ISO file that the Windows 7 USB/DVD Download tool creates is bootable. Bootable media allows you to install Windows 7 without having to first run an existing operating system on your machine. If you change the boot order of drives in your computer's BIOS, you can run the Windows 7 installation directly from your USB flash drive or DVD when you turn on your computer. Please see the documentation for your computer for information on how to change the BIOS boot order of drives. </description>
+The copy of the ISO file that the Windows 7 USB/DVD Download tool creates is bootable. Bootable media allows you to install Windows 7 without having to first run an existing operating system on your machine. If you change the boot order of drives in your computer's BIOS, you can run the Windows 7 installation directly from your USB flash drive or DVD when you turn on your computer. Please see the documentation for your computer for information on how to change the BIOS boot order of drives.
+    </description>
     <projectUrl>http://wudt.codeplex.com/</projectUrl>
     <tags>usb dvd iso backup</tags>
+    <licenseUrl>https://wudt.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/wudt.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/7ea0bab2488ce68b709fb2f5fff30fe4d0db81de/public/icons/wudt.png</iconUrl>
   </metadata>
 </package>
