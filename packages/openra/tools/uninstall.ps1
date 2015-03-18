@@ -43,7 +43,7 @@ function Get-Uninstaller {
 
   $key32 = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\"
   $key64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\"
-  $key   = @{64=$key64;32=$key32}[$Architecture]
+  $key = @{64=$key64;32=$key32}[$Architecture]
 
   $uninstaller = Get-ChildItem $key | %{ Get-ItemProperty $_.PSPath } | ?{ $_.DisplayName -match $Name }
   $uninstaller.UninstallString
