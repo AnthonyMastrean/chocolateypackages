@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>kindlepreviewer</id>
+    <title>Kindle Previewer</title>
+    <version>2.94</version>
+    <authors>Amazon</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Kindle Previewer is a graphical user interface tool that emulates how books display across Kindle devices and apps.</summary>
+    <description>
+Kindle Previewer is a graphical user interface tool that emulates how books display across Kindle devices and apps. Kindle Previewer makes it easy for publishers to preview the layout of a book and make sure its text displays properly for any orientation or font size to ensure publishers produce and submit the highest quality Kindle books.
+
+As a best practice we recommend you use the Kindle Previewer to review how their books look across all Kindle devices and apps.
+
+Highlights of Kindle Previewer functionality
+ * Ability to preview your content across Kindle devices and apps
+ * Support for previewing Kindle Text Pop Ups and Kindle Panel Views
+ * Accurate rendering of your content across Kindle devices and apps
+ * Faster previewing through features like Auto flip mode, Image flip mode
+ * Auto updates for future enhancements
+    </description>
+    <projectUrl>http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765261</projectUrl>
+    <tags>Amazon Kindle Preview</tags>
+    <licenseUrl>http://www.amazon.com/gp/feature.html?docId=1000599251</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/kindlepreviewer.png</iconUrl>
+  </metadata>
+</package>
