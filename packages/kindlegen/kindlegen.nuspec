@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>kindlegen</id>
+    <title>KindleGen</title>
+    <version>2.9</version>
+    <authors>Amazon</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>KindleGen is a command line tool which enables publishers to work in an automated environment with a variety of source content including HTML, XHTML or EPUB.</summary>
+    <description>
+KindleGen is a command line tool which enables publishers to work in an automated environment with a variety of source content including HTML, XHTML or EPUB. KindleGen converts this source content to a single file which supports both KF8 and Mobi formats enabling publishers to create great-looking books that work on all Kindle devices and apps.
+
+KindleGen is officially supported by Amazon to convert files to the Kindle format. We recommend you use KindleGen to create content that is compatible with all Kindle devices and apps. Files created with third-party software may not work properly on current or future Kindle devices and apps.
+
+Highlights of KindleGen functionality
+ * Support for all KF8 functionality
+ * Generates a single file supporting both KF8 and Mobi format
+ * Support for multiple source formats including HTML, XHTML and EPUB
+    </description>
+    <projectUrl>http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765211</projectUrl>
+    <tags>Amazon Kindle</tags>
+    <licenseUrl>http://www.amazon.com/gp/feature.html?docId=1000599251</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+</package>
