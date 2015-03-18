@@ -1,5 +1,5 @@
 ﻿$id   = "screentogif"
-$url  = "http://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=screentogif&DownloadId=1425263&FileTime=130672346330530000&Build=20959"
+$url  = "https://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=screentogif&DownloadId=1425263&FileTime=130672346330530000&Build=20959"
 $link = "Screen to Gif"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
