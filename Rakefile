@@ -20,9 +20,9 @@ task :default => ["package:all"]
 namespace :package do
   NUSPECS = FileList["packages/**/*.nuspec"]
   NUPKGS = NUSPECS.map{ |nuspec| File.join("output", output(nuspec)) }
-  
+
   directory "output"
-  
+
   desc "Package all of the specs"
   multitask :all => NUPKGS
 
@@ -55,13 +55,13 @@ namespace :web do
   desc "Publish the package icon website"
   task :publish => [:optimize, :generate, :copy] do
     FileUtils.cd("_deploy") do
-      system "git add -A"
+      system "git add -A ."
       system "git commit -m \"Site generated at #{Time.now.utc}\""
       system "git pull origin gh-pages"
       system "git push origin gh-pages"
     end
   end
-  
+
   task :optimize do
     `git ls-files --others --modified --exclude-standard -- *.png`.split("\n").each do |path|
       system "pngout \"#{path}\""
@@ -70,19 +70,19 @@ namespace :web do
 
   task :generate => ["public/_data/icons.yaml"]
 
-  task :copy do 
+  task :copy do
     FileUtils.rm_rf("_deploy/*")
     FileUtils.cp_r("public/.", "_deploy")
   end
 
   file "public/_data/icons.yaml" => ICONS do |task|
-    data = ICONS.map do |path| 
+    data = ICONS.map do |path|
       file = File.basename(path)
       name = File.basename(path, File.extname(path))
-      
+
       {"name" => name, "path" => "/chocolateypackages/icons/#{file}"}
     end
-    
+
     File.write(task.name, data.to_yaml)
   end
 

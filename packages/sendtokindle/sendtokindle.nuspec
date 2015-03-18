@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>sendtokindle</id>
+    <title>Send to Kindle</title>
+    <version>1.0.1.240</version>
+    <authors>Amazon</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Reading your personal documents on a Kindle has never been easier</summary>
+    <description>
+Reading your personal documents on a Kindle has never been easier
+
+ * Send personal documents to your Kindle from your PC.
+ * From Windows Explorer, simply right click on one or more documents and choose Send to Kindle.
+ * From any Windows application that can print, select Print and choose Send to Kindle.
+ * Drag and drop one or more documents onto the Send to Kindle application.
+ * Choose to save content to Amazon Cloud Drive where you can access, delete, organize, and share it from any web browser or using the Cloud Drive app for PC and Mac.
+
+When you download and install, Send to Kindle will appear when you right click on a file in Windows Explorer or in the print dialog of any Windows application. To send multiple documents to Kindle without opening them, simply select documents and choose Send to Kindle from the right-click menu in Windows Explorer.
+
+Content you save to Cloud Drive can be accessed from any Kindle device or using the free reading app on your iOS or Android device. Whispersync of notes, highlights, bookmarks and last page read is available on your Cloud Drive content. Learn more about the Kindle Personal Documents service here.
+    </description>
+    <projectUrl>http://www.amazon.com/gp/sendtokindle/pc/</projectUrl>
+    <tags>kindle</tags>
+    <licenseUrl>http://www.amazon.com/kindlelicense?ref=stk_pc_terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/sendtokindle.png</iconUrl>
+  </metadata>
+</package>
