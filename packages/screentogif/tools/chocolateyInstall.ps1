@@ -1,10 +1,13 @@
-﻿$id = "screentogif"
-$url = "http://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=screentogif&DownloadId=922737&FileTime=130583910278970000&Build=20941"
-$url64 = ""
-$kind = ""
-$silent = ""
+﻿$id   = "screentogif"
+$url  = "http://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=screentogif&DownloadId=1425263&FileTime=130672346330530000&Build=20959"
+$link = "Screen to Gif"
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
+$tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) "content"
+$bin     = Join-Path $content "ScreenToGif 1.4.1.exe"
 
-Install-ChocolateyZipPackage $id $url $content
+. $tools\shortcut.ps1
+
+Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content
+
+New-Shortcut -Link $link -SpecialFolder "CommonPrograms" -Target $bin
