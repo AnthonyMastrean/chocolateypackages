@@ -22,11 +22,14 @@
 
   .EXAMPLE
 
-  PS> Uninstall-ChocolateyPackage "foo" "EXE" "/S" (Get-Uninstaller -Name "Foo")
+  $tools = Split-Path $MyInvocation.MyCommand.Definition
+  . $tools\uninstall.ps1
+  
+  Uninstall-ChocolateyPackage "foo" "EXE" "/S" (Get-Uninstaller -Name "Foo")
 
   .LINK
 
-  https://github.com/AnthonyMastrean/chocolateypackages/blob/master/helpers/nullsoft.ps1
+  https://github.com/AnthonyMastrean/chocolateypackages/blob/master/helpers/uninstall.ps1
 #>
 function Get-Uninstaller {
   [CmdletBinding()]
