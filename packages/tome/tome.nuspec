@@ -17,12 +17,9 @@
         Take part in an epic fantasy adventure like no other, engaging both your imagination and your intelligence, demanding thought and attention to succeed.  Winner of the Roguelike of the Year award 2010, 2011 and 2012, Tales of Maj’Eyal is backed by constant development and an active, friendly community that have together invested over 340 years of total playtime.  279 players are playing right now – why not join them?
     </description>
     <projectUrl>http://te4.org/</projectUrl>
-    <tags>roguelike</tags>
+    <tags>games roguelike</tags>
     <licenseUrl>http://te4.org/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/tome.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
   </metadata>
 </package>

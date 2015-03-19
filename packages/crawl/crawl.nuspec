@@ -15,12 +15,9 @@
         Dungeon Crawl Stone Soup can be played offline, or online on a public telnet/ssh server. These public servers allow you to meet other players’ ghosts, watch other people playing, and, in general, have a blast!
     </description>
     <projectUrl>http://crawl.develz.org/</projectUrl>
-    <tags>roguelike</tags>
+    <tags>games roguelike</tags>
     <licenseUrl>http://crawl.develz.org/other/manual.html#l-licence-contact-history</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/crawl.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
   </metadata>
 </package>
