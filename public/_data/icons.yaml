@@ -77,6 +77,8 @@
   path: "/chocolateypackages/icons/jpegoptim.png"
 - name: keepass
   path: "/chocolateypackages/icons/keepass.png"
+- name: kindle
+  path: "/chocolateypackages/icons/kindle.png"
 - name: kindlepreviewer
   path: "/chocolateypackages/icons/kindlepreviewer.png"
 - name: liquibase

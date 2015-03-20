@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>kindle</id>
+    <title>Kindle for PC</title>
+    <version>1.11.2</version>
+    <authors>Amazon</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Read Everywhere with our Free Reading Apps</summary>
+    <description>The Kindle app is available for most major smartphones, tablets and computers. That means with our free Kindle reading apps, you can buy a Kindle book once, and read it on any device with the Kindle app installed*. You can also read that same Kindle book on a Kindle device if you own one.</description>
+    <projectUrl>https://www.amazon.com/gp/digital/fiona/kcp-landing-page?ie=UTF8&amp;ref_=kcp_pc_mkt_lnd</projectUrl>
+    <tags>amazon kindle</tags>
+    <licenseUrl>http://www.amazon.com/gp/help/customer/display.html/ref=hp_pcland_recterms?nodeId=200506200</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/kindle.png</iconUrl>
+  </metadata>
+</package>
