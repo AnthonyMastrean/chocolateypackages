@@ -12,20 +12,6 @@
 
   The name or partial name of the application.
 
-  .PARAMETER Architecture
-
-  The processor architecture of the target system.
-
-  This can usually be left out, as this function should be called within the
-  context of a Chocolatey command, it will use the loaded and internal function,
-  Get-ProcessorBits.
-
-  .PARAMETER Local
-
-  Despite Chocolatey's intent to be a machine-wide package manager, some
-  applications install for just the current user. Provide this switch to search
-  for uninstallers in the user's registry.
-
   .EXAMPLE
 
   $tools = Split-Path $MyInvocation.MyCommand.Definition
@@ -42,24 +28,14 @@ function Get-Uninstaller {
   param(
     [Parameter(Mandatory = $true)]
     [ValidateNotNullOrEmpty()]
-    [string] $Name,
-
-    [ValidateNotNullOrEmpty()]
-    [int] $Architecture = (Get-ProcessorBits),
-
-    [switch] $Local
+    [string] $Name
   )
 
-  $local_key = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\'
+  $local_key     = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'
+  $machine_key32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
+  $machine_key64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
 
-  $machine_key32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
-  $machine_key64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
-  $machine_key   = @{64=$machine_key64;32=$machine_key32}[$Architecture]
+  $keys = @($local_key, $machine_key32, $machine_key64)
 
-  $key = @{$true=$local_key;$false=$machine_key}[$Local]
-
-  Write-Debug "[Get-Uninstaller] Searching registry key: $key"
-
-  $uninstaller = Get-ChildItem $key | %{ Get-ItemProperty $_.PSPath } | ?{ $_.DisplayName -match $Name }
-  $uninstaller.UninstallString
+  Get-ItemProperty -Path $keys | ?{ $_.DisplayName -match $Name } | Select-Object -ExpandProperty UninstallString
 }
