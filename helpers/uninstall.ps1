@@ -10,7 +10,8 @@
 
   .PARAMETER Name
 
-  The name or partial name of the application.
+  The name of the application, as found in the Programs and Features applet 
+  in the Control Panel.
 
   .EXAMPLE
 
