@@ -8,22 +8,13 @@
     <owners>Anthony Mastrean</owners>
     <summary>Rsync is a fast and extraordinarily versatile file copying tool for both remote and local files.</summary>
     <description>
-        Rsync uses a delta-transfer algorithm which provides a very fast method
-        for bringing remote files into sync.  It does this by sending just the
-        differences in the files across the link, without requiring that both
-        sets of files are present at one of the ends of the link beforehand.  At
-        first glance this may seem impossible because the calculation of diffs
-        between two files normally requires local access to both files.
+Rsync uses a delta-transfer algorithm which provides a very fast method for bringing remote files into sync.  It does this by sending just the differences in the files across the link, without requiring that both sets of files are present at one of the ends of the link beforehand.  At first glance this may seem impossible because the calculation of diffs between two files normally requires local access to both files.
 
-        This packages provides rsync.exe, ssh.exe, and ssh-keygen.exe.
+This packages provides rsync.exe, ssh.exe, and ssh-keygen.exe.
     </description>
     <projectUrl>https://www.itefix.net/content/cwrsync-free-edition</projectUrl>
     <tags>rsync ssh ssh-keygen</tags>
     <licenseUrl>https://www.itefix.net/content/cwrsync-licenseversion</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/rsync.png</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
   </metadata>
 </package>
