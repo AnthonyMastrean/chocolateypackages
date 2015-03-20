@@ -18,7 +18,7 @@ Highlights of KindleGen functionality
  * Support for multiple source formats including HTML, XHTML and EPUB
     </description>
     <projectUrl>http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765211</projectUrl>
-    <tags>Amazon Kindle</tags>
+    <tags>amazon kindle</tags>
     <licenseUrl>http://www.amazon.com/gp/feature.html?docId=1000599251</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
