@@ -37,5 +37,5 @@ function Get-Uninstaller {
 
   $keys = @($local_key, $machine_key32, $machine_key64)
 
-  Get-ItemProperty -Path $keys | ?{ $_.DisplayName -match $Name } | Select-Object -ExpandProperty UninstallString
+  Get-ItemProperty -Path $keys | ?{ $_.DisplayName -eq $Name } | Select-Object -ExpandProperty UninstallString
 }
