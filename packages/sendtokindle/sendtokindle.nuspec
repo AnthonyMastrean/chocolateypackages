@@ -21,7 +21,7 @@ When you download and install, Send to Kindle will appear when you right click o
 Content you save to Cloud Drive can be accessed from any Kindle device or using the free reading app on your iOS or Android device. Whispersync of notes, highlights, bookmarks and last page read is available on your Cloud Drive content. Learn more about the Kindle Personal Documents service here.
     </description>
     <projectUrl>http://www.amazon.com/gp/sendtokindle/pc/</projectUrl>
-    <tags>Amazon kindle</tags>
+    <tags>amazon kindle</tags>
     <licenseUrl>http://www.amazon.com/kindlelicense?ref=stk_pc_terms</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/sendtokindle.png</iconUrl>

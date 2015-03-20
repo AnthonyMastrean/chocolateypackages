@@ -1,7 +1,7 @@
 $id     = "sendtokindle"
+$name   = "Send to Kindle"
 $kind   = "EXE"
 $silent = "/S"
-$name   = "Send to Kindle"
 
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 
