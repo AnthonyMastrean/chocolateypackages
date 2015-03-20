@@ -20,7 +20,7 @@ Highlights of Kindle Previewer functionality
  * Auto updates for future enhancements
     </description>
     <projectUrl>http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765261</projectUrl>
-    <tags>Amazon Kindle Preview</tags>
+    <tags>amazon kindle preview not-silent</tags>
     <licenseUrl>http://www.amazon.com/gp/feature.html?docId=1000599251</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/kindlepreviewer.png</iconUrl>
