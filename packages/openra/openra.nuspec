@@ -3,7 +3,7 @@
   <metadata>
     <id>openra</id>
     <title>OpenRA</title>
-    <version>0.0.0-pre20140608</version>
+    <version>0.0.0-pre20141029</version>
     <authors>OpenRA</authors>
     <owners>Anthony Mastrean</owners>
     <summary>A free real time strategy game engine supporting early Westwood classics.</summary>

@@ -10,22 +10,15 @@
 
   .PARAMETER Name
 
-  The name or partial name of the application.
-
-  .PARAMETER Architecture
-
-  The processor architecture of the target system.
-
-  This can usually be left out, as this function should be called within the
-  context of a Chocolatey command, it will use the loaded and internal function,
-  Get-ProcessorBits.
+  The name of the application, as found in the Programs and Features applet 
+  in the Control Panel.
 
   .EXAMPLE
 
   $tools = Split-Path $MyInvocation.MyCommand.Definition
   . $tools\uninstall.ps1
-  
-  Uninstall-ChocolateyPackage "foo" "EXE" "/S" (Get-Uninstaller -Name "Foo")
+
+  Uninstall-ChocolateyPackage 'foo' 'EXE' '/S' (Get-Uninstaller -Name 'Foo')
 
   .LINK
 
@@ -36,15 +29,14 @@ function Get-Uninstaller {
   param(
     [Parameter(Mandatory = $true)]
     [ValidateNotNullOrEmpty()]
-    [string] $Name,
-
-    [int] $Architecture = (Get-ProcessorBits)
+    [string] $Name
   )
 
-  $key32 = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\"
-  $key64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\"
-  $key = @{64=$key64;32=$key32}[$Architecture]
+  $local_key     = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'
+  $machine_key32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
+  $machine_key64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
 
-  $uninstaller = Get-ChildItem $key | %{ Get-ItemProperty $_.PSPath } | ?{ $_.DisplayName -match $Name }
-  $uninstaller.UninstallString
+  $keys = @($local_key, $machine_key32, $machine_key64)
+
+  Get-ItemProperty -Path $keys | ?{ $_.DisplayName -eq $Name } | Select-Object -ExpandProperty UninstallString
 }
