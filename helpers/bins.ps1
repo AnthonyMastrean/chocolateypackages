@@ -24,29 +24,13 @@
 
   .EXAMPLE
 
-  $tools = Split-Path $MyInvocation.MyCommand.Definition
-
-  . $tools\bins.ps1
-
   New-IgnoreBin -Path "foo.exe"
 
   .EXAMPLE
 
-  $tools   = Split-Path $MyInvocation.MyCommand.Definition
-  $content = Join-Path (Split-Path $tools) "content"
-  $foo     = Join-Path $content "foo.exe"
-  $bar     = Join-Path $content "bar.exe"
-
-  . $tools\bins.ps1
-
   New-IgnoreBin -Path $foo, $bar
 
   .EXAMPLE
-
-  $tools   = Split-Path $MyInvocation.MyCommand.Definition
-  $content = Join-Path (Split-Path $tools) "content"
-
-  . $tools\bins.ps1
 
   Get-ChildItem "$content\foo\*.exe" | New-IgnoreBin
 
@@ -97,29 +81,13 @@ function New-IgnoreBin {
 
   .EXAMPLE
 
-  $tools = Split-Path $MyInvocation.MyCommand.Definition
-
-  . $tools\bins.ps1
-
   New-GuiBin -Path "foo.exe"
 
   .EXAMPLE
 
-  $tools   = Split-Path $MyInvocation.MyCommand.Definition
-  $content = Join-Path (Split-Path $tools) "content"
-  $foo     = Join-Path $content "foo.exe"
-  $bar     = Join-Path $content "bar.exe"
-
-  . $tools\bins.ps1
-
   New-GuiBin -Path $foo, $bar
 
   .EXAMPLE
-
-  $tools   = Split-Path $MyInvocation.MyCommand.Definition
-  $content = Join-Path (Split-Path $tools) "content"
-
-  . $tools\bins.ps1
 
   Get-ChildItem "$content\foo\*.exe" | New-GuiBin
 

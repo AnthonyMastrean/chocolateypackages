@@ -10,13 +10,10 @@
 
   .PARAMETER Name
 
-  The name of the application, as found in the Programs and Features applet 
+  The name of the application, as found in the Programs and Features applet
   in the Control Panel.
 
   .EXAMPLE
-
-  $tools = Split-Path $MyInvocation.MyCommand.Definition
-  . $tools\uninstall.ps1
 
   Uninstall-ChocolateyPackage 'foo' 'EXE' '/S' (Get-Uninstaller -Name 'Foo')
 

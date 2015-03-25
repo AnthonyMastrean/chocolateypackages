@@ -71,16 +71,10 @@
 
   .EXAMPLE
 
-  $tools = Split-Path $MyInvocation.MyCommand.Definition
-  . $tools\shortcut.ps1
-  
   New-Shortcut -Link "foo" -Target "foo.exe" -SpecialFolder "CommonDesktop" -Description "The Foo program"
 
   .EXAMPLE
-  
-  $tools = Split-Path $MyInvocation.MyCommand.Definition
-  . $tools\shortcut.ps1
-  
+
   Remove-Shortcut -Link "foo" -SpecialFolder "CommonDesktop"
 
   .LINK
