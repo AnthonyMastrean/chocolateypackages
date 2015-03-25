@@ -1,27 +1,31 @@
 function New-IgnoreBin {
   [CmdletBinding()]
   param(
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
     [ValidateNotNullOrEmpty()]
     [ValidateScript({ Test-Path $_ })]
-    [string] $Name
+    [string[]] $Path
   )
 
-  $Name = Resolve-Path $Name
-
-  New-Item "$Name.ignore" -Type "File" -Force | Out-Null
+  PROCESS {
+    foreach($item in $Path) {
+      New-Item "$(Resolve-Path $item).ignore" -Type "File" -Force | Out-Null
+    }
+  }
 }
 
 function New-GuiBin {
   [CmdletBinding()]
   param(
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
     [ValidateNotNullOrEmpty()]
     [ValidateScript({ Test-Path $_ })]
-    [string] $Name
+    [string[]] $Path
   )
 
-  $Name = Resolve-Path $Name
-
-  New-Item "$Name.gui" -Type "File" -Force | Out-Null
+  PROCESS {
+    foreach($item in $Path) {
+      New-Item "$(Resolve-Path $item).gui" -Type "File" -Force | Out-Null
+    }
+  }
 }
