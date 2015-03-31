@@ -1,6 +1,6 @@
-﻿$name = "intellijidea-community"
-$url = "http://download.jetbrains.com/idea/ideaIC-14.0.3.exe"
-$kind = "EXE"
+﻿$id     = "intellijidea-community"
+$url    = "https://download.jetbrains.com/idea/ideaIC-14.1.exe"
+$kind   = "EXE"
 $silent = "/S"
 
-Install-ChocolateyPackage $name $kind $silent $url
+Install-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -Url $url

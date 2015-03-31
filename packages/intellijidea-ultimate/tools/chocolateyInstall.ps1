@@ -1,6 +1,6 @@
-﻿$name = "intellijidea-ultimate"
-$url = "http://download.jetbrains.com/idea/ideaIU-14.0.3.exe"
-$kind = "EXE"
+﻿$id     = "intellijidea-ultimate"
+$url    = "https://download.jetbrains.com/idea/ideaIU-14.1.exe"
+$kind   = "EXE"
 $silent = "/S"
 
-Install-ChocolateyPackage $name $kind $silent $url
+Install-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -Url $url
