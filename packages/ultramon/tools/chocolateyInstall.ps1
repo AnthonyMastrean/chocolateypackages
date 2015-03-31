@@ -1,6 +1,6 @@
 ﻿$id     = "ultramon"
 $kind   = "MSI"
-$silent = "/Q"
+$silent = "/Q /NORESTART"
 $url    = "http://www.realtimesoft.com/files/UltraMon_3.3.0_en_x32.msi"
 $url64  = "http://www.realtimesoft.com/files/UltraMon_3.3.0_en_x64.msi"
 

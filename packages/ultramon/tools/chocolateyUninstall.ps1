@@ -1,5 +1,5 @@
 $id     = "ultramon"
 $kind   = "MSI"
-$silent = "{9069EE0A-7615-4D86-AD80-CA263E936DA6} /Q"
+$silent = "{D4E62D29-31A1-4938-8CB7-7D275C1AEAC6} /Q /NORESTART"
 
 Uninstall-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent
