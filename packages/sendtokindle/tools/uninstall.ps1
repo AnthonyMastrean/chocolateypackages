@@ -10,12 +10,10 @@
 
   .PARAMETER Name
 
-  The name or partial name of the application.
+  The name of the application, as found in the Programs and Features applet
+  in the Control Panel.
 
   .EXAMPLE
-
-  $tools = Split-Path $MyInvocation.MyCommand.Definition
-  . $tools\uninstall.ps1
 
   Uninstall-ChocolateyPackage 'foo' 'EXE' '/S' (Get-Uninstaller -Name 'Foo')
 
@@ -35,7 +33,9 @@ function Get-Uninstaller {
   $machine_key32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
   $machine_key64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
 
-  $keys = @($local_key, $machine_key32, $machine_key64)
-
-  Get-ItemProperty -Path $keys | ?{ $_.DisplayName -match $Name } | Select-Object -ExpandProperty UninstallString
+  @($local_key, $machine_key32, $machine_key64) `
+    | ?{ Test-Path $_ } `
+    | Get-ItemProperty `
+    | ?{ $_.DisplayName -eq $Name } `
+    | Select-Object -ExpandProperty UninstallString
 }
