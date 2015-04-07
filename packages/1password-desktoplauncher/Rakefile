@@ -1,0 +1,12 @@
+SCRIPT = "1password-desktoplauncher-script/tools/1PasswordDesktopLauncher.ahk"
+ICON   = "1password-desktoplauncher-script/tools/1Password.ico"
+TARGET = "1password-desktoplauncher-compiled/tools/1PasswordDesktopLauncherexe"
+
+task :default => [:compile]
+
+task :compile => [TARGET]
+
+file TARGET => [SCRIPT] do |task|
+  system("ahk2exe /in \"#{SCRIPT}\" /out \"#{TARGET}\" /icon \"#{ICON}\"")
+  system("mpress \"#{TARGET}\"")
+end
