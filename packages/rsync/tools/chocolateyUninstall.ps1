@@ -1,5 +1,5 @@
 $id   = "rsync"
-$file = "cwRsync_5.4.1_x86_Free.zip"
+$file = "rsyncInstall.zip"
 
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 
