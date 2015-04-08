@@ -13,7 +13,7 @@ Install-ChocolateyZipPackage $id $url $content
 # This package requires the RSYNC_HOME directory on the PATH and a HOME
 # environment variable be available. I have provided reliable batch files that
 # perform these functions.
-Move-Item $tools\*.bat $rsync_home
+Move-Item $tools\*.bat $rsync_home -Force
 
 # We have to tell Chocolatey to -ignore- the existing executables, because it"s
 # built-in shim generator cannot satisfy these requirements.
