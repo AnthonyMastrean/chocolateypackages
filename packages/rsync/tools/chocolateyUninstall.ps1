@@ -1,10 +1,3 @@
-$id   = "rsync"
-$file = "rsyncInstall.zip"
-
-$tools = Split-Path $MyInvocation.MyCommand.Definition
-
-Uninstall-ChocolateyZipPackage -PackageName $id -ZipFileName $file
-
 # Remove the custom shims
 Get-ChildItem $tools\*.bat `
   | Split-Path -Leaf `
