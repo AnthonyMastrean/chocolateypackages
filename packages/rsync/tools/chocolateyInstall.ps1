@@ -18,8 +18,6 @@ Get-ChildItem $tools\*.bat | %{
   $basename = (Split-Path -Leaf $bat) -replace ".bat", ".exe"
   $exe      = Join-Path $ENV:chocolateyInstall "bin\$basename"
 
-  (Get-Content $bat -Raw) -replace '@rsync_home@', $rsync_home | Set-Content $bat
-
   & $shimgen --output="$exe" --path="$bat"
 }
 
