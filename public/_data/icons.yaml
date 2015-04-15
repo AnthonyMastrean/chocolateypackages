@@ -143,6 +143,8 @@
   path: "/chocolateypackages/icons/setacl.png"
 - name: sikuli
   path: "/chocolateypackages/icons/sikuli.png"
+- name: speq
+  path: "/chocolateypackages/icons/speq.png"
 - name: sqljdbc
   path: "/chocolateypackages/icons/sqljdbc.png"
 - name: start8
