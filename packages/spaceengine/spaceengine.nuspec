@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>spaceengine</id>
+    <title>SpaceEngine</title>
+    <version>0.9.7.2</version>
+    <authors>Vladimir Romanyuk</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>A free space simulation program that lets you explore the universe.</summary>
+    <description>
+A free space simulation program that lets you explore the universe in three dimensions, from planet Earth to the most distant galaxies. Areas of the known universe are represented using actual astronomical data, while regions uncharted by astronomy are generated procedurally. Millions of galaxies, trillions of stars, countless planets - all available for exploration. You can land any planet, moon or asteroid and watch alien landscapes and celestial phenomena. You can even pilot starships and atmospheric shuttles.
+    </description>
+    <projectUrl>http://en.spaceengine.org/</projectUrl>
+    <tags>space simulator astronomy</tags>
+    <licenseUrl>http://en.spaceengine.org/index/license/0-30</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/.png</iconUrl>-->
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+  </metadata>
+</package>
