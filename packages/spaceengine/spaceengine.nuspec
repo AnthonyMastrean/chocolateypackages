@@ -14,7 +14,7 @@ A free space simulation program that lets you explore the universe in three dime
     <tags>space simulator astronomy</tags>
     <licenseUrl>http://en.spaceengine.org/index/license/0-30</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/.png</iconUrl>-->
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/0c0cacb97298b8cef1d383832a3856feb8b2e728/public/icons/spaceengine.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
