@@ -115,6 +115,8 @@
   path: "/chocolateypackages/icons/ocsdk.png"
 - name: openra
   path: "/chocolateypackages/icons/openra.png"
+- name: opsview
+  path: "/chocolateypackages/icons/opsview.png"
 - name: oracle
   path: "/chocolateypackages/icons/oracle.png"
 - name: pdftk
