@@ -81,6 +81,8 @@
   path: "/chocolateypackages/icons/kindle.png"
 - name: kindlepreviewer
   path: "/chocolateypackages/icons/kindlepreviewer.png"
+- name: ksp-demo
+  path: "/chocolateypackages/icons/ksp-demo.png"
 - name: liquibase
   path: "/chocolateypackages/icons/liquibase.png"
 - name: lolcommits
@@ -145,6 +147,8 @@
   path: "/chocolateypackages/icons/setacl.png"
 - name: sikuli
   path: "/chocolateypackages/icons/sikuli.png"
+- name: spaceengine
+  path: "/chocolateypackages/icons/spaceengine.png"
 - name: speq
   path: "/chocolateypackages/icons/speq.png"
 - name: sqljdbc
@@ -155,6 +159,8 @@
   path: "/chocolateypackages/icons/sublimetext3-contextmenu.png"
 - name: tfpt
   path: "/chocolateypackages/icons/tfpt.png"
+- name: tinycc
+  path: "/chocolateypackages/icons/tinycc.png"
 - name: tome
   path: "/chocolateypackages/icons/tome.png"
 - name: tsunami
