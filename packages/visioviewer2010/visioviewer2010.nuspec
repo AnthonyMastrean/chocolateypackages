@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>visioviewer2010</id>
+    <title>Microsoft Visio 2010 Viewer</title>
+    <version>14.0</version>
+    <authors>Microsoft</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Microsoft Visio 2010 Viewer allows anyone to view Visio drawings and diagrams (created with Visio 5.0 through Visio 2010) inside their Microsoft Internet Explorer (versions 5 through 8) Web browser.</summary>
+    <description>
+By using Microsoft Visio 2010 Viewer, Visio users can freely distribute Visio drawings and diagrams to team members, partners, customers, or others, even if the recipients do not have Visio installed on their computers. Internet Explorer also allows for printing, although this is limited to the portion of the drawing displayed.
+
+Visio Viewer enables users to discover the advantages of using Visio drawings, charts, and illustrations in a Web-based environment. Visio Viewer is particularly useful for teams that need to collaborate from different locations.
+
+Viewing Visio drawings is as simple as double-clicking the drawing (files with a .vsd, .vss, .vst, .vdx, .vsx, or .vtx extension) in Windows Explorer. Internet Explorer will open, and Visio Viewer will render the drawing in the browser window. You can then pan and zoom in the drawing window by using toolbar buttons, keyboard shortcuts, or menu items in the shortcut menu. Also, you can see properties on any shape by opening the Properties and Settings dialog box and then selecting a shape. Some rendering and display settings are available in the Display Settings tab of the Properties and Settings dialog box. Additionally, you can set drawing-layer visibility and colors in the Layer Settings tab, and annotation visibility and colors in the Markup Settings tab.
+
+Notes
+
+ * Both Visio binary (.vsd) and XML (.vdx) files are supported.
+ * Visio Viewer is implemented as an ActiveX control that loads and renders Visio drawings inside Internet Explorer.
+    </description>
+    <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=21701</projectUrl>
+    <tags>visio viewer</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/2b9e91af3439e1dbb24a5c7340d607090e8e32ce/public/icons/microsoftoffice2013.png</iconUrl>
+  </metadata>
+</package>

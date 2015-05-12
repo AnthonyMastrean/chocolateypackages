@@ -2,7 +2,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>visioviewer</id>
-    <title>Microsoft Visio Viewer</title>
+    <title>Microsoft Visio 2013 Viewer</title>
     <version>15.0</version>
     <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
@@ -20,8 +20,5 @@ Notes
     <tags>microsoft visio viewer</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/2b9e91af3439e1dbb24a5c7340d607090e8e32ce/public/icons/microsoftoffice2013.png</iconUrl>
-    <dependencies>
-        <dependency id="visioviewer2013" version="[15.0,16.0)" />
-    </dependencies>
   </metadata>
 </package>
