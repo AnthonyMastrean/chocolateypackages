@@ -22,6 +22,6 @@ Notes
     <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=21701</projectUrl>
     <tags>visio viewer</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/2b9e91af3439e1dbb24a5c7340d607090e8e32ce/public/icons/microsoftoffice2013.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/04afff67a536b1f6e3671bd82b616e38adc8d4ad/public/icons/microsoftoffice2010.png</iconUrl>
   </metadata>
 </package>
