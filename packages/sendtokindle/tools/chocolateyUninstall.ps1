@@ -1,5 +1,5 @@
 $id     = "sendtokindle"
-$name   = "Send to Kindle"
+$name   = "Amazon Send to Kindle"
 $kind   = "EXE"
 $silent = "/S"
 
