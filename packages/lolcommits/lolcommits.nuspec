@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>lolcommits</id>
+    <version>0.5.9</version>
+    <title>lolcommits</title>
+    <authors>Matthew Rothenberg</authors>
+    <owners>Anthony Mastrean</owners>
+    <licenseUrl>https://github.com/mroth/lolcommits/blob/6782945e831601ff8b149577cbd9ce76aff38471/LICENSE</licenseUrl>
+    <projectUrl>https://lolcommits.github.io/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/1452cc8b10e1a211f2ec49054cbea4784b05ab21/public/icons/lolcommits.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>lolcommits takes a snapshot with your webcam every time you git commit code, and archives a lolcat style image with it. It's selfies for software developers. git blame has never been so much fun.</description>
+    <summary>lolcommits takes a snapshot with your webcam every time you git commit code.</summary>
+    <dependencies>
+      <dependency id="git" />
+      <dependency id="ruby" />
+      <dependency id="ruby2.devkit" />
+      <dependency id="imagemagick" />
+    </dependencies>
+  </metadata>
+</package>
