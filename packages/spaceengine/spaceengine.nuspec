@@ -9,14 +9,17 @@
     <summary>A free space simulation program that lets you explore the universe.</summary>
     <description>
 A free space simulation program that lets you explore the universe in three dimensions, from planet Earth to the most distant galaxies. Areas of the known universe are represented using actual astronomical data, while regions uncharted by astronomy are generated procedurally. Millions of galaxies, trillions of stars, countless planets - all available for exploration. You can land any planet, moon or asteroid and watch alien landscapes and celestial phenomena. You can even pilot starships and atmospheric shuttles.
+
+---
+WARNING: SLOW DOWNLOAD/INSTALL
+
+The installer itself is nearly 1GB and is hosted on a slow mirror. It will take a long time to download, even if you have a good network.
+
     </description>
     <projectUrl>http://en.spaceengine.org/</projectUrl>
-    <tags>space simulator astronomy</tags>
+    <tags>games space simulator astronomy</tags>
     <licenseUrl>http://en.spaceengine.org/index/license/0-30</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/0c0cacb97298b8cef1d383832a3856feb8b2e728/public/icons/spaceengine.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
   </metadata>
 </package>
