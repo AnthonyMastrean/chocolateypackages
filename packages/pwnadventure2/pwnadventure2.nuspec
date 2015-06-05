@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>pwnadventure2</id>
+    <title>Choose Your Pwn Adventure 2</title>
+    <version>2.0</version>
+    <authors>Ghost in the Shellcode</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>A custom 3D MMOFPS based on the Unity game engine.</summary>
+    <description>
+A custom 3D MMOFPS based on the Unity game engine. The game included several quests that were only solvable by modifying the game client.
+    </description>
+    <projectUrl>http://ghostintheshellcode.com/#pwnadventure2</projectUrl>
+    <tags>games fps mmo sandbox</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/bdd09bb17055570bff48522e8889ea91bdaf7c33/public/icons/pwnadventure2.png</iconUrl>
+  </metadata>
+</package>
