@@ -1,13 +1,7 @@
-﻿$name   = "ag"
-$url    = "https://kjkpub.s3.amazonaws.com/software/the_silver_searcher/rel/0.18.1-1129/ag.exe"
-$tools  = Split-Path $MyInvocation.MyCommand.Definition
-$target = Join-Path $tools "ag.exe"
+﻿$id  ="ag"
+$url = "https://kjkpub.s3.amazonaws.com/software/the_silver_searcher/rel/0.18.1-1129/ag.zip"
 
-try {
-  Get-ChocolateyWebFile $name $target $url
-  Write-ChocolateySuccess $name
-} 
-catch {
-  Write-ChocolateyFailure $name $_.Exception.Message
-  throw 
-}
+$tools   = Split-Path $MyInvocation.MyCommand.Definition
+$content = Join-Path (Split-Path $tools) "content"
+
+Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content
