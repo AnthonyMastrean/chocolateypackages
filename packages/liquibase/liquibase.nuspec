@@ -3,11 +3,13 @@
   <metadata>
     <id>liquibase</id>
     <title>Liquibase</title>
-    <version>3.3.2</version>
+    <version>3.3.5</version>
     <authors>Liquibase</authors>
     <owners>Anthony Mastrean</owners>
     <summary>An open source library for tracking, managing, and applying database changes.</summary>
-    <description>An open source library for tracking, managing, and applying database changes.</description>
+    <description>
+Liquibase is an open source, database-independent library for tracking, managing and applying database changes. It is built on a simple premise: All database changes are stored in a human readable yet trackable form and checked into source control.
+    </description>
     <projectUrl>http://www.liquibase.org/index.html</projectUrl>
     <tags>db change management</tags>
     <licenseUrl>https://github.com/liquibase/liquibase/blob/master/LICENSE.txt</licenseUrl>

@@ -1,7 +1,7 @@
-﻿$id = 'liquibase'
+﻿$id  = 'liquibase'
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
-$shim    = Join-Path $ENV:chocolateyInstall 'bin\liquibase.exe'
+$bat     = Join-Path $content 'liquibase.bat'
 
-Remove-Item $shim -Force | Out-Null
+Uninstall-BinFile -Name $id -Path $bat

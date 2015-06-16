@@ -1,12 +1,10 @@
 ﻿$id  = 'liquibase'
-$url = 'http://sourceforge.net/projects/liquibase/files/Liquibase%20Core/liquibase-3.3.2-bin.zip/download'
+$url = 'https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.3.5/liquibase-3.3.5-bin.zip'
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
 $bat     = Join-Path $content 'liquibase.bat'
-$shim    = Join-Path $ENV:chocolateyInstall 'bin\liquibase.exe'
-$shimgen = Join-Path $ENV:chocolateyInstall 'tools\shimgen.exe'
 
 Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content
 
-& $shimgen --output="$shim" --path="$bat"
+Install-BinFile -Name $id -Path $bat
