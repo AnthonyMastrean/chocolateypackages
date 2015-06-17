@@ -20,6 +20,6 @@ I've currently been testing this with The Witcher 3, and it is working great. Ho
     <tags>pause</tags>
     <licenseUrl>https://github.com/ryanries/UniversalPauseButton/blob/abba10971883c657b6738b1e0edfb457f08f38da/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/7600eaa385ee311c534cbbb4b91b43167e5d15de/public/icons/universalpausebutton.png</iconUrl>
   </metadata>
 </package>
