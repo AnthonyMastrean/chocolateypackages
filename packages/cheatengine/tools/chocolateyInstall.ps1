@@ -1,0 +1,10 @@
+﻿$id     = "cheatengine"
+$url    = "http://mirror3.cheatengine.org/download/d1/CheatEngine.exe"
+$url64  = "http://mirror3.cheatengine.org/download/d1/CheatEngine64.exe"
+$kind   = "EXE"
+$silent = "/S"
+$check  = "MD5"
+$hash   = ""
+$hash64 = "5040fb12f24c6593dd98926706425dfb"
+
+Install-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -Url $url -Url64 $url64 -ChecksumType $check -Checksum $hash -Checksum64 $hash64
