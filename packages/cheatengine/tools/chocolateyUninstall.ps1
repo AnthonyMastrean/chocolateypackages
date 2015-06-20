@@ -1,7 +1,7 @@
 $id     = "cheatengine"
-$name   = "Cheat Engine"
+$name   = "Cheat Engine 6.4"
 $kind   = "EXE"
-$silent = "/S"
+$silent = "/VERYSILENT /NORESTART"
 
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 
