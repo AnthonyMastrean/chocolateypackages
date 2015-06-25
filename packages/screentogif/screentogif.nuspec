@@ -3,12 +3,12 @@
   <metadata>
     <id>screentogif</id>
     <title>Screen To Gif</title>
-    <version>1.4.1</version>
+    <version>1.4.1.1</version>
     <authors>ScreenToGif</authors>
     <owners>Anthony Mastrean</owners>
     <summary>This tool allows you to record a selected area of your screen and save as a Gif.</summary>
     <description>This tool allows you to record a selected area of your screen and save as a Gif.</description>
-    <projectUrl>https://screentogif.codeplex.com/</projectUrl>
+    <projectUrl>https://screentogif.codeplex.com</projectUrl>
     <tags>screen recording recorder gif</tags>
     <licenseUrl>https://screentogif.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
