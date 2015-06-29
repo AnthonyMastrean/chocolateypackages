@@ -1,8 +1,12 @@
-﻿$id = "ant"
+﻿$id  = "ant"
 $url = "http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.zip"
-$ant_home = Join-Path (Get-BinRoot) "apache-ant-1.9.4"
 
-Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation (Get-BinRoot)
+$tools    = Split-Path $MyInvocation.MyCommand.Definition
+$content  = Split-Path $tools
+$ant_home = Join-Path $content "apache-ant-1.9.4"
+$ant_bin  = Join-Path $ant_home "bin"
 
-Write-Host "(Optional) Set your machine ANT_HOME and restart your shell:"
-Write-Host "  PS> [System.Environment]::SetEnvironmentVariable('ANT_HOME', '$ant_home', 'Machine')"
+Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content
+Install-ChocolateyEnvironmentVariable -VariableName "ANT_HOME" -VariableValue $ant_home -VariableType "Machine"
+
+Update-SessionEnvironment
