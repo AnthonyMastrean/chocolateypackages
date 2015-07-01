@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>cavesofqud</id>
+    <title>Caves of Qud</title>
+    <version>1.0.4646.16699</version>
+    <authors>Freehold Games</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Caves of Qud is a far-future roguelike in the tradition of the pen and paper classic, Gamma World.</summary>
+    <description>
+Caves of Qud is a far-future roguelike in the tradition of the pen and paper classic, Gamma World. After a wearisome haul, you arrive at the desert oasis of Joppa. A watervine farmer greets you, “Live and drink, friend.” You peer over the salt-spangled huts toward a faint blue light on the horizon. Stretched before you are the vine-swathed ruins of Qud, an adventurer’s utopia. Every inch of Qud is diggable, meltable, destructible, and plunderable. Every character you build is completely unique. Explore vanished arcologies, smash errant robots, and plunder Qud’s chrome halls for technological treasures. Join up with the Barathrumites, a sect of tinker-monks led by an ancient, sentient cave bear named Barathrum. Or forge your own path and vie for power with hundreds of monsters and NPCs. No two games of Caves of Qud are remotely alike.
+    </description>
+    <projectUrl>http://freeholdgames.com/?page_id=39</projectUrl>
+    <tags>games roguelike</tags>
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/2a34c6a2133f5009f76ea6518b0779123f1fe49b/public/icons/cavesofqud.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+  </metadata>
+</package>
