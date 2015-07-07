@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>pmd</id>
+    <title>PMD</title>
+    <version>5.3.2</version>
+    <authors>PMD</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>PMD is a source code analyzer.</summary>
+    <description>
+PMD is a source code analyzer. It finds common programming flaws like unused variables, empty catch blocks, unnecessary object creation, and so forth. It supports Java, JavaScript, PLSQL, Apache Velocity, XML, XSL. Additionally it includes CPD, the copy-paste-detector. CPD finds duplicated code in Java, C, C++, C#, PHP, Ruby, Fortran, JavaScript, PLSQL, Apache Velocity, Ruby, Scala, Objective C, Matlab, Python, Go.
+    </description>
+    <projectUrl>http://pmd.sourceforge.net/</projectUrl>
+    <tags>source code analyze lint</tags>
+    <licenseUrl>http://pmd.sourceforge.net/pmd-5.3.2/overview/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/e530258a17838ab065677c5522fecb8149bcfde6/public/icons/pmd.png</iconUrl>
+    <dependencies>
+      <dependency id="jdk8" />
+    </dependencies>
+  </metadata>
+</package>
