@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>checkstyle</id>
+    <title>Checkstyle</title>
+    <version>6.8.1</version>
+    <authors>checkstyle</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.</summary>
+    <description>
+Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. It automates the process of checking Java code to spare humans of this boring (but important) task. This makes it ideal for projects that want to enforce a coding standard.
+
+Checkstyle is highly configurable and can be made to support almost any coding standard. An example configuration files are supplied supporting the Sun Code Conventions, Google Java Style.
+    </description>
+    <projectUrl>http://checkstyle.sourceforge.net/</projectUrl>
+    <tags>java source code style</tags>
+    <licenseUrl>http://checkstyle.sourceforge.net/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/bff3a96e7cf0c5a72057768cec1be7a119a677d4/public/icons/checkstyle.png</iconUrl>
+    <dependencies>
+      <dependency id="jdk8" />
+    </dependencies>
+  </metadata>
+</package>
