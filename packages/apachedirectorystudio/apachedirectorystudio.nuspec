@@ -7,12 +7,14 @@
     <authors>Apache</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Apache Directory Studio is a complete directory tooling platform intended to be used with any LDAP server.</summary>
-    <description>Apache Directory Studio is a complete directory tooling platform intended to be used with any LDAP server however it is particularly designed for use with ApacheDS. It is an Eclipse RCP application, composed of several Eclipse (OSGi) plugins, that can be easily upgraded with additional ones. These plugins can even run within Eclipse itself.</description>
+    <description>
+Apache Directory Studio is a complete directory tooling platform intended to be used with any LDAP server however it is particularly designed for use with ApacheDS. It is an Eclipse RCP application, composed of several Eclipse (OSGi) plugins, that can be easily upgraded with additional ones. These plugins can even run within Eclipse itself.
+    </description>
     <projectUrl>http://directory.apache.org/studio/</projectUrl>
     <tags>apache ldap activedirectory</tags>
     <licenseUrl>http://www.apache.org/licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/apachedirectorystudio.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/15b31e19c8eb88e7b6cf70da85a5991ba66cc190/public/icons/apachedirectorystudio.png</iconUrl>
     <dependencies>
       <dependency id="javaruntime" version="[7.0,8.0)" />
     </dependencies>

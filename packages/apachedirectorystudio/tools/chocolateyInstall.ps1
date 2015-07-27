@@ -6,4 +6,4 @@ $silent = "/S"
 $hash   = "d6dcb0537fbd9d8a301eab22a542a193"
 $hash64 = "f0758eb31062e6842e5bfea77447a4cc"
 
-Install-ChocolateyPackage -PackageName $name -Type $kind -Silent $silent -Url $url -Url64 $url64 -Checksum $hash -Checksum64 $hash64
+Install-ChocolateyPackage -PackageName $name -FileType $kind -Silent $silent -Url $url -Url64 $url64 -Checksum $hash -Checksum64 $hash64
