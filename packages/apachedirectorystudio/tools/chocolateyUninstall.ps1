@@ -1,12 +1,8 @@
 ﻿$id     = "apachedirectorystudio"
-$name   = "Apache Directory Studio - (remove only)"
-$kind   = "EXE"
-$silent = "/S"
+$name   = "Apache Directory Studio"
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
+$tools  = Split-Path $MyInvocation.MyCommand.Definition
 
-. $tools\uninstall.ps1
+. $tools\shortcut.ps1
 
-$uninstaller = Get-Uninstaller -Name $name
-
-Uninstall-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -File $uninstaller
+Remove-Shortcut -Link $name -SpecialFolder "CommonPrograms"

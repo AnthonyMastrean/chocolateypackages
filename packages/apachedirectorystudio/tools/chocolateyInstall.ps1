@@ -1,9 +1,18 @@
-﻿$name   = "apachedirectorystudio"
-$url    = "https://archive.apache.org/dist/directory/studio/dist/2.0.0.v20130628/ApacheDirectoryStudio-win32-x86-2.0.0.v20130628.exe"
-$url64  = "https://archive.apache.org/dist/directory/studio/dist/2.0.0.v20130628/ApacheDirectoryStudio-win32-x86_64-2.0.0.v20130628.exe"
-$kind   = "EXE"
-$silent = "/S"
-$hash   = "d6dcb0537fbd9d8a301eab22a542a193"
-$hash64 = "f0758eb31062e6842e5bfea77447a4cc"
+﻿$id     = "apachedirectorystudio"
+$name   = "Apache Directory Studio"
+$url    = "http://psg.mtu.edu/pub/apache/directory/studio/2.0.0.v20150606-M9/ApacheDirectoryStudio-2.0.0.v20150606-M9-win32.win32.x86.zip"
+$url64  = "http://psg.mtu.edu/pub/apache/directory/studio/2.0.0.v20150606-M9/ApacheDirectoryStudio-2.0.0.v20150606-M9-win32.win32.x86_64.zip"
+$hash   = "51903e2a48e553d79772c7154830d254"
+$hash64 = "0901e16f8c99821a89cb185367b80936"
 
-Install-ChocolateyPackage -PackageName $name -FileType $kind -Silent $silent -Url $url -Url64 $url64 -Checksum $hash -Checksum64 $hash64
+$tools  = Split-Path $MyInvocation.MyCommand.Definition
+$contents = Split-Path $tools
+$bin    = Join-Path $contents (Join-Path "ApacheDirectoryStudio" "ApacheDirectoryStudio.exe")
+
+. $tools\shortcut.ps1
+. $tools\bins.ps1
+
+Install-ChocolateyZipPackage -PackageName $id -UnzipLocation $contents -Url $url -Url64 $url64 -Checksum $hash -Checksum64 $hash64
+
+New-Shortcut -Link $name -Target $bin -SpecialFolder "CommonPrograms"
+New-IgnoreBin -Path $bin
