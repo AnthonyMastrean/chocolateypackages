@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>flyinglogicpro</id>
-    <title>Flying Logic Pro (Trial)</title>
+    <id>flyinglogicreader</id>
+    <title>Flying Logic Reader</title>
     <version>2.2.11</version>
     <authors>Sciral</authors>
     <owners>Anthony Mastrean</owners>

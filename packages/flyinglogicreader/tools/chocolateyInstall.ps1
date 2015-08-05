@@ -1,6 +1,6 @@
-﻿$id     = "flyinglogicpro"
-$url    = "http://s3.amazonaws.com/flyinglogic.com/download/flying_logic_pro_win.zip"
-$url64  = "http://s3.amazonaws.com/flyinglogic.com/download/flying_logic_pro_win_x64.zip"
+﻿$id     = "flyinglogicreader"
+$url    = "http://s3.amazonaws.com/flyinglogic.com/download/flying_logic_reader_win.zip"
+$url64  = "http://s3.amazonaws.com/flyinglogic.com/download/flying_logic_reader_win_x64.zip"
 $kind   = "EXE"
 
 # This installer does not respect unattended mode (-q), even with an explicit
@@ -10,7 +10,7 @@ $silent = "-q" # (install4j)
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) "content"
-$install = Join-Path $content "Flying Logic Pro Installer.exe"
+$install = Join-Path $content "Flying Logic Reader Installer.exe"
 
 . $tools\bins.ps1
 
