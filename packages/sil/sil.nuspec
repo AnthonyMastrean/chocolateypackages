@@ -20,11 +20,11 @@ Sil comes from a tradition of role-playing games known as roguelikes. They stem 
     <!-- <docsUrl>http://www.amirrorclear.net/flowers/game/sil/Sil-121-Manual.pdf</docsUrl> -->
     <!-- <mailingListUrl></mailingListUrl> -->
     <!-- <bugTrackerUrl></bugTrackerUrl> -->
-    <tags>sil games roguelike</tags>
+    <tags>sil moria tolkein games roguelike</tags>
     <!-- <copyright></copyright> -->
     <!-- <licenseUrl></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/sil.png</iconUrl>-->
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/eb53131f62cd2c1ceb3f298df39a7b7b10691690/public/icons/sil.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
