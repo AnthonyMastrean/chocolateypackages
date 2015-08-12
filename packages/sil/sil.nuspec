@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>sil</id>
+    <title>Sil</title>
+    <version>1.2.1</version>
+    <authors>Sil Development Team</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Sil is a computer role-playing game with a strong emphasis on discovery and tactical combat.</summary>
+    <description>
+Sil is a role-playing game with a strong emphasis on discovery and tactical combat. It has a simple but rich combat system which allows for a great variety of choice: should you wear heavy armour that makes you easier to hit but reduces the damage you take? should you wield heavier weapons to overcome your opponents’ armour, or wield lighter weapons for more accuracy and a greater chance of critical hits? It depends on the situation and the type of character you become. You will also have the chance to retreat back into shadowy corridors to take the enemy one by one, or to stealthily creep up to your opponent and take him unawares.
+
+It is also one of very few games that stays true to the writings of Tolkien. Carefully researched, it dispenses with many generic fantasy tropes and reveals a different world. There are no wizards or priests, no plate mail or magical scrolls. Instead, it is the Norse Saga inspired world that Tolkien imagined, with warriors clad in shining mail, singing songs of rage or sorrow as they slay. The magic of the world is subtle yet powerful: there are songs of fear and of binding, rather than spells of fireball and teleportation.
+
+Sil comes from a tradition of role-playing games known as roguelikes. They stem from a game called Rogue that was written before computers had graphics and instead used symbols on the screen to represent a dungeon filled with monsters and treasure, that was randomly generated each time you played. Rogue also had ‘permanent death’: you have only one life and must choose wisely lest you have to start again. Finally, it had a system of unidentified items whose powers you must discover for yourself. Sil inherits all of these features, though it is much more advanced in many ways. 
+    </description>
+    <projectUrl>http://www.amirrorclear.net/flowers/game/sil/</projectUrl>
+    <!-- <packageSourceUrl></packageSourceUrl> -->
+    <!-- <projectSourceUrl></projectSourceUrl> -->
+    <!-- <docsUrl>http://www.amirrorclear.net/flowers/game/sil/Sil-121-Manual.pdf</docsUrl> -->
+    <!-- <mailingListUrl></mailingListUrl> -->
+    <!-- <bugTrackerUrl></bugTrackerUrl> -->
+    <tags>sil games roguelike</tags>
+    <!-- <copyright></copyright> -->
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/sil.png</iconUrl>-->
+    <!--<dependencies>
+      <dependency id="" version="__VERSION__" />
+      <dependency id="" />
+    </dependencies>-->
+    <releaseNotes>http://www.amirrorclear.net/flowers/game/sil/changes.txt</releaseNotes>
+    <!--<provides></provides>-->
+  </metadata>
+</package>
