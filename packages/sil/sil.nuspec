@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>sil</id>
     <title>Sil</title>
@@ -12,7 +12,7 @@ Sil is a role-playing game with a strong emphasis on discovery and tactical comb
 
 It is also one of very few games that stays true to the writings of Tolkien. Carefully researched, it dispenses with many generic fantasy tropes and reveals a different world. There are no wizards or priests, no plate mail or magical scrolls. Instead, it is the Norse Saga inspired world that Tolkien imagined, with warriors clad in shining mail, singing songs of rage or sorrow as they slay. The magic of the world is subtle yet powerful: there are songs of fear and of binding, rather than spells of fireball and teleportation.
 
-Sil comes from a tradition of role-playing games known as roguelikes. They stem from a game called Rogue that was written before computers had graphics and instead used symbols on the screen to represent a dungeon filled with monsters and treasure, that was randomly generated each time you played. Rogue also had ‘permanent death’: you have only one life and must choose wisely lest you have to start again. Finally, it had a system of unidentified items whose powers you must discover for yourself. Sil inherits all of these features, though it is much more advanced in many ways. 
+Sil comes from a tradition of role-playing games known as roguelikes. They stem from a game called Rogue that was written before computers had graphics and instead used symbols on the screen to represent a dungeon filled with monsters and treasure, that was randomly generated each time you played. Rogue also had ‘permanent death’: you have only one life and must choose wisely lest you have to start again. Finally, it had a system of unidentified items whose powers you must discover for yourself. Sil inherits all of these features, though it is much more advanced in many ways.
     </description>
     <projectUrl>http://www.amirrorclear.net/flowers/game/sil/</projectUrl>
     <!-- <packageSourceUrl></packageSourceUrl> -->

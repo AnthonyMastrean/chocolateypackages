@@ -121,7 +121,7 @@ function Install-Shortcut {
   }
 }
 
-function Unistall-Shortcut {
+function Uninstall-Shortcut {
   [CmdletBinding()]
   param(
     [Parameter(Mandatory = $true)]
