@@ -2,12 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>notepad2</id>
-    <version>4.2.25.3</version>
+    <version>4.2.25.4</version>
     <title>Notepad2</title>
     <authors>Florian Balmer</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>http://www.flos-freeware.ch/notepad2.html</projectUrl>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/notepad2.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/c9f61745624703c860058abfdb7e6e6651e80f93/public/icons/notepad2.png</iconUrl>
+    <licenseUrl>http://www.flos-freeware.ch/doc/Notepad2.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A fast and light-weight Notepad-like text editor with syntax highlighting.</description>
     <summary>A fast and light-weight Notepad-like text editor with syntax highlighting.</summary>
