@@ -1,32 +1,17 @@
-﻿$name = 'autohotkey'
+﻿$tools   = Split-Path $MyInvocation.MyCommand.Definition
+$content = Join-Path (Split-Path $tools) 'content'
+$exe     = Join-Path $content 'dtksneak.exe'
 
-$startup      = "$ENV:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
+. $tools\shortcut.ps1
 
-$tools        = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
-$content      = Join-Path (Split-Path $tools) "content"
+Get-ChocolateyWebFile `
+  -PackageName  'dtksneak' `
+  -Url          'https://github.com/AnthonyMastrean/autohotkey/releases/download/20150826/dtksneak.exe' `
+  -Checksum     '0a22c21ba7caf5347587ed168a598a1e' `
+  -FileFullPath $exe
 
-$targetPath   = Join-Path "$content" "dtk.ahk"
-$iconPath     = Join-Path "$content" "dtk.ico"
-$shortcutPath = Join-Path "$startup" "dtksneak.lnk"
-
-try 
-{ 
-  #Runs processes asserting UAC, will assert administrative rights - used by Install-ChocolateyInstallPackage
-  #Run-ChocolateyProcessAsAdmin 'STATEMENTS_TO_RUN' 'Optional_Application_If_Not_PowerShell'
-  
-  $shell = New-Object -ComObject "Wscript.Shell"
-  $shortcut = $shell.CreateShortcut($shortcutPath)
-  $shortcut.TargetPath = $targetPath  
-  $shortcut.WorkingDirectory = $content
-  $shortcut.IconLocation = $iconPath
-  $shortcut.Save()
-  
-  & $shortcutPath
-  
-  Write-ChocolateySuccess "$name"
-} 
-catch 
-{
-  Write-ChocolateyFailure "$name" "$($_.Exception.Message)"
-  throw 
-}
+Install-Shortcut `
+  -Link          'DTK Sneak' `
+  -Target        $exe `
+  -SpecialFolder 'CommonStartup' `
+  -Launch

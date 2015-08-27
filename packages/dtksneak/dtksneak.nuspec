@@ -3,15 +3,12 @@
   <metadata>
     <id>dtksneak</id>
     <title>DTK Sneak</title>
-    <version>1.0.0.1</version>
+    <version>1.0.0.20150826</version>
     <authors>Anthony Mastrean</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>The DTK Barcode Reader SDK _loves_ to pop up a licensing dialog when running in debug. It's annoying to have to babysit that dialog. This script, when running, watches for the dialog and automatically clicks the Close button.</summary>
-    <description>The DTK Barcode Reader SDK _loves_ to pop up a licensing dialog when running in debug. It's annoying to have to babysit that dialog. This script, when running, watches for the dialog and automatically clicks the Close button.</description>
-    <tags>dtk automation</tags>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/dtksneak.png</iconUrl>
-    <dependencies>
-      <dependency id="autohotkey" />
-    </dependencies>
+    <summary>Auto-close the DTK activation dialog.</summary>
+    <description>The DTK Barcode Reader SDK _loves_ to pop up a licensing dialog when running in debug. It's annoying to babysit that dialog. This app, when running, watches for the dialog and automatically clicks the Close button.</description>
+    <tags>dtk autohotkey</tags>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/7e70e3502ed7139a8de807c3b0ec8fa9edc9269d/public/icons/dtksneak.png</iconUrl>
   </metadata>
 </package>
