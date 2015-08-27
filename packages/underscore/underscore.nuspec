@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>underscore</id>
+    <version>1.0.0.20150826</version>
+    <title>Underscore Mode</title>
+    <authors>Anthony Mastrean</authors>
+    <owners>Anthony Mastrean</owners>
+    <projectUrl>https://github.com/AnthonyMastrean/autohotkey/tree/master/underscore</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/99229af126d03d7737ff5b4716da357c79330a6f/public/icons/underscore.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Make the spacebar insert underscores instead of spaces. Enter underscore mode by pressing CTRL + SHIFT +U. Exit underscore mode by pressing Tab, Esc, or Enter.</description>
+    <summary>Replace the spaces with underscores!</summary>
+    <tags>underscore spacebar autohotkey</tags>
+  </metadata>
+</package>
