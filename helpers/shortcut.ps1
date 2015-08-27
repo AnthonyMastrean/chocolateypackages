@@ -69,13 +69,18 @@
 
   The tooltip to display on the shortcut.
 
+  .PARAMETER Launch
+
+  Whether to launch this link immediately after creating it. Useful for links
+  created in the CommonStartup special folder.
+
   .EXAMPLE
 
-  Install-Shortcut -Link "foo" -Target "foo.exe" -SpecialFolder "CommonDesktop" -Description "The Foo program"
+  Install-Shortcut -Link "foo" -Target "foo.exe" -SpecialFolder "CommonPrograms" -Description "Foo Bar"
 
   .EXAMPLE
 
-  Unistall-Shortcut -Link "foo" -SpecialFolder "CommonDesktop"
+  Uninstall-Shortcut -Link "foo" -SpecialFolder "CommonDesktop"
 
   .LINK
 
@@ -95,7 +100,8 @@ function Install-Shortcut {
 
     [string] $SpecialFolder,
     [string] $Icon,
-    [string] $Description
+    [string] $Description,
+    [switch] $Launch
   )
 
   $Link = Resolve-ShortcutLink -Link $Link -SpecialFolder $SpecialFolder
@@ -118,6 +124,10 @@ function Install-Shortcut {
 
   if(-not(Test-Path $Link)) {
     throw "Failed to create shortcut: $Link"
+  }
+
+  if($Launch) {
+    & $Link
   }
 }
 
