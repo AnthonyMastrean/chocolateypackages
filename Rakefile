@@ -1,60 +1,44 @@
-require "erb"
-require "fileutils"
-require "ostruct"
 require "rake/clean"
 require "rexml/document"
-require "yaml"
 
-def output(nuspec)
+CLOBBER.include("bin/*.nupkg")
+
+def nupkg(nuspec)
   name = File.basename(nuspec, ".nuspec")
   doc = REXML::Document.new(File.open(nuspec))
   version = REXML::XPath.first(doc, "/package/metadata/version").text
 
-  return "#{name}.#{version}.nupkg"
+  "#{name}.#{version}.nupkg"
 end
 
-CLOBBER.include("output/*.nupkg")
+NUSPECS = FileList["packages/**/*.nuspec"]
+NUPKGS = NUSPECS.map{ |file| File.join("bin", nupkg(file)) }
 
-task :default => ["package:all"]
+directory "bin"
 
-namespace :package do
-  NUSPECS = FileList["packages/**/*.nuspec"]
-  NUPKGS = NUSPECS.map{ |nuspec| File.join("output", output(nuspec)) }
+task :default => [:pack]
 
-  directory "output"
+desc "Build all packages"
+multitask :pack => NUPKGS
 
-  desc "Package all of the specs"
-  multitask :all => NUPKGS
+desc "Create new package"
+task :new, [:name, :version, :title] do |task, args|
+  args.with_defaults(:title => args[:name])
 
-  desc "Start a new package"
-  task :new, [:id, :version, :title] do |task, args|
-    args.with_defaults(:title => args[:id])
-
-    FileUtils.cp_r("template", "packages/#{args[:id]}")
-    FileUtils.mv("packages/#{args[:id]}/template.nuspec", "packages/#{args[:id]}/#{args[:id]}.nuspec")
-
-    Dir["packages/#{args[:id]}/**/*"].select{ |path| File.file?(path) }.each do |path|
-      template = ERB.new(File.read(path))
-      binder = OpenStruct.new(args)
-      content = template.result(binder.instance_eval { binding })
-
-      File.write(path, content)
-    end
-  end
-
-  NUSPECS.zip NUPKGS do |nuspec, nupkg|
-    file nupkg => ["output", nuspec] do
-      system "nuget pack #{nuspec} -OutputDirectory output -NoPackageAnalysis -NonInteractive -Verbosity normal"
-    end
+  Dir.chdir("packages") do
+    system("choco new #{args[:name]}")
   end
 end
 
-namespace :web do
-  ICONS = Dir["public/icons/*.png"]
+desc "Optimize icons"
+task :optimize do
+  `git ls-files --others --modified --exclude-standard -- *.png`.split("\n").each do |file|
+    system("pngout \"#{file}\"")
+  end
+end
 
-  task :optimize do
-    `git ls-files --others --modified --exclude-standard -- *.png`.split("\n").each do |path|
-      system "pngout \"#{path}\""
-    end
+NUSPECS.zip NUPKGS do |nuspec, nupkg|
+  file nupkg => ["bin", nuspec] do
+    system("nuget pack \"#{nuspec}\" -OutputDirectory bin -NoPackageAnalysis -NonInteractive -Verbosity normal")
   end
 end
