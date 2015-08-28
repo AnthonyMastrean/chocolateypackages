@@ -1,22 +1,23 @@
-﻿$name = "dejavufonts"
-$url = "http://downloads.sourceforge.net/project/dejavu/dejavu/2.34/dejavu-fonts-ttf-2.34.zip"
+﻿$tools   = Split-Path $MyInvocation.MyCommand.Definition
+$package = Split-Path $tools
+$fonts   = Join-Path $package 'dejavu-fonts-ttf-2.35\ttf'
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) "content"
-$zip = Join-Path $content "dejavu-fonts-ttf-2.34\ttf"
+function Install-Fonts {
+  param([string] $path)
 
-Install-ChocolateyZipPackage $name $url $content
-
-try {
   $FONT_FOLDER = 0x14
-  $shell = New-Object -ComObject "Shell.Application"
-  $source = $shell.Namespace($zip)
+
+  $shell = New-Object -ComObject 'Shell.Application'
+  $source = $shell.Namespace($path)
   $target = $shell.Namespace($FONT_FOLDER)
   $target.CopyHere($source.Items())
-  
-  Write-ChocolateySuccess $name
-} 
-catch {
-  Write-ChocolateyFailure $name $_.Exception.Message
-  throw 
 }
+
+Install-ChocolateyZipPackage `
+  -PackageName   'dejavufonts' `
+  -Url           'http://sourceforge.net/projects/dejavu/files/dejavu/2.35/dejavu-fonts-ttf-2.35.zip' `
+  -Checksum      'd8b5214d35bcd2bfcb2cffa7795b351d' `
+  -UnzipLocation $package
+
+Install-Fonts `
+  -Path $fonts

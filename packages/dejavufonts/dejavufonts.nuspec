@@ -2,15 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>dejavufonts</id>
-    <version>2.34</version>
+    <version>2.35</version>
     <title>DejaVu Fonts</title>
     <authors>DejaVu</authors>
     <owners>Anthony Mastrean</owners>
     <licenseUrl>http://dejavu-fonts.org/wiki/License</licenseUrl>
     <projectUrl>http://dejavu-fonts.org/wiki/Main_Page</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/a6150a9f6ee46d700049b76009f89f7be6093ef7/public/icons/dejavufonts.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>The DejaVu fonts are a font family based on the Bitstream Vera Fonts. Its purpose is to provide a wider range of characters while maintaining the original look and feel.</description>
-    <summary>The DejaVu fonts are a font family based on the Bitstream Vera Fonts. Its purpose is to provide a wider range of characters while maintaining the original look and feel.</summary>
-    <tags>dejavu sans serif mono font fonts</tags>
+    <summary>The DejaVu fonts are a font family based on the Bitstream Vera Fonts.</summary>
+    <tags>dejavu sans serif mono fonts</tags>
   </metadata>
 </package>
