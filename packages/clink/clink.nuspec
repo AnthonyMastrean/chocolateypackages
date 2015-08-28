@@ -3,18 +3,16 @@
   <metadata>
     <id>clink</id>
     <title>Clink</title>
-    <version>0.4</version>
+    <version>0.4.4</version>
     <authors>Martin Ridgers</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Powerful Bash-style command line editing for cmd.exe</summary>
     <description>Clink combines the native Windows shell cmd.exe with the powerful command line editing features of the GNU Readline library, which provides rich completion, history, and line-editing capabilities. Readline is best known for its use in the well-known Unix shell Bash, the standard shell for Mac OS X and many Linux distributions.</description>
     <projectUrl>http://mridgers.github.io/clink/</projectUrl>
-    <tags>cmd bash readline editing</tags>
+    <tags>cmd command console bash readline</tags>
     <licenseUrl>https://github.com/mridgers/clink/blob/47597cc9207ce203e108cffbaa611713e96db6e3/LICENSE</licenseUrl>
+    <releaseNotes>https://github.com/mridgers/clink/releases/tag/0.4.4</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/clink.png</iconUrl>
-    <dependencies>
-      <dependency id="clink.install" version="[0.4,0.5)" />
-    </dependencies>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/b99806f802877137ddb602da4abbdc4ac8983c46/public/icons/clink.png</iconUrl>
   </metadata>
 </package>
