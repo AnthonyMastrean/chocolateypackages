@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>havdetectiontool</id>
+    <title>Microsoft Hardware-Assisted Virtualization Detection Tool</title>
+    <version>1.0</version>
+    <authors>Microsoft</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>The Hardware-assisted virtualization (HAV) detection tool checks if the computer processor supports HAV and if this setting is enabled.</summary>
+    <description>
+Windows Virtual PC requires processors capable of hardware-assisted virtualization with AMD-V™, Intel® VT or VIA® VT turned on in the BIOS. The HAV detection tool helps you check if the computer processor supports hardware virtualization. The tool also checks if this feature is enabled on the processor. 
+    </description>
+    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=592</projectUrl>
+    <tags>virtualization vt vtx</tags>
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/d62b7b1727204d11ec90a9c38eaabe78e20ecb09/public/icons/windows8.png</iconUrl>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
