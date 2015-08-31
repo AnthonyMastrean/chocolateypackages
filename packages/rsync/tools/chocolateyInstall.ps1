@@ -1,24 +1,16 @@
-﻿$id  = "rsync"
-$url = "https://www.itefix.net/dl/cwRsync_5.4.1_x86_Free.zip"
-
-$tools      = Split-Path $MyInvocation.MyCommand.Definition
-$content    = Join-Path (Split-Path $tools) "content"
-$rsync_home = Join-Path $content "cwRsync_5.4.1_x86_Free"
-$shimgen    = Join-Path $ENV:chocolateyInstall "tools\shimgen.exe"
+﻿$tools   = Split-Path $MyInvocation.MyCommand.Definition
+$package = Split-Path $tools
+$content = Join-Path $package 'cwRsync_5.4.1_x86_Free'
 
 . $tools\bins.ps1
 
-Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content
+Install-ChocolateyZipPackage `
+    -PackageName 'rsync' `
+    -Url 'https://www.itefix.net/dl/cwRsync_5.4.1_x86_Free.zip' `
+    -UnzipLocation $package
 
 # This package requires the RSYNC_HOME directory on the PATH and a HOME
 # environment variable. This cannot be provided with Chocolatey's automatic
 # shimming. I have to shim custom batch files.
-Get-ChildItem $tools\*.bat | %{
-  $bat      = $_
-  $basename = (Split-Path -Leaf $bat) -replace ".bat", ".exe"
-  $exe      = Join-Path $ENV:chocolateyInstall "bin\$basename"
-
-  & $shimgen --output="$exe" --path="$bat"
-}
-
-Get-ChildItem $rsync_home\*.exe | New-IgnoreBin
+Get-ChildItem $tools\*.bat | %{ Install-BinFile -Name $_.BaseName -Path $_ }
+Get-ChildItem $content\*.exe | New-IgnoreBin

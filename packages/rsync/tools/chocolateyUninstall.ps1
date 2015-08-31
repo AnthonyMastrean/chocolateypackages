@@ -1,7 +1,6 @@
-# Remove the custom shims
-Get-ChildItem $tools\*.bat `
-  | Split-Path -Leaf `
-  | %{ $_ -replace ".bat", ".exe" } `
-  | %{ Join-Path $ENV:chocolateyInstall "bin\$_" } `
-  | ?{ Test-Path $_ } `
-  | Remove-Item -Force
+$tools = Split-Path $MyInvocation.MyCommand.Definition
+
+# This package requires the RSYNC_HOME directory on the PATH and a HOME
+# environment variable. This cannot be provided with Chocolatey's automatic
+# shimming. I have to shim custom batch files.
+Get-ChildItem $tools\*.bat | %{ Uninstall-BinFile -Name $_.BaseName -Path $_ }
