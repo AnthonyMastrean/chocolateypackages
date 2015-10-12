@@ -1,6 +1,5 @@
-﻿$id     = "kindle"
-$url    = "http://kindleforpc.amazon.com/40996/KindleForPC-installer-1.12.40996.exe"
-$kind   = "EXE"
-$silent = "/S"
-
-Install-ChocolateyPackage -PackageName $id -InstallerType $kind -SilentArgs $silent -Url $url
+﻿Install-ChocolateyPackage `
+  -PackageName 'kindle' `
+  -InstallerType 'EXE' `
+  -SilentArgs '/S' `
+  -Url 'http://kindleforpc.amazon.com/40996/KindleForPC-installer-1.12.40996.exe'
