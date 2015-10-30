@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>rescuetime</id>
+    <title>RescueTime</title>
+    <version>2.11</version>
+    <authors>RescueTime</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>RescueTime helps you understand your daily habits so you can focus and be more productive.</summary>
+    <description>
+Find your ideal work‑life balance. With so many distractions and possibilities in your digital life, it's easy to get scattered. RescueTime helps you understand your daily habits so you can focus and be more productive.
+    </description>
+    <projectUrl>https://www.rescuetime.com/</projectUrl>
+    <tags>time management productivity</tags>
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/rescuetime.png</iconUrl>-->
+  </metadata>
+</package>
