@@ -12,8 +12,7 @@ Find your ideal work‑life balance. With so many distractions and possibilities
     </description>
     <projectUrl>https://www.rescuetime.com/</projectUrl>
     <tags>time management productivity</tags>
-    <!-- <licenseUrl></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/rescuetime.png</iconUrl>-->
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/7ebbebfc35217ef44cf26507ab32dab2079c53a4/public/icons/rescuetime.png</iconUrl>
   </metadata>
 </package>
