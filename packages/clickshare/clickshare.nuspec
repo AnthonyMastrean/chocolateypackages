@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>clickshare</id>
+    <title>Barco ClickShare Launcher Installer</title>
+    <version>1.7.0</version>
+    <authors>Barco</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>ClickShare wireless presentation system</summary>
+    <description>
+ClickShare lets you share your content on the large meeting room screen in the most intuitive way possible. Cables are no longer needed: just start your presentation by simply pushing a button – whether of a USB-device you connect to your laptop PC or MAC, or by using the user-friendly app for iPhone, iPad, or Android. What’s more, ClickShare also automatically displays the most optimal resolution, without messing up the layout on your laptop.
+    </description>
+    <projectUrl>http://www.barco.com/en/clickshare</projectUrl>
+    <tags>wireless presentation</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/d93a34b85e86b31dec806eb3dab3e912fc95d22f/public/icons/clickshare.png</iconUrl>
+  </metadata>
+</package>
