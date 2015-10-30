@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<package>
   <metadata>
     <id>clickshare</id>
     <title>Barco ClickShare Launcher Installer</title>
