@@ -3,7 +3,7 @@
   <metadata>
     <id>intellijidea</id>
     <title>JetBrains IntelliJ IDEA</title>
-    <version>14.0</version>
+    <version>15.0</version>
     <authors>JetBrains</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The Most Intelligent Java IDE</summary>
@@ -14,7 +14,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/intellijidea.png</iconUrl>
     <dependencies>
-      <dependency id="intellijidea-community" version="[14.0, 15.0)" />
+      <dependency id="intellijidea-community" version="[15.0, 16.0)" />
     </dependencies>
   </metadata>
 </package>
