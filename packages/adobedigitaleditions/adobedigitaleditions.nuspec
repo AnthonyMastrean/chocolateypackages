@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package>
   <metadata>
     <id>adobedigitaleditions</id>
     <title>Adobe Digital Editions</title>
-    <version>4.0.2</version>
+    <version>4.5</version>
     <authors>Adobe</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Optimize your reading experience with this free reading app, now with EPUB 3 support.</summary>
-    <description>Readers want choice, flexibility, and ease — to buy or borrow books and read them on their preferred reading devices.  Adobe Digital Editions software offers an engaging way to view and manage media rich eBooks and other digital publications. Use it to download and purchase digital content, which can be read both online and offline. Transfer copy-protected eBooks from your personal computer to other computers or devices. Organize your eBooks into a custom library and annotate pages.</description>
+    <description>
+Readers want choice, flexibility, and ease — to buy or borrow books and read them on their preferred reading devices.  Adobe Digital Editions software offers an engaging way to view and manage media rich eBooks and other digital publications. Use it to download and purchase digital content, which can be read both online and offline. Transfer copy-protected eBooks from your personal computer to other computers or devices. Organize your eBooks into a custom library and annotate pages.
+    </description>
     <projectUrl>http://www.adobe.com/solutions/ebook/digital-editions.html</projectUrl>
-    <tags>adobe digital ereader epub book</tags>
+    <tags>ereader epub not-unattended</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/adobedigitaleditions.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/04a1c9042bf4f873778111436be3f2a8515bbadd/public/icons/adobedigitaleditions.png</iconUrl>
   </metadata>
 </package>
