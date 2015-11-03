@@ -1,5 +1,5 @@
 $id     = "intellijidea-ultimate"
-$name   = "IntelliJ IDEA Ultimate Edition 14.1"
+$name   = "IntelliJ IDEA Ultimate Edition 15.0"
 $kind   = "EXE"
 $silent = "/S"
 
