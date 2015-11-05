@@ -3,14 +3,19 @@
   <metadata>
     <id>imagej</id>
     <title>ImageJ</title>
-    <version>1.45.0.1</version>
+    <version>1.49</version>
     <authors>Wayne Rasband</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Image Processing and Analysis in Java</summary>
-    <description>ImageJ is a public domain Java image processing program inspired by NIH Image for the Macintosh. It can display, edit, analyze, process, save and print 8-bit, 16-bit and 32-bit images. It can read many image formats including TIFF, GIF, JPEG, BMP, DICOM, FITS and "raw". It supports "stacks", a series of images that share a single window. It is multithreaded, so time-consuming operations such as image file reading can be performed in parallel with other operations.</description>
+    <description>
+ImageJ is a public domain Java image processing program inspired by NIH Image for the Macintosh. It can display, edit, analyze, process, save and print 8-bit, 16-bit and 32-bit images. It can read many image formats including TIFF, GIF, JPEG, BMP, DICOM, FITS and "raw". It supports "stacks", a series of images that share a single window. It is multithreaded, so time-consuming operations such as image file reading can be performed in parallel with other operations.
+    </description>
     <projectUrl>http://rsbweb.nih.gov/ij/</projectUrl>
     <tags>image processing nih</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/imagej.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/f260d356e9f8459389ee4fcbe2ef0a0996f1ea87/public/icons/imagej.png</iconUrl>
+    <dependencies>
+        <dependency id="jdk8" />
+    </dependencies>
   </metadata>
 </package>
