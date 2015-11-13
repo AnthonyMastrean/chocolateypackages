@@ -3,7 +3,7 @@
   <metadata>
     <id>clink</id>
     <title>Clink</title>
-    <version>0.4.4</version>
+    <version>0.4.5</version>
     <authors>Martin Ridgers</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Powerful Bash-style command line editing for cmd.exe</summary>
@@ -11,7 +11,7 @@
     <projectUrl>http://mridgers.github.io/clink/</projectUrl>
     <tags>cmd command console bash readline</tags>
     <licenseUrl>https://github.com/mridgers/clink/blob/47597cc9207ce203e108cffbaa611713e96db6e3/LICENSE</licenseUrl>
-    <releaseNotes>https://github.com/mridgers/clink/releases/tag/0.4.4</releaseNotes>
+    <releaseNotes>https://github.com/mridgers/clink/releases/tag/0.4.5</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/b99806f802877137ddb602da4abbdc4ac8983c46/public/icons/clink.png</iconUrl>
   </metadata>
