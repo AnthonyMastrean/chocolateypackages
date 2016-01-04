@@ -2,15 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mousewithoutborders</id>
-    <version>2.1.2.1213</version>
+    <version>2.1.5</version>
     <title>Mouse Without Borders</title>
     <authors>Microsoft Garage,Truong Do</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=35460</projectUrl>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/mousewithoutborders.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/98c0ba0689a3cdbfff5cf4298d9ef995018af522/public/icons/mousewithoutborders.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Mouse without Borders is a product that makes you the captain of your computer fleet by allowing you to control up to four computers from a single mouse and keyboard. This means that with Mouse without Borders you can copy text or drag and drop files across computers.</description>
     <summary>Mouse without Borders is a project that allows you to reach across your PC's as if they were part of one single desktop.</summary>
+    <description>
+Mouse without Borders is a product that makes you the captain of your computer fleet by allowing you to control up to four computers from a single mouse and keyboard. This means that with Mouse without Borders you can copy text or drag and drop files across computers.
+    </description>
     <tags>microsoft garage mouse monitor</tags>
   </metadata>
 </package>
