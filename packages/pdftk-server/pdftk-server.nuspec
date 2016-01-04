@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>pdftk-server</id>
+    <title>The PDF Toolkit (Server)</title>
+    <version>2.02</version>
+    <authors>Sid Steward, PDFLabs</authors>
+    <owners>dukeofkanabec</owners>
+    <description>
+PDFtk Server is our command-line tool for working with PDFs. It is commonly used for client-side scripting or server-side processing of PDFs.
+
+It is also used by OEMs and ISVs to give their products the ability to manipulate PDFs. A commercial license is required to distribute PDFtk with your commercial product.
+    </description>
+    <summary>PDFtk Server is our command-line tool for working with PDFs.</summary>
+    <copyright>Copyright © 2004–2014 Steward and Lee, LLC</copyright>
+    <tags>pdf pdflabs</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/2f30f65302fb337e544e1bbcad147356a6bc926f/public/icons/pdftk.png</iconUrl>
+    <projectUrl>https://www.pdflabs.com/tools/pdftk-server/</projectUrl>
+    <licenseUrl>https://www.pdflabs.com/docs/pdftk-license/</licenseUrl>
+    <packageSourceUrl>https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-win-setup.exe</packageSourceUrl>
+    <docsUrl>https://www.pdflabs.com/docs/pdftk-man-page/</docsUrl>
+  </metadata>
+</package>

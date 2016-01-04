@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pdftk</id>
-    <title>The PDF Toolkit</title>
+    <title>The PDF Toolkit (Free)</title>
     <version>2.02</version>
-    <authors>Sid Steward</authors>
+    <authors>Sid Steward, PDFLabs</authors>
     <owners>Anthony Mastrean</owners>
-    <description>If PDF is electronic paper, then pdftk is an electronic staple-remover, hole-punch, binder, secret-decoder-ring, and X-Ray-glasses. Pdftk is a simple tool for doing everyday things with PDF documents.</description>
-    <projectUrl>http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/</projectUrl>
-    <tags>pdf</tags>
-    <licenseUrl>http://www.pdflabs.com/docs/pdftk-license/</licenseUrl>
+    <description>
+If PDF is electronic paper, then pdftk is an electronic staple-remover, hole-punch, binder, secret-decoder-ring, and X-Ray-glasses. Pdftk is a simple tool for doing everyday things with PDF documents.
+    </description>
+    <summary>PDFtk is a simple tool for doing everyday things with PDF documents.</summary>
+    <copyright>Copyright © 2004–2014 Steward and Lee, LLC</copyright>
+    <tags>pdf pdflabs</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/pdftk.png</iconUrl>
+    <projectUrl>http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/</projectUrl>
+    <licenseUrl>http://www.pdflabs.com/docs/pdftk-license/</licenseUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/2f30f65302fb337e544e1bbcad147356a6bc926f/public/icons/pdftk.png</iconUrl>
+    <packageSourceUrl>https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_free-2.02-win-setup.exe</packageSourceUrl>
+    <docsUrl>https://www.pdflabs.com/docs/pdftk-man-page/</docsUrl>
   </metadata>
 </package>
