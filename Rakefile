@@ -39,6 +39,6 @@ end
 
 NUSPECS.zip NUPKGS do |nuspec, nupkg|
   file nupkg => ["bin", nuspec] do
-    system("nuget pack \"#{nuspec}\" -OutputDirectory bin -NoPackageAnalysis -NonInteractive")
+    system("choco pack \"#{nuspec}\"")
   end
 end
