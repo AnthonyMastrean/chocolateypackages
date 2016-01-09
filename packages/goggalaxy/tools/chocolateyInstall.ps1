@@ -5,5 +5,4 @@ $fileType = 'EXE'
 $silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
 $validExitCodes = @(0)
 
-
 Install-ChocolateyPackage $packageName $fileType $silentArgs $url -validExitCodes $validExitCodes
