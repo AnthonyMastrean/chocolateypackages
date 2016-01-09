@@ -17,7 +17,7 @@
     <bugTrackerUrl></bugTrackerUrl>-->
     <tags>goggalaxy galaxy gog games admin</tags>
     <copyright>GOG.com © 2016</copyright>
-    <licenseUrl></licenseUrl>
+    <licenseUrl>https://www.gog.com/support/policies/gog_user_agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/a561f0de0d19224bf85d694f74f6ce52f8bf9c08/public/icons/goggalaxy.png</iconUrl>-->
     <!--<dependencies>
