@@ -1,6 +1,9 @@
-﻿$id     = "goggalaxy"
-$url    = "http://cdn.gog.com/open/galaxy/client/installers/setup_galaxy_1.0.2.958.exe"
-$kind   = "EXE"
-$silent = "/VERYSILENT /NORESTART"
+﻿$packageName = 'GOGGalaxy'
+$version = '{{PackageVersion}}'
+$url = "http://cdn.gog.com/open/galaxy/client/setup_galaxy_1.1.5.28.exe"
+$fileType = 'EXE'
+$silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
+$validExitCodes = @(0)
 
-Install-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -Url $url
+
+Install-ChocolateyPackage $packageName $fileType $silentArgs $url -validExitCodes $validExitCodes

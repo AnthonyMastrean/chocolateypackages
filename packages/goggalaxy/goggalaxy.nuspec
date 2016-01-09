@@ -1,19 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>goggalaxy</id>
     <title>GOG Galaxy</title>
-    <version>1.0.2.958</version>
+    <version>{{PackageVersion}}</version>
     <authors>GOG</authors>
-    <owners>Anthony Mastrean</owners>
+    <owners>AnthonyMastrean</owners>
     <summary>Truly gamer friendly, DRM-free online gaming platform.</summary>
-    <description>
-GOG GALAXY is a fully optional client to install, play and update your games. It also offers online multiplayer, achievements, chat, game-time tracking and more - but it’s up to you which features you want to use.
-    </description>
+    <description>GOG GALAXY is a fully optional client to install, play and update your games. It also offers online multiplayer, achievements, chat, game-time tracking and more - but it’s up to you which features you want to use.</description>
     <projectUrl>https://www.gog.com/galaxy</projectUrl>
-    <tags>games gog</tags>
-    <!-- <licenseUrl></licenseUrl> -->
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/goggalaxy</packageSourceUrl>
+    <!--<projectSourceUrl></projectSourceUrl>
+    <docsUrl></docsUrl>
+    <mailingListUrl></mailingListUrl>
+    <bugTrackerUrl></bugTrackerUrl>-->
+    <tags>gog-galaxy gog games admin</tags>
+    <copyright>GOG.com © 2016</copyright>
+    <licenseUrl></licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/a561f0de0d19224bf85d694f74f6ce52f8bf9c08/public/icons/goggalaxy.png</iconUrl>
+    <!--<iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/a561f0de0d19224bf85d694f74f6ce52f8bf9c08/public/icons/goggalaxy.png</iconUrl>-->
+    <!--<dependencies>
+      <dependency id="" version="__VERSION__" />
+      <dependency id="" />
+    </dependencies>-->
+    <releaseNotes>https://www.gog.com/galaxy#glx-whats-new</releaseNotes>
+    <!--<provides></provides>-->
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
