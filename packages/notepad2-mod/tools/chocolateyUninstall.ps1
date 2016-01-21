@@ -6,7 +6,7 @@ $package_args = @{
   packageName = 'notepad2-mod'
   fileType    = 'EXE'
   silentArgs  = '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES'
-  file        = Get-Uninstaller -Name 'Notepad2-mod 4.2.25.955'
+  file        = Get-Uninstaller -Name 'Notepad2-mod 4.2.25.964'
 }
 
 Uninstall-ChocolateyPackage @package_args
