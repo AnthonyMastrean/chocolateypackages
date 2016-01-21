@@ -5,8 +5,8 @@ $package_args = @{
   packageName  = 'notepad2-mod'
   url          = $url
   url64        = $url
-  checksum     = 'b9c150d3ae4f09264a7a5b736072becb'
-  checksumType = 'md5'
+  checksum     = '83c1e8e3d57cbb5d5be94cf851df680fa7d2f9de'
+  checksumType = 'sha1'
   fileType     = 'EXE'
   silentArgs   = '/VERYSILENT /NORESTART'
 }
