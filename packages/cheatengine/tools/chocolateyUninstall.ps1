@@ -1,12 +1,9 @@
-$id     = 'cheatengine'
-$name   = 'Cheat Engine 6.4'
-$kind   = 'EXE'
-$silent = '/VERYSILENT /NORESTART'
-
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 
 . $tools\uninstall.ps1
 
-$uninstaller = Get-Uninstaller -Name $name
-
-Uninstall-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -File $uninstaller
+Uninstall-ChocolateyPackage `
+  -PackageName 'cheatengine' `
+  -FileType 'EXE' `
+  -Silent '/VERYSILENT /NORESTART' `
+  -File (Get-Uninstaller -Name 'Cheat Engine 6.5')
