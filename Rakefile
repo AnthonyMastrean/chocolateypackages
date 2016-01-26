@@ -1,8 +1,6 @@
 require "rake/clean"
 require "rexml/document"
 
-CLOBBER.include("bin/*.nupkg")
-
 def nupkg(nuspec)
   name = File.basename(nuspec, ".nuspec")
   doc = REXML::Document.new(File.open(nuspec))
@@ -11,24 +9,15 @@ def nupkg(nuspec)
   "#{name}.#{version}.nupkg"
 end
 
-NUSPECS = FileList["packages/**/*.nuspec"]
-NUPKGS = NUSPECS.map{ |file| File.join("bin", nupkg(file)) }
+CLOBBER.include("**/*.nupkg")
 
-directory "bin"
+SPECS = FileList["packages/**/*.nuspec"]
+PACKAGES = SPECS.map{ |file| File.join(File.dirname(file), nupkg(file)) }
 
 task :default => [:pack]
 
 desc "Build all packages"
-multitask :pack => NUPKGS
-
-desc "Create new package"
-task :new, [:name, :version, :title] do |task, args|
-  args.with_defaults(:title => args[:name])
-
-  Dir.chdir("packages") do
-    system("choco new #{args[:name]}")
-  end
-end
+task :pack => PACKAGES
 
 desc "Optimize icons"
 task :optimize do
@@ -37,8 +26,10 @@ task :optimize do
   end
 end
 
-NUSPECS.zip NUPKGS do |nuspec, nupkg|
-  file nupkg => ["bin", nuspec] do
-    system("choco pack \"#{nuspec}\"")
+SPECS.zip PACKAGES do |nuspec, nupkg|
+  file nupkg => [nuspec] do
+    Dir.chdir(File.dirname(nuspec)) do
+      system("choco pack \"#{File.basename(nuspec)}\"")
+    end
   end
 end
