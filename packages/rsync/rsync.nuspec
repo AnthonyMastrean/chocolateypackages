@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package>
   <metadata>
     <id>rsync</id>
     <title>RSync for Windows</title>
-    <version>5.4.1.20150827</version>
+    <version>5.5.0</version>
     <authors>itefix</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Rsync is a fast and extraordinarily versatile file copying tool for both remote and local files.</summary>
@@ -13,6 +13,8 @@ Rsync uses a delta-transfer algorithm which provides a very fast method for brin
 This packages provides rsync.exe, ssh.exe, and ssh-keygen.exe.
     </description>
     <projectUrl>https://www.itefix.net/content/cwrsync-free-edition</projectUrl>
+    <releaseNotes>https://www.itefix.net/content/cwrsync-rsync-312</releaseNotes>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <tags>rsync ssh ssh-keygen</tags>
     <licenseUrl>https://www.itefix.net/content/cwrsync-licenseversion</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
