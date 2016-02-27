@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url = 'https://github.com/XhmikosR/notepad2-mod/releases/download/4.2.25.964/Notepad2-mod.4.2.25.964.exe'
-$checksum = '83c1e8e3d57cbb5d5be94cf851df680fa7d2f9de'
+$url = 'https://github.com/XhmikosR/notepad2-mod/releases/download/4.2.25.970/Notepad2-mod.4.2.25.970.exe'
+$checksum = '944DB5741E9759BAD75505016B0FCD7257F26BEA'
 $checksumType = 'sha1'
 $package_args = @{
   packageName    = 'notepad2-mod'
