@@ -1,7 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url = 'https://github.com/XhmikosR/notepad2-mod/releases/download/4.2.25.970/Notepad2-mod.4.2.25.970.exe'
-$checksum = '944DB5741E9759BAD75505016B0FCD7257F26BEA'
+$tools = Split-Path $MyInvocation.MyCommand.Definition
+. $tools\version.ps1
+
+$url = "https://github.com/XhmikosR/notepad2-mod/releases/download/${version}/Notepad2-mod.${version}.exe"
 $checksumType = 'sha1'
 $package_args = @{
   packageName    = 'notepad2-mod'
