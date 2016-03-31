@@ -3,15 +3,22 @@
   <metadata>
     <id>nethack</id>
     <title>NetHack</title>
-    <version>3.4.3</version>
+    <version>3.6.0</version>
     <authors>NetHack Development Team</authors>
     <owners>Anthony Mastrean</owners>
     <summary>NetHack is a single player dungeon exploration game.</summary>
-    <description>NetHack is a single player dungeon exploration game that runs on a wide variety of computer systems, with a variety of graphical and text interfaces all using the same game engine. Unlike many other Dungeons &amp; Dragons-inspired games, the emphasis in NetHack is on discovering the detail of the dungeon and not simply killing everything in sight - in fact, killing everything in sight is a good way to die quickly. Each game presents a different landscape - the random number generator provides an essentially unlimited number of variations of the dungeon and its denizens to be discovered by the player in one of a number of characters: you can pick your race, your role, and your gender.</description>
+    <description>
+NetHack is a single player dungeon exploration game that runs on a wide variety of computer systems, with a variety of graphical and text interfaces all using the same game engine. Unlike many other Dungeons &amp; Dragons-inspired games, the emphasis in NetHack is on discovering the detail of the dungeon and not simply killing everything in sight - in fact, killing everything in sight is a good way to die quickly. Each game presents a different landscape - the random number generator provides an essentially unlimited number of variations of the dungeon and its denizens to be discovered by the player in one of a number of characters: you can pick your race, your role, and your gender.
+    </description>
     <projectUrl>http://www.nethack.org/</projectUrl>
     <tags>games roguelike</tags>
     <licenseUrl>http://www.nethack.org/common/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/nethack.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/1e0ea970e6bf5f259e8e0446da924e8d0e86ee07/public/icons/nethack.png</iconUrl>
+    <bugTrackerUrl>http://www.nethack.org/v360/bugs.html</bugTrackerUrl>
+    <releaseNotes>http://www.nethack.org/v360/release.html</releaseNotes>
+    <mailingListUrl>http://www.nethack.org/common/usenet.html</mailingListUrl>
+    <projectSourceUrl>http://www.nethack.org/common/git.html</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
   </metadata>
 </package>
