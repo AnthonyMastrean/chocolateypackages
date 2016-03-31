@@ -6,4 +6,4 @@ Uninstall-ChocolateyPackage `
   -PackageName 'intellijidea-ultimate' `
   -FileType 'EXE' `
   -Silent '/S' `
-  -File (Get-Uninstaller -Name 'IntelliJ IDEA Ultimate Edition 15.0')
+  -File (Get-Uninstaller -Name 'IntelliJ IDEA Ultimate Edition 2016.1.1')
