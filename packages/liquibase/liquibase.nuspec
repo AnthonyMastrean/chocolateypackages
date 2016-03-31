@@ -3,18 +3,20 @@
   <metadata>
     <id>liquibase</id>
     <title>Liquibase</title>
-    <version>3.4.1</version>
+    <version>3.4.2</version>
     <authors>Liquibase</authors>
     <owners>Anthony Mastrean</owners>
     <summary>An open source library for tracking, managing, and applying database changes.</summary>
     <description>
 Liquibase is an open source, database-independent library for tracking, managing and applying database changes. It is built on a simple premise: All database changes are stored in a human readable yet trackable form and checked into source control.
     </description>
-    <projectUrl>http://www.liquibase.org/index.html</projectUrl>
+    <projectUrl>http://www.liquibase.org/</projectUrl>
     <tags>db change management</tags>
-    <licenseUrl>https://github.com/liquibase/liquibase/blob/master/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/liquibase/liquibase/3118056d64d8884e267edf5c717eb61b57ed44a2/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/liquibase.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/17c712c0bf345eb3dcb8326049a8198230228008/public/icons/liquibase.png</iconUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
+    <releaseNotes>https://github.com/liquibase/liquibase/releases/tag/liquibase-parent-3.4.2</releaseNotes>
     <dependencies>
       <dependency id="javaruntime" version="[6.0,8.0)" />
     </dependencies>
