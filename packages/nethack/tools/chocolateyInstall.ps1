@@ -12,14 +12,14 @@ Install-ChocolateyZipPackage `
     -Checksum 'da1dcadb67ccdbe4fa7ffda096565c14' `
     -UnzipLocation $content
 
-New-GuiBin $tiles
+Install-GuiBin -Path $tiles
 
-New-Shortcut `
+Install-Shortcut `
     -Link 'NetHack for Windows (Tiles)' `
     -Target $tiles `
     -SpecialFolder 'CommonPrograms'
 
-New-Shortcut `
+Install-Shortcut `
     -Link 'NetHack for Windows (Classic)' `
     -Target $classic `
     -SpecialFolder 'CommonPrograms'

@@ -1,11 +1,11 @@
 <#
   .SYNOPSIS
 
-  New-Shortcut creates a new shortcut to a file or program.
+  Install-Shortcut creates a new shortcut to a file or program.
 
   .DESCRIPTION
 
-  New-Shortcut wraps the COM Object, Wscript.Shell, and its arguments to create
+  Install-Shortcut wraps the COM Object, Wscript.Shell, and its arguments to create
   a shortcut to a file or program. It requires some very specific input, please
   review the notes on each parameter.
 
@@ -69,15 +69,24 @@
 
   The tooltip to display on the shortcut.
 
+  .PARAMETER Launch
+
+  Whether to launch this link immediately after creating it. Useful for links
+  created in the CommonStartup special folder.
+
   .EXAMPLE
 
-  PS> New-Shortcut -Link "foo" -Target "foo.exe" -SpecialFolder "CommonDesktop" -Description "The Foo program"
+  Install-Shortcut -Link "foo" -Target "foo.exe" -SpecialFolder "CommonPrograms" -Description "Foo Bar"
+
+  .EXAMPLE
+
+  Uninstall-Shortcut -Link "foo" -SpecialFolder "CommonDesktop"
 
   .LINK
 
-  https://github.com/AnthonyMastrean/chocolateypackages/blob/1b8671c6a7ca2f068524e663afd372db98bff844/helpers/shortcut.ps1
+  https://github.com/AnthonyMastrean/chocolateypackages/blob/master/helpers/shortcut.ps1
 #>
-function New-Shortcut {
+function Install-Shortcut {
   [CmdletBinding()]
   param(
     [Parameter(Mandatory = $true)]
@@ -91,7 +100,8 @@ function New-Shortcut {
 
     [string] $SpecialFolder,
     [string] $Icon,
-    [string] $Description
+    [string] $Description,
+    [switch] $Launch
   )
 
   $Link = Resolve-ShortcutLink -Link $Link -SpecialFolder $SpecialFolder
@@ -115,9 +125,13 @@ function New-Shortcut {
   if(-not(Test-Path $Link)) {
     throw "Failed to create shortcut: $Link"
   }
+
+  if($Launch) {
+    & $Link
+  }
 }
 
-function Remove-Shortcut {
+function Uninstall-Shortcut {
   [CmdletBinding()]
   param(
     [Parameter(Mandatory = $true)]
