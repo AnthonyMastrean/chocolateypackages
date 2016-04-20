@@ -1,20 +1,26 @@
-﻿$id     = "flyinglogicreader"
-$url    = "http://s3.amazonaws.com/flyinglogic.com/download/flying_logic_reader_win.zip"
-$url64  = "http://s3.amazonaws.com/flyinglogic.com/download/flying_logic_reader_win_x64.zip"
-$kind   = "EXE"
-
-# This installer does not respect unattended mode (-q), even with an explicit
-# directory (-dir) and/or a response file (-varfile).
-# https://twitter.com/Wyrmkeep/status/611274375275266048
-$silent = "-q" # (install4j)
-
-$tools   = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) "content"
-$install = Join-Path $content "Flying Logic Reader Installer.exe"
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$content = Join-Path (Split-Path $tools) 'content'
+$install = Join-Path $content 'Flying Logic Reader Installer.exe'
 
 . $tools\bins.ps1
 
-Install-ChocolateyZipPackage -PackageName $id -Url $url -Url64 $url64 -UnzipLocation $content
-Install-ChocolateyInstallPackage -PackageName $id -FileType $kind -Silent $silent -File $install
+Install-ChocolateyZipPackage `
+    -PackageName 'flyinglogicreader' `
+    -Url 'http://s3.amazonaws.com/flyinglogic.com/download/flying_logic_reader_win.zip' `
+    -Url64 'http://s3.amazonaws.com/flyinglogic.com/download/flying_logic_reader_win_x64.zip' `
+    -Checksum 'd5e0e144a5790fd16e49859ec7ed1153' `
+    -Checksum64 '74942e3b38918d6abb47c73e92faa17e' `
+    -UnzipLocation $content
 
-New-IgnoreBin -Path $install
+# This installer (install4j) does not respect unattended mode (-q), even with
+# an explicit directory (-dir) and/or a response file (-varfile).
+#
+#   https://twitter.com/Wyrmkeep/status/611274375275266048
+#
+Install-ChocolateyInstallPackage `
+    -PackageName 'flyinglogicreader' `
+    -FileType 'EXE' `
+    -Silent '-q' `
+    -File $install
+
+Install-IgnoreBin -Path $install

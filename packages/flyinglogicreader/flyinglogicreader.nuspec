@@ -3,7 +3,7 @@
   <metadata>
     <id>flyinglogicreader</id>
     <title>Flying Logic Reader</title>
-    <version>2.2.11</version>
+    <version>2.2.12</version>
     <authors>Sciral</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Flying Logic is a highly visual, easy to use software application that does for reasoning what spreadsheets do for numbers. </summary>
@@ -15,5 +15,10 @@ Flying Logic is a revolutionary tool for proactive thinkers, whether you want to
     <licenseUrl>http://flyinglogic.com/docs/license/en.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/ee16d1a51904271762c3c43ac2f148e9f585b1c8/public/icons/flyinglogicpro.png</iconUrl>
+    <packageSourceUrl>http://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <releaseNotes>http://flyinglogic.com/about/history.html</releaseNotes>
+    <docsUrl>http://flyinglogic.com/about/index.html</docsUrl>
+    <mailingListUrl>http://flyinglogic.com/community/index.html</mailingListUrl>
+    <bugTrackerUrl>http://flyinglogic.com/contact/index.html</bugTrackerUrl>
   </metadata>
 </package>

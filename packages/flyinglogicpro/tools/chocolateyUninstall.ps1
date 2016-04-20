@@ -1,12 +1,9 @@
-$id     = "flyinglogicpro"
-$name   = "Flying Logic Pro 2.2.11"
-$kind   = "EXE"
-$silent = "-q"
-
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 
 . $tools\uninstall.ps1
 
-$uninstaller = Get-Uninstaller -Name $name
-
-Uninstall-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -File $uninstaller
+Uninstall-ChocolateyPackage `
+    -PackageName 'flyinglogicpro' `
+    -FileType 'EXE' `
+    -Silent '-q' `
+    -File (Get-Uninstaller -Name 'Flying Logic Pro 2.2.12')
