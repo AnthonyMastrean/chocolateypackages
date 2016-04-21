@@ -3,7 +3,7 @@
   <metadata>
     <id>wudt</id>
     <title>Windows 7 USB/DVD Download Tool</title>
-    <version>1.0.30.2</version>
+    <version>1.0.30.20160421</version>
     <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The Windows 7 USB/DVD Download tool allows you to create a copy of your Windows 7 ISO file on a USB flash drive or a DVD.</summary>
@@ -21,5 +21,10 @@ The copy of the ISO file that the Windows 7 USB/DVD Download tool creates is boo
     <licenseUrl>https://wudt.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/7ea0bab2488ce68b709fb2f5fff30fe4d0db81de/public/icons/wudt.png</iconUrl>
+    <docsUrl>http://wudt.codeplex.com/documentation</docsUrl>
+    <bugTrackerUrl>http://wudt.codeplex.com/workitem/list/basic</bugTrackerUrl>
+    <mailingListUrl>http://wudt.codeplex.com/discussions</mailingListUrl>
+    <projectSourceUrl>http://wudt.codeplex.com/SourceControl/latest</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
   </metadata>
 </package>

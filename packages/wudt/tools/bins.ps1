@@ -24,21 +24,21 @@
 
   .EXAMPLE
 
-  New-IgnoreBin -Path "foo.exe"
+  Install-IgnoreBin -Path "foo.exe"
 
   .EXAMPLE
 
-  New-IgnoreBin -Path $foo, $bar
+  Install-IgnoreBin -Path $foo, $bar
 
   .EXAMPLE
 
-  Get-ChildItem "$content\foo\*.exe" | New-IgnoreBin
+  Get-ChildItem "$content\foo\*.exe" | Install-IgnoreBin
 
   .LINK
 
   https://github.com/AnthonyMastrean/chocolateypackages/blob/master/helpers/bins.ps1
 #>
-function New-IgnoreBin {
+function Install-IgnoreBin {
   [CmdletBinding()]
   param(
     [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
@@ -81,21 +81,21 @@ function New-IgnoreBin {
 
   .EXAMPLE
 
-  New-GuiBin -Path "foo.exe"
+  Install-GuiBin -Path "foo.exe"
 
   .EXAMPLE
 
-  New-GuiBin -Path $foo, $bar
+  Install-GuiBin -Path $foo, $bar
 
   .EXAMPLE
 
-  Get-ChildItem "$content\foo\*.exe" | New-GuiBin
+  Get-ChildItem "$content\foo\*.exe" | Install-GuiBin
 
   .LINK
 
   https://github.com/AnthonyMastrean/chocolateypackages/blob/master/helpers/bins.ps1
 #>
-function New-GuiBin {
+function Install-GuiBin {
   [CmdletBinding()]
   param(
     [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
