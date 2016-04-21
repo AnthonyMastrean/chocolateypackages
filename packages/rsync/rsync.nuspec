@@ -2,9 +2,9 @@
 <package>
   <metadata>
     <id>rsync</id>
-    <title>RSync for Windows</title>
+    <title>cwRsync (Free Edition)</title>
     <version>5.5.0</version>
-    <authors>itefix</authors>
+    <authors>Itefix</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Rsync is a fast and extraordinarily versatile file copying tool for both remote and local files.</summary>
     <description>
@@ -18,5 +18,8 @@ This packages provides rsync.exe, ssh.exe, and ssh-keygen.exe.
     <tags>rsync ssh ssh-keygen</tags>
     <licenseUrl>https://www.itefix.net/content/cwrsync-licenseversion</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://www.itefix.net/forum</mailingListUrl>
+    <bugTrackerUrl>https://www.itefix.net/support</bugTrackerUrl>
+    <docsUrl>https://www.itefix.net/cwrsync</docsUrl>
   </metadata>
 </package>
