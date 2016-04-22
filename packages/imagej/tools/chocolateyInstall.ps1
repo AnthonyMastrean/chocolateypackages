@@ -6,8 +6,8 @@ $shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'I
 
 Install-ChocolateyZipPackage `
     -PackageName 'imagej' `
-    -Url 'http://rsbweb.nih.gov/ij/download/win32/ij149-nojre.zip' `
-    -Checksum '7c9fcbf8851f788e0e704ec05461a442' `
+    -Url 'http://wsr.imagej.net/distros/win/ij150-win-nojre.zip' `
+    -Checksum '44E2C83E9E877B075AAB83DDEDFDAF28' `
     -UnzipLocation $package
 
 Install-ChocolateyShortcut `
