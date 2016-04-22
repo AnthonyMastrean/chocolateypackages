@@ -1,5 +1,5 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
-$response = Join-Path $tools 'Setup.iss'
+$response = Join-Path $tools 'install.iss'
 
 # This an InstallShield installer, requiring a response file (.ISS) for silent
 # installation.
