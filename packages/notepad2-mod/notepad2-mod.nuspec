@@ -21,7 +21,7 @@ Changes compared to the official Notepad2
  * Support for replacing Windows Notepad using a clean, unintrusive registry-based method
  * Other various minor changes and tweaks
 
- Changed keyboard shortcuts compared to Notepad2:
+Changed keyboard shortcuts compared to Notepad2:
 
  * `Ctrl+Alt+F2` Expand selection to next match.
  * `Ctrl+Alt+Shift+F2` Expand selection to previous match.
