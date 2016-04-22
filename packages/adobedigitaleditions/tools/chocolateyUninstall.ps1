@@ -4,6 +4,6 @@ $tools = Split-Path $MyInvocation.MyCommand.Definition
 
 Uninstall-ChocolateyPackage `
   -PackageName 'adobedigitaleditions' `
-  -File (Get-Uninstaller -Name 'Adobe Digital Editions 4.5') `
   -FileType 'EXE' `
-  -SilentArgs '/S'
+  -SilentArgs '/S' `
+  -File (Get-Uninstaller -Name 'Adobe Digital Editions 4.5')
