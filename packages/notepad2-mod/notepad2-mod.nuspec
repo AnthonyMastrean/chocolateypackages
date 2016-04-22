@@ -3,7 +3,7 @@
   <metadata>
     <id>notepad2-mod</id>
     <title>Notepad2-mod</title>
-    <version>4.2.25.971</version>
+    <version>4.2.25.972</version>
     <authors>XhmikosR</authors>
     <owners>Anthony Mastrean</owners>
     <summary>A modified version (fork) of Notepad2 based on Kai Liu's and other people's patches.</summary>
@@ -14,9 +14,5 @@ Changes compared to the official Notepad2: Code folding, Support for bookmarks, 
     <licenseUrl>http://www.opensource.org/licenses/bsd-license.php</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/666691f5d6d18e8dc23a1d92f79ced3afe1f8f75/public/icons/notepad2-mod.png</iconUrl>
-    <releaseNotes>
-4.2.25.971:
-Fixes a bug in the uninstallation logic. This is still Notepad2-mod 4.2.25.970.
-    </releaseNotes>
   </metadata>
 </package>
