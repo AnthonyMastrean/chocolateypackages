@@ -3,15 +3,38 @@
   <metadata>
     <id>notepad2-mod</id>
     <title>Notepad2-mod</title>
-    <version>4.2.25.972</version>
+    <version>4.2.25.20160422</version>
     <authors>XhmikosR</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>A modified version (fork) of Notepad2 based on Kai Liu's and other people's patches.</summary>
-    <description>A modified version (fork) of Notepad2 based on Kai Liu's and other people's patches.
-Changes compared to the official Notepad2: Code folding, Support for bookmarks, Option to mark all occurrences of a word, Word auto-completion, Syntax highlighting support for AutoHotkey, AutoIt3, AviSynth, Bash, CMake, Inno Setup, LaTeX, Lua, NSIS, Ruby and Tcl scripts, Improved support for NFO ANSI art, Support for replacing Windows Notepad using a clean, unintrusive registry-based method, Other various minor changes and tweaks</description>
-    <projectUrl>http://xhmikosr.github.io/notepad2-mod/</projectUrl>
+    <summary>Notepad2-mod, a Notepad2 fork, a fast and light-weight Notepad-like text editor with syntax highlighting.</summary>
+    <description>
+A modified version (fork) of Notepad2 based on Kai Liu's and other people's patches.
+
+Changes compared to the official Notepad2
+
+ * Code folding
+ * Support for bookmarks
+ * Option to mark all occurrences of a word
+ * Word auto-completion
+ * Syntax highlighting support for AutoHotkey, AutoIt3, AviSynth, Bash, CMake, Inno Setup, LaTeX, Lua, Markdown, NSIS, Ruby, Tcl and YAML scripts
+ * Improved support for NFO ANSI art
+ * Support for replacing Windows Notepad using a clean, unintrusive registry-based method
+ * Other various minor changes and tweaks
+
+ Changed keyboard shortcuts compared to Notepad2:
+
+ * `Ctrl+Alt+F2` Expand selection to next match.
+ * `Ctrl+Alt+Shift+F2` Expand selection to previous match.
+ * `Ctrl+Shift+Enter` New line with toggled auto indent option.
+    </description>
     <tags>notepad notepad2 admin</tags>
-    <licenseUrl>http://www.opensource.org/licenses/bsd-license.php</licenseUrl>
+    <projectUrl>http://xhmikosr.github.io/notepad2-mod/</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/XhmikosR/notepad2-mod/68b11903fc662cd538ed2324585e50c508cd4014/License.txt</licenseUrl>
+    <projectSourceUrl>https://github.com/XhmikosR/notepad2-mod</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <docsUrl>https://github.com/XhmikosR/notepad2-mod/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/XhmikosR/notepad2-mod/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/XhmikosR/notepad2-mod/releases</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/666691f5d6d18e8dc23a1d92f79ced3afe1f8f75/public/icons/notepad2-mod.png</iconUrl>
   </metadata>
