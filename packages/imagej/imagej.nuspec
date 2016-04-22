@@ -3,7 +3,7 @@
   <metadata>
     <id>imagej</id>
     <title>ImageJ</title>
-    <version>1.49</version>
+    <version>1.50</version>
     <authors>Wayne Rasband</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Image Processing and Analysis in Java</summary>
@@ -15,7 +15,7 @@ ImageJ is a public domain Java image processing program inspired by NIH Image fo
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/f260d356e9f8459389ee4fcbe2ef0a0996f1ea87/public/icons/imagej.png</iconUrl>
     <dependencies>
-        <dependency id="jdk8" />
+        <dependency id="jre8" />
     </dependencies>
   </metadata>
 </package>
