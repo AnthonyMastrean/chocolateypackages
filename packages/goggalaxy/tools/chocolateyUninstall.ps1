@@ -1,12 +1,32 @@
-$id     = "goggalaxy"
-$name   = "GOG Galaxy"
-$kind   = "EXE"
-$silent = "/VERYSILENT /NORESTART"
+﻿$packageName = 'GOGGalaxy'
+$softwareName = 'GOG Galaxy*'
+$installerType = 'EXE' 
+$silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
+$validExitCodes = @(0)
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
+$uninstalled = $false
+$local_key     = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'
+$machine_key   = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
+$machine_key6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
 
-. $tools\uninstall.ps1
+[array]$key = Get-ItemProperty -Path @($machine_key6432,$machine_key, $local_key) `
+                        -ErrorAction SilentlyContinue `
+         | ? { $_.DisplayName -like "$softwareName" }
 
-$uninstaller = Get-Uninstaller -Name $name
-
-Uninstall-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -File $uninstaller
+if ($key.Count -eq 1) {
+  $key | % { 
+    $file = "$($_.UninstallString)"
+    Uninstall-ChocolateyPackage -PackageName $packageName `
+                                -FileType $installerType `
+                                -SilentArgs "$silentArgs" `
+                                -ValidExitCodes $validExitCodes `
+                                -File "$file"
+  }
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$packageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$key.Count matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "Please alert package maintainer the following keys were matched:"
+  $key | % {Write-Warning "- $_.DisplayName"}
+}
