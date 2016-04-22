@@ -1,15 +1,20 @@
-﻿$id  = "ant"
-$url = "http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.6-bin.zip"
-$md5 = "a2ab149c0ef45ac6bdcb59cba46efac8"
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$package = Split-Path $tools
+$ant_home = Join-Path $package 'apache-ant-1.9.7'
+$ant_bat = Join-Path $ant_home 'bin/ant.bat'
 
-$tools    = Split-Path $MyInvocation.MyCommand.Definition
-$content  = Split-Path $tools
-$ant_home = Join-Path $content "apache-ant-1.9.6"
-$ant_bat  = Join-Path $ant_home "bin/ant.bat"
+Install-ChocolateyZipPackage `
+    -PackageName 'ant' `
+    -Url 'https://archive.apache.org/dist/ant/binaries/apache-ant-1.9.7-bin.zip' `
+    -Checksum '28c89951fa4752b7f0c0126fb6d6fffb9d7cc63cde822f2b8adafa45e96abaf1ff153ffe49be68f9235b8419a1d2fea468dadc19c331cdd4bdbf44354a3ef48a' `
+    -ChecksumType 'SHA512' `
+    -UnzipLocation $package
 
-Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content -Checksum $md5 -ChecksumType "md5"
-Install-ChocolateyEnvironmentVariable -VariableName "ANT_HOME" -VariableValue $ant_home -VariableType "Machine"
+Install-ChocolateyEnvironmentVariable `
+    -VariableName 'ANT_HOME' `
+    -VariableValue $ant_home `
+    -VariableType 'Machine'
 
-Install-BinFile -Name "ant" -Path $ant_bat
+Install-BinFile -Name 'ant' -Path $ant_bat
 
 Update-SessionEnvironment
