@@ -1,7 +1,7 @@
-﻿$tools    = Split-Path $MyInvocation.MyCommand.Definition
-$package  = Split-Path $tools
-$imagej   = Join-Path $package 'ImageJ'
-$target   = Join-Path $imagej 'ImageJ.exe'
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$package = Split-Path $tools
+$imagej = Join-Path $package 'ImageJ'
+$target = Join-Path $imagej 'ImageJ.exe'
 $shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'ImageJ.lnk'
 
 Install-ChocolateyZipPackage `
