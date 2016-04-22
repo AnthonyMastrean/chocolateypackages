@@ -3,7 +3,7 @@
   <metadata>
     <id>goggalaxy</id>
     <title>GOG Galaxy</title>
-    <version>1.0.2.958</version>
+    <version>1.1.8.20160422</version>
     <authors>GOG</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Truly gamer friendly, DRM-free online gaming platform.</summary>
@@ -12,7 +12,49 @@ GOG GALAXY is a fully optional client to install, play and update your games. It
     </description>
     <projectUrl>https://www.gog.com/galaxy</projectUrl>
     <tags>games gog</tags>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <bugTrackerUrl>http://mantis.gog.com/</bugTrackerUrl>
+    <mailingListUrl>https://www.gog.com/wishlist/galaxy</mailingListUrl>
     <!-- <licenseUrl></licenseUrl> -->
+    <releaseNotes>
+New and improved in GOG Galaxy BETA 1.1
+
+*Rollback*
+
+Sometimes game updates break things. The Rollback feature is here, allowing you to restore your game to any earlier version just a single click. Game updates are now not just optional, but also reversible.
+
+*New installation options*
+
+Control the installation process. You can now view required disk space, select your language, modify the installation path, and more.
+
+*Streamlined navigation*
+
+Use the Back and Forward buttons across the entire app to easily navigate between your installed games, the store, and the library.
+
+*Friend search*
+
+Find other users easily using their email address or GOG.com username, then add them to your friends with just one click.
+
+*Better performance*
+
+The new update decreases RAM and CPU usage across the board. The app will now launch faster and take advantage of GPU acceleration on Windows, and App Nap support on Mac OS X.
+
+*HiDPI support*
+
+Enjoy proper HiDPI scaling and a retina-ready UI for exceptionally high-resolution displays.
+
+*Pause and resume*
+
+You can now pause the download and installation process at any time, without ever losing your progress.
+
+*Compact sidebar*
+
+See more of your library and the store with a new, compact sidebar. If you prefer the old look, you can always go back.
+
+*And more...*
+
+Double click to launch a game instantly from the sidebar, view available languages and space requirements, accept new invites directly from the friends list, and so much more...
+    </releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/a561f0de0d19224bf85d694f74f6ce52f8bf9c08/public/icons/goggalaxy.png</iconUrl>
   </metadata>

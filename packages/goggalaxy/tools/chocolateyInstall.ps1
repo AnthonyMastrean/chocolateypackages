@@ -1,6 +1,6 @@
-﻿$id     = "goggalaxy"
-$url    = "http://cdn.gog.com/open/galaxy/client/installers/setup_galaxy_1.0.2.958.exe"
-$kind   = "EXE"
-$silent = "/VERYSILENT /NORESTART"
-
-Install-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -Url $url
+﻿Install-ChocolateyPackage `
+    -PackageName 'goggalaxy' `
+    -FileType 'EXE' `
+    -Silent '/VERYSILENT /NORESTART' `
+    -Url 'http://cdn.gog.com/open/galaxy/client/setup_galaxy_1.1.8.8.exe' `
+    -Checksum 'a35378913cae59fbe4c68ab2eefa27ed'

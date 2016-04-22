@@ -1,12 +1,9 @@
-$id     = "goggalaxy"
-$name   = "GOG Galaxy"
-$kind   = "EXE"
-$silent = "/VERYSILENT /NORESTART"
-
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 
 . $tools\uninstall.ps1
 
-$uninstaller = Get-Uninstaller -Name $name
-
-Uninstall-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -File $uninstaller
+Uninstall-ChocolateyPackage `
+    -PackageName 'goggalaxy' `
+    -FileType 'EXE' `
+    -Silent '/VERYSILENT /NORESTART' `
+    -File (Get-Uninstaller -Name 'GOG Galaxy')
