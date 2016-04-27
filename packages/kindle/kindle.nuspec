@@ -3,7 +3,7 @@
   <metadata>
     <id>kindle</id>
     <title>Kindle for PC</title>
-    <version>1.14.43019</version>
+    <version>1.15.43061</version>
     <authors>Amazon</authors>
     <owners>Anthony Mastrean, mew1033</owners>
     <summary>Read Everywhere with our Free Reading Apps</summary>
@@ -12,6 +12,8 @@ The Kindle app is available for most major smartphones, tablets and computers. T
     </description>
     <projectUrl>https://www.amazon.com/gp/digital/fiona/kcp-landing-page</projectUrl>
     <releaseNotes>https://www.amazon.com/gp/digital/fiona/kcp-landing-page</releaseNotes>
+    <docsUrl>https://www.amazon.com/gp/digital/fiona/kcp-landing-page</docsUrl>
+    <bugTrackerUrl>https://www.amazon.com/gp/help/customer/display.html/ref=hp_ss_v3_ds_t4?ie=UTF8&amp;nodeId=200127470</bugTrackerUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <tags>admin amazon kindle</tags>
     <licenseUrl>http://www.amazon.com/gp/help/customer/display.html/ref=hp_pcland_recterms?nodeId=200506200</licenseUrl>
