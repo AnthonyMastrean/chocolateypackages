@@ -1,4 +1,4 @@
 ﻿Uninstall-ChocolateyPackage `
   -PackageName 'clickshare' `
   -FileType 'MSI' `
-  -Silent '{42DEF07A-8579-431C-8B7A-0094E3D0888B} /QN'
+  -Silent '{25E136CF-DAD8-48B5-A1DF-E236E1ECF627} /QN'
