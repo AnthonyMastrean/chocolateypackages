@@ -6,9 +6,12 @@ $tools = Split-Path $MyInvocation.MyCommand.Definition
 
 $package_args = @{
   packageName    = 'notepad2-mod'
-  url            = "https://github.com/XhmikosR/notepad2-mod/releases/download/${version}/Notepad2-mod.${version}.exe"
-  checksum       = '45F58D793308F88B19AAEE1B09C352862185DC14'
-  checksumType   = 'SHA1'
+  url            = $url
+  url64          = $url
+  checksum       = $checksum
+  checksum64     = $checksum
+  checksumType   = $checksumType
+  checksumType64 = $checksumType
   fileType       = 'EXE'
   silentArgs     = '/VERYSILENT /NORESTART'
 }
