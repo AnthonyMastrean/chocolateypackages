@@ -18,7 +18,7 @@ ClickShare lets you share your content on the large meeting room screen in the m
     <releaseNotes>
 **Improvements/bug fixes**
 
-* Allow to set the Windows environment variable CLICKSHARE_LAUNCHER_CLIENT_PATH to run a local ClickShare Client instead of the one on the ClickShare USB drive.
+* Allow to set the Windows environment variable `CLICKSHARE_LAUNCHER_CLIENT_PATH` to run a local ClickShare Client instead of the one on the ClickShare USB drive.
     </releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/d93a34b85e86b31dec806eb3dab3e912fc95d22f/public/icons/clickshare.png</iconUrl>
