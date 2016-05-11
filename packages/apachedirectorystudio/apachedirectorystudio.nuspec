@@ -22,7 +22,7 @@ Apache Directory Studio is a complete directory tooling platform intended to be 
     <bugTrackerUrl>http://issues.apache.org/jira/browse/DIRSTUDIO</bugTrackerUrl>
     <mailingListUrl>http://directory.apache.org/mailing-lists-and-irc.html</mailingListUrl>
     <dependencies>
-      <dependency id="javaruntime" version="[7.0, 9.0)" />
+      <dependency id="jre8" />
     </dependencies>
   </metadata>
 </package>
