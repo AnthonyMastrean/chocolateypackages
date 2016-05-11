@@ -1,8 +1,7 @@
-﻿$id     = "apachedirectorystudio"
-$name   = "Apache Directory Studio"
-
-$tools  = Split-Path $MyInvocation.MyCommand.Definition
+﻿$tools  = Split-Path $MyInvocation.MyCommand.Definition
 
 . $tools\shortcut.ps1
 
-Remove-Shortcut -Link $name -SpecialFolder "CommonPrograms"
+Uninstall-Shortcut `
+    -Link 'Apache Directory Studio' `
+    -SpecialFolder 'CommonPrograms'
