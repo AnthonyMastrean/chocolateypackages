@@ -109,8 +109,8 @@ function Install-Shortcut {
   $shell = New-Object -ComObject 'Wscript.Shell'
 
   $shortcut = $shell.CreateShortcut($Link)
-  $shortcut.TargetPath = (Resolve-Path $Target)
-  $shortcut.WorkingDirectory = (Split-Path (Resolve-Path $Target))
+  $shortcut.TargetPath = (Resolve-Path $Target).Path
+  $shortcut.WorkingDirectory = (Split-Path (Resolve-Path $Target).Path)
 
   if($Icon) {
     $shortcut.IconLocation = $Icon
