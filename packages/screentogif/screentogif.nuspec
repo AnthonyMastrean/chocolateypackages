@@ -3,15 +3,35 @@
   <metadata>
     <id>screentogif</id>
     <title>Screen To Gif</title>
-    <version>1.4.1.1</version>
+    <version>1.4.2</version>
     <authors>ScreenToGif</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>This tool allows you to record a selected area of your screen and save as a Gif.</summary>
-    <description>This tool allows you to record a selected area of your screen and save as a Gif.</description>
+    <summary>This tool allows you to record a selected area of your screen and save it as a Gif.</summary>
+    <description>
+This tool allows you to record a selected area of your screen and save it as a Gif.
+
+Features:
+
+ * Record your screen and save directly to a gif looped animation or a video.
+ * Pause and continue to record or start over by discard the recording.
+ * Move the window around to record what you want, it stays on top.
+ * You can add Text, Subtitles, Title Frames, Borders, Watermarks, Drawings, etc.
+ * Crop and Resize.
+ * Remove frames that you don't want.
+ * Select a folder to save the file automatically or select one before encoding.
+ * Add the system cursor to your recording.
+ * Very small sized and portable (uses a settings file under the AppData folder) executable.
+    </description>
     <projectUrl>https://screentogif.codeplex.com</projectUrl>
+    <projectSourceUrl>https://screentogif.codeplex.com/SourceControl/latest</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <docsUrl>https://screentogif.codeplex.com/documentation</docsUrl>
+    <releaseNotes>https://screentogif.codeplex.com/releases/view/617012</releaseNotes>
+    <bugTrackerUrl>https://screentogif.codeplex.com/workitem/list/basic</bugTrackerUrl>
+    <mailingListUrl>https://screentogif.codeplex.com/discussions</mailingListUrl>
     <tags>screen recording recorder gif</tags>
     <licenseUrl>https://screentogif.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/screentogif.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/3cdf4869fbba994eae1799270a536ab435200e84/public/icons/screentogif.png</iconUrl>
   </metadata>
 </package>
