@@ -2,8 +2,8 @@
 $package = Split-Path $tools
 $bin = Join-Path $package (Join-Path 'ApacheDirectoryStudio' 'ApacheDirectoryStudio.exe')
 
-. $tools\shortcut.ps1
 . $tools\bins.ps1
+. $tools\shortcut.ps1
 
 Install-ChocolateyZipPackage `
     -PackageName 'apachedirectorystudio' `

@@ -2,6 +2,7 @@
 $content = Join-Path (Split-Path $tools) 'content'
 $bin = Join-Path $content 'ScreenToGif 1.4.2.exe'
 
+. $tools\bins.ps1
 . $tools\shortcut.ps1
 
 Install-ChocolateyZipPackage `
@@ -14,3 +15,6 @@ Install-Shortcut `
     -Link 'Screen to Gif' `
     -Target $bin `
     -SpecialFolder 'CommonPrograms'
+
+Install-IgnoreBin `
+    -Path $bin
