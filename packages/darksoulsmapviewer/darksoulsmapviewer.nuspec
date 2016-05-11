@@ -3,7 +3,7 @@
   <metadata>
     <id>darksoulsmapviewer</id>
     <title>Dark Souls Map Viewer</title>
-    <version>0.2</version>
+    <version>0.2.0.20160511</version>
     <authors>vlad001 Ispohr</authors>
     <owners>Anthony Mastrean</owners>
     <summary></summary>
@@ -11,18 +11,12 @@
 Dark Souls Map Viewer is a program made by vlad001 on the xentax forums, who released the program open sourced. Ispohr on the Dark Souls Reddit re-released the map viewer, with the DLC content and a online map analytics too, but for whatever reason his website is now down (likely got hacked). Because of this, the Oolacile data file was kinda ‘lost’. A nice person over on Reddit posted it and I decided to package it up and host it. Now it’ll have a place to exist other than random rapidshare links. This is Vlad001’s with the map files from Ispohr’s release. Vlad001 has also been kind enough to endorse this mirror.
 
 The maps themselves are not the -actual- maps of Dark Souls but instead the collision maps. The game’s collision maps are surprisingly complete, even when it comes to objects you should never be able to reach, but keep this in mind if something seems missing.
-
-If you wanna get some idea what the Dark Souls Map Viewer is like, check out this video:
-
-http://www.youtube.com/watch?v=tyTB5vhKGSI
     </description>
     <projectUrl>http://kayin.moe/?p=2218</projectUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <mailingListUrl>http://forum.xentax.com/viewtopic.php?f=16&amp;t=7876&amp;start=60</mailingListUrl>
+    <docsUrl>https://www.youtube.com/watch?v=tyTB5vhKGSI</docsUrl>
     <tags>games dark-souls map</tags>
-    <!-- <licenseUrl></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!--<iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/darksoulsmapviewer.png</iconUrl>-->
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
   </metadata>
 </package>

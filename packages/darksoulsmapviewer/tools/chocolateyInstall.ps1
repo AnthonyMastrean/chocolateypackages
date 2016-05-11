@@ -1,17 +1,20 @@
-﻿$id   = "darksoulsmapviewer"
-$name = "Dark Souls Map Viewer"
-$url  = "http://kayin.pyoko.org/darksoulsmapviewer.zip"
-
-$tools   = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) "content"
-$main    = Join-Path $content "dksmv-0.2\main.exe"
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$content = Join-Path (Split-Path $tools) 'content'
+$main = Join-Path $content 'dksmv-0.2\main.exe'
 
 . $tools\bins.ps1
 . $tools\shortcut.ps1
 
-Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content
+Install-ChocolateyZipPackage `
+    -PackageName 'darksoulsmapviewer' `
+    -Url 'http://kayin.pyoko.org/darksoulsmapviewer.zip' `
+    -Checksum '2004205a4bd94f190a62d7e01c3bea7c' `
+    -UnzipLocation $content
 
-New-IgnoreBin -Name $main
+Install-IgnoreBin `
+    -Path $main
 
-New-Shortcut -Link $name -Target $main -SpecialFolder "CommonDesktop"
-New-Shortcut -Link $name -Target $main -SpecialFolder "CommonPrograms"
+Install-Shortcut `
+    -Link 'Dark Souls Map Viewer' `
+    -Target $main `
+    -SpecialFolder 'CommonPrograms'
