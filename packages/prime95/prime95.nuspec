@@ -18,7 +18,7 @@ This program is used to find Mersenne Prime numbers. See http://www.utm.edu/rese
     <docsUrl>http://www.mersenne.org/download/readme.txt</docsUrl>
     <mailingListUrl>http://www.mersenneforum.org/</mailingListUrl>
     <bugTrackerUrl>mailto:woltman@alum.mit.edu</bugTrackerUrl>
-    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/1c984cef1528253505d64e2c7fe1e32412865f4c/public/icons/prime95.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/f1c74e9b15d0d968b5e30080a70dec377d83a36c/public/icons/prime95.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>prime gimps</tags>
   </metadata>
