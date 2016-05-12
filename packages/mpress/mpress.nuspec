@@ -3,14 +3,35 @@
   <metadata>
     <id>mpress</id>
     <title>MATCODE Compressor</title>
-    <version>2.19</version>
+    <version>2.19.0.20160512</version>
     <authors>MATCODE Software</authors>
     <owners>Anthony Mastrean</owners>
     <summary>MPRESS is a free, high-performance executable packer for PE32/PE32+/.NET/MAC-DARWIN executable formats!</summary>
-    <description>MPRESS makes programs and libraries smaller, and decrease start time when the application loaded from a slow removable media or from the network. It uses in-place decompression technique, which allows to decompress the executable without memory overhead or other drawbacks; it also protects programs against reverse engineering by non-professional hackers. Programs compressed with MPRESS run exactly as before, with no runtime performance penalties.</description>
-    <projectUrl>http://www.matcode.com/mpress.htm</projectUrl>
-    <tags>mpress packer compress</tags>
+    <description>
+MPRESS makes programs and libraries smaller, and decrease start time when the application loaded from a slow removable media or from the network. It uses in-place decompression technique, which allows to decompress the executable without memory overhead or other drawbacks; it also protects programs against reverse engineering by non-professional hackers. Programs compressed with MPRESS run exactly as before, with no runtime performance penalties.
+
+MPRESS Features
+
+ * Advanced compression of .NET executable files (anyCPU,x86,AMD64,IA64 EXE)
+ * Support for MS Framework 1.1/2.0/3.0/4.0
+ * Does not require .NET Framework to be installed
+ * Advanced compression of PE32/PE32+ (AMD64) executable files (EXE, DLL, OCX, etc.)
+ * Optional LZMA compression
+ * In-place decompression
+ * Static TLS support
+ * Support for mac-darwin-i386, mac-darwin-x86_64 and mac-darwin-ub applications
+ * Very fast decompression: ~210 MB/sec on an AMD 2500+
+ * Strip sensitive information (relocation, debug information, exceptions, etc.)
+ * Compression of program code, data, and resources
+ * Completely transparent, self-contained operation with UNICODE support
+ * Command line interface allows to use MPRESS from a batch or from a make file
+ * Full Windows 9x/NT/2000/XP/2003/Vista/2008/Windows8 compatibility
+    </description>
+    <projectUrl>https://autohotkey.com/mpress/mpress_web.htm</projectUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <docsUrl>https://web.archive.org/web/20150511220010/http://www.matcode.com/docs.htm</docsUrl>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/mpress.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>mpress packer compress</tags>
   </metadata>
 </package>
