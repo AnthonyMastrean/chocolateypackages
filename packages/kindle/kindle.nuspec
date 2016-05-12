@@ -14,6 +14,7 @@ The Kindle app is available for most major smartphones, tablets and computers. T
     <releaseNotes>https://www.amazon.com/gp/digital/fiona/kcp-landing-page</releaseNotes>
     <docsUrl>https://www.amazon.com/gp/digital/fiona/kcp-landing-page</docsUrl>
     <bugTrackerUrl>https://www.amazon.com/gp/help/customer/display.html/ref=hp_ss_v3_ds_t4?ie=UTF8&amp;nodeId=200127470</bugTrackerUrl>
+    <mailingListUrl>https://www.amazon.com/gp/help/customer/forums/kindleqna/ref=hp_ss_qs_v3_dv_kh</mailingListUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <tags>admin amazon kindle</tags>
     <licenseUrl>http://www.amazon.com/gp/help/customer/display.html/ref=hp_pcland_recterms?nodeId=200506200</licenseUrl>

@@ -3,7 +3,7 @@
   <metadata>
     <id>kindlepreviewer</id>
     <title>Kindle Previewer</title>
-    <version>2.94.0.1</version>
+    <version>2.94.0.20160512</version>
     <authors>Amazon</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Kindle Previewer is a graphical user interface tool that emulates how books display across Kindle devices and apps.</summary>
@@ -13,6 +13,7 @@ Kindle Previewer is a graphical user interface tool that emulates how books disp
 As a best practice we recommend you use the Kindle Previewer to review how their books look across all Kindle devices and apps.
 
 Highlights of Kindle Previewer functionality
+
  * Ability to preview your content across Kindle devices and apps
  * Support for previewing Kindle Text Pop Ups and Kindle Panel Views
  * Accurate rendering of your content across Kindle devices and apps
@@ -20,9 +21,13 @@ Highlights of Kindle Previewer functionality
  * Auto updates for future enhancements
     </description>
     <projectUrl>http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765261</projectUrl>
-    <tags>amazon kindle preview not-silent</tags>
     <licenseUrl>http://www.amazon.com/gp/feature.html?docId=1000599251</licenseUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <mailingListUrl>https://www.amazon.com/gp/help/customer/forums/kindleqna/ref=hp_ss_qs_v3_dv_kh</mailingListUrl>
+    <bugTrackerUrl>https://www.amazon.com/gp/help/customer/contact-us?ie=UTF8&amp;ref_=hp_ss_qs_v3_dv_cu_t2</bugTrackerUrl>
+    <docsUrl>http://kindlepreviewer.s3.amazonaws.com/UserGuide.pdf</docsUrl>
+    <tags>amazon kindle preview not-silent</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/kindlepreviewer.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/3763177365cfab0f7debcd100595a171182fadb3/public/icons/kindlepreviewer.png</iconUrl>
   </metadata>
 </package>

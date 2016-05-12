@@ -1,7 +1,8 @@
-﻿$id     = "sendtokindle"
-$url    = "http://s3.amazonaws.com/sendtokindle/SendToKindleForPC-installer.exe"
-$kind   = "EXE"
-$silent = "/S"
-$exits  = @(0, 1223)
-
-Install-ChocolateyPackage -PackageName $id -FileType $kind -Silent $silent -Url $url -ValidExitCodes $exits
+﻿Install-ChocolateyPackage `
+    -PackageName 'sendtokindle' `
+    -FileType 'EXE' `
+    -Silent '/S' `
+    -Url 'http://s3.amazonaws.com/sendtokindle/SendToKindleForPC-installer.exe' `
+    -Checksum '42F3FD58D90EA6927F963D01B52BDAAC07946CE29F072730E11428FF18C5FA5A' `
+    -ChecksumType 'SHA256' `
+    -ValidExitCodes @(0, 1223)
