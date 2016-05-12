@@ -2,18 +2,24 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>prime95</id>
-    <version>28.5</version>
+    <version>28.9</version>
     <title>Great Internet Mersenne Prime Search</title>
     <authors>George Woltman</authors>
     <owners>Anthony Mastrean</owners>
-    <licenseUrl>http://www.mersenne.org/legal/#EULA</licenseUrl>
-    <projectUrl>http://mersenne.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/1c984cef1528253505d64e2c7fe1e32412865f4c/public/icons/prime95.png</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>This program is used to find Mersenne Prime numbers.</summary>
     <description>
 This program is used to find Mersenne Prime numbers. See http://www.utm.edu/research/primes/mersenne.shtml for a good description of Mersenne primes. Mersenne numbers can be proved composite (not prime) by either finding a factor or by running a Lucas-Lehmer primality test.
     </description>
-    <summary>This program is used to find Mersenne Prime numbers.</summary>
+    <licenseUrl>http://www.mersenne.org/legal/#EULA</licenseUrl>
+    <projectUrl>http://mersenne.org</projectUrl>
+    <releaseNotes>http://www.mersenne.org/download/whatsnew.txt</releaseNotes>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <projectSourceUrl>http://www.mersenne.org/ftp_root/gimps/p95v289.source.zip</projectSourceUrl>
+    <docsUrl>http://www.mersenne.org/download/readme.txt</docsUrl>
+    <mailingListUrl>http://www.mersenneforum.org/</mailingListUrl>
+    <bugTrackerUrl>mailto:woltman@alum.mit.edu</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/1c984cef1528253505d64e2c7fe1e32412865f4c/public/icons/prime95.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>prime gimps</tags>
   </metadata>
 </package>

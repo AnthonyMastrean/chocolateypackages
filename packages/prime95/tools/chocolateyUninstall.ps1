@@ -1,9 +1,7 @@
-$id   = 'prime95'
-$name = 'Prime95'
-
-$tools   = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) 'content'
+$tools = Split-Path $MyInvocation.MyCommand.Definition
 
 . $tools\shortcut.ps1
 
-Remove-Shortcut -Link $name -SpecialFolder "CommonPrograms"
+Uninstall-Shortcut `
+    -Link 'Prime95'
+    -SpecialFolder 'CommonPrograms'
