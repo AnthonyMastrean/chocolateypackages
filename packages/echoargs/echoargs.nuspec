@@ -3,17 +3,19 @@
   <metadata>
     <id>echoargs</id>
     <title>EchoArgs</title>
-    <version>0.0.1</version>
+    <version>3.2.0</version>
     <authors>Pscx</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Echo command line arguments back out to the console for your review.</summary>
     <description>Echo command line arguments back out to the console for your review.</description>
     <projectUrl>http://pscx.codeplex.com/</projectUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <projectSourceUrl>http://pscx.codeplex.com/SourceControl/latest</projectSourceUrl>
+    <docsUrl>https://pscx.codeplex.com/downloads/get/923564</docsUrl>
+    <bugTrackerUrl>http://pscx.codeplex.com/workitem/list/basic</bugTrackerUrl>
+    <mailingListUrl>http://pscx.codeplex.com/discussions</mailingListUrl>
+    <releaseNotes>https://pscx.codeplex.com/releases/view/133199</releaseNotes>
     <tags>echo args powershell console command cmd</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
-  <files>
-    <file src="content\echoargs.exe" target="content\echoargs.exe" />
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
 </package>
