@@ -3,19 +3,24 @@
   <metadata>
     <id>ungit</id>
     <title>ungit</title>
-    <version>0.8.4</version>
+    <version>0.10.1</version>
     <authors>Fredrik Noren</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The easiest way to use git. On any platform. Anywhere.</summary>
     <description>The easiest way to use git. On any platform. Anywhere.</description>
-    <projectUrl>https://github.com/FredrikNoren/ungit</projectUrl>
-    <tags>git</tags>
+    <projectUrl>https://github.com/FredrikNoren/ungit#readme</projectUrl>
     <licenseUrl>https://github.com/FredrikNoren/ungit#license-mit</licenseUrl>
+    <projectSourceUrl>https://github.com/FredrikNoren/ungit</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
+    <docsUrl>https://github.com/FredrikNoren/ungit#using</docsUrl>
+    <bugTrackerUrl>https://github.com/FredrikNoren/ungit/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/FredrikNoren/ungit/blob/master/CHANGELOG.md#0101</releaseNotes>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/b035344b18d9979b4a69df2cb594d9df1aefe72f/public/icons/ungit.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/ungit.png</iconUrl>
+    <tags>git</tags>
     <dependencies>
-      <dependency id="git" version="[1.8, 2.0)" />
-      <dependency id="nodejs.install" version="[0.10, 1.0)" />
+      <dependency id="git" version="[1.8,)" />
+      <dependency id="nodejs.install" version="[0.10,)" />
     </dependencies>
   </metadata>
 </package>
