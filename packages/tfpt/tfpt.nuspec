@@ -21,7 +21,7 @@ This release supports
  * Team Foundation Server 2012 Update 3
  * Team Foundation Server 2012 Update 4
     </description>
-    <projectUrl>http://visualstudiogallery.msdn.microsoft.com/c255a1e4-04ba-4f68-8f4e-cd473d6b971f</projectUrl>
+    <projectUrl>https://visualstudiogallery.msdn.microsoft.com/b1ef7eb2-e084-4cb8-9bc7-06c3bad9148f</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/03b32c827aeeb19f19a7496a7fb1144cf73c3496/public/icons/microsoft.png</iconUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
