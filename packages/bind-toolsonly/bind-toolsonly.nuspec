@@ -3,13 +3,25 @@
   <metadata>
     <id>bind-toolsonly</id>
     <title>BIND Tools</title>
-    <version>9.10.2</version>
+    <version>9.10.3</version>
     <authors>ISC</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>BIND is by far the most widely used DNS software on the Internet.</summary>
-    <description>BIND is by far the most widely used DNS software on the Internet. It provides a robust and stable platform on top of which organizations can build distributed computing systems with the knowledge that those systems are fully compliant with published DNS standards.</description>
+    <summary>The most widely used Name Server Software.</summary>
+    <description>
+BIND is open source software that implements the Domain Name System (DNS) protocols for the Internet. It is a reference implementation of those protocols, but it is also production-grade software, suitable for use in high-volume and high-reliability applications.  The name BIND stands for “Berkeley Internet Name Domain”, because the software originated in the early 1980s at the University of California at Berkeley.
+
+BIND is by far the most widely used DNS software on the Internet, providing a robust and stable platform on top of which organizations can build distributed computing systems with the knowledge that those systems are fully compliant with published DNS standards.
+    </description>
     <projectUrl>http://www.isc.org/software/bind</projectUrl>
+    <releaseNotes>http://ftp.isc.org/isc/bind9/9.10.3-P4/RELEASE-NOTES-bind-9.10.3-P4.html</releaseNotes>
+    <docsUrl>http://ftp.isc.org/isc/bind9/cur/9.10/doc/arm/Bv9ARM.html</docsUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <bugTrackerUrl>https://www.isc.org/community/report-bug/</bugTrackerUrl>
+    <mailingListUrl>https://www.isc.org/community/mailing-list/</mailingListUrl>
     <tags>bind isc dig</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+        <dependency id="vcredist2012" />
+    </dependencies>
   </metadata>
 </package>

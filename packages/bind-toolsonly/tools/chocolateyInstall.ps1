@@ -1,10 +1,9 @@
-﻿$tools   = Split-Path $MyInvocation.MyCommand.Definition
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
 
 $keep = @(
   'arpaname.exe',
   'bindevt.dll',
-  'BINDInstall.exe',
   'delv.exe',
   'dig.exe',
   'host.exe',
@@ -24,10 +23,12 @@ $keep = @(
 
 Install-ChocolateyZipPackage `
   -PackageName 'bind' `
-  -Url 'http://ftp.isc.org/isc/bind9/9.10.2-P4/BIND9.10.2-P4.x86.zip' `
-  -Url64 'http://ftp.isc.org/isc/bind9/9.10.2-P4/BIND9.10.2-P4.x64.zip' `
-  -Checksum '9814f6109699c167a0a0996bbc8c2e36' `
-  -Checksum64 '0f59aa797943ccece2e16496c76535ff' `
+  -Url 'http://ftp.isc.org/isc/bind9/9.10.3-P4/BIND9.10.3-P4.x86.zip' `
+  -Url64 'http://ftp.isc.org/isc/bind9/9.10.3-P4/BIND9.10.3-P4.x64.zip' `
+  -Checksum '9AE88282924CE70D445D006D2EE57987355A0F1951859E42E4AF58D7D17812F3' `
+  -Checksum64 '19B7863CF029D9EB5C2BE033DA2C3D853A91E40929585224A4004381F88EB967' `
+  -ChecksumType 'SHA256' `
+  -ChecksumType64 'SHA256' `
   -UnzipLocation $content `
 
 Get-ChildItem $content `
