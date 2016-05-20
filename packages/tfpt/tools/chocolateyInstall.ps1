@@ -6,7 +6,7 @@
     -Checksum 'A988F052D1D8CB694BB89BF147ACADE2A7E870CAE89B3982D480058CE8AB0B8F' `
     -ChecksumType 'SHA256'
 
-$programs = @{64=${ENV:PROGRAMFILES(X86)};32=$ENV:PROGRAMFILES}[(Get-ProcessorBits 64)]
+$programs = @{64=${ENV:PROGRAMFILES(X86)};32=$ENV:PROGRAMFILES}[(Get-ProcessorBits)]
 $bin = Join-Path $programs 'Microsoft Team Foundation Server 2012 Power Tools'
 
 Install-ChocolateyPath `
