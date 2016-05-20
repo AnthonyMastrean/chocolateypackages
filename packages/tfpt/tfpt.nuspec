@@ -2,8 +2,8 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>tfpt</id>
-    <title>Microsoft Visual Studio Team Foundation Server 2012 Power Tools</title>
-    <version>11.0.60506.0</version>
+    <title>Microsoft Visual Studio Team Foundation Server 2013 Power Tools</title>
+    <version>12.1.00402.0</version>
     <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Power Tools are a set of enhancements, tools, and command-line utilities that increase productivity of Team Foundation Server scenarios.</summary>
@@ -12,16 +12,10 @@ Power Tools are a set of enhancements, tools, and command-line utilities that in
 
 This release supports
 
- * Visual Studio 2012 Update 1
- * Visual Studio 2012 Update 2
- * Visual Studio 2012 Update 3
- * Visual Studio 2012 Update 4
- * Team Foundation Server 2012 Update 1
- * Team Foundation Server 2012 Update 2
- * Team Foundation Server 2012 Update 3
- * Team Foundation Server 2012 Update 4
+ * Visual Studio 2013, including any update
+ * Team Foundation Server 2013, including any update
     </description>
-    <projectUrl>https://visualstudiogallery.msdn.microsoft.com/b1ef7eb2-e084-4cb8-9bc7-06c3bad9148f</projectUrl>
+    <projectUrl>https://visualstudiogallery.msdn.microsoft.com/f017b10c-02b4-4d6d-9845-58a06545627f</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/03b32c827aeeb19f19a7496a7fb1144cf73c3496/public/icons/microsoft.png</iconUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
