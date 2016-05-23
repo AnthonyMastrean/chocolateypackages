@@ -20,5 +20,8 @@ This release supports
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>tfs powertools</tags>
+    <dependencies>
+        <dependency id="dotnet3.5" />
+    </dependencies>
   </metadata>
 </package>
