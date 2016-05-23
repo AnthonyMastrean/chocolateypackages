@@ -6,7 +6,7 @@
     <version>3.2.0</version>
     <authors>Pscx</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>Echo command line arguments back out to the console for your review.</summary>
+    <summary>Echo command line arguments back to the console for you to review.</summary>
     <description>
 This is a repackaging of the EchoArgs.exe command line tool from the PowerShell
 Community Extensions package (Pscx). It's used to echo command line arguments
