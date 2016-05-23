@@ -8,7 +8,9 @@
     <owners>Anthony Mastrean</owners>
     <summary>Echo command line arguments back out to the console for your review.</summary>
     <description>
-Echo command line arguments back out to the console for your review.
+This is a repackaging of the EchoArgs.exe command line tool from the PowerShell
+Community Extensions package (Pscx). It's used to echo command line arguments
+back to the console for you to review!
     </description>
     <projectUrl>http://pscx.codeplex.com/</projectUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
