@@ -1,0 +1,6 @@
+Verification is intended to assist the Chocolatey moderators and community in
+verifying that this package's contents are trustworthy.
+
+ 1. Download the Pscx installer from http://pscx.codeplex.com/downloads/get/923562.
+ 2. Extract the EchoArgs.exe from the MSI using a tool like lessmsi.
+ 3. Compare checksums.

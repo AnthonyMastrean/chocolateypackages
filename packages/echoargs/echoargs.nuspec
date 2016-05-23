@@ -7,7 +7,9 @@
     <authors>Pscx</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Echo command line arguments back out to the console for your review.</summary>
-    <description>Echo command line arguments back out to the console for your review.</description>
+    <description>
+Echo command line arguments back out to the console for your review.
+    </description>
     <projectUrl>http://pscx.codeplex.com/</projectUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <projectSourceUrl>http://pscx.codeplex.com/SourceControl/latest</projectSourceUrl>
@@ -15,6 +17,7 @@
     <bugTrackerUrl>http://pscx.codeplex.com/workitem/list/basic</bugTrackerUrl>
     <mailingListUrl>http://pscx.codeplex.com/discussions</mailingListUrl>
     <releaseNotes>https://pscx.codeplex.com/releases/view/133199</releaseNotes>
+    <licenseUrl>http://pscx.codeplex.com/license</licenseUrl>
     <tags>echo args powershell console command cmd</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
