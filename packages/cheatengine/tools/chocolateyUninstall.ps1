@@ -6,4 +6,4 @@ Uninstall-ChocolateyPackage `
   -PackageName 'cheatengine' `
   -FileType 'EXE' `
   -Silent '/VERYSILENT /NORESTART' `
-  -File (Get-Uninstaller -Name 'Cheat Engine 6.5')
+  -File (Get-Uninstaller -Name 'Cheat Engine 6.5.1')
