@@ -1,4 +1,4 @@
-$id  = "findbugs"
+﻿$id  = "findbugs"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Split-Path $tools

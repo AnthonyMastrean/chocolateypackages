@@ -1,4 +1,4 @@
-$tools = Split-Path $MyInvocation.MyCommand.Definition
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $package = Split-Path $tools
 $ant_home = Join-Path $package 'apache-ant-1.9.7'
 $ant_bat = Join-Path $ant_home 'bin/ant.bat'

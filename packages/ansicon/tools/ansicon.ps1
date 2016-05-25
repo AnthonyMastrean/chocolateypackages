@@ -1,4 +1,4 @@
-# ANSICON -i produces a Command Processor AutoRun property with these attributes
+﻿# ANSICON -i produces a Command Processor AutoRun property with these attributes
 #
 #   * at the beginning of the property
 #   * surrounded by parenthesis

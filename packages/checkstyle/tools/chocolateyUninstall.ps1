@@ -1,4 +1,4 @@
-$id  = "checkstyle"
+﻿$id  = "checkstyle"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Split-Path $tools

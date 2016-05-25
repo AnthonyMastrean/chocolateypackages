@@ -1,4 +1,4 @@
-$tools = Split-Path $MyInvocation.MyCommand.Definition
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $response = Join-Path $tools 'uninstall.iss'
 
 . $tools\uninstall.ps1

@@ -1,4 +1,4 @@
-<#
+﻿<#
   .SYNOPSIS
 
   Get the uninstaller location for most Windows software.

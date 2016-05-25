@@ -1,4 +1,4 @@
-$tools = Split-Path $MyInvocation.MyCommand.Definition
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 
 . $tools\uninstall.ps1
 . $tools\version.ps1

@@ -1,4 +1,4 @@
-$id = "ruby.devkit"
+﻿$id = "ruby.devkit"
 $url = "https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe"
 
 $tools = Split-Path $MyInvocation.MyCommand.Definition
@@ -21,7 +21,7 @@ try {
   }  
 
   # Delete all the <DEVKIT_INSTALL_DIR> subdirectories and files except for 
-  # config.yml. If you’ve made any customizations to the MSYS shell you may 
+  # config.yml. If youâ€™ve made any customizations to the MSYS shell you may 
   # also want to keep files in the etc and home subdirectories.
   Backup-RubyDevkitCustomizations $devkit $temp
   Remove-RubyDevkit $devkit
@@ -37,9 +37,9 @@ try {
   # From a Command Prompt, cd into the <DEVKIT_INSTALL_DIR> directory and run 
   # ruby dk.rb install --force. This will cause all your installed Rubies 
   # listed in config.yml to use the updated SFX DevKit when building native 
-  # gems and update the DevKit’s helper scripts (devkit.rb and 
+  # gems and update the DevKitâ€™s helper scripts (devkit.rb and 
   # operating_system.rb) with any new functionality. For safety, the original 
-  # helper scripts are timestamp archived beside the new helper scripts. It’s 
+  # helper scripts are timestamp archived beside the new helper scripts. Itâ€™s 
   # always a good idea to review the two versions (and potentially make 
   # modifications) to ensure configuration specific to your system still works 
   # as expected.

@@ -1,4 +1,4 @@
-$id     = "openra"
+﻿$id     = "openra"
 $name   = "OpenRA"
 $kind   = "EXE"
 $silent = "/S"

@@ -1,4 +1,4 @@
-$tools = Split-Path $MyInvocation.MyCommand.Definition
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 
 # This package requires the RSYNC_HOME directory on the PATH and a HOME
 # environment variable. This cannot be provided with Chocolatey's automatic

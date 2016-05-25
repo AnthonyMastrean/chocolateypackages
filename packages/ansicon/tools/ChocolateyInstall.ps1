@@ -1,4 +1,4 @@
-$id = "ansicon"
+﻿$id = "ansicon"
 $url = "https://github.com/adoxa/ansicon/releases/download/v1.66/ansi166.zip"
 
 $user_key = "HKCU:\Software\Microsoft\Command Processor"

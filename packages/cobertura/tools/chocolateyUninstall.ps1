@@ -1,4 +1,4 @@
-$id  = "cobertura"
+﻿$id  = "cobertura"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition
 $content = Split-Path $tools

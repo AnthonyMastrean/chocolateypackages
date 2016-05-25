@@ -1,4 +1,4 @@
-$id     = "spaceengine"
+﻿$id     = "spaceengine"
 $name   = "SpaceEngine version 0.9.7.2"
 $kind   = "EXE"
 $silent = "/VERYSILENT /NORESTART"

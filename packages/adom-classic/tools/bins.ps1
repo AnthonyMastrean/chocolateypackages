@@ -1,4 +1,4 @@
-function New-IgnoreBin {
+﻿function New-IgnoreBin {
   [CmdletBinding()]
   param(
     [Parameter(Mandatory = $true)]

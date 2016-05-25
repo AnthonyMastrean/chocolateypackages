@@ -1,4 +1,4 @@
-$id = "angband"
+﻿$id = "angband"
 $name = "Angband"
 
 $tools = Split-Path $MyInvocation.MyCommand.Definition

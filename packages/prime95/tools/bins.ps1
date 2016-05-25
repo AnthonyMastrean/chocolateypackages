@@ -1,4 +1,4 @@
-<#
+﻿<#
   .SYNOPSIS
 
   Create a .ignore file for a package binary.

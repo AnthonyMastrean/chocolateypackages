@@ -1,4 +1,4 @@
-<#
+﻿<#
   .SYNOPSIS
 
   New-Shortcut creates a new shortcut to a file or program.

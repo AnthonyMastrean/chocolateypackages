@@ -1,4 +1,4 @@
-function Get-Rubies {
+﻿function Get-Rubies {
   $paths = @{
     $true=$ENV:PATH;
     $false=[Environment]::GetEnvironmentVariable("Path", "Machine")

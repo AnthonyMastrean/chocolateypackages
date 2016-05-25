@@ -1,4 +1,4 @@
-$id = "adom-tiles"
+﻿$id = "adom-tiles"
 $name = "Ancient Domains of Mystery (ADOM)"
 $tools = Split-Path $MyInvocation.MyCommand.Definition
 

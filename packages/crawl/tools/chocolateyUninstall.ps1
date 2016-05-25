@@ -1,4 +1,4 @@
-$id = "crawl"
+﻿$id = "crawl"
 $kind = "EXE"
 $silent = "/S"
 

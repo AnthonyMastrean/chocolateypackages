@@ -1,4 +1,4 @@
-$id        = "visioviewer2013"
+﻿$id        = "visioviewer2013"
 $kind      = "MSI"
 $silent    = "/QN"
 $product64 = "{95150000-0052-0409-1000-0000000FF1CE}"

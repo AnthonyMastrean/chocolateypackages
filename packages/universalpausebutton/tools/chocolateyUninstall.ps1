@@ -1,4 +1,4 @@
-$id   = "universalpausebutton"
+﻿$id   = "universalpausebutton"
 $name = "Universal Pause Button"
 
 $tools   = Split-Path $MyInvocation.MyCommand.Definition

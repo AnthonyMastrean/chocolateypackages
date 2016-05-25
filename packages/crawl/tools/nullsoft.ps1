@@ -1,4 +1,4 @@
-<#
+﻿<#
   .SYNOPSIS
 
   Get the uninstaller EXE location for a Nullsoft installer.
