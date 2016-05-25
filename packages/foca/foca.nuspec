@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>foca</id>
+    <title>Fingerprinting Organizations with Collected Archives (FOCA)</title>
+    <version>3.4.3</version>
+    <authors>Eleven Paths</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>FOCA (Fingerprinting Organizations with Collected Archives) is a tool used mainly to find metadata and hidden information in the documents its scans.</summary>
+    <description>
+FOCA (Fingerprinting Organizations with Collected Archives) is a tool used mainly to find metadata and hidden information in the documents its scans. These documents may be on web pages, and can be downloaded and analyzed with FOCA.
+
+It is capable of analyzing a wide variety of documents, with the most common being Microsoft Office, Open Office, or PDF files, although it also analyzes Adobe InDesign or SVG files, for instance.
+
+These documents are searched for using three possible search engines: Google, Bing, and Exalead. The sum of the results from the three engines amounts to a lot of documents. It is also possible to add local files to extract the EXIF information from graphic files, and a complete analysis of the information discovered through the URL is conducted even before downloading the file.
+
+With all data extracted from all files, FOCA matches information in an attempt to identify which documents have been created by the same team and what servers and clients may be infered from them.
+    </description>
+    <projectUrl>https://www.elevenpaths.com/labstools/foca/index.html</projectUrl>
+    <tags>metadata documents infosec</tags>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/87bad93729a25d41fd303162e0748c97694916a4/public/icons/foca.png</iconUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <bugTrackerUrl>https://www.elevenpaths.com/keep-touch/contact-us/index.html</bugTrackerUrl>
+    <mailingListUrl>https://community.elevenpaths.com/elevenpaths</mailingListUrl>
+    <licenseUrl>https://www.elevenpaths.com/pdfs_eulas/TDIP_EULA_Foca%20_07082014_EN.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+        <dependency id="dotnet3.5" />
+    </dependencies>
+  </metadata>
+</package>
