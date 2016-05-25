@@ -15,11 +15,14 @@ It comes with a memory scanner to quickly scan for variables used within a game 
 For new users it is recommended to go through the tutorial(The one that comes with Cheat Engine, you can find it in your programs list after installing) and at least reach step 5 for basic understanding of the usage of Cheat Engine.
     </description>
     <projectUrl>http://www.cheatengine.org/</projectUrl>
-    <releaseNotes>http://www.cheatengine.org/</releaseNotes>
+    <releaseNotes>https://github.com/cheat-engine/cheat-engine/releases/tag/6.5</releaseNotes>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
-    <tags>games hex-editor debugging</tags>
+    <projectSourceUrl>https://github.com/cheat-engine/cheat-engine</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/cheat-engine/cheat-engine/issues</bugTrackerUrl>
+    <mailingListUrl>http://forum.cheatengine.org/</mailingListUrl>
     <licenseUrl>https://github.com/cheat-engine/cheat-engine/blob/35a850255f59923858ee3a7eb7e2a65ca197e821/Cheat%20Engine/release/License.txt</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/27828f55e1a0091893bf8adfc5439e6d35596a9e/public/icons/cheatengine.png</iconUrl>
+    <tags>games hex-editor debugging</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
 </package>

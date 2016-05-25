@@ -2,5 +2,6 @@
   -PackageName 'cheatengine' `
   -FileType 'EXE' `
   -Silent '/VERYSILENT /NORESTART' `
-  -Url 'http://mirror3.cheatengine.org/download/d1/CheatEngine65.exe' `
-  -Checksum 'd88193ae121bb62005ce0137cf3613cf'
+  -Url 'https://github.com/cheat-engine/cheat-engine/releases/download/6.5/CheatEngine65.exe' `
+  -Checksum 'C0804C963983AAA16BFC1CBEAB63EF3E52784204192B1929FD3CDB8A7D4D7D3B' `
+  -ChecksumType 'SHA256'
