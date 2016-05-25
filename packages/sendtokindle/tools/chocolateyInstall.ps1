@@ -1,4 +1,8 @@
-﻿Install-ChocolateyPackage `
+﻿Set-Service `
+    -Name 'Spooler' `
+    -StartupType 'Automatic'
+
+Install-ChocolateyPackage `
     -PackageName 'sendtokindle' `
     -FileType 'EXE' `
     -Silent '/S' `

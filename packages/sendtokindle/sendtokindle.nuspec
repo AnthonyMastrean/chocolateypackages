@@ -19,6 +19,10 @@ Reading your personal documents on a Kindle has never been easier
 When you download and install, Send to Kindle will appear when you right click on a file in Windows Explorer or in the print dialog of any Windows application. To send multiple documents to Kindle without opening them, simply select documents and choose Send to Kindle from the right-click menu in Windows Explorer.
 
 Content you save to Cloud Drive can be accessed from any Kindle device or using the free reading app on your iOS or Android device. Whispersync of notes, highlights, bookmarks and last page read is available on your Cloud Drive content. Learn more about the Kindle Personal Documents service here.
+
+----
+
+This package requires the Print Spooler service to be enabled, this requires setting the service startup type to Automatic (or Manual, but we think Automatic is a better choice for desktop systems).
     </description>
     <projectUrl>http://www.amazon.com/gp/sendtokindle/pc/</projectUrl>
     <licenseUrl>http://www.amazon.com/kindlelicense?ref=stk_pc_terms</licenseUrl>
