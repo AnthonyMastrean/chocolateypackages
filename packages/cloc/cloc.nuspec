@@ -3,15 +3,22 @@
   <metadata>
     <id>cloc</id>
     <title>Count Lines of Code (CLOC)</title>
-    <version>1.62</version>
+    <version>1.66</version>
     <authors>Al Danial</authors>
     <owners>Anthony Mastrean</owners>
-    <summary>cloc counts blank lines, comment lines, and physical lines of source code in many programming languages.</summary>
-    <description>cloc counts blank lines, comment lines, and physical lines of source code in many programming languages. Given two versions of a code base, cloc can compute differences in blank, comment, and source lines. It is written entirely in Perl with no dependencies outside the standard distribution of Perl v5.6 and higher (code from some external modules is embedded within cloc) and so is quite portable.</description>
-    <projectUrl>http://cloc.sourceforge.net/</projectUrl>
+    <summary>Cloc counts blank lines, comment lines, and physical lines of source code in many programming languages.</summary>
+    <description>
+Cloc counts blank lines, comment lines, and physical lines of source code in many programming languages. Given two versions of a code base, cloc can compute differences in blank, comment, and source lines. It is written entirely in Perl with no dependencies outside the standard distribution of Perl v5.6 and higher (code from some external modules is embedded within cloc) and so is quite portable.
+    </description>
+    <projectUrl>https://github.com/AlDanial/cloc#readme</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/AlDanial/cloc/34f117e3b82f3d655c0798c2c940f010637f9b1d/LICENSE</licenseUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/AlDanial/cloc/issues</bugTrackerUrl>
+    <docsUrl>https://github.com/AlDanial/cloc#quick-start-</docsUrl>
+    <releaseNotes>https://github.com/AlDanial/cloc/releases/download/v1.66/release_notes-1.66.txt</releaseNotes>
+    <projectSourceUrl>https://github.com/AlDanial/cloc</projectSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/f02158b13686063faaa826fbeb9ec5e37d2513ce/public/icons/cloc.png</iconUrl>
     <tags>loc sloc cloc count lines code</tags>
-    <licenseUrl>http://cloc.sourceforge.net/#License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/cloc.png</iconUrl>
   </metadata>
 </package>
