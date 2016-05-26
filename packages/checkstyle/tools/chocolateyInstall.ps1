@@ -1,19 +1,22 @@
-﻿$id  = "checkstyle"
-$url = "http://downloads.sourceforge.net/project/checkstyle/checkstyle/6.8.1/checkstyle-6.8.1-bin.zip"
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$package = Split-Path $tools
+$content = Join-Path $package 'checkstyle-6.18'
+$bat = Join-Path $tools 'checkstyle.bat'
 
-$tools   = Split-Path $MyInvocation.MyCommand.Definition
-$content = Split-Path $tools
-$pkg_home = Join-Path $content "checkstyle-6.8.1"
-$bat     = Join-Path $tools "checkstyle.bat"
+Install-ChocolateyZipPackage `
+    -PackageName 'checkstyle' `
+    -Url 'https://sourceforge.net/projects/checkstyle/files/checkstyle/6.18/checkstyle-6.18-bin.zip/download' `
+    -Checksum '2034571567DC973E3B30D7CBB45B005A628D2C1877FC0E0F058D61DD2F0BC841' `
+    -ChecksumType 'SHA256' `
+    -UnzipLocation $package
 
-Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content
-Install-ChocolateyEnvironmentVariable -VariableName "CHECKSTYLE_HOME" -VariableValue $pkg_home -VariableType "Machine"
+Install-ChocolateyEnvironmentVariable `
+    -VariableName 'CHECKSTYLE_HOME' `
+    -VariableValue $content `
+    -VariableType 'Machine'
 
-@"
-@ECHO OFF
-java -jar "$pkg_home\checkstyle-6.8.1-all.jar" %*
-"@ | Out-File $bat -Encoding 'ASCII' -Force
-
-Install-BinFile -Name "checkstyle" -Path $bat
+Install-BinFile `
+    -Name 'checkstyle' `
+    -Path $bat
 
 Update-SessionEnvironment

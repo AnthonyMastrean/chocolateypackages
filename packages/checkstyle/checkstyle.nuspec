@@ -3,7 +3,7 @@
   <metadata>
     <id>checkstyle</id>
     <title>Checkstyle</title>
-    <version>6.8.1</version>
+    <version>6.18</version>
     <authors>checkstyle</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.</summary>
@@ -11,14 +11,24 @@
 Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. It automates the process of checking Java code to spare humans of this boring (but important) task. This makes it ideal for projects that want to enforce a coding standard.
 
 Checkstyle is highly configurable and can be made to support almost any coding standard. An example configuration files are supplied supporting the Sun Code Conventions, Google Java Style.
+
+----
+
+Due to changes in the Java 8 package, you may have to set your own `%JAVA_HOME%` environment variable. Checkstyle is a JAR and, as you can see in the included `checkstyle.bat` file, we have to run the checkstyle JAR through the `java` command.
     </description>
     <projectUrl>http://checkstyle.sourceforge.net/</projectUrl>
-    <tags>java source code style</tags>
+    <projectSourceUrl>https://github.com/checkstyle/checkstyle</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/checkstyle/checkstyle/issues</bugTrackerUrl>
+    <docsUrl>http://checkstyle.sourceforge.net/config.html</docsUrl>
+    <mailingListUrl>http://checkstyle.sourceforge.net/mail-lists.html</mailingListUrl>
+    <releaseNotes>http://checkstyle.sourceforge.net/releasenotes.html</releaseNotes>
     <licenseUrl>http://checkstyle.sourceforge.net/license.html</licenseUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/2257c158a8b2b0dd9fea7602ee7b85c85a2ca88c/public/icons/checkstyle.png</iconUrl>
+    <tags>java source code style</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/bff3a96e7cf0c5a72057768cec1be7a119a677d4/public/icons/checkstyle.png</iconUrl>
     <dependencies>
-      <dependency id="jdk8" />
+      <dependency id="jre8" />
     </dependencies>
   </metadata>
 </package>
