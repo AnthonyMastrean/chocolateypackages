@@ -11,8 +11,15 @@ Install-ChocolateyZipPackage `
     -ChecksumType 'SHA256' `
     -UnzipLocation $package
 
-# This package requires the RSYNC_HOME directory on the PATH and a HOME
+Install-ChocolateyEnvironmentVariable `
+    -VariableName 'CWRSYNC_HOME' `
+    -VariableValue $content `
+    -VariableType 'Machine'
+
+# This package requires the CWRSYNC_HOME directory on the PATH and a HOME
 # environment variable. This cannot be provided with Chocolatey's automatic
 # shimming. I have to shim custom batch files.
 Get-ChildItem $tools\*.bat | %{ Install-BinFile -Name $_.BaseName -Path $_ }
 Get-ChildItem $content\bin\*.exe | Install-IgnoreBin
+
+Update-SessionEnvironment
