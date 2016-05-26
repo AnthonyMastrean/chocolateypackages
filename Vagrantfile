@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
     vbox.cpus = 1
     vbox.customize ['modifyvm', :id, '--audio', 'none']
     vbox.customize ['modifyvm', :id, '--usb', 'off']
-    vbox.linked_clone = true if Vagrant::VERSION >= '1.8.0'
+    vbox.linked_clone = true if Vagrant::VERSION >= '1.8'
   end
   config.vm.provision 'shell', inline: <<-SHELL
     Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('http://chocolatey.org/installabsolutelatest.ps1'))
