@@ -9,7 +9,7 @@ function Install-ChocolateyCommonShortcut {
   .DESCRIPTION
 
   Create a shortcut in one of the Windows special folders, like on the Desktop
-  or in the Start Menu Programs folder. This function wraps the provided
+  or in the Start Menu Programs folder. This function wraps the built-in
   Install-ChocolateyShortcut, but only exposes behavior for creating shortcuts
   in these special folders.
 
@@ -62,7 +62,12 @@ function Install-ChocolateyCommonShortcut {
     [switch] $Launch
   )
 
-  $ShortcutFilePath = Resolve-ShortcutPath -ShortcutName $ShortcutName -SpecialFolder $SpecialFolder
+  # See about_Splatting for more information on this approach.
+  #
+  #   https://technet.microsoft.com/en-us/library/jj672955.aspx
+  #
+
+  $ShortcutFilePath = Join-Path ([System.Environment]::GetFolderPath($SpecialFolder)) $ShortcutName
   $PsBoundParameters['ShortcutFilePath'] = $ShortcutFilePath
 
   Install-ChocolateyShortcut @PsBoundParameters
@@ -84,26 +89,5 @@ function Uninstall-ChocolateyCommonShortcut {
     $SpecialFolder
   )
 
-  Remove-Item -Path (Resolve-ShortcutPath -ShortcutName $ShortcutName -SpecialFolder $SpecialFolder) -Force | Out-Null
-}
-
-function Resolve-ShortcutPath {
-  param(
-    [Parameter(Mandatory = $true)]
-    [ValidateNotNullOrEmpty()]
-    $ShortcutName,
-
-    [Parameter(Mandatory = $true)]
-    [ValidateScript({ [System.Environment+SpecialFolder]$_ })]
-    $SpecialFolder
-  )
-
-  if(-not($ShortcutName.ToLower().EndsWith('.lnk') -or $ShortcutName.ToLower().EndsWith('.url'))) {
-    $ShortcutName = "$ShortcutName.lnk"
-  }
-
-  $ShortcutFilePath = Join-Path ([System.Environment]::GetFolderPath($SpecialFolder)) $ShortcutName
-
-  # This is how you get Resolve-Path behavior for a path that doesn't exist.
-  $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($ShortcutFilePath)
+  Remove-Item -Path (Join-Path ([System.Environment]::GetFolderPath($SpecialFolder)) $ShortcutName) -Force | Out-Null
 }
