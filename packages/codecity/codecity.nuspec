@@ -3,15 +3,21 @@
   <metadata>
     <id>codecity</id>
     <title>CodeCity</title>
-    <version>1.4.3</version>
+    <version>1.4.3.20160527</version>
     <authors>Richard Wettel</authors>
     <owners>Anthony Mastrean</owners>
     <summary>CodeCity is an integrated environment for software analysis.</summary>
-    <description>CodeCity is an integrated environment for software analysis, in which software systems are visualized as interactive, navigable 3D cities. The classes are represented as buildings in the city, while the packages are depicted as the districts in which the buildings reside. The visible properties of the city artifacts depict a set of chosen software metrics, as in the polymetric views of CodeCrawler.</description>
-    <projectUrl>http://www.inf.usi.ch/phd/wettel/codecity.html</projectUrl>
-    <tags>code visualization static analysis</tags>
+    <description>
+CodeCity is an integrated environment for software analysis, in which software systems are visualized as interactive, navigable 3D cities. The classes are represented as buildings in the city, while the packages are depicted as the districts in which the buildings reside. The visible properties of the city artifacts depict a set of chosen software metrics, as in the polymetric views of CodeCrawler.
+    </description>
+    <projectUrl>http://wettel.github.io/codecity.html</projectUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <docsUrl>http://wettel.github.io/codecity-faq.html</docsUrl>
     <licenseUrl>http://www.cincomsmalltalk.com/userblogs/cincom/blogView?content=nc_license</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>http://wettel.github.io/codecity-releases.html</releaseNotes>
+    <bugTrackerUrl>http://wettel.github.io/contact.html</bugTrackerUrl>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/codecity.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>code visualization static analysis</tags>
   </metadata>
 </package>
