@@ -1,16 +1,8 @@
-param($id)
+param($PackageName)
 
 $ErrorActionPreference = 'Stop'
 
 $here = Split-Path $MyInvocation.MyCommand.Definition
-$package = Join-Path $here (Join-Path 'packages' $id)
+$source = Join-Path $here "packages\$PackageName"
 
-# Run an arbitrary Win32 application so LASTEXITCODE is 0
-setx trigger 1
-
-choco install --force --yes --source "$package;http://chocolatey.org/api/v2/" $id
-
-# Vagrant has issues knowing that there was an error
-if ($LASTEXITCODE -ne 0) {
-  exit $LASTEXITCODE
-}
+choco install --force --yes --source "$source;http://chocolatey.org/api/v2/" $PackageName
