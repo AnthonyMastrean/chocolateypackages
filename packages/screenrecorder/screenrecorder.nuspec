@@ -15,7 +15,7 @@ Whether you are having problems yourself getting something to work correctly on 
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/f88ad642988c497ac138d0d0bb48181761655eb6/public/icons/screenrecorder.png</iconUrl>
     <copyright>2007 - Burak Uysaler</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>screenrecorder not-silent</tags>
+    <tags>screen recorder wmv not-silent</tags>
     <!-- <docsUrl></docsUrl> -->
     <!-- <projectSourceUrl></projectSourceUrl> -->
     <!-- <mailingListUrl></mailingListUrl> -->
