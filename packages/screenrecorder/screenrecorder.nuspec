@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>screenrecorder</id>
+    <title>Windows Screen Recorder</title>
+    <version>4.0.0</version>
+    <authors>Burak Uysaler</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Screen Recorder simplifies screen capture for everyone.</summary>
+    <description>
+Whether you are having problems yourself getting something to work correctly on your computer and are working with tech support, or you're trying to solve such problems for your customers, friends, or your Mom, you have probably spent hours describing or explaining events over and over again in an effort to deal with the lack of clarity that exists when one party can't see what is going on. Now there's a solution. Screenrecorder is a very easy-to-use screen-to-video capture program, developed on top of Windows Media Encoder, that lets you easily capture what is going on to a small video file, which you can then send via e-mail to the appropriate person. That person can then watch the video just as if he is sitting next to you and you are showing him what's is happening on the screen.
+    </description>
+    <projectUrl>https://technet.microsoft.com/en-us/magazine/2009.03.utilityspotlight2.aspx</projectUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/f88ad642988c497ac138d0d0bb48181761655eb6/public/icons/screenrecorder.png</iconUrl>
+    <copyright>2007 - Burak Uysaler</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>screenrecorder not-silent</tags>
+    <!-- <docsUrl></docsUrl> -->
+    <!-- <projectSourceUrl></projectSourceUrl> -->
+    <!-- <mailingListUrl></mailingListUrl> -->
+    <!-- <bugTrackerUrl></bugTrackerUrl> -->
+    <!-- <licenseUrl></licenseUrl> -->
+    <!-- <releaseNotes></releaseNotes> -->
+    <!-- <provides></provides> -->
+  </metadata>
+</package>
