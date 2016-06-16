@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   end
   config.vm.provision 'shell', inline: <<-SHELL
     Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('http://chocolatey.org/installabsolutelatest.ps1'))
-    Import-Module "$ENV:CHOCOLATEYINSTALL\helpers\chocolateyInstaller.psm1"
+    Import-Module "$ENV:CHOCOLATEYINSTALL/helpers/chocolateyInstaller.psm1"
     Update-SessionEnvironment
   SHELL
 end
