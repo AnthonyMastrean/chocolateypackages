@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>sikulix</id>
+    <title>SikuliX</title>
+    <version>1.1.0</version>
+    <authors>Tsung Hsiang Chang, Tom Yeh, Raimund Hocke</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Sikuli is a visual technology to automate and test graphical user interfaces (GUI) using images (screenshots).</summary>
+    <description>
+SikuliX automates anything you see on the screen of your desktop computer running Windows, Mac or some Linux/Unix. It uses image recognition powered by OpenCV to identify and control GUI components. This is handy in cases when there is no easy access to a GUI's internals or the source code of the application or web page you want to act on.
+
+SikuliX supports as scripting languages
+
+ * Python language level 2.7 (supported by Jython)
+ * running RobotFramework text-scripts is supported (see docs)
+ * Ruby language level 1.9 and 2.0 (supported by JRuby)
+ * JavaScript (supported by the Java Scripting Engine)
+
+and you can use it in Java programming and programming/scripting with any Java aware programming/scripting language (Jython, JRuby, Scala, Clojure).
+
+Though SikuliX is currently not available on any mobile device, it can be used with the respective emulators on a desktop computer or based on VNC solutions.
+
+Besides locating images on a screen SikuliX can run the mouse and the keyboard to interact with the identified GUI elements. This is available for multi monitor environments and even for remote systems with some restrictions.
+
+SikuliX comes with basic text recognition (OCR) and can be used to search text in images. This feature is powered by Tesseract.
+
+SikuliX is a Java application, that works on Windows XP+, Mac 10.6+ and most Linux/Unix systems. For Windows, Mac and Ubuntu 12.04+ it is complete and should normally work out of the box. For other Linux/Unix systems there usually are a few prerequisites to be setup.
+
+SikuliX is the follow up of Sikuli Script - last version 2011 as Sikuli-X-1.0rc3. Though it is no longer supported.
+    </description>
+    <projectUrl>http://sikulix.com/</projectUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <projectSourceUrl>https://github.com/RaiMan/SikuliX-2014</projectSourceUrl>
+    <bugTrackerUrl>https://launchpad.net/sikuli</bugTrackerUrl>
+    <docsUrl>http://sikulix-2014.readthedocs.io/en/latest/index.html</docsUrl>
+    <licenseUrl>http://sikuli.org/LICENSE</licenseUrl>
+    <releaseNotes>https://launchpad.net/sikuli/sikulix/1.1.0</releaseNotes>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/e10c936a1973d6f98f8b9adf6a96da87c2b56289/public/icons/sikuli.png</iconUrl>
+    <tags>automate test ui gui screenshot script</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="jre8" />
+    </dependencies>
+  </metadata>
+</package>
