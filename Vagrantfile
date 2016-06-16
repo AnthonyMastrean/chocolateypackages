@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
     vbox.memory = 2048
     vbox.customize ['modifyvm', :id, '--audio', 'none']
     vbox.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
-    vbox.customize ['modifyvm', :id, '--draganddrop', 'hosttoguest']
+    vbox.customize ['modifyvm', :id, '--draganddrop', 'bidirectional']
     vbox.customize ['modifyvm', :id, '--usb', 'off']
     vbox.customize ['modifyvm', :id, '--vram', 32]
   end
