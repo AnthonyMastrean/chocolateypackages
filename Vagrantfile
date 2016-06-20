@@ -15,9 +15,5 @@ Vagrant.configure(2) do |config|
     vbox.customize ['modifyvm', :id, '--usb', 'off']
     vbox.customize ['modifyvm', :id, '--vram', 32]
   end
-  config.vm.provision 'shell', inline: <<-SHELL
-    Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('http://chocolatey.org/installabsolutelatest.ps1'))
-    Import-Module "$ENV:CHOCOLATEYINSTALL/helpers/chocolateyInstaller.psm1"
-    Update-SessionEnvironment
-  SHELL
+  config.vm.provision 'shell', path: 'provision.ps1', powershell_elevated_interactive: true
 end
