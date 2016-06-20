@@ -1,9 +1,7 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
-$msi = Join-Path $content 'PriorTerminalSetup.msi'
-$exe = Join-Path $content 'setup.exe'
-
-. $tools\bins.ps1
+$install = Join-Path $content 'PriorTerminalSetup.msi'
+$setup = Join-Path $content 'setup.exe'
 
 Install-ChocolateyZipPackage `
     -PackageName 'priorterminal' `
@@ -16,7 +14,6 @@ Install-ChocolateyInstallPackage `
     -PackageName 'priorterminal' `
     -FileType 'MSI' `
     -SilentArgs '/Q' `
-    -File $msi
+    -File $install
 
-Install-IgnoreBin `
-    -Path $exe
+New-Item -Type 'File' -Path "$setup.ignore" -Force | Out-Null
