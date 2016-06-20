@@ -1,9 +1,7 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
-$bin = Join-Path $content (Join-Path 'bin' 'FOCA.exe')
-
-. $tools\bins.ps1
-. $tools\shortcut.ps1
+$foca = Join-Path $content (Join-Path 'bin' 'FOCA.exe')
+$shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'FOCA.lnk'
 
 Install-ChocolateyZipPackage `
     -PackageName 'foca' `
@@ -12,10 +10,8 @@ Install-ChocolateyZipPackage `
     -Checksum '9D0759F21AFB6E45834BA070CBA4541624E8E8042E85CA8CA5ACCD737CDE770D' `
     -ChecksumType 'SHA256'
 
-Install-Shortcut `
-    -Link 'FOCA' `
-    -Target $bin `
-    -SpecialFolder 'CommonPrograms'
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $shortcut `
+    -TargetPath $foca
 
-Install-IgnoreBin `
-    -Path $bin
+New-Item -Type 'File' -Path "$foca.ignore" -Force | Out-Null

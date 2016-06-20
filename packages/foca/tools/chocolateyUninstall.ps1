@@ -1,7 +1,3 @@
-﻿$tools  = Split-Path $MyInvocation.MyCommand.Definition
+﻿$shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'FOCA.lnk'
 
-. $tools\shortcut.ps1
-
-Uninstall-Shortcut `
-    -Link 'FOCA' `
-    -SpecialFolder 'CommonPrograms'
+Remove-Item -Path $shortcut -Force | Out-Null
