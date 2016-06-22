@@ -3,14 +3,21 @@
   <metadata>
     <id>joytokey</id>
     <title>Joy To Key</title>
-    <version>5.6.0.1</version>
+    <version>5.8.2</version>
     <authors>JTKSOFT</authors>
     <owners>Anthony Mastrean</owners>
     <summary>JoyToKey enables PC game controllers to emulate a mouse and the keyboard input.</summary>
-    <description>JoyToKey enables PC game controllers to emulate a mouse and the keyboard input, so that windows applications and web games can be controlled with your favorite joysticks! Whenever joystick buttons and sticks are pressed, JoyToKey converts them into keyboard strokes and/or mouse movements so that the targeted application will work as if you are using a real keyboard and a mouse!</description>
+    <description>
+JoyToKey enables PC game controllers to emulate a mouse and the keyboard input, so that windows applications and web games can be controlled with your favorite joysticks! Whenever joystick buttons and sticks are pressed, JoyToKey converts them into keyboard strokes and/or mouse movements so that the targeted application will work as if you are using a real keyboard and a mouse!
+    </description>
     <projectUrl>http://joytokey.net/</projectUrl>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/joytokey.png</iconUrl>
-    <tags>joystick gaming</tags>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/d49756a2856e860a4f6f5155ee2af02a05622f83/public/icons/joytokey.png</iconUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <releaseNotes>http://joytokey.net/en/news</releaseNotes>
+    <docsUrl>http://joytokey.net/en/overview</docsUrl>
+    <licenseUrl>http://joytokey.net/en/purchase</licenseUrl>
+    <copyright>Copyright (C) 2015 JTKSOFT All Rights Reserved.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>joystick gaming</tags>
   </metadata>
 </package>
