@@ -37,5 +37,7 @@ function Get-Uninstaller {
     | ?{ Test-Path $_ } `
     | Get-ItemProperty `
     | ?{ $_.DisplayName -eq $Name } `
-    | Select-Object -ExpandProperty UninstallString
+    | Select-Object -ExpandProperty UninstallString `
+    | ForEach-Object { if ($_ -match '^\s*"([^"]+)"') { $matches[1] } else { $_ } } `
+    | Select-Object -First 1
 }
