@@ -23,7 +23,7 @@ Update-SessionEnvironment
 Push-Location $content
 
 Install-ChocolateyInstallPackage `
-    -PackageName 'sikulix' `
+    -PackageName 'jython' `
     -FileType 'EXE' `
     -SilentArgs "-jar $setup -s -d C:\jython2.7 -t standard" `
     -File 'java'
