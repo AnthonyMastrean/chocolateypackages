@@ -11,7 +11,7 @@ Dlg1={DBCDB997-EEEB-4BE9-BAFF-26B4094DBDE6}-SdFinishReboot-0
 Result=1
 [Application]
 Name=ScanSnap Manager
-Version=V5.5L10
+Version=V6.5L40
 Company=PFU
 Lang=0009
 [{DBCDB997-EEEB-4BE9-BAFF-26B4094DBDE6}-SdFinishReboot-0]

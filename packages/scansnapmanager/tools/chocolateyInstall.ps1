@@ -10,7 +10,7 @@ $response = @{32=$response32;64=$response64}[(Get-ProcessorBits)]
 Install-ChocolateyPackage `
     -PackageName 'scansnapmanager' `
     -FileType 'EXE' `
-    -Url 'http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/w-s1500/WinS1500ManagerV55L10WW.exe' `
-    -Checksum '236EB287A10598E7D37F5A0F515759A8B4F2F86B5C9B375315B7D1C97DED26D4' `
+    -Url 'http://origin.pfultd.com/downloads/IMAGE/driver/ss/mgr/w-ix500/WiniX500ManagerV65L40WW.exe' `
+    -Checksum '54E483EA1E9136C8184039098464C37B7EF711CD2C80FCA703419D1F58722D09' `
     -ChecksumType 'SHA256' `
     -SilentArgs "/S /f1`"$response`""
