@@ -1,6 +1,7 @@
-﻿$name   = 'imageresizerapp'
-$url    = 'http://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=imageresizer&DownloadId=347439&FileTime=129779776836370000&Build=20074'
-$kind   = 'EXE'
-$silent = '/quiet /norestart'
-
-Install-ChocolateyPackage $name $kind $silent $url
+﻿Install-ChocolateyPackage `
+    -PackageName 'imageresizerapp' `
+    -FileType 'EXE' `
+    -SilentArgs '/quiet /norestart' `
+    -Url 'https://github.com/bricelam/ImageResizer/releases/download/v3.0/ImageResizerSetup-3.0.exe' `
+    -Checksum '9E23E07E042943E1862B86D8C9DC05483A118938F5B19F359CB8F9AA6A14A452' `
+    -ChecksumType 'SHA256'

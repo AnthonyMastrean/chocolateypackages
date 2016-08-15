@@ -8,9 +8,17 @@
     <owners>Anthony Mastrean</owners>
     <summary>Resize one or more selected image files directly from Windows Explorer.</summary>
     <description>Image Resizer for Windows is a utility that lets you resize one or more selected image files directly from Windows Explorer by right-clicking. I created it so that modern Windows users could regain the joy they left behind with Microsoft's Image Resizer Powertoy for Windows XP.</description>
-    <projectUrl>http://imageresizer.codeplex.com/</projectUrl>
-    <tags>image resize xp</tags>
-    <licenseUrl>http://imageresizer.codeplex.com/license</licenseUrl>
+    <projectUrl>http://www.bricelam.net/ImageResizer/</projectUrl>
+    <projectSourceUrl>https://github.com/bricelam/ImageResizer</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/bricelam/ImageResizer/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/c82866c48b2d31da77d7456cfd9f3d32ba0a2b48/public/icons/imageresizerapp.png</iconUrl>
+    <licenseUrl>https://github.com/bricelam/ImageResizer/blob/706812e4ec15ec36f2948a05f9105ac802d35089/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://github.com/bricelam/ImageResizer/releases/tag/v3.0</releaseNotes>
+    <tags>image resize xp</tags>
+    <dependencies>
+        <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>
   </metadata>
 </package>
