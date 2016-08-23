@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>prime95</id>
-    <version>28.9.0.20160513</version>
+    <version>28.9.0.20160823</version>
     <title>Great Internet Mersenne Prime Search</title>
     <authors>George Woltman</authors>
     <owners>Anthony Mastrean</owners>
