@@ -6,4 +6,4 @@ Uninstall-ChocolateyPackage `
   -PackageName 'intellijidea-community' `
   -FileType 'EXE' `
   -Silent '/S' `
-  -File (Get-Uninstaller -Name 'IntelliJ IDEA 2016.2.2')
+  -File (Get-Uninstaller -Name 'IntelliJ IDEA 2016.2.3')
