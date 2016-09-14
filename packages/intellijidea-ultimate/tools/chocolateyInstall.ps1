@@ -2,6 +2,6 @@
   -PackageName 'intellijidea-ultimate' `
   -FileType 'EXE' `
   -Silent '/S' `
-  -Checksum 'b98d2c6d354762ab56eed3bd37ad482fbefa68ac4fe91c310be7b1b901f4f1a0' `
+  -Checksum '74006EC851934C8C1A4BE27656762C6FF38CB847288CE800A2F6FFE1691B72A9' `
   -ChecksumType 'sha256' `
-  -Url 'https://download.jetbrains.com/idea/ideaIU-2016.2.3.exe'
+  -Url 'https://download.jetbrains.com/idea/ideaIU-2016.2.4.exe'
