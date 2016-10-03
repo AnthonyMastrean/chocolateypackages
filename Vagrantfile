@@ -1,7 +1,7 @@
 Vagrant.require_version '>= 1.8'
 
 Vagrant.configure(2) do |config|
-  config.vm.box = 'ferventcoder/win2012r2-x64-nocm'
+  config.vm.box = 'anthonymastrean/windows-server-2012-r2-x64'
   config.vm.communicator = 'winrm'
   config.vm.guest = :windows
   config.vm.provider :virtualbox do |vbox|
