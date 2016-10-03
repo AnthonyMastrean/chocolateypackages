@@ -1,9 +1,5 @@
-﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
-
-. $tools\uninstall.ps1
-
-Uninstall-ChocolateyPackage `
+﻿Uninstall-ChocolateyPackage `
   -PackageName 'kindle' `
   -FileType 'EXE' `
   -SilentArgs '/S' `
-  -File (Get-Uninstaller -Name 'Amazon Kindle')
+  -File (Get-UninstallRegistryKey -SoftwareName 'Amazon Kindle').UninstallString
