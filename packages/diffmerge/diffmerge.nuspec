@@ -2,12 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>diffmerge</id>
-    <version>4.2.0.1</version>
+    <version>4.2.0.697</version>
     <title>SourceGear DiffMerge</title>
     <authors>SourceGear</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>http://www.sourcegear.com/diffmerge/</projectUrl>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/diffmerge.png</iconUrl>
+    <docsUrl>http://www.sourcegear.com/diffmerge/webhelp/</docsUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/ceb2cee4c4be45f731773966443124115b845650/public/icons/diffmerge.png</iconUrl>
+    <releaseNotes>http://www.sourcegear.com/diffmerge/webhelp/sec__release__4_2_0.html</releaseNotes>
+    <licenseUrl>http://www.sourcegear.com/diffmerge/webhelp/chapter_sourcegearlicenseagreement.html</licenseUrl>
+    <mailingListUrl>http://support.sourcegear.com/viewforum.php?f=33</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Visually compare and merge files within Windows, Mac OS X and Linux.</description>
     <tags>diff merge</tags>
