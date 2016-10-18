@@ -2,6 +2,6 @@
   -PackageName 'intellijidea-community' `
   -FileType 'EXE' `
   -Silent '/S' `
-  -Checksum 'A77AB82880E10CBDB0862874B5D713695F35484218185CA8833B2DCAD824891D' `
+  -Checksum '729AA54EB56663D55C64D0495466A6D031CF066869D08B233D0B05995DD0B1AF' `
   -ChecksumType 'sha256' `
-  -Url 'https://download.jetbrains.com/idea/ideaIC-2016.2.4.exe'
+  -Url 'https://download.jetbrains.com/idea/ideaIC-2016.2.5.exe'
