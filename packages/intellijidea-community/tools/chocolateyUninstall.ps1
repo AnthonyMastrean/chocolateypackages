@@ -29,6 +29,8 @@ if ($key.Count -eq 1) {
                                 -ValidExitCodes $validExitCodes `
                                 -File "$file"
   }
+  # Temporary workaround for race condition in chocolaty 0.10.3.  The bug is fixed in 0.10.4.
+  Start-Sleep -Seconds 10
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
 } elseif ($key.Count -gt 1) {
