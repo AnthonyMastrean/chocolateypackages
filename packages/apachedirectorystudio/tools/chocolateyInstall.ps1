@@ -1,22 +1,10 @@
-﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
-$package = Split-Path $tools
-$bin = Join-Path $package (Join-Path 'ApacheDirectoryStudio' 'ApacheDirectoryStudio.exe')
-
-. $tools\bins.ps1
-. $tools\shortcut.ps1
-
-Install-ChocolateyZipPackage `
+﻿Install-ChocolateyPackage `
     -PackageName 'apachedirectorystudio' `
-    -UnzipLocation $package `
-    -Url 'http://archive.apache.org/dist/directory/studio/2.0.0.v20151221-M10/ApacheDirectoryStudio-2.0.0.v20151221-M10-win32.win32.x86.zip' `
-    -Url64 'http://archive.apache.org/dist/directory/studio/2.0.0.v20151221-M10/ApacheDirectoryStudio-2.0.0.v20151221-M10-win32.win32.x86_64.zip' `
-    -Checksum 'd89794897b9de46af33a113551f2c0f8' `
-    -Checksum64 '4f45ccfe6abf6bf265f385f972a48123'
-
-Install-Shortcut `
-    -Link 'Apache Directory Studio' `
-    -Target $bin `
-    -SpecialFolder 'CommonPrograms'
-
-Install-IgnoreBin `
-    -Path $bin
+    -FileType 'EXE' `
+    -Silent '/S' `
+    -Url 'https://archive.apache.org/dist/directory/studio/2.0.0.v20161101-M12/ApacheDirectoryStudio-2.0.0.v20161101-M12-win32.win32.x86.exe' `
+    -Url64 'https://archive.apache.org/dist/directory/studio/2.0.0.v20161101-M12/ApacheDirectoryStudio-2.0.0.v20161101-M12-win32.win32.x86_64.exe' `
+    -Checksum '71925b01f83d6363bb8f6b45a4ee7c93' `
+    -ChecksumType 'MD5' `
+    -Checksum64 '9bdef2e9c2e4c5006a774712c94dbc4b' `
+    -ChecksumType64 'MD5'
