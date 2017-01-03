@@ -2,8 +2,8 @@
 
 $packageName = 'intellijidea-ultimate'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://download.jetbrains.com/idea/ideaIU-2016.3.exe'
-$url64       = 'https://download.jetbrains.com/idea/ideaIU-2016.3.exe'
+$url         = 'https://download.jetbrains.com/idea/ideaIU-2016.3.2.exe'
+$url64       = 'https://download.jetbrains.com/idea/ideaIU-2016.3.2.exe'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -14,9 +14,9 @@ $packageArgs = @{
 
   softwareName   = 'IntelliJ IDEA 2016.3*'
 
-  checksum       = '3F12AAAD21D0E56581EA5EC6B5B405D83236345C0994287FD4CB0D255669639F'
+  checksum       = '7498D17DA49B71C6CF40F99288F5383DDC918BB79F4539D7E900507AAFE89F1A'
   checksumType   = 'sha256'
-  checksum64     = '3F12AAAD21D0E56581EA5EC6B5B405D83236345C0994287FD4CB0D255669639F'
+  checksum64     = '7498D17DA49B71C6CF40F99288F5383DDC918BB79F4539D7E900507AAFE89F1A'
   checksumType64 = 'sha256'
 
   silentArgs     = '/S'
