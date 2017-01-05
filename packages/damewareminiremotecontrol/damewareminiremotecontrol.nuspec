@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>damewareminiremotecontrol</id>
+    <title>DameWare Mini Remote Control (Evaluation)</title>
+    <version>12.0.4</version>
+    <authors>DameWare</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Affordable remote control software for all your customer support and help desk needs.</summary>
+    <description>
+DameWare Mini Remote Control provides powerful remote control software for connecting to remote desktops, laptops and servers to troubleshoot and solve issues. DameWare Mini Remote Control (MRC) is the best value in remote control software and has been used for more than 10 years by thousands of IT admins to seamlessly connect to remote servers, desktops and notebooks. DameWare MRC provides remote control for Mac OS X, Windows and Linux systems. DameWare Mini Remote Control Benefits - Easy-to-install, easy-to-use and easy-to-maintain remote access software - Easy to afford with licensing based on number of IT admin users rather than number of remote computers managed - Validated by thousands of users and supported by SolarWinds! DameWare Mini Remote Control Key Features - Quickly and easily connect to and control remote desktops, laptops and servers - Provides remote control for Mac OS X, Windows and Linux - Deploy agents on the fly and start remote control sessions without rebooting - Connect to unattended computers without the need for remote user interaction - Easily configure and install agents in bulk with the included MSI package builder - Complete security, including smart card authentication
+    </description>
+    <projectUrl>http://www.dameware.com/dameware-mini-remote-control</projectUrl>
+    <tags>not-silent not-unattended vnc remote control</tags>
+    <licenseUrl>https://us.store.solarwinds.com/c-1-dameware-mini-remote-control-buy-now.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/31a3c2eff415c5771aaf43ff6e4aef3d403b8ac9/public/icons/damewareminiremotecontrol.png</iconUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <docsUrl>https://support.solarwinds.com/Success_Center/DameWare_Remote_Support_Mini_Remote_Control/DameWare_Remote_Support_and_Mini_Remote_Control_Documentation</docsUrl>
+    <releaseNotes>https://support.solarwinds.com/Success_Center/DameWare_Remote_Support_Mini_Remote_Control/release_notes</releaseNotes>
+    <bugTrackerUrl>https://customerportal.solarwinds.com/support/submit-a-ticket</bugTrackerUrl>
+    <mailingListUrl>https://thwack.solarwinds.com/community/application-and-server_tht/dameware-drs</mailingListUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" />
+    </dependencies>
+  </metadata>
+</package>
