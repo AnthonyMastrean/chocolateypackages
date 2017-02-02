@@ -1,10 +1,9 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
 $classic = Join-Path $content 'NetHack.exe'
+$classic_shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'NetHack for Windows (Classic).lnk'
 $tiles = Join-Path $content 'NetHackW.exe'
-
-. $tools\bins.ps1
-. $tools\shortcut.ps1
+$tiles_shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'NetHack for Windows (Tiles).lnk'
 
 Install-ChocolateyZipPackage `
     -PackageName 'nethack' `
@@ -12,14 +11,12 @@ Install-ChocolateyZipPackage `
     -Checksum 'da1dcadb67ccdbe4fa7ffda096565c14' `
     -UnzipLocation $content
 
-Install-GuiBin -Path $tiles
+New-Item -Type File -Path "$tiles.gui" -Force | Out-Null
 
-Install-Shortcut `
-    -Link 'NetHack for Windows (Tiles)' `
-    -Target $tiles `
-    -SpecialFolder 'CommonPrograms'
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $classic_shortcut `
+    -TargetPath $classic
 
-Install-Shortcut `
-    -Link 'NetHack for Windows (Classic)' `
-    -Target $classic `
-    -SpecialFolder 'CommonPrograms'
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $tiles_shortcut `
+    -TargetPath $tiles
