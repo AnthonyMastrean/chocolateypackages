@@ -11,12 +11,15 @@ Install-ChocolateyZipPackage `
     -Checksum 'da1dcadb67ccdbe4fa7ffda096565c14' `
     -UnzipLocation $content
 
-New-Item -Type File -Path "$tiles.gui" -Force | Out-Null
+New-Item -Type File -Path "$classic.ignore" -Force | Out-Null
+New-Item -Type File -Path "$tiles.ignore" -Force | Out-Null
 
 Install-ChocolateyShortcut `
     -ShortcutFilePath $classic_shortcut `
+    -WorkingDirectory $content `
     -TargetPath $classic
 
 Install-ChocolateyShortcut `
     -ShortcutFilePath $tiles_shortcut `
+    -WorkingDirectory $content `
     -TargetPath $tiles
