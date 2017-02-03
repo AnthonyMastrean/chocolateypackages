@@ -3,7 +3,7 @@
   <metadata>
     <id>ant</id>
     <title>Apache Ant</title>
-    <version>1.9.7</version>
+    <version>1.9.8</version>
     <authors>Apache</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other.</summary>
