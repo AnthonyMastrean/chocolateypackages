@@ -3,13 +3,16 @@
   <metadata>
     <id>isowriter</id>
     <title>ISO Writer</title>
-    <version>0.5.1.1</version>
+    <version>0.6.1</version>
     <authors>Alex Feinman</authors>
     <owners>Anthony Mastrean</owners>
-    <description>ISOWriter utility is designed as a command-line-based alternative to the GUI-based ISO Recorder. It has has been designed to allow for unattended operations from batch files. A non-zero exit code is returned on failure</description>
+    <description>
+ISOWriter utility is designed as a command-line-based alternative to the GUI-based ISO Recorder. It has has been designed to allow for unattended operations from batch files. A non-zero exit code is returned on failure. CreateCD utility uses the same APIs and interfaces as Windows Shell CD/DVD burn engine.
+    </description>
     <projectUrl>http://alexfeinman.com/ISOWriter.htm</projectUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <tags>iso disk writer</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/isowriter.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/f9dc6fdd3fc0b933395dc6ca8391b6ffe0921249/public/icons/isowriter.png</iconUrl>
   </metadata>
 </package>
