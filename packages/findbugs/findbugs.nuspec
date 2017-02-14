@@ -3,7 +3,7 @@
   <metadata>
     <id>findbugs</id>
     <title>FindBugs</title>
-    <version>3.0.1</version>
+    <version>3.0.1.1</version>
     <authors>FindBugs Development Team</authors>
     <owners>Anthony Mastrean</owners>
     <summary>FindBugs is a program which uses static analysis to look for bugs in Java code.</summary>
