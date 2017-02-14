@@ -3,7 +3,7 @@
   <metadata>
     <id>goggalaxy</id>
     <title>GOG Galaxy</title>
-    <version>1.1.9.56</version>
+    <version>1.1.27.1</version>
     <authors>GOG</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Truly gamer friendly, DRM-free online gaming platform.</summary>
@@ -57,5 +57,8 @@ Double click to launch a game instantly from the sidebar, view available languag
     </releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/a561f0de0d19224bf85d694f74f6ce52f8bf9c08/public/icons/goggalaxy.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" />
+    </dependencies>
   </metadata>
 </package>
