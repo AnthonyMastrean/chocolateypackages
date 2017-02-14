@@ -13,7 +13,7 @@ ISO Recorder is a tool (power toy) for Windows XP, 2003 and now Windows Vista, t
     <docsUrl>http://alexfeinman.com/HowTo.htm</docsUrl>
     <bugTrackerUrl>mailto:isorecorder@alexfeinman.com?subject=ISO Recorder v3 feedback</bugTrackerUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
-    <tags>iso disk recorder not-silent</tags>
+    <tags>iso disk recorder notsilent</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/45bc281557fd73bd07819307c29b07c2500a38c4/public/icons/isorecorder.png</iconUrl>
   </metadata>
