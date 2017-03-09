@@ -1,38 +1,20 @@
-﻿$name = 'bellavista'
-$url  = 'http://www.zezula.net/download/bellavista_en.zip'
-
-$is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
-
-$tools = Split-Path $MyInvocation.MyCommand.Definition
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
+$bellavista32 = Join-Path $content 'Win32\BellaVista.exe'
+$bellavista64 = Join-Path $content 'x64\BellaVista.exe'
+$bellavista = @{32=$bellavista32;64=$bellavista64}[(Get-ProcessorBits)]
+$shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'BellaVista.lnk'
 
-$32bit = Join-Path $content 'Win32\BellaVista.exe'
-$64bit = Join-Path $content 'x64\BellaVista.exe'
-$target = if($is64bit) { $64bit } else { $32bit }
-$other = if($is64bit) { $32bit } else { $64bit }
-$link = Join-Path $ENV:PROGRAMDATA 'Microsoft\Windows\Start Menu\Programs\BellaVista.lnk'
+Install-ChocolateyZipPackage `
+  -PackageName 'bellavista' `
+  -Url 'http://www.zezula.net/download/bellavista_en.zip' `
+  -Checksum '1C6B2CB57DDB2B3582F443C2F1CC49E86AEF2FD9B44F446BA9225FF811A2E366' `
+  -ChecksumType 'SHA256' `
+  -UnzipLocation $content
 
-try { 
-  Install-ChocolateyZipPackage $name $url $content
+New-Item -Type 'File' -Path "$bellavista32.ignore" -Force | Out-Null
+New-Item -Type 'File' -Path "$bellavista64.ignore" -Force | Out-Null
 
-  # ignore the applications
-  New-Item "$32bit.gui" -Force -Type 'File'
-  New-Item "$64bit.gui" -Force -Type 'File'
-  
-  # we only want 1 batch file
-  Remove-Item $other -Force -Recurse
-
-  # and create the shortcut
-  Start-ChocolateyProcessAsAdmin -minimized "
-`$sh = New-Object -ComObject 'Wscript.Shell';
-`$x = `$sh.CreateShortcut('$link');
-`$x.TargetPath = '$target';
-`$x.WorkingDirectory = (Split-Path '$target');
-`$x.Save();
-" 
-  
-  Write-ChocolateySuccess $name
-} catch {
-  Write-ChocolateyFailure $name $_.Exception.Message
-  throw 
-}
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $shortcut `
+    -TargetPath $bellavista

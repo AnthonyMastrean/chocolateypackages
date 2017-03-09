@@ -3,7 +3,7 @@
   <metadata>
     <id>rsync</id>
     <title>cwRsync (Free Edition)</title>
-    <version>5.5.0.20160526</version>
+    <version>5.5.0.20170203</version>
     <authors>Itefix</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Rsync is a fast and extraordinarily versatile file copying tool for both remote and local files.</summary>

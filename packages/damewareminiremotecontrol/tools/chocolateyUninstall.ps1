@@ -5,4 +5,4 @@ $name = @{32=$name32;64=$name64}[(Get-ProcessorBits)]
 Uninstall-ChocolateyPackage `
   -PackageName 'damewareminiremotecontrol' `
   -FileType 'EXE' `
-  -File (Get-UninstallRegistryKey -SoftwareName $name)
+  -File (Get-UninstallRegistryKey -SoftwareName $name).UninstallString
