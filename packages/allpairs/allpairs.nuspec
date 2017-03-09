@@ -3,12 +3,15 @@
   <metadata>
     <id>allpairs</id>
     <title>All Pairs</title>
-    <version>1.2.1</version>
+    <version>1.2.1.1</version>
     <authors>James Bach</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Pairwise (a.k.a. all-pairs) testing is an effective test case generation technique that is based on the observation that most faults are caused by interactions of at most two factors. Pairwise-generated test suites cover all combinations of two therefore are much smaller than exhaustive ones yet still very effective in finding defects.</summary>
-    <description>Let's say you must test something that involves a lot of different variables. Configuration testing is like that: different printers, different print options, different documents. Who knows what combination will fail? But you can't try all combinations of all variables together, because that would be too many tests. So instead, you could create tests that pair each value of each of the variables with each value of each other variable at least once. Allpairs is a tool I wrote that will find a reasonably small set of test cases to satisfy that coverage standard. For instance, to try all combinations of 10 variables with ten values each would require 10,000,000,000 test cases. Allpairs only requires 177 cases.</description>
+    <description>
+Let's say you must test something that involves a lot of different variables. Configuration testing is like that: different printers, different print options, different documents. Who knows what combination will fail? But you can't try all combinations of all variables together, because that would be too many tests. So instead, you could create tests that pair each value of each of the variables with each value of each other variable at least once. Allpairs is a tool I wrote that will find a reasonably small set of test cases to satisfy that coverage standard. For instance, to try all combinations of 10 variables with ten values each would require 10,000,000,000 test cases. Allpairs only requires 177 cases.
+    </description>
     <projectUrl>http://www.satisfice.com/tools.shtml</projectUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <tags>pairwise testing</tags>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
