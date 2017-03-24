@@ -1,14 +1,26 @@
-﻿$id  = "findbugs"
-$url = "http://downloads.sourceforge.net/project/findbugs/findbugs/3.0.1/findbugs-3.0.1.zip"
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$package = Split-Path $tools
+$content = Join-Path $package 'findbugs-3.0.1'
+$findbugs = Join-Path $content 'bin/findbugs.bat'
+$icon = Join-Path $content 'bin/findbugs.ico'
+$shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'FindBugs.lnk'
 
-$tools   = Split-Path $MyInvocation.MyCommand.Definition
-$content = Split-Path $tools
-$pkg_home = Join-Path $content "findbugs-3.0.1"
-$bat     = Join-Path $pkg_home "bin/findbugs.bat"
+Install-ChocolateyZipPackage `
+    -PackageName 'findbugs' `
+    -Url 'http://downloads.sourceforge.net/project/findbugs/findbugs/3.0.1/findbugs-3.0.1.zip' `
+    -Checksum '61EE01904E05A7A5FA2F1A84D8C40EF6F875C19FE2E3CCDAAFB75ACD13918904' `
+    -ChecksumType 'SHA256' `
+    -UnzipLocation $package
 
-Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content
-Install-ChocolateyEnvironmentVariable -VariableName "FINDBUGS_HOME" -VariableValue $pkg_home -VariableType "Machine"
+Install-ChocolateyEnvironmentVariable `
+    -VariableName 'FINDBUGS_HOME' `
+    -VariableValue $content `
+    -VariableType 'Machine'
 
-Install-BinFile -Name "findbugs" -Path $bat
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $shortcut `
+    -TargetPath $findbugs `
+    -WorkingDirectory $content `
+    -IconLocation $icon `
 
 Update-SessionEnvironment

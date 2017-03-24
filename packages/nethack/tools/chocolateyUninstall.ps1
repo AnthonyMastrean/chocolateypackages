@@ -1,6 +1,5 @@
-﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+﻿$classic_shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'NetHack for Windows (Classic).lnk'
+$tiles_shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'NetHack for Windows (Tiles).lnk'
 
-. $tools\shortcut.ps1
-
-Uninstall-Shortcut -Link 'NetHack for Windows (Tiles)' -SpecialFolder 'CommonPrograms'
-Uninstall-Shortcut -Link 'NetHack for Windows (Classic)' -SpecialFolder 'CommonPrograms'
+Remove-Item -Path $classic_shortcut -Force | Out-Null
+Remove-Item -Path $tiles_shortcut -Force | Out-Null
