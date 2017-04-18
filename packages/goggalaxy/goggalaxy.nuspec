@@ -3,18 +3,17 @@
   <metadata>
     <id>goggalaxy</id>
     <title>GOG Galaxy</title>
-    <version>1.1.27.1</version>
+    <version>1.1.30.5</version>
     <authors>GOG</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Truly gamer friendly, DRM-free online gaming platform.</summary>
     <description>
-GOG GALAXY is a fully optional client to install, play and update your games. It also offers online multiplayer, achievements, chat, game-time tracking and more - but it’s up to you which features you want to use.
+The gaming Client designed for a convenient purchasing, playing and updating games, as well as an online play between gaming platforms, GOG Galaxy is also built with optionality in mind, and a belief that you should own the games you buy.
     </description>
     <projectUrl>https://www.gog.com/galaxy</projectUrl>
     <tags>games gog</tags>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <bugTrackerUrl>http://mantis.gog.com/</bugTrackerUrl>
-    <mailingListUrl>https://www.gog.com/wishlist/galaxy</mailingListUrl>
     <!-- <licenseUrl></licenseUrl> -->
     <releaseNotes>
 New and improved in GOG Galaxy BETA 1.1
