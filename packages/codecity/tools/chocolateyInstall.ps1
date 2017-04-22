@@ -1,9 +1,7 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
 $bin = Join-Path $content 'codecity.exe'
-
-. $tools\bins.ps1
-. $tools\shortcut.ps1
+$shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'CodeCity.lnk'
 
 Install-ChocolateyZipPackage `
     -PackageName 'codecity' `
@@ -12,10 +10,8 @@ Install-ChocolateyZipPackage `
     -ChecksumType 'SHA256' `
     -File $content
 
-Install-IgnoreBin `
-    -Path $bin
+New-Item -Type 'File' -Path "$bin.ignore" -Force | Out-Null
 
-Install-Shortcut `
-    -Link 'CodeCity' `
-    -Target $bin `
-    -SpecialFolder 'CommonPrograms'
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $shortcut `
+    -TargetPath $bin

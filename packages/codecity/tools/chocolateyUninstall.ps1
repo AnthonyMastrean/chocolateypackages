@@ -1,8 +1,3 @@
-$tools = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) 'content'
+$shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'CodeCity.lnk'
 
-. $tools\shortcut.ps1
-
-Uninstall-Shortcut `
-    -Link 'CodeCity' `
-    -SpecialFolder 'CommonPrograms'
+Remove-Item -Path $shortcut -Force | Out-Null
