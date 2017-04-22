@@ -22,10 +22,10 @@ For new users it is recommended to go through the tutorial(The one that comes wi
     <mailingListUrl>http://forum.cheatengine.org/</mailingListUrl>
     <licenseUrl>https://github.com/cheat-engine/cheat-engine/blob/35a850255f59923858ee3a7eb7e2a65ca197e821/Cheat%20Engine/release/License.txt</licenseUrl>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/27828f55e1a0091893bf8adfc5439e6d35596a9e/public/icons/cheatengine.png</iconUrl>
-    <tags>games hex-editor debugging</tags>
+    <tags>games hex-editor debugging admin</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-        <dependency id="chocolatey-core.extension" />
+        <dependency id="chocolatey-core.extension" version="[1.0,)" />
     </dependencies>
   </metadata>
 </package>
