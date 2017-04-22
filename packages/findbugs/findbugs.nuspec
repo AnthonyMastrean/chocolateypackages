@@ -24,17 +24,18 @@ FindBugs is free software, available under the terms of the Lesser GNU Public Li
 FindBugs uses BCEL to analyze Java bytecode.  As of version 1.1, FindBugs also supports bug detectors written using the ASM bytecode framework.  FindBugs uses dom4j for XML manipulation.
     </description>
     <projectUrl>http://findbugs.sourceforge.net/</projectUrl>
-    <tags>java source code static analysis</tags>
+    <tags>java source code static analysis admin</tags>
     <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
     <bugTrackerUrl>http://findbugs.sourceforge.net/reportingBugs.html</bugTrackerUrl>
     <mailingListUrl>http://findbugs.sourceforge.net/mailingLists.html</mailingListUrl>
     <docsUrl>http://findbugs.sourceforge.net/publications.html</docsUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <projectSourceUrl>https://github.com/findbugsproject/findbugs</projectSourceUrl>
+    <releaseNotes>http://findbugs.sourceforge.net/Changes.html</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/ad1c9017d72aa9e0c314de5f5ac36ceb6f34b5ea/public/icons/findbugs.png</iconUrl>
     <dependencies>
-      <dependency id="jdk8" />
+      <dependency id="jdk8" version="[8.0,)" />
     </dependencies>
   </metadata>
 </package>
