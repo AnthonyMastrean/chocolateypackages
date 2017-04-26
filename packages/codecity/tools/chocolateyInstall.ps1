@@ -8,7 +8,7 @@ Install-ChocolateyZipPackage `
     -Url 'http://wettel.github.io/download/codecity-win.zip' `
     -Checksum '98CB19CE685B5271E7167F424B4FBE6E786256E5844674054A2925B8FA018992' `
     -ChecksumType 'SHA256' `
-    -File $content
+    -UnzipLocation $content
 
 New-Item -Type 'File' -Path "$bin.ignore" -Force | Out-Null
 
