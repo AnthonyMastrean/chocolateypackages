@@ -2,8 +2,8 @@
 
 $packageName = 'intellijidea-community'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://download.jetbrains.com/idea/ideaIC-2016.3.4.exe'
-$url64       = 'https://download.jetbrains.com/idea/ideaIC-2016.3.4.exe'
+$url         = 'https://download.jetbrains.com/idea/ideaIC-2016.3.5.exe'
+$url64       = 'https://download.jetbrains.com/idea/ideaIC-2016.3.5.exe'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -14,9 +14,9 @@ $packageArgs = @{
 
   softwareName   = 'IntelliJ IDEA Community Edition 2016.3*'
 
-  checksum       = '207DBC84F6769EB0E675DD6DB6D4D66F042F87E91B10CEF83679848595C0CA8E'
+  checksum       = 'B034BE1574F62D6AE95CB972E5EA3596A3213A24D6ABA9D729CA8A7A1BF9610B'
   checksumType   = 'sha256'
-  checksum64     = '207DBC84F6769EB0E675DD6DB6D4D66F042F87E91B10CEF83679848595C0CA8E'
+  checksum64     = 'B034BE1574F62D6AE95CB972E5EA3596A3213A24D6ABA9D729CA8A7A1BF9610B'
   checksumType64 = 'sha256'
 
   silentArgs     = '/S'
