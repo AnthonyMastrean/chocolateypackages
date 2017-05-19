@@ -3,9 +3,9 @@
   <metadata>
     <id>intellijidea-community</id>
     <title>JetBrains IntelliJ IDEA (Community Edition)</title>
-    <version>2016.3.4</version>
+    <version>2017.1</version>
     <authors>JetBrains</authors>
-    <owners>Anthony Mastrean</owners>
+    <owners>Anthony Mastrean, Jordi Garcia</owners>
     <summary>Capable and Ergonomic Java IDE</summary>
     <description>Excel at enterprise, mobile and web development with Java, Scala and Groovy, with all the latest modern technologies and frameworks available out of the box.</description>
     <projectUrl>http://www.jetbrains.com/idea/</projectUrl>
@@ -16,7 +16,7 @@
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <releaseNotes>https://www.jetbrains.com/idea/whatsnew/</releaseNotes>
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/IDEA</bugTrackerUrl>
-    <docsUrl>https://www.jetbrains.com/help/idea/2016.3/meet-intellij-idea.html</docsUrl>
+    <docsUrl>https://www.jetbrains.com/help/idea/2017.1/meet-intellij-idea.html</docsUrl>
     <mailingListUrl>https://intellij-support.jetbrains.com/hc/en-us</mailingListUrl>
   </metadata>
 </package>

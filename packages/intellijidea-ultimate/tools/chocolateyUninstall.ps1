@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName = 'intellijidea-ultimate'
-$softwareName = 'IntelliJ IDEA 2016.3*'
+$softwareName = 'IntelliJ IDEA 2017.1*'
 $installerType = 'EXE'
 
 $silentArgs = '/S'
@@ -29,6 +29,7 @@ if ($key.Count -eq 1) {
                                 -ValidExitCodes $validExitCodes `
                                 -File "$file"
   }
+  # Temporary workaround for race condition in chocolaty 0.10.3.  The bug is fixed in 0.10.4.
   Start-Sleep -Seconds 10
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
