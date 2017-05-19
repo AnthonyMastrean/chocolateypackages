@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>jython</id>
+    <title>Jython 2.7</title>
+    <version>2.7.0</version>
+    <authors>Jython Community</authors>
+    <owners>Jesse Sanford</owners>
+    <summary>Jython is a Java implementation of Python that combines expressive power with clarity. Jython is freely available for both commercial and non-commercial use and is distributed with source code.</summary>
+    <description>
+Jython is a Java implementation of Python that combines expressive power with clarity. Jython is freely available for both commercial and non-commercial use and is distributed with source code. Jython is complementary to Java and is especially suited for the following tasks:
+
+Embedded scripting - Java programmers can add the Jython libraries to their system to allow end users to write simple or complicated scripts that add functionality to the application.
+
+Interactive experimentation - Jython provides an interactive interpreter that can be used to interact with Java packages or with running Java applications. This allows programmers to experiment and debug any Java system using Jython.
+
+Rapid application development - Python programs are typically 2-10X shorter than the equivalent Java program. This translates directly to increased programmer productivity. The seamless interaction between Python and Java allows developers to freely mix the two languages both during development and in shipping products.
+    </description>
+    <projectUrl>http://www.jython.org/</projectUrl>
+    <packageSourceUrl>https://github.com/jessesanford/chocolateypackages/</packageSourceUrl>
+    <projectSourceUrl>https://bitbucket.org/jython/jython/src</projectSourceUrl>
+    <bugTrackerUrl>http://bugs.jython.org</bugTrackerUrl>
+    <docsUrl>http://www.jython.org/docs/</docsUrl>
+    <licenseUrl>http://www.jython.org/license.html</licenseUrl>
+    <releaseNotes>https://wiki.python.org/jython/JythonReleaseNotes</releaseNotes>
+    <iconUrl>http://jesseross.com/clients/jython/images/jy_logo_medium_c.png</iconUrl>
+    <tags>python language programming scripting script</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="jre8" />
+    </dependencies>
+  </metadata>
+</package>
