@@ -2,8 +2,6 @@
 $package = Split-Path $tools
 $content = Join-Path $package 'cwRsync_5.5.0_x86_Free'
 
-. $tools\bins.ps1
-
 Install-ChocolateyZipPackage `
     -PackageName 'rsync' `
     -Url 'https://www.itefix.net/dl/cwRsync_5.5.0_x86_Free.zip' `
@@ -20,6 +18,6 @@ Install-ChocolateyEnvironmentVariable `
 # environment variable. This cannot be provided with Chocolatey's automatic
 # shimming. I have to shim custom batch files.
 Get-ChildItem $tools\*.bat | %{ Install-BinFile -Name $_.BaseName -Path $_ }
-Get-ChildItem $content\bin\*.exe | Install-IgnoreBin
+Get-ChildItem $content\bin\*.exe | %{ New-Item -Type 'File' -Path "$_.ignore" -Force | Out-Null }
 
 Update-SessionEnvironment

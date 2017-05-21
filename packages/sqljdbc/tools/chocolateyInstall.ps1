@@ -1,21 +1,9 @@
-﻿$name   = 'sqljdbc'
-$url    = 'http://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/sqljdbc_4.0.2206.100_enu.exe'
-$kind   = 'EXE'
-$proper = 'Microsoft JDBC Driver 4.0 for SQL Server'
-$tools  = Split-Path $MyInvocation.MyCommand.Definition
-$local  = Join-Path $tools $proper
-$target = Join-Path $ENV:PROGRAMFILES $proper
-$silent = "'/auto `"$local`"'"
+﻿$target = Join-Path $ENV:PROGRAMFILES 'Microsoft JDBC DRIVER 6.0 for SQL Server'
 
-Install-ChocolateyPackage -PackageName $name -FileType $kind -SilentArgs $silent -Url $url
-
-try {
-  Start-ChocolateyProcessAsAdmin -ExeToRun 'xcopy' -Statements "`"$local`" `"$target`" /Y /E /I /Q"
-  Remove-Item $local -Force -Recurse
-
-  Write-ChocolateySuccess $name
-} 
-catch {
-  Write-ChocolateyFailure $name $($_.Exception.Message)
-  throw 
-}
+Install-ChocolateyPackage `
+    -PackageName 'sqljdbc' `
+    -FileType 'EXE' `
+    -SilentArgs "'/auto `"$target`"'" `
+    -Url 'https://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/enu/sqljdbc_6.0.8112.100_enu.exe' `
+    -Checksum 'DF6921B801D3C5AEFD85B94F7A183CAF099E0B1867D2973CD8AF2856077AFA79' `
+    -ChecksumType 'SHA256' `

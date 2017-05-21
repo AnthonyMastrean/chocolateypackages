@@ -1,7 +1,5 @@
-﻿$tools  = Split-Path $MyInvocation.MyCommand.Definition
-
-. $tools\shortcut.ps1
-
-Uninstall-Shortcut `
-    -Link 'Apache Directory Studio' `
-    -SpecialFolder 'CommonPrograms'
+﻿Uninstall-ChocolateyPackage `
+  -PackageName 'apachedirectorystudio' `
+  -FileType 'EXE' `
+  -Silent '/S' `
+  -File (Get-UninstallRegistryKey -SoftwareName 'Apache Directory Studio - (remove only)').UninstallString

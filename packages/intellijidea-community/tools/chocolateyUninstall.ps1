@@ -1,9 +1,41 @@
-﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+﻿$ErrorActionPreference = 'Stop';
 
-. $tools\uninstall.ps1
+$packageName = 'intellijidea-community'
+$softwareName = 'IntelliJ IDEA Community Edition 2017.1*'
+$installerType = 'EXE'
 
-Uninstall-ChocolateyPackage `
-  -PackageName 'intellijidea-community' `
-  -FileType 'EXE' `
-  -Silent '/S' `
-  -File (Get-Uninstaller -Name 'IntelliJ IDEA 2016.2.5')
+$silentArgs = '/S'
+$validExitCodes = @(0, 3010, 1605, 1614, 1641)
+if ($installerType -ne 'MSI') {
+  $validExitCodes = @(0)
+}
+
+$uninstalled = $false
+[array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
+
+if ($key.Count -eq 1) {
+  $key | % { 
+    $file = "$($_.UninstallString)"
+
+    if ($installerType -eq 'MSI') {
+      $silentArgs = "$($_.PSChildName) $silentArgs"
+
+      $file = ''
+    }
+
+    Uninstall-ChocolateyPackage -PackageName $packageName `
+                                -FileType $installerType `
+                                -SilentArgs "$silentArgs" `
+                                -ValidExitCodes $validExitCodes `
+                                -File "$file"
+  }
+  # Temporary workaround for race condition in chocolaty 0.10.3.  The bug is fixed in 0.10.4.
+  Start-Sleep -Seconds 10
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$packageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$key.Count matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "Please alert package maintainer the following keys were matched:"
+  $key | % {Write-Warning "- $_.DisplayName"}
+}

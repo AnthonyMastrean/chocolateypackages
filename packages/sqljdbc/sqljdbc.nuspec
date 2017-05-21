@@ -3,15 +3,21 @@
   <metadata>
     <id>sqljdbc</id>
     <title>Microsoft JDBC Driver for SQL Server</title>
-    <version>4.0.2206.100</version>
+    <version>6.0.8112.100</version>
     <authors>Microsoft</authors>
     <owners>Anthony Mastrean</owners>
     <summary>A Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs) available in Java Platform, Enterprise Edition 5 and 6.</summary>
-    <description>In our continued commitment to interoperability, Microsoft has released the 4.0 version of the Microsoft JDBC Driver for SQL Server. The Microsoft JDBC Driver 4.0 for SQL Server download is available to all SQL Server users at no additional charge, and provides access to Microsoft SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Azure from any Java application, application server, or Java-enabled applet. This is a Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs) available in Java Platform, Enterprise Edition 5 and 6. This release of the JDBC Driver is JDBC 4.0 compliant and runs on the Java Development Kit (JDK) version 5.0 or 6.0.</description>
-    <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=11774</projectUrl>
-    <tags>sql server jdbc java</tags>
-    <licenseUrl>http://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/license.txt</licenseUrl>
+    <description>
+In our continued commitment to interoperability, Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL Server, and Azure SQL Database. The driver is available at no additional charge and provides Java database connectivity from any Java application, application server, or Java-enabled applet. This driver is a Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs).
+
+The Microsoft JDBC Driver for SQL Server has been tested against major application servers such as IBM WebSphere, and SAP NetWeaver.
+    </description>
+    <projectUrl>https://msdn.microsoft.com/library/mt484311.aspx</projectUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
+    <tags>sql server jdbc java admin not-silent</tags>
+    <licenseUrl>https://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/enu/license60.txt</licenseUrl>
+    <releaseNotes>https://msdn.microsoft.com/en-us/library/aa342325(v=sql.110).aspx</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/sqljdbc.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/973d6f98f4472b88b19989811d6fad890c0475c5/public/icons/microsoft.png</iconUrl>
   </metadata>
 </package>
