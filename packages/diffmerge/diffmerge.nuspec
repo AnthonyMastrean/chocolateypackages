@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>diffmerge</id>
-    <version>4.2.0.697</version>
+    <version>4.2.0.20170602</version>
     <title>SourceGear DiffMerge</title>
     <authors>SourceGear</authors>
     <owners>Anthony Mastrean</owners>
@@ -15,6 +15,6 @@
     <mailingListUrl>http://support.sourcegear.com/viewforum.php?f=33</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Visually compare and merge files within Windows, Mac OS X and Linux.</description>
-    <tags>diff merge</tags>
+    <tags>diff merge admin</tags>
   </metadata>
 </package>
