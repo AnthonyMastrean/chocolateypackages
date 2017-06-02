@@ -3,7 +3,7 @@
   <metadata>
     <id>kindle</id>
     <title>Kindle for PC</title>
-    <version>1.17</version>
+    <version>1.20</version>
     <authors>Amazon</authors>
     <owners>Anthony Mastrean, mew1033</owners>
     <summary>Read Everywhere with our Free Reading Apps</summary>
@@ -21,7 +21,7 @@ The Kindle app is available for most major smartphones, tablets and computers. T
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/kindle.png</iconUrl>
     <dependencies>
-        <dependency id="chocolatey-uninstall.extension" />
+        <dependency id="chocolatey-core.extension" version="[1.0,)" />
     </dependencies>
   </metadata>
 </package>
