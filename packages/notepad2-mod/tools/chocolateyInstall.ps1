@@ -13,7 +13,7 @@ $package_args = @{
   checksumType   = $checksumType
   checksumType64 = $checksumType
   fileType       = 'EXE'
-  silentArgs     = '/VERYSILENT /NORESTART'
+  silentArgs     = '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES'
 }
 
 Install-ChocolateyPackage @package_args
