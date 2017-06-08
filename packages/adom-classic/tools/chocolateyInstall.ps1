@@ -1,22 +1,19 @@
-﻿$id = "adom-classic"
-$name = "Ancient Domains of Mystery (ADOM)"
-$url = "http://www.ancardia.com/download/adom_windows_1.2.0_pre23.zip"
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$package = Split-Path $tools
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) "content"
-$adom = Join-Path $content "adom\Adom.exe"
+$shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
+$shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'ADOM (Classic).lnk'
+$target = Join-Path $package 'adom\adom.exe'
 
-. $tools\bins.ps1
-. $tools\shortcut.ps1
+Install-ChocolateyZipPackage `
+    -PackageName 'adom-classic' `
+    -Url 'http://www.ancardia.com/download/adom_windows_r60_pub.zip' `
+    -Checksum '4E7A513F6B8CFFC0D63A35F51117FC95F951BE7C82CFDD7B0DB79C719D018DBE' `
+    -ChecksumType 'SHA256' `
+    -UnzipLocation $package
 
-Install-ChocolateyZipPackage $id $url $content
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $shortcut `
+    -TargetPath $target
 
-try {
-  New-GuiBin -Name $adom
-  New-Shortcut -Link $name -Target $adom -SpecialFolder "CommonPrograms"
-
-  Write-ChocolateySuccess $id
-} catch {
-  Write-ChocolateyFailure $id $_.Exception.Message
-  throw
-}
+New-Item -Type 'File' -Path "$target.ignore" -Force | Out-Null
