@@ -1,7 +1,9 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
-$shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms')) 'Joy to Key.lnk'
 $target = Join-Path $content 'JoyToKey_en\JoyToKey.exe'
+
+$shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
+$shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'Joy to Key.lnk'
 
 Install-ChocolateyZipPackage `
     -PackageName 'joytokey' `
