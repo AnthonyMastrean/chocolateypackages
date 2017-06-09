@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>prime95</id>
-    <version>28.9.0.20160823</version>
-    <title>Great Internet Mersenne Prime Search</title>
+    <version>28.10</version>
+    <title>Great Internet Mersenne Prime Search (GIMPS)</title>
     <authors>George Woltman</authors>
     <owners>Anthony Mastrean</owners>
     <summary>This program is used to find Mersenne Prime numbers.</summary>
@@ -14,7 +14,7 @@ This program is used to find Mersenne Prime numbers. See http://www.utm.edu/rese
     <projectUrl>http://mersenne.org</projectUrl>
     <releaseNotes>http://www.mersenne.org/download/whatsnew.txt</releaseNotes>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
-    <projectSourceUrl>http://www.mersenne.org/ftp_root/gimps/p95v289.source.zip</projectSourceUrl>
+    <projectSourceUrl>http://www.mersenne.org/ftp_root/gimps/p95v2810.source.zip</projectSourceUrl>
     <docsUrl>http://www.mersenne.org/download/readme.txt</docsUrl>
     <mailingListUrl>http://www.mersenneforum.org/</mailingListUrl>
     <bugTrackerUrl>mailto:woltman@alum.mit.edu</bugTrackerUrl>
