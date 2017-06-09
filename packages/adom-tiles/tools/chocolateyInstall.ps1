@@ -1,9 +1,9 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $package = Split-Path $tools
+$target = Join-Path $package 'adom\adom.exe'
 
 $shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
 $shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'ADOM (Tiles).lnk'
-$target = Join-Path $package 'adom\adom.exe'
 
 # PowerShell [3.0,)
 # $url = (Invoke-WebRequest -Uri 'http://www.indiedb.com/downloads/start/89176').Links `
