@@ -14,7 +14,7 @@ This program is used to find Mersenne Prime numbers. See http://www.utm.edu/rese
     <projectUrl>http://mersenne.org</projectUrl>
     <releaseNotes>http://www.mersenne.org/download/whatsnew.txt</releaseNotes>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
-    <projectSourceUrl>http://www.mersenne.org/ftp_root/gimps/p95v2810.source.zip</projectSourceUrl>
+    <projectSourceUrl>https://mersenne.org/download/#source</projectSourceUrl>
     <docsUrl>http://www.mersenne.org/download/readme.txt</docsUrl>
     <mailingListUrl>http://www.mersenneforum.org/</mailingListUrl>
     <bugTrackerUrl>mailto:woltman@alum.mit.edu</bugTrackerUrl>
