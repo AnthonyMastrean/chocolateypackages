@@ -19,6 +19,12 @@ If you’re experiencing these common WiFi problems at your home or small office
  * Instantly identify the ideal channel for your router (access point)
  * Measure signal strength throughout your home to identify dead spots and ideal access point placement
  * Monitor overlap with neighboring networks to reduce or eliminate cochannel and adjacent-channel interference
+
+ ----
+
+ This product is out-of-support and no longer distributed by the authors. There
+ are no existing reliable file hosts/mirrors, so I have published the last
+ known-good version of the installer to my own GitHub repository.
     </description>
     <projectUrl>http://www.metageek.com/products/inssider/</projectUrl>
     <tags></tags>
