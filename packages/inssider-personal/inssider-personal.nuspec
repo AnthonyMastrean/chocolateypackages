@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>inssider-home</id>
-    <title>inSSIDer Home</title>
-    <version>3.1.2.1</version>
+    <id>inssider-personal</id>
+    <title>inSSIDer Personal</title>
+    <version>4.2.1</version>
     <authors>MetaGeek, LLC</authors>
     <owners>Anthony Mastrean</owners>
     <summary>If you’re experiencing these common WiFi problems at your home, you need inSSIDer.</summary>
     <description>
-Fix Your Broken WiFi with inSSIDer Home.
+Fix Your Broken WiFi with inSSIDer Personal.
 
  * Dropped connections?
  * Buffering videos?
  * Choppy streaming music?
 
-If you’re experiencing these common WiFi problems at your home or small office, you need inSSIDer Home.
+If you’re experiencing these common WiFi problems at your home or small office, you need inSSIDer Office.
 
  * Instantly identify the ideal channel for your router (access point)
  * Measure signal strength throughout your home to identify dead spots and ideal access point placement
@@ -22,15 +22,15 @@ If you’re experiencing these common WiFi problems at your home or small office
 
  ----
 
- This product is out-of-support and no longer distributed by the authors. There are no existing reliable file hosts/mirrors, so I have published the last known-good version of the installer to my own GitHub repository.
+ This product is out-of-support and no longer sold or distributed by the authors, although they are still hosting the installer for prior purchases.
     </description>
-    <projectUrl>http://www.metageek.com/products/inssider/</projectUrl>
+    <projectUrl>http://www.metageek.com/products/inssider/personal</projectUrl>
     <tags>wifi analyzer admin</tags>
-    <licenseUrl>https://support.metageek.com/hc/en-us/articles/203084484-inSSIDer-3-inSSIDer-Home-End-of-Life</licenseUrl>
+    <licenseUrl>http://blogs.metageek.net/blog/2017/06/end-of-life-overview/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/6f270696cd751d75acf3da75b595daef15a6633b/public/icons/inssider.png</iconUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
-    <releaseNotes>https://support.metageek.com/hc/en-us/articles/203084484-inSSIDer-3-inSSIDer-Home-End-of-Life</releaseNotes>
+    <releaseNotes>https://support.metageek.com/hc/en-us/articles/204144320-inSSIDer-4-Release-Notes</releaseNotes>
     <bugTrackerUrl>https://support.metageek.com/hc/en-us/requests/new</bugTrackerUrl>
     <docsUrl>https://support.metageek.com/hc/en-us/articles/204158620-inSSIDer-Office-User-Guide</docsUrl>
     <mailingListUrl>https://support.metageek.com/hc/en-us</mailingListUrl>
