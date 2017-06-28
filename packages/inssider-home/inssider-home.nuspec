@@ -25,7 +25,7 @@ If you’re experiencing these common WiFi problems at your home or small office
  This product is out-of-support and no longer distributed by the authors. There are no existing reliable file hosts/mirrors, so I have published the last known-good version of the installer to my own GitHub repository.
     </description>
     <projectUrl>http://www.metageek.com/products/inssider/</projectUrl>
-    <tags></tags>
+    <tags>wifi analyzer</tags>
     <licenseUrl>https://support.metageek.com/hc/en-us/articles/203084484-inSSIDer-3-inSSIDer-Home-End-of-Life</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/d656825f25cb27c016b80d2ca53fff901b8fad1e/public/icons/inssider3-home.png</iconUrl>
