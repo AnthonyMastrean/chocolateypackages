@@ -16,7 +16,7 @@ dotCover Command Line Tools is a standalone command line package that enables an
     <copyright>JetBrains s.r.o.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/JetBrains/Chocolatey/de29d5a4613a12c94b5da4f65ad3aa22cd9202de/dotCover/logo.png</iconUrl>
-    <releaseNotes>https://ant.apache.org/antnews.html</releaseNotes>
+    <releaseNotes>https://www.jetbrains.com/dotcover/whatsnew/</releaseNotes>
     <docsUrl>https://www.jetbrains.com/help/dotcover/Running_Coverage_Analysis_from_the_Command_LIne.html</docsUrl>
     <bugTrackerUrl>https://youtrack.jetbrains.com/oauth?state=%2Fissues%2FDCVR</bugTrackerUrl>
     <mailingListUrl>https://dotnettools-support.jetbrains.com/hc/en-us/community/topics/200379915-dotCover-discussions</mailingListUrl>
