@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName = 'intellijidea-community'
-$softwareName = 'IntelliJ IDEA Community Edition 2017.1*'
+$softwareName = 'IntelliJ IDEA Community Edition 2017.2*'
 $installerType = 'EXE'
 
 $silentArgs = '/S'
