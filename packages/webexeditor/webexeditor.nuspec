@@ -3,11 +3,11 @@
   <metadata>
     <id>webexeditor</id>
     <title>Cisco WebEx Recording Editor</title>
-    <version>29.7.0.1</version>
+    <version>31.14.3.30</version>
     <authors>Cisco WebEx</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Watch, share, and edit WebEx recordings!</summary>
-    <description>If you receive an email with a link to a WebEx recording, just click on the link to watch it. There's no player required. Or if you've downloaded a file, get the WebEx Player below (file types are .ARF or .WRF) for your operating system. 
+    <description>If you receive an email with a link to a WebEx recording, just click on the link to watch it. There's no player required. Or if you've downloaded a file, get the WebEx Player below (file types are .ARF or .WRF) for your operating system.
 
 Sharing is easy. You can post a link anywhere and your visitors can view the WebEx. Want to edit? Download the file and convert it to .WMV and edit like any video.
 
