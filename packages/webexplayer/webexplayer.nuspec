@@ -13,7 +13,8 @@ Sharing is easy. You can post a link anywhere and your visitors can view the Web
 
 There are two types of WebEx recording files — .ARF and .WRF. Choose the right player for your recording.</description>
     <projectUrl>http://www.webex.com/play-webex-recording.html</projectUrl>
-    <tags>webex wrf recorder player</tags>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <tags>webex wrf recorder player admin</tags>
     <!-- <licenseUrl></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/webex.png</iconUrl>
