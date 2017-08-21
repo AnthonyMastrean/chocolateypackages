@@ -1,33 +1,34 @@
-﻿$id = "adom"
-$name = "Ancient Domains of Mystery (ADOM)"
-$url = "http://www30.zippyshare.com/v/68255892/file.html"
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$package = Split-Path $tools
+$target = Join-Path $package 'adom\adom.exe'
 
-# <a id="dlbutton" href="/d/68255892/9029/adom_noteye_windows_1.2.0_pre23.zip"><img src="/images/download.png" alt="Download" border="0"></a>
-$dl_match = '<a id="dlbutton" href="(?<chunk>.*?)">'
+$shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
+$shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'ADOM (Tiles).lnk'
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) "content"
-$adom = Join-Path $content "adom\Adom.exe"
+# PowerShell [3.0,)
+# $url = (Invoke-WebRequest -Uri 'http://www.indiedb.com/downloads/start/89176').Links `
+#     | ?{ $_.innerHTML -eq 'download adom_noteye_windows_r60_pub.1.zip' } `
+#     | %{ "http://www.indiedb.com$($_.href)" }
 
-. $tools\bins.ps1
-. $tools\shortcut.ps1
+# PowerShell [2.0,)
+$request = [System.Net.WebRequest]::Create('http://www.indiedb.com/downloads/start/89176')
+$response = $request.GetResponse()
+$stream = $response.GetResponseStream()
+$reader = New-Object 'System.IO.StreamReader' $stream
+$body = $reader.ReadToEnd()
+$body -match '<a href="(.*)">download adom_noteye_windows_r60_pub.1.zip</a>' | Out-Null
+$url = "http://www.indiedb.com$($matches[1])"
 
-try {
-  $request = Invoke-WebRequest $url -SessionVariable session
+Install-ChocolateyZipPackage `
+    -PackageName 'adom-tiles' `
+    -Url $url `
+    -Checksum '0CF75B6C1BD0DF5EC7727639E2E07029DB5C4E7AE2C79B5DD7EC40AC32BE9686' `
+    -ChecksumType 'SHA256' `
+    -UnzipLocation $package
 
-  if(-not($request.Content -match $dl_match)) {
-    throw "Cannot extract download URL from request."
-  }
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $shortcut `
+    -WorkingDirectory $workdir `
+    -TargetPath $target
 
-  $dl_url = "http://www30.zippyshare.com$($matches['chunk'])"
-
-  Install-ChocolateyZipPackage $id $dl_url $content
-
-  New-GuiBin -Name $adom
-  New-Shortcut -Link $name -Target $adom -SpecialFolder $folder
-
-  Write-ChocolateySuccess $id
-} catch {
-  Write-ChocolateyFailure $id $_.Exception.Message
-  throw
-}
+New-Item -Type 'File' -Path "$target.ignore" -Force | Out-Null

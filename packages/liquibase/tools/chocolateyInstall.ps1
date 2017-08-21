@@ -4,8 +4,8 @@ $bat     = Join-Path $content 'liquibase.bat'
 
 Install-ChocolateyZipPackage `
   -PackageName 'liquibase' `
-  -Url 'https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.5.1/liquibase-3.5.1-bin.zip' `
-  -Checksum '10B309095D5B9E18EAFB30C6E3D6DD5FCE0D35B32BEA1C64AA2CA9EBD843F0B8' `
+  -Url 'https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.5.3/liquibase-3.5.3-bin.zip' `
+  -Checksum 'B002C0129709EB35A41B7B94078363688E16591ED571BA752E0F68B4981DE61C' `
   -ChecksumType 'SHA256' `
   -UnzipLocation $content
 

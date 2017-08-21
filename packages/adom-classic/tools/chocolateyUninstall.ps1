@@ -1,8 +1,4 @@
-﻿$id = "adom-classic"
-$name = "Ancient Domains of Mystery (ADOM)"
+﻿$shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
+$shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'ADOM (Classic).lnk'
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
-
-. $tools\shortcut.ps1
-
-Remove-Shortcut -Link $name -SpecialFolder "CommonPrograms"
+Remove-Item -Path $shortcut -Force | Out-Null

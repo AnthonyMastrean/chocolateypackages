@@ -3,7 +3,7 @@
   <metadata>
     <id>liquibase</id>
     <title>Liquibase</title>
-    <version>3.5.1</version>
+    <version>3.5.3</version>
     <authors>Liquibase</authors>
     <owners>Anthony Mastrean</owners>
     <summary>An open source library for tracking, managing, and applying database changes.</summary>

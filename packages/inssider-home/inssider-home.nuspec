@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>inssider-home</id>
+    <title>inSSIDer Home</title>
+    <version>3.1.2.1</version>
+    <authors>MetaGeek, LLC</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>If you’re experiencing these common WiFi problems at your home, you need inSSIDer.</summary>
+    <description>
+Fix Your Broken WiFi with inSSIDer Home.
+
+ * Dropped connections?
+ * Buffering videos?
+ * Choppy streaming music?
+
+If you’re experiencing these common WiFi problems at your home or small office, you need inSSIDer Home.
+
+ * Instantly identify the ideal channel for your router (access point)
+ * Measure signal strength throughout your home to identify dead spots and ideal access point placement
+ * Monitor overlap with neighboring networks to reduce or eliminate cochannel and adjacent-channel interference
+
+ ----
+
+ This product is out-of-support and no longer distributed by the authors.
+    </description>
+    <projectUrl>http://www.metageek.com/products/inssider/</projectUrl>
+    <tags>wifi analyzer admin</tags>
+    <licenseUrl>https://support.metageek.com/hc/en-us/articles/203084484-inSSIDer-3-inSSIDer-Home-End-of-Life</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/6f270696cd751d75acf3da75b595daef15a6633b/public/icons/inssider.png</iconUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
+    <releaseNotes>https://support.metageek.com/hc/en-us/articles/203084484-inSSIDer-3-inSSIDer-Home-End-of-Life</releaseNotes>
+    <bugTrackerUrl>https://support.metageek.com/hc/en-us/requests/new</bugTrackerUrl>
+    <docsUrl>https://support.metageek.com/hc/en-us/articles/204158620-inSSIDer-Office-User-Guide</docsUrl>
+    <mailingListUrl>https://support.metageek.com/hc/en-us</mailingListUrl>
+  </metadata>
+</package>
