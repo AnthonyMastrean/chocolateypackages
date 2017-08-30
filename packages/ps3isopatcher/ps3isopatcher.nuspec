@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ps3isopatcher</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <owners>Anthony Mastrean</owners>
+    <title>PS3 ISO Patcher</title>
+    <authors>BlackDaemon</authors>
+    <projectUrl>https://rpcs3.net/quickstart#dumping_games</projectUrl>
+    <!-- <iconUrl></iconUrl> -->
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <projectSourceUrl></projectSourceUrl> -->
+    <!-- <docsUrl></docsUrl> -->
+    <!-- <mailingListUrl></mailingListUrl> -->
+    <!-- <bugTrackerUrl></bugTrackerUrl> -->
+    <tags>playstation iso patch</tags>
+    <summary>Simple utility to apply IRD patches to PS3 ISOs.</summary>
+    <description>
+Simple utility to apply IRD patches to PS3 ISOs.
+
+----
+
+This software has only been released on various forums or download sites, but we
+prefer to provide the software hosted by the RPCS3 team.
+    </description>
+    <!-- <releaseNotes></releaseNotes> -->
+  </metadata>
+</package>
