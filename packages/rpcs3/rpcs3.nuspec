@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>rpcs3</id>
-    <version>0.0.3-build5939</version>
+    <version>0.0.3-build5952</version>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>RPCS3</title>
@@ -15,7 +15,7 @@
     <docsUrl>https://rpcs3.net/quickstart</docsUrl>
     <mailingListUrl>https://forums.rpcs3.net/</mailingListUrl>
     <bugTrackerUrl>https://github.com/RPCS3/rpcs3/issues</bugTrackerUrl>
-    <tags>playstation emulator admin</tags>
+    <tags>playstation emulator</tags>
     <summary>An Open-source Sony PlayStation 3 Emulator for Windows and Linux</summary>
     <description>
 ## The History of RPCS3
@@ -37,5 +37,11 @@ RPCS3 has been seen by many as an impossible feat in the eyes of gamers and prog
 In March 2014, Cinema Blend's William Usher wrote "A lot of gamers originally thought that the complexity of the PlayStation 3's Cell architecture would have prevented it from being emulated." In the same month, Eurogamer's Elio Cossu also wrote "The emulation, even at such an early stage, was a remarkable achievement, considering the complexity of the hardware of the PlayStation 3."
     </description>
     <releaseNotes>https://rpcs3.net/compatibility?b</releaseNotes>
+    <dependencies>
+        <dependency id="vcredist2015" version="[14.0,)" />
+        <!-- All supported versions of Windows meet the minimum requirements. -->
+        <!-- https://support.microsoft.com/en-us/help/179113/how-to-install-the-latest-version-of-directx -->
+        <!-- <dependency id="directx" version="[9.0," /> -->
+    </dependencies>
   </metadata>
 </package>
