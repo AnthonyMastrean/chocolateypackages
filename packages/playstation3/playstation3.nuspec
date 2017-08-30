@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>playstation3</id>
+    <version>4.81</version>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <owners>Anthony Mastrean</owners>
+    <title>PlayStation 3 System Software</title>
+    <authors>Sony</authors>
+    <projectUrl>https://www.playstation.com/en-us/support/system-updates/ps3/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/4b0c553bc67bb37b86b53120150d5f80e98e1293/public/icons/playstation.png</iconUrl>
+    <licenseUrl>http://doc.dl.playstation.net/doc/ps3-eula/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <mailingListUrl>https://support.us.playstation.com/</mailingListUrl>
+    <tags>playstation system software</tags>
+    <summary>PS3™ system software</summary>
+    <description>
+An update to the PS3™ system software was released on November 1, 2016. You can use this update to upgrade your system software to version 4.81.
+
+&gt; See the 'Project URL' for detailed instructions on downloading and updating your system.
+    </description>
+    <releaseNotes>
+## New for 4.81
+
+This system software update improves the quality of the system performance.
+
+## New for 4.80
+
+This system software update improves system performance.
+    </releaseNotes>
+  </metadata>
+</package>
