@@ -3,5 +3,5 @@
     -FileType 'MSI' `
     -SilentArgs '/QN' `
     -Url 'https://welcome.webex.com/client/T31L/ateditor.msi' `
-    -Checksum '032AFBCA918A7D7C28036699EFC1C020EA71DEAFEE9437029C9338AC408A35B9' `
+    -Checksum '97D9EF5C583143E6297CBACCE6356C26AD663CDC108989E9AE614F0C04B2AB85' `
     -ChecksumType 'SHA256'
