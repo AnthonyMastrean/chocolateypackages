@@ -2,8 +2,8 @@
 
 $packageName = 'intellijidea-ultimate'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://download.jetbrains.com/idea/ideaIU-2017.2.2.exe'
-$url64       = 'https://download.jetbrains.com/idea/ideaIU-2017.2.2.exe'
+$url         = 'https://download.jetbrains.com/idea/ideaIU-2017.2.3.exe'
+$url64       = 'https://download.jetbrains.com/idea/ideaIU-2017.2.3.exe'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -14,9 +14,9 @@ $packageArgs = @{
 
   softwareName   = 'IntelliJ IDEA 2017.2*'
 
-  checksum       = '7b1db262378870c862a8bfe33ff5c0238dfe5918018d7fd2691ea995d59dbaea'
+  checksum       = '47F03C4D71D16D90E3239DCA2B51325DCEE917AB53CB56B311ED83C19F9224BD'
   checksumType   = 'sha256'
-  checksum64     = '7b1db262378870c862a8bfe33ff5c0238dfe5918018d7fd2691ea995d59dbaea'
+  checksum64     = '47F03C4D71D16D90E3239DCA2B51325DCEE917AB53CB56B311ED83C19F9224BD'
   checksumType64 = 'sha256'
 
   silentArgs     = '/S'
