@@ -3,8 +3,8 @@
   <metadata>
     <id>angband</id>
     <title>Angband</title>
-    <version>3.5.1</version>
-    <authors>Angband Developers, Andi Sidwell</authors>
+    <version>4.1.0</version>
+    <authors>Angband Developers</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Angband is a free, single-player dungeon exploration game. You play an adventurer: seeking riches, fighting monsters, and preparing for a final battle with Morgoth, the Lord of Darkness.</summary>
     <description>
@@ -15,9 +15,14 @@ The player will begin his adventure on the town level where he may acquire suppl
 Note that Angband is a very complex game, and it may be difficult to grasp everything at first, especially if you have never played a "roguelike" game before. You should probably browse through all of the "online help files", especially this one, before beginning any serious adventuring...
     </description>
     <projectUrl>http://rephial.org/</projectUrl>
+    <releaseNotes>http://rephial.org/release</releaseNotes>
+    <mailingListUrl>http://angband.oook.cz/forum/</mailingListUrl>
+    <docsUrl>http://rephial.org/help</docsUrl>
+    <projectSourceUrl>https://github.com/angband/angband</projectSourceUrl>
+    <bugTrackerUrl>http://trac.rephial.org/</bugTrackerUrl>
     <tags>games roguelike</tags>
     <!-- <licenseUrl></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/angband.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/48a2f4dba5b50b06ed784cec314f838badb7fbab/public/icons/angband.png</iconUrl>
   </metadata>
 </package>

@@ -1,22 +1,19 @@
-﻿$id = "angband"
-$name = "Angband"
-$url = "http://rephial.org/downloads/3.5/angband-v3.5.1-win.zip"
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$package = Split-Path $tools
+$target = Join-Path $package 'angband-4.1.0\angband.exe'
 
-$tools = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) "content"
-$angband = Join-Path $content "angband-3.5.1\angband.exe"
+$shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
+$shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'Angband.lnk'
 
-. $tools\bins.ps1
-. $tools\shortcut.ps1
+Install-ChocolateyZipPackage `
+    -PackageName 'angband' `
+    -Url 'http://rephial.org/downloads/4.1/angband-4.1.0-win.zip' `
+    -Checksum 'D6706B61B40F7C12E7B061DBB0AD8773ED2FFCCC9F6197A53EA23628F475964A' `
+    -ChecksumType 'SHA256' `
+    -UnzipLocation $package `
 
-Install-ChocolateyZipPackage $id $url $content
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $shortcut `
+    -TargetPath $target
 
-try {
-  New-GuiBin -Name $angband
-  New-Shortcut -Link $name -Target $angband -SpecialFolder "CommonPrograms"
-
-  Write-ChocolateySuccess $id
-} catch {
-  Write-ChocolateyFailure $id $_.Exception.Message
-  throw
-}
+New-Item -Path "$target.gui" -Type 'File' -Force | Out-Null
