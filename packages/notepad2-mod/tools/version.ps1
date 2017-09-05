@@ -1,4 +1,4 @@
-﻿$version = '4.2.25.991'
+﻿$version = '4.2.25.998'
 $url = "https://github.com/XhmikosR/notepad2-mod/releases/download/${version}/Notepad2-mod.${version}.exe"
-$checksum = '44994EA8086DA877DC79A963203B6FD0B96B08B0A576BB4DF822FD286992E503'
+$checksum = 'EBD0BFD738BA9F07598369D09C91241807C94FE63F6629A0A9C66F2D66D3AED9'
 $checksumType = 'SHA256'
