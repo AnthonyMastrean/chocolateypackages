@@ -3,7 +3,7 @@
   <metadata>
     <id>cloc</id>
     <title>Count Lines of Code (CLOC)</title>
-    <version>1.70</version>
+    <version>1.72</version>
     <authors>Al Danial</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Cloc counts blank lines, comment lines, and physical lines of source code in many programming languages.</summary>

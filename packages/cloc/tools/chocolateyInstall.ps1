@@ -10,7 +10,7 @@ Remove-Item -Path $legacy -Force | Out-Null
 
 Get-ChocolateyWebFile `
     -PackageName 'cloc' `
-    -Url 'https://github.com/AlDanial/cloc/releases/download/v1.70/cloc-1.70.exe' `
-    -Checksum '1C1A64FFF0C7065954C52C36D288D800D9B18C558162AAB3BD239D2E537476F0' `
+    -Url 'https://github.com/AlDanial/cloc/releases/download/v1.72/cloc-1.72.exe' `
+    -Checksum 'CDBBBA435649FF6EFBCEB2824BC1404091FCF09D78547507DEE4BB3E3AB841DF' `
     -ChecksumType 'SHA256' `
     -FileFullPath $target
