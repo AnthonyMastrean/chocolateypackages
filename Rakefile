@@ -11,7 +11,7 @@ end
 
 CLOBBER.include('**/*.nupkg')
 
-SPECS = FileList['**/*.nuspec']
+SPECS = FileList['packages/**/*.nuspec']
 PACKAGES = SPECS.map{ |file| File.join('bin', nupkg(file)) }
 
 task :default => [:pack]
