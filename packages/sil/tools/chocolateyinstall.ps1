@@ -1,35 +1,19 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+$content = Join-Path (Split-Path $tools) 'content'
+$target = Join-Path $content 'Sil/sil.exe'
 
-$id      = 'sil'
-$name    = 'Sil'
-$url     = 'http://www.amirrorclear.net/flowers/game/sil/Sil-121-Win.zip'
-$hash    = 'c6f5237fed3a8264806afbeba675a3ac'
+$shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
+$shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'Sil.lnk'
 
-$tools   = Split-Path $MyInvocation.MyCommand.Definition
-$package = Split-Path $tools
-$content = Join-Path $package 'Sil'
-$exe     = Join-Path $content 'sil.exe'
+Install-ChocolateyZipPackage `
+    -PackageName 'sil' `
+    -Url 'http://www.amirrorclear.net/flowers/game/sil/Sil-130-Win.zip' `
+    -Checksum '613A9BBD6DC9869FE6FD352F6E3AF21060421AB5C56CF27DB3F1C2CE49B5A908' `
+    -ChecksumType 'SHA256' `
+    -UnzipLocation $content
 
-. $tools\shortcut.ps1
-. $tools\bins.ps1
+Install-ChocolateyShortcut `
+    -ShortcutFilePath $shortcut `
+    -TargetPath $target
 
-$zip_args = @{
-  packageName   = $id
-  unzipLocation = $package
-  url           = $url
-  checksum      = $hash
-}
-
-$shortcut_args = @{
-  link          = $name
-  target        = $exe
-  specialFolder = 'CommonPrograms'
-}
-
-$bin_args = @{
-  path = $exe
-}
-
-Install-ChocolateyZipPackage @zip_args
-Install-Shortcut @shortcut_args
-Install-IgnoreBin @bin_args
+New-Item -Type 'File' -Path "$target.ignore" -Force | Out-Null

@@ -3,7 +3,7 @@
   <metadata>
     <id>sil</id>
     <title>Sil</title>
-    <version>1.2.1</version>
+    <version>1.3</version>
     <authors>Sil Development Team</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Sil is a computer role-playing game with a strong emphasis on discovery and tactical combat.</summary>
@@ -15,21 +15,16 @@ It is also one of very few games that stays true to the writings of Tolkien. Car
 Sil comes from a tradition of role-playing games known as roguelikes. They stem from a game called Rogue that was written before computers had graphics and instead used symbols on the screen to represent a dungeon filled with monsters and treasure, that was randomly generated each time you played. Rogue also had ‘permanent death’: you have only one life and must choose wisely lest you have to start again. Finally, it had a system of unidentified items whose powers you must discover for yourself. Sil inherits all of these features, though it is much more advanced in many ways.
     </description>
     <projectUrl>http://www.amirrorclear.net/flowers/game/sil/</projectUrl>
-    <!-- <packageSourceUrl></packageSourceUrl> -->
-    <!-- <projectSourceUrl></projectSourceUrl> -->
-    <!-- <docsUrl>http://www.amirrorclear.net/flowers/game/sil/Sil-121-Manual.pdf</docsUrl> -->
-    <!-- <mailingListUrl></mailingListUrl> -->
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
+    <projectSourceUrl>http://www.amirrorclear.net/flowers/game/sil/Sil-130-src.zip</projectSourceUrl>
+    <docsUrl>http://www.amirrorclear.net/flowers/game/sil/Sil-130-Manual.pdf</docsUrl>
+    <mailingListUrl>http://angband.oook.cz/forum/showthread.php?t=5216</mailingListUrl>
     <!-- <bugTrackerUrl></bugTrackerUrl> -->
     <tags>sil moria tolkein games roguelike</tags>
     <!-- <copyright></copyright> -->
     <!-- <licenseUrl></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/eb53131f62cd2c1ceb3f298df39a7b7b10691690/public/icons/sil.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="__VERSION__" />
-      <dependency id="" />
-    </dependencies>-->
     <releaseNotes>http://www.amirrorclear.net/flowers/game/sil/changes.txt</releaseNotes>
-    <!--<provides></provides>-->
   </metadata>
 </package>

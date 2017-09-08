@@ -1,15 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿$shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
+$shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'Sil.lnk'
 
-$id      = 'sil'
-$name    = 'Sil'
-
-$tools   = Split-Path $MyInvocation.MyCommand.Definition
-
-. $tools\shortcut.ps1
-
-$shortcut_args = @{
-  link          = $name
-  specialFolder = 'CommonPrograms'
-}
-
-Uninstall-Shortcut @shortcut_args
+Remove-Item -Path $shortcut -Force | Out-Null
