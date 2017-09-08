@@ -3,7 +3,7 @@
   <metadata>
     <id>pmd</id>
     <title>PMD</title>
-    <version>5.3.2</version>
+    <version>5.8.1</version>
     <authors>PMD</authors>
     <owners>Anthony Mastrean</owners>
     <summary>PMD is a source code analyzer.</summary>
