@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>redrogue</id>
+    <title>Red Rogue</title>
+    <version>1.0.7</version>
+    <authors>Aaron Steed</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>A computer game, a side-scrolling roguelike-like</summary>
+    <description>
+Descend into the Dungeon of Chaos, retrieve the Amulet of Yendor, kill all who stand in your way and return with your prize.
+    </description>
+    <projectUrl>http://www.redrogue.net/</projectUrl>
+    <tags>games roguelike</tags>
+    <!-- <licenseUrl></licenseUrl> -->
+    <docsUrl>http://www.redrogue.net/faq.html</docsUrl>
+    <!-- <mailingListUrl></mailingListUrl> -->
+    <!-- <bugTrackerUrl></bugTrackerUrl> -->
+    <releaseNotes>http://www.redrogue.net/version.html</releaseNotes>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <projectSourceUrl>http://github.com/st33d/red-rogue</projectSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+  </metadata>
+</package>
