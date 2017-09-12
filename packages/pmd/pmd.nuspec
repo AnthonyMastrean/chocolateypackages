@@ -11,8 +11,13 @@
 PMD is a source code analyzer. It finds common programming flaws like unused variables, empty catch blocks, unnecessary object creation, and so forth. It supports Java, JavaScript, PLSQL, Apache Velocity, XML, XSL. Additionally it includes CPD, the copy-paste-detector. CPD finds duplicated code in Java, C, C++, C#, PHP, Ruby, Fortran, JavaScript, PLSQL, Apache Velocity, Ruby, Scala, Objective C, Matlab, Python, Go.
     </description>
     <projectUrl>http://pmd.sourceforge.net/</projectUrl>
+    <projectSourceUrl>https://github.com/pmd/pmd</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/pmd/pmd/issues</bugTrackerUrl>
+    <docsUrl>https://pmd.github.io/pmd-5.8.1/</docsUrl>
+    <releaseNotes>https://pmd.github.io/pmd-5.8.1/overview/changelog.html</releaseNotes>
+    <mailingListUrl>https://pmd.github.io/#support</mailingListUrl>
     <tags>source code analyze lint</tags>
-    <licenseUrl>http://pmd.sourceforge.net/pmd-5.3.2/overview/license.html</licenseUrl>
+    <licenseUrl>https://github.com/pmd/pmd/blob/6d4e902a2a36df937bb445a53223485a2e16e473/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/e530258a17838ab065677c5522fecb8149bcfde6/public/icons/pmd.png</iconUrl>
     <dependencies>
