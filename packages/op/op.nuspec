@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>op</id>
+    <title>1Password CLI</title>
+    <version>0.1.1</version>
+    <authors>AgileBits</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>1Password - Have you ever forgotten a password?</summary>
+    <description>
+1Password apps are available on just about every platform, but they’ve always had the same dependency: a graphical interface. Now all of 1Password is available with just two characters: `op`.
+
+The 1Password command-line tool makes your 1Password account accessible entirely from the command line. A simple op signin will securely authenticate you with the 1Password service and give you access to a wide range of capabilities.
+    </description>
+    <tags>password</tags>
+    <copyright>AgileBits</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://blog.agilebits.com/2017/09/06/announcing-the-1password-command-line-tool-public-beta/</projectUrl>
+    <releaseNotes>https://app-updates.agilebits.com/product_history/CLI</releaseNotes>
+    <packageSourceUrl>https://github.com/anthonymastrean/chocolateypackages/</packageSourceUrl>
+    <licenseUrl>https://1password.com/legal/terms-of-service/</licenseUrl>
+    <docsUrl>https://support.1password.com/command-line/</docsUrl>
+    <mailingListUrl>https://discussions.agilebits.com/</mailingListUrl>
+    <bugTrackerUrl>https://support.1password.com/</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/1password.png</iconUrl>
+  </metadata>
+</package>
