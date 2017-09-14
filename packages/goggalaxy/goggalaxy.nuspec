@@ -3,7 +3,7 @@
   <metadata>
     <id>goggalaxy</id>
     <title>GOG Galaxy</title>
-    <version>1.1.30.5</version>
+    <version>1.2.23.4</version>
     <authors>GOG</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Truly gamer friendly, DRM-free online gaming platform.</summary>
@@ -11,7 +11,7 @@
 The gaming Client designed for a convenient purchasing, playing and updating games, as well as an online play between gaming platforms, GOG Galaxy is also built with optionality in mind, and a belief that you should own the games you buy.
     </description>
     <projectUrl>https://www.gog.com/galaxy</projectUrl>
-    <tags>games gog</tags>
+    <tags>games gog admin</tags>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <bugTrackerUrl>http://mantis.gog.com/</bugTrackerUrl>
     <!-- <licenseUrl></licenseUrl> -->
@@ -19,7 +19,8 @@ The gaming Client designed for a convenient purchasing, playing and updating gam
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/a561f0de0d19224bf85d694f74f6ce52f8bf9c08/public/icons/goggalaxy.png</iconUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" />
+      <dependency id="chocolatey-core.extension" version="[1.0,)" />
+      <dependency id="KB2919355" version="[1.0,)" />
     </dependencies>
   </metadata>
 </package>
