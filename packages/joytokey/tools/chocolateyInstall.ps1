@@ -1,5 +1,4 @@
-﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) 'content'
+﻿$content = Join-Path (Get-ToolsLocation) 'joytokey'
 $target = Join-Path $content 'JoyToKey_en\JoyToKey.exe'
 
 $shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
