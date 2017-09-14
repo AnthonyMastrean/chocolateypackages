@@ -4,6 +4,7 @@ $target = Join-Path $content 'JoyToKey_en\JoyToKey.exe'
 $shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
 $shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'Joy to Key.lnk'
 
+# Joy to Key writes to its installation directory, so it can't be in %PROGRAMDATA%
 Install-ChocolateyZipPackage `
     -PackageName 'joytokey' `
     -Url 'http://joytokey.net/download/JoyToKey_en.zip' `
