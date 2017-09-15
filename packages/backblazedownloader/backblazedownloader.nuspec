@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>backblazedownloader</id>
+    <title>Backblaze Downloader</title>
+    <version>5.0.0.109</version>
+    <authors>Backblaze</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>The 'Backblaze Downloader' app can download faster and more reliably than the web browser.</summary>
+    <description>
+On Windows computers, any ZIP file restore larger than 2 GB can be difficult to download. In addition, if one of your filenames contains a non-English character the standard Windows Unzip programs will not work correctly. The Backblaze Downloader solves these problems.
+    </description>
+    <projectUrl>https://www.backblaze.com/help-backblaze-downloader-win.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/fcf04ac1e6f7f4be4268dd528f21547bf51f3c4b/public/icons/backblaze.png</iconUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <!-- <releaseNotes></releaseNotes> -->
+    <docsUrl>https://www.backblaze.com/help.html</docsUrl>
+    <licenseUrl>https://www.backblaze.com/company/terms.html</licenseUrl>
+    <copyright>Backblaze © 2017.</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>backup download</tags>
+  </metadata>
+</package>
