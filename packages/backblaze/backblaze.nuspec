@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>backblaze</id>
+    <title>Backblaze</title>
+    <version>1.0.0</version>
+    <authors>Backblaze, Inc.</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Never Lose a File Again with the World's Easiest Cloud Backup</summary>
+    <description>
+## Unlimited Online Backup
+
+Backblaze will automatically back up all your files including documents, photos, music and movies. Unlimited files. Unlimited file size. Unlimited speed.
+
+## Restore and Access
+
+You can download a free restore of 1 file or all your files anywhere in the world. There is an option to have a 128 GB flash drive ($99) FedEx to you or an external drive up to 4 TB ($189).
+
+## Your Data is Safe
+
+Backblaze takes security seriously. All data is stored in our secure datacenters with 24-hour staff, biometric security and redundant power. Learn how Backblaze uses encryption to protect your data. New: Backblaze has enabled two-factor authentication. Now a 6-digit code can be sent to your phone during sign-in for an extra layer of security.
+    </description>
+    <projectUrl>https://www.backblaze.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/fcf04ac1e6f7f4be4268dd528f21547bf51f3c4b/public/icons/backblaze.png</iconUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <!-- <releaseNotes></releaseNotes> -->
+    <docsUrl>https://www.backblaze.com/help.html</docsUrl>
+    <bugTrackerUrl>https://help.backblaze.com/requests</bugTrackerUrl>
+    <licenseUrl>https://www.backblaze.com/company/terms.html</licenseUrl>
+    <copyright>Backblaze © 2017.</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>backup restore recovery admin not-silent not-unattended</tags>
+    <dependencies>
+        <dependency id="chocolatey-core.extension" version="[1.0,)" />
+    </dependencies>
+  </metadata>
+</package>
