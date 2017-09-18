@@ -1,0 +1,348 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="bed82b1e-f1b3-4ae1-b34e-4ddac124ace0">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>142231404</LastFileSize>
+    <LastFileDate>2014-01-13T21:16:56.9262313</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://directory.apache.org/studio/</Url>
+            <StartText>"&gt;&lt;b&gt;Download Apache&lt;br&gt;Directory Studio </StartText>
+            <EndText>&lt;/b&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>http://apache.cs.utah.edu//\S*-x86-\S*.exe</Regex>
+            <Url>http://directory.apache.org/studio/download/download-windows.cgi?Preferred=http%3A%2F%2Fapache.cs.utah.edu%2F</Url>
+            <TextualContent>http://supergsego.com/apache//directory/studio/dist/2.0.0.v20130628/ApacheDirectoryStudio-win32-x86-2.0.0.v20130628.exe</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>http://apache.cs.utah.edu//\S*-x86_64-\S*.exe</Regex>
+            <Url>http://directory.apache.org/studio/download/download-windows.cgi?Preferred=http%3A%2F%2Fapache.cs.utah.edu%2F</Url>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>D:\Users\Anthony\Downloads\ApacheDirectoryStudio-win32-x86-2.0.0.v20130628.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-01-13T21:16:56.9262313</LastUpdated>
+    <TargetPath>D:\Users\Anthony\Downloads\</TargetPath>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name>apachedirectorystudio</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="7e9d2814-e32d-4e3c-8091-917e1b3bdef2">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>178786472</LastFileSize>
+    <LastFileDate>2014-01-13T21:31:00.6082808</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://download.jetbrains.com/idea/ideaIC-{version}.exe</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.jetbrains.com/js2/version.js</Url>
+            <StartText>var versionIDEALong = "</StartText>
+            <EndText>";</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>D:\Users\Anthony\Downloads\ideaIC-13.0.1.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-01-13T21:31:00.6082808</LastUpdated>
+    <TargetPath>D:\Users\Anthony\Downloads\</TargetPath>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name>intellijidea-community</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="803125e0-a504-42ff-b4c8-0bbfe1ba3694">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>249300936</LastFileSize>
+    <LastFileDate>2014-01-13T21:29:56.5660805</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://download.jetbrains.com/idea/ideaIU-{version}.exe</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.jetbrains.com/js2/version.js</Url>
+            <StartText>var versionIDEALong = "</StartText>
+            <EndText>";</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>D:\Users\Anthony\Downloads\ideaIU-13.0.1.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-01-13T21:29:56.5660805</LastUpdated>
+    <TargetPath>D:\Users\Anthony\Downloads\</TargetPath>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name>intellijidea-ultimate</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="ce7aa200-5ce6-4e10-a06f-f35730d52248">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>298496</LastFileSize>
+    <LastFileDate>2014-01-13T20:56:24.7834334</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.flos-freeware.ch/notepad2.html</Url>
+            <StartText>Current Release: Version </StartText>
+            <EndText>&lt;br /&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://www.flos-freeware.ch/zip/Notepad2_{version}_x86.exe</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://www.flos-freeware.ch/zip/Notepad2_{version}_x64.exe</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>D:\Users\Anthony\Downloads\Notepad2_4.2.25_x86.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-01-13T20:56:24.7834334</LastUpdated>
+    <TargetPath>D:\Users\Anthony\Downloads\</TargetPath>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name>notepad2</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="f7b22884-b135-4272-b880-a3bf5a040121">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>1218470</LastFileSize>
+    <LastFileDate>2014-01-13T20:56:42.4956987</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://xhmikosr.github.io/notepad2-mod/</Url>
+            <StartText>Latest version: &lt;span&gt;</StartText>
+            <EndText>&lt;/span&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>https://github.com/XhmikosR/notepad2-mod/releases/download/{version}/Notepad2-mod.{version}.exe</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>D:\Users\Anthony\Downloads\Notepad2-mod.4.2.25.897.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-01-13T20:56:42.4956987</LastUpdated>
+    <TargetPath>D:\Users\Anthony\Downloads\</TargetPath>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name>notepad2-mod</Name>
+  </ApplicationJob>
+</Jobs>
