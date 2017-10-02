@@ -22,7 +22,7 @@ PMD is a source code analyzer. It finds common programming flaws like unused var
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/e530258a17838ab065677c5522fecb8149bcfde6/public/icons/pmd.png</iconUrl>
     <dependencies>
-      <dependency id="jdk8" />
+      <dependency id="jdk8" version="[8.0,)" />
     </dependencies>
   </metadata>
 </package>
