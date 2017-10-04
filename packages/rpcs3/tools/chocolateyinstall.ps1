@@ -9,8 +9,8 @@ $shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'RPCS3
 Install-ChocolateyZipPackage `
   -PackageName 'rpcs3' `
   -UnzipLocation $content `
-  -Url 'https://ci.appveyor.com/api/buildjobs/eubw9x42h5f36h5v/artifacts/rpcs3-v0.0.3-2017-08-29-da3f3fd1_win64.zip' `
-  -Checksum 'D446AA6D797889F71C494FB734596D07CF212061EAF1AB4A2486659E134443DD' `
+  -Url 'https://ci.appveyor.com/api/buildjobs/w36ohxu26bm9dq2q/artifacts/rpcs3-v0.0.3-2017-09-29-81b3e7e4_win64.zip' `
+  -Checksum '089C2862F63F9DC94E0EF3A71386C0D5C9BFF43BF73C82AB7FAC41D4F7326059' `
   -ChecksumType 'SHA256' `
 
 Install-ChocolateyShortcut `
