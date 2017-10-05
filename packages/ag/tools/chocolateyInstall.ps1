@@ -1,7 +1,15 @@
-﻿$id  = "ag"
-$url = "https://kjkpub.s3.amazonaws.com/software/the_silver_searcher/rel/0.29.1-1641/ag.zip"
+﻿$ErrorActionPreference = 'Stop';
+$toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
-$tools   = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) "content"
+$packageArgs = @{
+  packageName    = 'ag'
+  url            = 'https://github.com/k-takata/the_silver_searcher-win32/releases/download/2017-08-31%2F2.1.0-1/ag-2017-08-31_2.1.0-1-x86.zip'
+  checksum       = '28456A424A30B12BE3BE2B9D427BC67031BC436F87F1100607CFA9A44C1AF95D'
+  url64          = 'https://github.com/k-takata/the_silver_searcher-win32/releases/download/2017-08-31%2F2.1.0-1/ag-2017-08-31_2.1.0-1-x64.zip'
+  checksum64     = '2F0B83E705D6224DF82BE92014726875BEC925C6B56EF84170D1F19EDDFAA439'
+  checksumType   = 'sha256'
+  checksumType64 = 'sha256'
+  unzipLocation  = $toolsDir
+}
 
-Install-ChocolateyZipPackage -PackageName $id -Url $url -UnzipLocation $content
+Install-ChocolateyZipPackage @packageArgs

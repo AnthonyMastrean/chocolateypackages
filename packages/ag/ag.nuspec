@@ -3,14 +3,16 @@
   <metadata>
     <id>ag</id>
     <title>The Silver Searcher</title>
-    <version>0.29.1.1641</version>
-    <authors>Krzysztof Kowalczyk, Geoff Greer</authors>
+    <version>2.1.0.1</version>
+    <authors>Geoff Greer, K. Takata</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The Silver Searcher is like grep or ack, except faster.</summary>
     <description>The Silver Searcher is like grep or ack, except faster. It's written in super-optimized C (like grep) and it's intelligent about entirely skipping files that you don't want to waste time searching (like ack).</description>
-    <projectUrl>http://blog.kowalczyk.info/software/the-silver-searcher-for-windows.html</projectUrl>
-    <tags>ag ack search grep</tags>
-    <licenseUrl>https://github.com/kjk/the_silver_searcher/blob/76544feebd8020c841b76b3c6ec62799997024e0/LICENSE</licenseUrl>
+    <projectUrl>https://geoff.greer.fm/ag/</projectUrl>
+    <projectSourceUrl>https://github.com/k-takata/the_silver_searcher-win32</projectSourceUrl>
+    <tags>ag ack foss grep search</tags>
+    <licenseUrl>https://github.com/k-takata/the_silver_searcher-win32/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/ag</packageSourceUrl>
   </metadata>
 </package>
