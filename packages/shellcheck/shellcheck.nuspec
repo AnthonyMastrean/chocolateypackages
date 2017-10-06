@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>shellcheck</id>
+    <title>ShellCheck</title>
+    <version>0.4.6</version>
+    <authors>Vidar Holen</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>ShellCheck is a GPLv3 tool that gives warnings and suggestions for bash/sh shell scripts.</summary>
+    <description>
+The goals of ShellCheck are
+
+ * To point out and clarify typical beginner's syntax issues that cause a shell to give cryptic error messages.
+
+ * To point out and clarify typical intermediate level semantic problems that cause a shell to behave strangely and counter-intuitively.
+
+ * To point out subtle caveats, corner cases and pitfalls that may cause an advanced user's otherwise working script to fail under future circumstances.
+    </description>
+    <projectUrl>http://www.shellcheck.net/</projectUrl>
+    <tags>shell check lint</tags>
+    <copyright>Copyright 2012-2015, Vidar 'koala_man' Holen and contributors.</copyright>
+    <licenseUrl>https://github.com/koalaman/shellcheck/blob/3785a08906b23e18d8299af458b93a2ec314b525/LICENSE</licenseUrl>
+    <docsUrl>https://github.com/koalaman/shellcheck/wiki</docsUrl>
+    <!-- <mailingListUrl></mailingListUrl> -->
+    <bugTrackerUrl>https://github.com/koalaman/shellcheck/issues</bugTrackerUrl>
+    <releaseNotes></releaseNotes>
+    <projectSourceUrl>https://github.com/koalaman/shellcheck/</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/packages/shellcheck</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+  </metadata>
+</package>
