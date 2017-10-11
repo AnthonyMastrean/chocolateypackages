@@ -17,4 +17,4 @@ Install-ChocolateyShortcut `
     -ShortcutFilePath $shortcut `
     -TargetPath $depends
 
-New-Item -Type 'File' -Path '$depends.gui' -Force | Out-Null
+New-Item -Type 'File' -Path "$depends.gui" -Force | Out-Null
