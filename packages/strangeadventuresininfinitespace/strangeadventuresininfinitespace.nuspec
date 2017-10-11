@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>strangeadventuresininfinitespace</id>
+    <title>Strange Adventures in Infinite Space</title>
+    <version>1.5</version>
+    <authors>Digital Eel</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Explore the galaxy...in 20 minutes or less!</summary>
+    <description>
+Strange Adventures in Infinite Space was the first game of its kind: a Rogue-like space adventure. Dubbed “A Perfect Short Game” in a Gamasutra article by Ernest Adams, it gathered critical acclaim and eventually spawned a much awaited sequel Weird Worlds: Return to Infinite Space that brought this style of gameplay to more modern systems with OpenGL graphics and award-winning audio track.
+
+Strange Adventures in Infinite Space is also an example of the scratchware concept: professional quality, original games with high replayability, made by just a couple of people with freeware tools for no development cost.
+
+After being sold for several years by Cheapass Games, Strange Adventures in Infinite Space was released as free software and its source code was made available under the GNU General Public License. Go to the Strange Adventures in Infinite Space website to download the game, source code and various other goodies
+    </description>
+    <projectUrl>http://www.digital-eel.com/sais/index.htm</projectUrl>
+    <copyright>Copyright 2001-2017 R. Carlson, I. Keranen and Phosphorous</copyright>
+    <tags>games roguelike space</tags>
+    <!-- <licenseUrl></licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/packages/strangeadventuresininfinitespace</packageSourceUrl>
+    <projectSourceUrl>http://digital-eel.com/sais/source.htm</projectSourceUrl>
+    <docsUrl>http://www.digital-eel.com/ggb/</docsUrl>
+    <bugTrackerUrl>http://www.infinitespacegames.com/contact-us/</bugTrackerUrl>
+    <!-- <releaseNotes></releaseNotes> -->
+    <!-- <mailingListUrl></mailingListUrl> -->
+    <!-- <iconUrl></iconUrl> -->
+    <dependencies>
+      <dependency id="chocolatey-core.extension" />
+    </dependencies>
+  </metadata>
+</package>
