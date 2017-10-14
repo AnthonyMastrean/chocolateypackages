@@ -3,7 +3,7 @@
   <metadata>
     <id>goggalaxy</id>
     <title>GOG Galaxy</title>
-    <version>1.2.23.4</version>
+    <version>1.2.24.93</version>
     <authors>GOG</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Truly gamer friendly, DRM-free online gaming platform.</summary>
@@ -15,7 +15,7 @@ The gaming Client designed for a convenient purchasing, playing and updating gam
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <bugTrackerUrl>http://mantis.gog.com/</bugTrackerUrl>
     <!-- <licenseUrl></licenseUrl> -->
-    <releaseNotes>https://www.gog.com/forum/general/gog_galaxy_beta_2/post1903</releaseNotes>
+    <releaseNotes>https://www.gog.com/forum/general/gog_galaxy_official_discussion_thread/post1</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/a561f0de0d19224bf85d694f74f6ce52f8bf9c08/public/icons/goggalaxy.png</iconUrl>
     <dependencies>
