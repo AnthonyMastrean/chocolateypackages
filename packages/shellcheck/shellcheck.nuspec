@@ -3,7 +3,7 @@
   <metadata>
     <id>shellcheck</id>
     <title>ShellCheck</title>
-    <version>0.4.6</version>
+    <version>0.4.6.20171113</version>
     <authors>Vidar Holen</authors>
     <owners>Anthony Mastrean</owners>
     <summary>ShellCheck is a GPLv3 tool that gives warnings and suggestions for bash/sh shell scripts.</summary>
@@ -25,7 +25,7 @@ The goals of ShellCheck are
     <bugTrackerUrl>https://github.com/koalaman/shellcheck/issues</bugTrackerUrl>
     <releaseNotes></releaseNotes>
     <projectSourceUrl>https://github.com/koalaman/shellcheck/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/packages/shellcheck</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/shellcheck</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- <iconUrl></iconUrl> -->
   </metadata>
