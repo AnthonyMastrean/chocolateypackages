@@ -1,7 +1,7 @@
 ﻿Install-ChocolateyPackage `
     -PackageName 'goggalaxy' `
-    -Url 'https://cdn.gog.com/open/galaxy/client/setup_galaxy_1.2.24.93.exe' `
-    -Checksum 'dbe52668308525a1a1bc3f838d888d38c1b759818a6df2f7bae8ba32aeb021c7' `
+    -Url 'https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_1.2.32.20.exe' `
+    -Checksum '4D87303F8941B5B41E625D7EE96320050B71698357B15C8A3D0630658A781F94' `
     -ChecksumType 'SHA256' `
     -FileType 'EXE' `
     -SilentArgs '/VERYSILENT /NORESTART'
