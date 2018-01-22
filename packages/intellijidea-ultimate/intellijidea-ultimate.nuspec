@@ -14,7 +14,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/17c712c0bf345eb3dcb8326049a8198230228008/public/icons/intellijidea.png</iconUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
-    <releaseNotes>https://www.jetbrains.com/idea/whatsnew/</releaseNotes>
+    <releaseNotes>https://confluence.jetbrains.com/display/IDEADEV/IntelliJ+IDEA+2017.3.3+Release+Notes</releaseNotes>
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/IDEA</bugTrackerUrl>
     <docsUrl>https://www.jetbrains.com/help/idea/2017.3/meet-intellij-idea.html</docsUrl>
     <mailingListUrl>https://intellij-support.jetbrains.com/hc/en-us</mailingListUrl>
