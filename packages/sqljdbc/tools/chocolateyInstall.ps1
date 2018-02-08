@@ -4,6 +4,6 @@ Install-ChocolateyPackage `
     -PackageName 'sqljdbc' `
     -FileType 'EXE' `
     -SilentArgs "'/auto `"$target`"'" `
-    -Url 'https://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/enu/sqljdbc_6.0.8112.100_enu.exe' `
-    -Checksum 'DF6921B801D3C5AEFD85B94F7A183CAF099E0B1867D2973CD8AF2856077AFA79' `
+    -Url 'https://download.microsoft.com/download/3/F/7/3F74A9B9-C5F0-43EA-A721-07DA590FD186/sqljdbc_6.2.2.0_enu.exe' `
+    -Checksum 'E066C2647F3FB44E0D826412DFA0C86E509168DAFFC28F20D840603290D9F097' `
     -ChecksumType 'SHA256' `
