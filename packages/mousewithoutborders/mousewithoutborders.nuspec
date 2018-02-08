@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mousewithoutborders</id>
-    <version>2.1.6.1027</version>
+    <version>2.1.8.0105</version>
     <title>Mouse Without Borders</title>
     <authors>Microsoft Garage,Truong Do</authors>
     <owners>Anthony Mastrean</owners>
@@ -13,7 +13,7 @@
     <bugTrackerUrl>http://aka.ms/mm</bugTrackerUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <releaseNotes>
-New in this release: Works better with Windows 8.1 and Windows 10.
+New in this release: Bug fixes and improvements.
     </releaseNotes>
     <summary>Mouse without Borders is a project that allows you to reach across your PCs as if they were part of one single desktop.</summary>
     <description>
