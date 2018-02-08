@@ -1,4 +1,7 @@
-﻿Uninstall-ChocolateyPackage `
+# The installer cannot overwrite the current or previous version, so we have
+# to do this here, unfortunately.
+#
+Uninstall-ChocolateyPackage `
   -PackageName 'mousewithoutborders' `
   -FileType    'MSI' `
   -ValidExitcodes 0, 1605 `
