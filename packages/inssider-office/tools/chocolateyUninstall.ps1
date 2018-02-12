@@ -1,4 +1,4 @@
 ﻿Uninstall-ChocolateyPackage `
-  -PackageName 'inssider-personal' `
+  -PackageName 'inssider-office' `
   -FileType 'MSI' `
-  -Silent '{661DE192-35CA-432B-9F71-37A18352D4B4} /QN'
+  -Silent '{E909E6D9-706A-4863-AC63-29F5D89443AE} /QN'

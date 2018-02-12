@@ -1,7 +1,9 @@
-﻿Install-ChocolateyPackage `
+﻿# This product uses a static download URL :'(
+#
+Install-ChocolateyPackage `
     -PackageName 'inssider-office' `
     -FileType 'MSI' `
     -SilentArgs '/QN' `
     -Url 'http://files.metageek.net/downloads/inSSIDerOffice.msi' `
-    -Checksum 'F9D667F7923DE64439B2EFBCA8A0827B8338160CB1669FCFF39775C80063DAEE' `
+    -Checksum 'EA7307CB9F0BA661411A3B4FBA3F3AE7FC3E8C41E00A82E587FD0C7F6AEE486E' `
     -ChecksumType 'SHA256'
