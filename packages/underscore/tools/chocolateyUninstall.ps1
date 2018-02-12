@@ -1,7 +1,4 @@
-﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
+﻿$shortcutdir = @{$true='CommonStartup';$false='Startup'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
+$shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'Underscore Mode.lnk'
 
-. $tools\shortcut.ps1
-
-Uninstall-Shortcut `
-  -Link          'Underscore Mode' `
-  -SpecialFolder 'CommonStartup'
+Remove-Item -Path $shortcut -Force | Out-Null
