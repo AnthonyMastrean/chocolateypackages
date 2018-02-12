@@ -20,6 +20,7 @@
     <bugTrackerUrl>http://www.realtimesoft.com/ultramon/support.asp</bugTrackerUrl>
     <docsUrl>http://www.realtimesoft.com/ultramon/tour/</docsUrl>
     <mailingListUrl>http://www.realtimesoft.com/multimon/forum/forums.asp?tmpl=UltraMon</mailingListUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/ultramon</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/0f1d40ed2600b08366d3adfdb16b8db27711290d/public/icons/ultramon.png</iconUrl>
   </metadata>
 </package>
