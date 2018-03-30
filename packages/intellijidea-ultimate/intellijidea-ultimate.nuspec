@@ -3,7 +3,7 @@
   <metadata>
     <id>intellijidea-ultimate</id>
     <title>JetBrains IntelliJ IDEA (Ultimate Edition)</title>
-    <version>2017.3.5</version>
+    <version>2018.1</version>
     <authors>JetBrains</authors>
     <owners>Anthony Mastrean, Jordi Garcia</owners>
     <summary>Capable and Ergonomic Java IDE</summary>
@@ -16,7 +16,7 @@
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <releaseNotes>https://www.jetbrains.com/idea/whatsnew/</releaseNotes>
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/IDEA</bugTrackerUrl>
-    <docsUrl>https://www.jetbrains.com/help/idea/2017.3/meet-intellij-idea.html</docsUrl>
+    <docsUrl>https://www.jetbrains.com/help/idea/2018.1/meet-intellij-idea.html</docsUrl>
     <mailingListUrl>https://intellij-support.jetbrains.com/hc/en-us</mailingListUrl>
   </metadata>
 </package>
