@@ -2,8 +2,8 @@
 
 $packageName = 'intellijidea-ultimate'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://download.jetbrains.com/idea/ideaIU-2018.1.1.exe'
-$sha256sum   = '65ee56cae871026313fc168a736d8565de6fe2519768458310da16c8ff297af8'
+$url         = 'https://download.jetbrains.com/idea/ideaIU-2018.1.2.exe'
+$sha256sum   = 'f0522a565f6b91a11b6dfb60985d3a9a015d1adc6a5e2da8c743ed7fc0081859'
 
 $packageArgs = @{
   packageName    = $packageName
