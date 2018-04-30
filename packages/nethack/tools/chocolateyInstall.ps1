@@ -7,8 +7,8 @@ $tiles_shortcut = Join-Path ([System.Environment]::GetFolderPath('CommonPrograms
 
 Install-ChocolateyZipPackage `
     -PackageName 'nethack' `
-    -Url 'https://sourceforge.net/projects/nethack/files/nethack/3.6.0/nethack-360-win-x86-2.zip/download' `
-    -Checksum 'da1dcadb67ccdbe4fa7ffda096565c14' `
+    -Url 'https://nethack.org/download/3.6.1/nethack-361-win-x86.zip' `
+    -Checksum 'da35664aaed22b19e440a080ee43b49e' `
     -UnzipLocation $content
 
 New-Item -Type File -Path "$classic.ignore" -Force | Out-Null
