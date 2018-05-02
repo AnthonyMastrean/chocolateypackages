@@ -1,11 +1,11 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $package = Split-Path $tools
-$content = Join-Path $package 'cwRsync_5.5.0_x86_Free'
+$content = Join-Path $package 'cwrsync_5.7.1_x86_free'
 
 Install-ChocolateyZipPackage `
     -PackageName 'rsync' `
-    -Url 'https://www.itefix.net/dl/cwRsync_5.5.0_x86_Free.zip' `
-    -Checksum '37e8ef21ac975d4ee86c9d3be40c8935e8b9d0ba84e9302fc106b9452296cb85' `
+    -Url 'https://www.itefix.net/dl/cwrsync_5.7.1_x86_free.zip' `
+    -Checksum '379dc8534b808bdd6c454470b293c1b65be8373f279fb0c1ea0a2e52a3cc5502' `
     -ChecksumType 'SHA256' `
     -UnzipLocation $package
 
