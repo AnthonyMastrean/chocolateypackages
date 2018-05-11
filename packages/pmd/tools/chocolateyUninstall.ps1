@@ -1,6 +1,6 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $package = Split-Path $tools
-$pmd_home = Join-path $package 'pmd-bin-5.8.1'
+$pmd_home = Join-path $package 'pmd-bin-6.3.0'
 $pmd_bin = Join-Path $pmd_home 'bin/pmd.bat'
 $cpd_bin = Join-Path $pmd_home 'bin/cpd.bat'
 

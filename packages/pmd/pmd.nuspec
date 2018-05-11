@@ -3,7 +3,7 @@
   <metadata>
     <id>pmd</id>
     <title>PMD</title>
-    <version>5.8.1</version>
+    <version>6.3.0</version>
     <authors>PMD</authors>
     <owners>Anthony Mastrean</owners>
     <summary>PMD is a source code analyzer.</summary>
@@ -14,15 +14,15 @@ PMD is a source code analyzer. It finds common programming flaws like unused var
     <projectUrl>http://pmd.sourceforge.net/</projectUrl>
     <projectSourceUrl>https://github.com/pmd/pmd</projectSourceUrl>
     <bugTrackerUrl>https://github.com/pmd/pmd/issues</bugTrackerUrl>
-    <docsUrl>https://pmd.github.io/pmd-5.8.1/</docsUrl>
-    <releaseNotes>https://pmd.github.io/pmd-5.8.1/overview/changelog.html</releaseNotes>
+    <docsUrl>https://pmd.github.io/pmd-6.3.0/</docsUrl>
+    <releaseNotes>https://pmd.github.io/pmd-6.3.0/pmd_release_notes.html</releaseNotes>
     <mailingListUrl>https://pmd.github.io/#support</mailingListUrl>
     <tags>source code analyze lint</tags>
     <licenseUrl>https://github.com/pmd/pmd/blob/6d4e902a2a36df937bb445a53223485a2e16e473/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/e530258a17838ab065677c5522fecb8149bcfde6/public/icons/pmd.png</iconUrl>
     <dependencies>
-      <dependency id="jdk8" version="[8.0,)" />
+      <dependency id="javaruntime" version="[7.0,)" />
     </dependencies>
   </metadata>
 </package>
