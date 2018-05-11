@@ -2,8 +2,8 @@
 
 $packageName = 'intellijidea-community'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://download.jetbrains.com/idea/ideaIC-2018.1.2.exe'
-$sha256sum   = 'de2baa01b575c0f0bf9c90cc82ee5fd4f7db0a846391ad87efdca61ea98457a7'
+$url         = 'https://download.jetbrains.com/idea/ideaIC-2018.1.3.exe'
+$sha256sum   = 'abd7f135af5825f5aa98cc094b09020e5e9f703c9d8233991cd9c83919c54bf8'
 
 $packageArgs = @{
   packageName    = $packageName
