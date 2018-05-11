@@ -8,7 +8,7 @@ $shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'Backb
 Install-ChocolateyZipPackage `
     -PackageName 'backblazedownloader' `
     -Url 'https://secure.backblaze.com/api/restore_downloader' `
-    -Checksum 'D8FF4E3EE638F445379BD885B84A85CCB90794F1F5268735D78A64D054C66134' `
+    -Checksum '3B1DC5A6D228BBDF0D84E396A410DC1E87C41E2ECBDC03C5D1C8633BA9C8B35E' `
     -ChecksumType 'SHA256' `
     -UnzipLocation $content
 
