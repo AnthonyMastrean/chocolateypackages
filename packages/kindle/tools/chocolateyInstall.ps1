@@ -2,6 +2,6 @@
   -PackageName 'kindle' `
   -InstallerType 'EXE' `
   -SilentArgs '/S' `
-  -Url 'https://s3.amazonaws.com/kindleforpc/48017/KindleForPC-installer-1.21.48017.exe' `
-  -Checksum 'A6EA9068FABCDFDE6DA3099FA242C19BEDE3E393F2C6D3CB24C859A5F4281AE7' `
+  -Url 'https://s3.amazonaws.com/kindleforpc/50133/KindleForPC-installer-1.23.50133.exe' `
+  -Checksum 'B66F5F4F8A68965A6D04AA41C97816A043517A24E19CFF943B804F1A1363CF08' `
   -ChecksumType 'SHA256'
