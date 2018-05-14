@@ -6,8 +6,13 @@
     <version>3.0.0</version>
     <authors>Alex Feinman</authors>
     <owners>Anthony Mastrean</owners>
+    <summary>ISO Recorder is a Windows 7/8/10 tool that allows the user to create ISO 9660 images out of an existing CD/DVD as well as master them from a file directory on disk.</summary>
     <description>
-ISO Recorder is a tool (power toy) for Windows XP, 2003 and now Windows Vista, that allows (depending on the Windows version) to burn CD and DVD images (DVD support is only available on Windows Vista), copy disks, make images of the existing data CDs and DVDs and create ISO images from a content of a disk folder.
+ISO Recorder is a Windows 7/8/10 tool that allows the user to create ISO 9660 images out of an existing CD/DVD as well as master them from a file directory on disk. Its main feature is writing these ISO images to a blank or rewritable disk.
+
+ISO Recorder has been initially created in the year 2000, during Windows XP beta program, to facilitate burning the ISO images to a CD. Windows XP has been the first Windows Beta to be offered as ISO images. It quickly became popular with the beta community, since it allowed to use Windows XP to create install media, without the need to purchase 3rd-party software.
+
+Since then Windows has been slowly acquiring new features related to media mastering: Windows 7 allowed to mount ISO files and introduced DVD writing supoport, Windows 10 added support for writing ISO images to media.
     </description>
     <projectUrl>http://isorecorder.alexfeinman.com/#/</projectUrl>
     <docsUrl>http://isorecorder.alexfeinman.com/#/howto</docsUrl>
