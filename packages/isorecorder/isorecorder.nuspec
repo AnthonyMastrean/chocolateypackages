@@ -3,14 +3,14 @@
   <metadata>
     <id>isorecorder</id>
     <title>ISO Recorder</title>
-    <version>3.1.3</version>
+    <version>3.0.0</version>
     <authors>Alex Feinman</authors>
     <owners>Anthony Mastrean</owners>
     <description>
 ISO Recorder is a tool (power toy) for Windows XP, 2003 and now Windows Vista, that allows (depending on the Windows version) to burn CD and DVD images (DVD support is only available on Windows Vista), copy disks, make images of the existing data CDs and DVDs and create ISO images from a content of a disk folder.
     </description>
-    <projectUrl>http://alexfeinman.com/isorecorder.htm</projectUrl>
-    <docsUrl>http://alexfeinman.com/HowTo.htm</docsUrl>
+    <projectUrl>http://isorecorder.alexfeinman.com/#/</projectUrl>
+    <docsUrl>http://isorecorder.alexfeinman.com/#/howto</docsUrl>
     <bugTrackerUrl>mailto:isorecorder@alexfeinman.com?subject=ISO Recorder v3 feedback</bugTrackerUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <tags>iso disk recorder notsilent</tags>
