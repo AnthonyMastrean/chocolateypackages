@@ -8,7 +8,7 @@ $install = Join-Path $content 'wudt.msi'
 Install-ChocolateyZipPackage `
     -PackageName 'wudt' `
     -UnzipLocation $content `
-    -Url 'http://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=wudt&DownloadId=96313&FileTime=129048694816630000&Build=21031' `
+    -Url 'https://download.microsoft.com/download/C/4/8/C48F6E20-FE20-41C6-8C1C-408FE7B49A3A/Windows7-USB-DVD-Download-Tool-Installer-en-US.exe' `
     -Checksum '6B7CEA4838D892A0A0F625BAB2DF3D378A035C365209DB3C573253F037882229' `
     -ChecksumType 'SHA256'
 
