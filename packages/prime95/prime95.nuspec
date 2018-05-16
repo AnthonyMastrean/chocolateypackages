@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>prime95</id>
-    <version>28.10</version>
+    <version>29.4</version>
     <title>Great Internet Mersenne Prime Search (GIMPS)</title>
     <authors>George Woltman</authors>
     <owners>Anthony Mastrean</owners>
@@ -12,7 +12,7 @@ This program is used to find Mersenne Prime numbers. See http://www.utm.edu/rese
     </description>
     <licenseUrl>http://www.mersenne.org/legal/#EULA</licenseUrl>
     <projectUrl>http://mersenne.org</projectUrl>
-    <releaseNotes>http://www.mersenne.org/download/whatsnew.txt</releaseNotes>
+    <releaseNotes>https://www.mersenne.org/download/whatsnew_294b7.txt</releaseNotes>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <projectSourceUrl>https://mersenne.org/download/#source</projectSourceUrl>
     <docsUrl>http://www.mersenne.org/download/readme.txt</docsUrl>
