@@ -23,11 +23,11 @@ $keep = @(
 
 Install-ChocolateyZipPackage `
   -PackageName 'bind' `
-  -Url 'https://www.isc.org/downloads/file/bind-9-11-3/?version=win-32-bit' `
-  -Checksum '90A938C12B8C3BFF63463A5DF659BD419412CF9986592696A1BB007E5F5C9352' `
+  -Url 'https://www.isc.org/downloads/file/bind-9-12-1/?version=win-32-bit' `
+  -Checksum '8E7474509846E15CEF966B0A5786FF79DC898EB7F90A83C2109C59FCBAD8C6ED' `
   -ChecksumType 'SHA256' `
-  -Url64 'https://www.isc.org/downloads/file/bind-9-11-3/?version=win-64-bit' `
-  -Checksum64 'DE958C4CF72DBC64DCBB42130BD466D9FD367E4519C5C3F78A6675CA87E12B7D' `
+  -Url64 'https://www.isc.org/downloads/file/bind-9-12-1/?version=win-64-bit' `
+  -Checksum64 '8946B29544D97E2217110AEB42D6F86C43625614A9F2DAC4509CA8099D276A46' `
   -ChecksumType64 'SHA256' `
   -UnzipLocation $content `
 
