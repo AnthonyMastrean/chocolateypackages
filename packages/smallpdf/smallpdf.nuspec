@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>smallpdf</id>
+    <version>1.11.0</version>
+    <title>Smallpdf for Desktop</title>
+    <authors>Smallpdf GmbH</authors>
+    <projectUrl>https://smallpdf.com/desktop</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/9aeb2d45cd5a8b8c2b42700b4a353b5d0acf4049/public/icons/smallpdf.png</iconUrl>
+    <licenseUrl>https://smallpdf.com/legal</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/smallpdf</packageSourceUrl>
+    <docsUrl>https://smallpdf.com/support</docsUrl>
+    <tags>pdf edit merge split</tags>
+    <summary>Simplify your PDF tasks with our easy to use app</summary>
+    <description>
+Be among the first people to experience Smallpdf on desktop to enjoy: optimal reading experience, faster compression and automatic upgrades. Don't worry, all the easy to use features from our website will follow soon.
+    </description>
+  </metadata>
+</package>
