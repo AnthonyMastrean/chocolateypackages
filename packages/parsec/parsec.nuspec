@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>parsec</id>
+    <title>Parsec</title>
+    <version>1.0.0.20180613-beta</version>
+    <authors>Parsec Team</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Play on your own PC or in the cloud, at a consistent ultra-low latency 60FPS.</summary>
+    <description>
+Play on your own PC or in the cloud, at a consistent ultra-low latency 60FPS. Parsec works over the Internet or in-home without any extra setup.
+
+We believe you should have the freedom to access your games on any device. From anywhere.
+
+We strive to build the best game streaming technology on the market. In our quest to shave milliseconds, we've built a networking protocol, hardware-specific optimizations, and video encoding for one purpose — game streaming.
+    </description>
+    <tags>gaming streaming cloud notsilent notunattended</tags>
+    <copyright>Parsec Cloud, Inc 2016-2018</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://parsecgaming.com/</projectUrl>
+    <releaseNotes>https://parsecgaming.com/changelog</releaseNotes>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/parsec</packageSourceUrl>
+    <licenseUrl>https://parsecgaming.com/terms</licenseUrl>
+    <docsUrl>https://support.parsecgaming.com/hc/en-us</docsUrl>
+    <mailingListUrl>https://support.parsecgaming.com/hc/en-us</mailingListUrl>
+    <bugTrackerUrl>https://support.parsecgaming.com/hc/en-us</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/master/public/icons/parsec.png</iconUrl>
+  </metadata>
+</package>
