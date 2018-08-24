@@ -1,9 +1,9 @@
-﻿$target = Join-Path $ENV:PROGRAMFILES 'Microsoft JDBC DRIVER 6.0 for SQL Server'
+﻿$target = Join-Path $ENV:PROGRAMFILES 'Microsoft JDBC DRIVER 7.0 for SQL Server'
 
 Install-ChocolateyPackage `
     -PackageName 'sqljdbc' `
     -FileType 'EXE' `
     -SilentArgs "'/auto `"$target`"'" `
-    -Url 'https://download.microsoft.com/download/3/F/7/3F74A9B9-C5F0-43EA-A721-07DA590FD186/sqljdbc_6.2.2.0_enu.exe' `
-    -Checksum 'E066C2647F3FB44E0D826412DFA0C86E509168DAFFC28F20D840603290D9F097' `
+    -Url 'https://download.microsoft.com/download/2/F/C/2FC75210-EDDE-464C-8E54-45C0291032FF/sqljdbc_7.0.0.0_enu.exe' `
+    -Checksum '922C9347D0B94FE09A5344C302D0748107DC30D672256880909542F48B9F038A' `
     -ChecksumType 'SHA256' `
