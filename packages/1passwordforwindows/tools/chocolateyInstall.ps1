@@ -1,7 +1,7 @@
 ﻿Install-ChocolateyPackage `
     -PackageName '1passwordforwindows' `
     -FileType 'EXE' `
-    -SilentArgs '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' `
-    -Url 'https://rink.hockeyapp.net/api/2/apps/0cb99692bcdb47abb89fad56dfd56d0c?format=zip' `
-    -Checksum '642618F4CF52D811CAF6049F56C8DA4BB04AD36E858A597B7B635265689BE7ED' `
+    -SilentArgs '/VERYSILENT' `
+    -Url 'https://c.1password.com/dist/1P/win6/1PasswordSetup-7.2.576.exe' `
+    -Checksum '4A85E971D5F2E88CA73F7030E08EA65C73A18FBB6A1AB148072F0D707EBA821D' `
     -ChecksumType 'SHA256'
