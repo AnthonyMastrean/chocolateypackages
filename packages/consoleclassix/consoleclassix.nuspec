@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>consoleclassix</id>
+    <title>Console Classix</title>
+    <version>4.30.0</version>
+    <authors>Console Classix</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>Play Classic Retro Games Today!</summary>
+    <description>
+# Play
+
+Play Atari, Nintendo, and Coleco games with our software for free with no account required. Our library of games includes all of the classic titles you remember as well as plenty of games you may not have ever heard of.
+
+# Learn
+
+Checkout our game info pages to learn more about each game we offer. We offer game hints, background information, and plenty of information about all of our games. Discover your new favorites right here!
+
+# Power Up
+
+Upgrade your account to access our full library of more than 12 classic gaming systems. You will have more classic gaming than you can handle. Cancel anytime and keep your access until the end of the month you paid for.
+    </description>
+    <copyright>Copyright © Console Classix Inc 2016</copyright>
+    <projectUrl>http://www.consoleclassix.com/</projectUrl>
+    <tags>games console classic emulation</tags>
+    <docsUrl>http://www.consoleclassix.com/Help.html</docsUrl>
+    <bugTrackerUrl>http://www.consoleclassix.com/Help.html#contact_us</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/blob/master/packages/consoleclassix</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/master/public/icons/consoleclassix.png</iconUrl>
+  </metadata>
+</package>
