@@ -26,7 +26,7 @@ Highlights of Kindle Previewer functionality
     <mailingListUrl>https://www.amazon.com/gp/help/customer/forums/kindleqna/ref=hp_ss_qs_v3_dv_kh</mailingListUrl>
     <bugTrackerUrl>https://www.amazon.com/gp/help/customer/contact-us?ie=UTF8&amp;ref_=hp_ss_qs_v3_dv_cu_t2</bugTrackerUrl>
     <docsUrl>http://kindlepreviewer.s3.amazonaws.com/UserGuide.pdf</docsUrl>
-    <tags>amazon kindle preview not-unattended not-silent admin</tags>
+    <tags>amazon kindle preview notsilent notunattended admin</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/3763177365cfab0f7debcd100595a171182fadb3/public/icons/kindlepreviewer.png</iconUrl>
   </metadata>
