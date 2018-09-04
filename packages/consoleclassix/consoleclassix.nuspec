@@ -27,5 +27,8 @@ Upgrade your account to access our full library of more than 12 classic gaming s
     <bugTrackerUrl>http://www.consoleclassix.com/Help.html#contact_us</bugTrackerUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/blob/master/packages/consoleclassix</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/master/public/icons/consoleclassix.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="[1.0,)" />
+    </dependencies>
   </metadata>
 </package>
