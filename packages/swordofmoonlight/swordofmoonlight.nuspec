@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>swordofmoonlight</id>
+    <version>2.0.0.32</version>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/blob/master/packages/swordofmoonlight</packageSourceUrl>
+    <owners>Anthony Mastrean</owners>
+    <title>Sword of Moonlight</title>
+    <authors>Sword of Moonlight</authors>
+    <projectUrl>http://www.swordofmoonlight.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/4b92c967a3d6f6b0f442b09817a97583ba6af8d3/public/icons/swordofmoonlight.png</iconUrl>
+    <docsUrl>http://swordofmoonlight.com/Tutorial.htm</docsUrl>
+    <mailingListUrl>http://www.swordofmoonlight.com/bbs/</mailingListUrl>
+    <tags>games editing rpg-maker notsilent notunattended admin</tags>
+    <summary>The King's Field Making Tool</summary>
+    <description>
+Sword of Moonlight can be a difficult tool to master, as there is nearly no information available to the end user in english.  This tutorial is designed to help you get started creating a simple game in Sword of Moonlight, and to illustrate how to take advantage of the many tools that accompany the SoM software.
+
+The guide is listed in the most suitable order I could come up with, and, if followed step by step, should allow you to easily complete the 'create a test game' section at the very end.  Please feel free to email or post here for any help or recommendations on the material listed in this section.
+
+Now, onward young champions of moonlight!
+    </description>
+    <releaseNotes>http://www.swordofmoonlight.com/category-or-blog-title/</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="[1.0,)" />
+    </dependencies>
+  </metadata>
+</package>
