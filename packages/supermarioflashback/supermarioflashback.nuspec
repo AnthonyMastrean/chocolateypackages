@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>supermarioflashback</id>
+    <version>0.0.0-demo1</version>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/blob/master/packages/supermarioflashback</packageSourceUrl>
+    <owners>Anthony Mastrean</owners>
+    <title>Super Mario Flashback</title>
+    <authors>Mors, Flashback Team</authors>
+    <projectUrl>http://flashback.mors-games.com</projectUrl>
+    <copyright>Flashback Team and Super Mario Flashback are in no way affiliated with Nintendo. Super Mario Flashback is a non-profit game created by fans, and no financial gain whatsoever is made from the project. The copyrights of Mario and all associated characters, names, terms, art, and music thereof belong to Nintendo.</copyright>
+    <mailingListUrl>http://flashback.mors-games.com/forums/</mailingListUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/master/public/icons/supermarioflashback.png</iconUrl>
+    <tags>games</tags>
+    <summary>A fanmade Mario fangame</summary>
+    <description>
+ Super Mario Flashback is an upcoming fanmade Mario fangame that combines the mechanics of 2D and 3D Super Mario titles with beautiful graphics and an original soundtrack. It's being developed by Mors and the Flashback Team since 2014. Since then the game has undergone several changes, including a recent engine change.
+    </description>
+  </metadata>
+</package>
