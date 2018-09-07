@@ -11,7 +11,7 @@
 Flying Logic is a revolutionary tool for proactive thinkers, whether you want to change your personal life for the better, or grow a world-class business that impacts thousands or millions of people. Flying Logic is a highly visual, easy to use software application that does for reasoning what spreadsheets do for numbers. Just as you would not do detailed financial projections in your head, you need Flying Logic for all nontrivial planning and reasoning endeavors. Project management software won’t help you when you have no idea what part of a complex system needs improvement, or what that improvement might look like, or how to cause that improvement. Answering these questions is a critical and often-overlooked part of the planning process, and this is where Flying Logic shines. Flying Logic diagrams are not static images— they are working models of your reasoning that you test as you build and that stay “live” as you share your reasoning with others.
     </description>
     <projectUrl>http://flyinglogic.com/</projectUrl>
-    <tags>theory-of-constraints toc visualization graphing not-silent not-unattended</tags>
+    <tags>theory-of-constraints toc visualization graphing notsilent notunattended</tags>
     <licenseUrl>http://flyinglogic.com/docs/license/en.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/ee16d1a51904271762c3c43ac2f148e9f585b1c8/public/icons/flyinglogicpro.png</iconUrl>
