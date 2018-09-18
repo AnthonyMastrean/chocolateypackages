@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>rpcs3</id>
-    <version>0.0.3-build6421</version>
+    <version>0.0.5-alpha7345</version>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>RPCS3</title>
@@ -36,7 +36,7 @@ RPCS3 has been seen by many as an impossible feat in the eyes of gamers and prog
 
 In March 2014, Cinema Blend's William Usher wrote "A lot of gamers originally thought that the complexity of the PlayStation 3's Cell architecture would have prevented it from being emulated." In the same month, Eurogamer's Elio Cossu also wrote "The emulation, even at such an early stage, was a remarkable achievement, considering the complexity of the hardware of the PlayStation 3."
     </description>
-    <releaseNotes>https://rpcs3.net/compatibility?b</releaseNotes>
+    <releaseNotes>https://rpcs3.net/blog</releaseNotes>
     <dependencies>
         <dependency id="vcredist2015" version="[14.0,)" />
         <!-- All supported versions of Windows meet the minimum requirements. -->
