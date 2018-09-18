@@ -38,7 +38,7 @@ In March 2014, Cinema Blend's William Usher wrote "A lot of gamers originally th
     </description>
     <releaseNotes>https://rpcs3.net/blog</releaseNotes>
     <dependencies>
-        <dependency id="vcredist2015" version="[14.0,)" />
+        <dependency id="vcredist2017" version="[14.0,)" />
         <!-- All supported versions of Windows meet the minimum requirements. -->
         <!-- https://support.microsoft.com/en-us/help/179113/how-to-install-the-latest-version-of-directx -->
         <!-- <dependency id="directx" version="[9.0," /> -->
