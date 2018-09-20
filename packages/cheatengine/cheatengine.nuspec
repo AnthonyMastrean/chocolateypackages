@@ -16,7 +16,7 @@ For new users it is recommended to go through the tutorial(The one that comes wi
     </description>
     <projectUrl>http://www.cheatengine.org/</projectUrl>
     <releaseNotes>https://github.com/cheat-engine/cheat-engine/releases</releaseNotes>
-    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/cheatengine</packageSourceUrl>
     <projectSourceUrl>https://github.com/cheat-engine/cheat-engine</projectSourceUrl>
     <bugTrackerUrl>https://github.com/cheat-engine/cheat-engine/issues</bugTrackerUrl>
     <mailingListUrl>http://forum.cheatengine.org/</mailingListUrl>
