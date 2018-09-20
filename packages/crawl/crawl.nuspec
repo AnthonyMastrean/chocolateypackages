@@ -3,7 +3,7 @@
   <metadata>
     <id>crawl</id>
     <title>Dungeon Crawl Stone Soup</title>
-    <version>0.15.2</version>
+    <version>0.22.1</version>
     <authors>Stone Soup Team, Linley Henzell</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Dungeon Crawl Stone Soup is an open-source, single-player, role-playing roguelike game of exploration and treasure-hunting in dungeons filled with dangerous and unfriendly monsters in a quest to rescue the mystifyingly fabulous Orb of Zot.</summary>
@@ -17,7 +17,14 @@
     <projectUrl>http://crawl.develz.org/</projectUrl>
     <tags>games roguelike</tags>
     <licenseUrl>http://crawl.develz.org/other/manual.html#l-licence-contact-history</licenseUrl>
+    <bugTrackerUrl>https://crawl.develz.org/mantis/</bugTrackerUrl>
+    <mailingListUrl>https://crawl.develz.org/tavern/</mailingListUrl>
+    <docsUrl>http://crawl.chaosforge.org/Crawl_Wiki</docsUrl>
+    <releaseNotes>http://crawl.develz.org/wordpress/blog</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/crawl.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="[1.0,)" />
+    </dependencies>
   </metadata>
 </package>
