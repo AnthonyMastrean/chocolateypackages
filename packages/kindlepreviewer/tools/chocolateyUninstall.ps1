@@ -1,9 +1,5 @@
-﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
-
-. $tools\uninstall.ps1
-
-Uninstall-ChocolateyPackage `
+﻿Uninstall-ChocolateyPackage `
     -PackageName 'kindlepreviewer' `
     -FileType 'EXE' `
     -Silent '/S' `
-    -File (Get-Uninstaller -Name 'Kindle Previewer')
+    -File (Get-UninstallRegistryKey -SoftwareName 'Kindle Previewer 3').UninstallString

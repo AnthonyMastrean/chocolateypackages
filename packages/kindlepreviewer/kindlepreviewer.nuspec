@@ -3,7 +3,7 @@
   <metadata>
     <id>kindlepreviewer</id>
     <title>Kindle Previewer</title>
-    <version>2.94.0.20160512</version>
+    <version>3.27</version>
     <authors>Amazon</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Kindle Previewer is a graphical user interface tool that emulates how books display across Kindle devices and apps.</summary>
@@ -28,6 +28,6 @@ Highlights of Kindle Previewer functionality
     <docsUrl>http://kindlepreviewer.s3.amazonaws.com/UserGuide.pdf</docsUrl>
     <tags>amazon kindle preview notsilent notunattended admin</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/3763177365cfab0f7debcd100595a171182fadb3/public/icons/kindlepreviewer.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/e1562a92b25e6a2bac1485e550f1237e21780258/public/icons/kindlepreviewer.png</iconUrl>
   </metadata>
 </package>
