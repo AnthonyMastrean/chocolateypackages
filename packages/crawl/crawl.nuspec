@@ -23,6 +23,7 @@
     <releaseNotes>http://crawl.develz.org/wordpress/blog</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/master/public/icons/crawl.png</iconUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/crawl</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="[1.0,)" />
     </dependencies>
