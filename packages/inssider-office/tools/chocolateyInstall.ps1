@@ -5,5 +5,5 @@ Install-ChocolateyPackage `
     -FileType 'MSI' `
     -SilentArgs '/QN' `
     -Url 'http://files.metageek.net/downloads/inSSIDerOffice.msi' `
-    -Checksum 'EA7307CB9F0BA661411A3B4FBA3F3AE7FC3E8C41E00A82E587FD0C7F6AEE486E' `
+    -Checksum '95E647E5969169588DC6093AE26F19D194A22FDCC61DA54211106255FDA7ECE0' `
     -ChecksumType 'SHA256'
