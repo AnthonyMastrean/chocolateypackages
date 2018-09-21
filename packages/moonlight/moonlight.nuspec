@@ -4,7 +4,7 @@
     <id>moonlight</id>
     <title>Moonlight Game Streaming</title>
     <version>0.5.1</version>
-    <authors>Case Western Reserve University Hacker Society</authors>
+    <authors>Moonlight Game Streaming Team</authors>
     <owners>Anthony Mastrean</owners>
     <summary>An open source nVidia gamestream client</summary>
     <description>

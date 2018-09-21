@@ -1,5 +1,4 @@
 Uninstall-ChocolateyPackage `
   -PackageName 'moonlight' `
-  -FileType 'EXE' `
-  -SilentArgs '/QUIET /NORESTART'
-  -File (Get-UninstallRegistryKey -SoftwareName 'Moonlight Game Streaming Client').UninstallString
+  -FileType 'MSI' `
+  -Silent '{748D7267-E789-493C-85DD-20ECFB0F42CA} /QN'
