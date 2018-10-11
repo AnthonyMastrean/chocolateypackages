@@ -3,7 +3,7 @@
   <metadata>
     <id>isorecorder</id>
     <title>ISO Recorder</title>
-    <version>3.0.0</version>
+    <version>3.1</version>
     <authors>Alex Feinman</authors>
     <owners>Anthony Mastrean</owners>
     <summary>ISO Recorder is a Windows 7/8/10 tool that allows the user to create ISO 9660 images out of an existing CD/DVD as well as master them from a file directory on disk.</summary>
