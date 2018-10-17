@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>colortool</id>
     <title>Windows Console Color Tool</title>
-    <version>1.0.0</version>
+    <version>18.10.2002</version>
     <authors>Windows Console Team</authors>
     <owners>Anthony Mastrean</owners>
     <summary>A tool to make it easier to change the console to your desired scheme.</summary>
@@ -12,14 +12,12 @@ ColorTool is a utility for helping to set the color palette of the Windows Conso
     </description>
     <projectUrl>https://github.com/Microsoft/console/tree/master/tools/ColorTool</projectUrl>
     <tags>windows console color</tags>
-    <licenseUrl>https://github.com/Microsoft/console/blob/cf4780a4a2b0c3b05d1bc50ae4d91950261cf7cb/tools/ColorTool/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/Microsoft/console/blob/master/tools/ColorTool/LICENSE</licenseUrl>
     <docsUrl>https://blogs.msdn.microsoft.com/commandline/2017/08/11/introducing-the-windows-console-colortool/</docsUrl>
-    <!-- <mailingListUrl></mailingListUrl> -->
     <bugTrackerUrl>https://github.com/Microsoft/console/issues</bugTrackerUrl>
-    <!-- <releaseNotes></releaseNotes> -->
+    <releaseNotes>https://github.com/Microsoft/console/releases</releaseNotes>
     <projectSourceUrl>https://github.com/Microsoft/console/tree/master/tools/ColorTool</projectSourceUrl>
-    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/colortool</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <!-- <iconUrl></iconUrl> -->
   </metadata>
 </package>

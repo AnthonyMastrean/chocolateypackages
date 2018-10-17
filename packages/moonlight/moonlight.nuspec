@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>moonlight</id>
+    <title>Moonlight Game Streaming</title>
+    <version>0.5.1</version>
+    <authors>Moonlight Game Streaming Team</authors>
+    <owners>Anthony Mastrean</owners>
+    <summary>An open source nVidia gamestream client</summary>
+    <description>
+Moonlight allows you to stream your collection of games from your PC to another device.
+
+Moonlight (formerly known as Limelight) is an open source implementation of NVIDIA's GameStream protocol. We implemented the protocol used by the NVIDIA Shield and wrote a set of 3rd party clients.
+
+What does this mean for you? Moonlight allows you to stream your collection of games from your GameStream-compatible PC to any supported device and play them remotely. Moonlight is perfect for gameplay on the go without sacrificing the graphics quality of your gaming computer.
+    </description>
+    <tags>games streaming admin</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://moonlight-stream.com/</projectUrl>
+    <releaseNotes>https://github.com/moonlight-stream/moonlight-qt/releases</releaseNotes>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/moonlight</packageSourceUrl>
+    <licenseUrl>https://raw.githubusercontent.com/moonlight-stream/moonlight-qt/master/LICENSE</licenseUrl>
+    <docsUrl>https://github.com/moonlight-stream/moonlight-docs/wiki</docsUrl>
+    <mailingListUrl>https://discordapp.com/invite/MySTSdq</mailingListUrl>
+    <bugTrackerUrl>https://github.com/moonlight-stream/moonlight-qt/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/504386b4e4aed717709b8c27604f0ba552394ef1/public/icons/moonlight.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="[1.0,)" />
+    </dependencies>
+  </metadata>
+</package>
