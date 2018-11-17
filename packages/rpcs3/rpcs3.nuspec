@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>rpcs3</id>
-    <version>0.0.5-alpha7433</version>
+    <version>0.0.5-alpha7499</version>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>RPCS3</title>

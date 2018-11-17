@@ -8,8 +8,8 @@ $shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'RPCS3
 # to use the old-style "tools" location.
 Install-ChocolateyZipPackage `
   -PackageName 'rpcs3' `
-  -Url 'https://github.com/RPCS3/rpcs3-binaries-win/releases/download/build-d8424a1f355dd39d0edb356889bcc333815e9d17/rpcs3-v0.0.5-7433-d8424a1f_win64.7z' `
-  -Checksum '64E17FFF79E5E9E210CE14759D538D7F9E13BB32A0916B17A16F0403A8746FDD' `
+  -Url 'https://github.com/RPCS3/rpcs3-binaries-win/releases/download/build-225310e04bf54efb92dbe424b2dd222248fb07bc/rpcs3-v0.0.5-7499-225310e0_win64.7z' `
+  -Checksum '5CCC86F4B9D3D88E2728D6772B47B345D7730ACA8124F9143616C23534979253' `
   -ChecksumType 'SHA256' `
   -UnzipLocation $content
 
