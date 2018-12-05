@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName = 'intellijidea-community'
-$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'https://download.jetbrains.com/idea/ideaIC-2018.3.exe'
 $sha256sum   = '6bee47d4521ca7207711ef2a630b1efcbf4d8807741fb771cc75501e9b9415bb'
+
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $programFiles = (${env:ProgramFiles(x86)}, ${env:ProgramFiles} -ne $null)[0]
 $pp = Get-PackageParameters
 $installDir = "$programFiles\JetBrains\IntelliJ IDEA Community Edition $env:ChocolateyPackageVersion"
@@ -14,8 +14,10 @@ if ($pp.InstallDir) {
 $silentArgs   = "/S /CONFIG=$toolsDir\silent.config "
 $silentArgs   += "/D=`"$installDir`""
 
+New-Item -ItemType Directory -Force -Path $installDir
+
 $packageArgs = @{
-  packageName    = $packageName
+  packageName    = $env:ChocolateyPackageName
   unzipLocation  = $toolsDir
   fileType       = 'exe'
   url            = $url
