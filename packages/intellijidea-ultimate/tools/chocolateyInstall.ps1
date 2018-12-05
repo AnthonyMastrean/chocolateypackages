@@ -2,8 +2,17 @@
 
 $packageName = 'intellijidea-ultimate'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://download.jetbrains.com/idea/ideaIU-2018.2.7.exe'
-$sha256sum   = 'ffbd954c3cc3641f8d3bf7e63213c6b3a1ee9ed669530be4481c83ffdfe669da'
+$url         = 'https://download.jetbrains.com/idea/ideaIU-2018.3.exe'
+$sha256sum   = 'e6f8229a7da834f91bad255163ea6ad459ba292c76e2fbd4dbbc9a506d4b7586'
+$programFiles = (${env:ProgramFiles(x86)}, ${env:ProgramFiles} -ne $null)[0]
+$pp = Get-PackageParameters
+$installDir = "$programFiles\JetBrains\IntelliJ IDEA $env:ChocolateyPackageVersion"
+if ($pp.InstallDir) {
+    $installDir = $pp.InstallDir
+}
+
+$silentArgs   = "/S /CONFIG=$toolsDir\silent.config "
+$silentArgs   += "/D=`"$installDir`""
 
 $packageArgs = @{
   packageName    = $packageName
@@ -12,15 +21,15 @@ $packageArgs = @{
   url            = $url
   url64bit       = $url
 
-  softwareName   = 'IntelliJ IDEA 2018.2*'
+  softwareName   = 'IntelliJ IDEA 2018.3*'
 
   checksum       = $sha256sum
   checksumType   = 'sha256'
   checksum64     = $sha256sum
   checksumType64 = 'sha256'
 
-  silentArgs     = '/S'
-  validExitCodes = @(0)
+  silentArgs     = $silentArgs
+  validExitCodes = @(0, 1641, 3010)
 }
 
 Install-ChocolateyPackage @packageArgs

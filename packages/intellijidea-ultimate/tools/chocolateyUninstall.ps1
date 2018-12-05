@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName = 'intellijidea-ultimate'
-$softwareName = 'IntelliJ IDEA 2018.2*'
+$softwareName = 'IntelliJ IDEA 2018.3*'
 $installerType = 'EXE'
 
 $silentArgs = '/S'
