@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url         = 'https://download.jetbrains.com/idea/ideaIC-2018.3.exe'
-$sha256sum   = '6bee47d4521ca7207711ef2a630b1efcbf4d8807741fb771cc75501e9b9415bb'
+$url         = 'https://download.jetbrains.com/idea/ideaIC-2018.3.1.exe'
+$sha256sum   = '79a4e667125f1897effe0f66ea1d762ca7cbebe6501bb1c5e8d403dcd1d18342'
 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $programFiles = (${env:ProgramFiles(x86)}, ${env:ProgramFiles} -ne $null)[0]
@@ -23,7 +23,7 @@ $packageArgs = @{
   url            = $url
   url64bit       = $url
 
-  softwareName   = 'IntelliJ IDEA Community Edition 2018.3*'
+  softwareName   = 'IntelliJ IDEA Community Edition*'
 
   checksum       = $sha256sum
   checksumType   = 'sha256'
