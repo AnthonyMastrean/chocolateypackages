@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>stigviewer</id>
+    <version>2.8</version>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/stigviewer</packageSourceUrl>
+    <owners>Anthony Mastrean</owners>
+    <title>STIG Viewer</title>
+    <authors>IASE</authors>
+    <projectUrl>https://iase.disa.mil/stigs/Pages/stig-viewing-guidance.aspx</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/example.png</iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://iasecontent.disa.mil/stigs/pdf/STIG_Viewer_2.x_User_Guide_June_2018.pdf</docsUrl>
+    <tags>security defense harden</tags>
+    <summary>Getting to the content of a XCCDF formatted STIG to read and understand the content is not as easy as opening a .doc or .pdf file and reading it. This is a tool which can be used to view the STIGs</summary>
+    <description>
+The DoD/DISA STIG Viewer tool provides the capability to view one or more XCCDF.xml formatted STIGs in an easy to navigate human readable format. It is compatible with STIGs developed and published by DISA for the DoD.   The purpose of the STIG Viewer is to provide an intuitive graphical user interface that allows ease of access to the STIG content along with additional search and sort functionality unavailable with the current method of viewing the STIGs using a style sheet in a web browser.  STIG Viewer also supports additional functionality.
+
+STIG Viewer features:
+
+* Multiple STIG files can be open in STIG Viewer at any given time.
+* One or more XCCDF STIG files can be individually loaded. 
+* XCCDF STIG files can be extracted from zipped STIG packages.
+* A 'Local Save-point' can be created on a system to store user configuration data and the current set of imported STIGs. This permits the last set of loaded STIGs to be reloaded each time the Viewer is started. The 'Local Save-point' can be deleted from the Viewer's options menu. Only one 'Local Save-point' can be created at a time.
+* Multiple XCCDF STIG files can be simultaneously unzipped and loaded from a .zip file containing one or more folders which contain the zipped STIG packages. STIG Viewer will drill down to find all XCCDF files and load them. A 'Local Save-point' is required for this operation as all XCCDF files are extracted to its local folder.
+* The list of STIG requirements/vulnerabilities can be sorted by STIG ID, Vulnerability ID, or Rule ID
+* All loaded STIG files can be searched or filtered based on one or more keywords.  All fields or individual fields can be searched. A filtered list of STIG requirements/vulnerabilities is returned
+* CCI data can be displayed if the CCI reference is contained in the STIG requirements/vulnerabilities
+* Loaded and filtered STIG data can be printed or exported to HTML and RTF file formats for use with other programs (i.e. web browsers and Microsoft Word). The printed/exported data is based on the list of requirements displayed in the center pane of the viewer.  The output is formatted as a tables  containing each requirement. 
+* A manual review checklist can be generated from the currently loaded STIG (or STIGs) or a filtered list. The checklist is generated from all requirements showing in the center pane. This checklist can be used to manually enter review results and notes. The manual review checklist can be saved and reloaded 
+* The manual review checklist can be formatted as a short form paper checklist for recording review results. This format can be exported to a file or printed
+* Automated review SCAP XCCDF Results files can be imported into the checklist populating the checklist with the automated results. The manual portion of the review can be completed and added to the automated results.
+* The checklist can be exported in a format that can be imported into VMS. 
+
+NOTE: This feature does not work well if a checklist is generated from multiple STIGs. Special handling is required
+    </description>
+    <releaseNotes>https://iasecontent.disa.mil/stigs/pdf/STIG_Viewer_Ver_2.8_Change_Log.pdf</releaseNotes>
+    <dependencies>
+      <dependency id="jre8" version="[8.0,)" />
+      <dependency id="chocolatey-core.extension" version="[1.0,)" />
+    </dependencies>
+  </metadata>
+</package>
