@@ -1,26 +1,37 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName = 'intellijidea-community'
+$url         = 'https://download.jetbrains.com/idea/ideaIC-2018.3.1.exe'
+$sha256sum   = '79a4e667125f1897effe0f66ea1d762ca7cbebe6501bb1c5e8d403dcd1d18342'
+
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://download.jetbrains.com/idea/ideaIC-2018.2.7.exe'
-$sha256sum   = 'bb19bf8346025e4049cff2e729a356dba62efbe319990393a26078f24f95b019'
+$programFiles = (${env:ProgramFiles(x86)}, ${env:ProgramFiles} -ne $null)[0]
+$pp = Get-PackageParameters
+$installDir = "$programFiles\JetBrains\IntelliJ IDEA Community Edition $env:ChocolateyPackageVersion"
+if ($pp.InstallDir) {
+    $installDir = $pp.InstallDir
+}
+
+$silentArgs   = "/S /CONFIG=$toolsDir\silent.config "
+$silentArgs   += "/D=`"$installDir`""
+
+New-Item -ItemType Directory -Force -Path $installDir
 
 $packageArgs = @{
-  packageName    = $packageName
+  packageName    = $env:ChocolateyPackageName
   unzipLocation  = $toolsDir
   fileType       = 'exe'
   url            = $url
   url64bit       = $url
 
-  softwareName   = 'IntelliJ IDEA Community Edition 2018.2*'
+  softwareName   = 'IntelliJ IDEA Community Edition*'
 
   checksum       = $sha256sum
   checksumType   = 'sha256'
   checksum64     = $sha256sum
   checksumType64 = 'sha256'
 
-  silentArgs     = '/S'
-  validExitCodes = @(0)
+  silentArgs     = $silentArgs
+  validExitCodes = @(0, 1641, 3010)
 }
 
 Install-ChocolateyPackage @packageArgs
