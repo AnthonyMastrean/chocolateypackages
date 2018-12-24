@@ -21,7 +21,7 @@ BIND is by far the most widely used DNS software on the Internet, providing a ro
     <tags>bind isc dig</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-        <dependency id="vcredist2012" />
+        <dependency id="vcredist2012" version="[11.0,)" />
     </dependencies>
   </metadata>
 </package>
