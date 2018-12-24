@@ -15,9 +15,9 @@ The 1Password command-line tool makes your 1Password account accessible entirely
     <tags>password</tags>
     <copyright>AgileBits</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>https://blog.agilebits.com/2017/09/06/announcing-the-1password-command-line-tool-public-beta/</projectUrl>
+    <projectUrl>https://1password.com/downloads/command-line/</projectUrl>
     <releaseNotes>https://app-updates.agilebits.com/product_history/CLI</releaseNotes>
-    <packageSourceUrl>https://github.com/anthonymastrean/chocolateypackages/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/op</packageSourceUrl>
     <licenseUrl>https://1password.com/legal/terms-of-service/</licenseUrl>
     <docsUrl>https://support.1password.com/command-line/</docsUrl>
     <mailingListUrl>https://discussions.agilebits.com/</mailingListUrl>
