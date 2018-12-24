@@ -1,5 +1,5 @@
-﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
-$content = Join-Path (Split-Path $tools) 'content'
+﻿$tools = Split-Path -Path $MyInvocation.MyCommand.Definition
+$content = Join-Path -Path (Split-Path -Path $tools) -ChildPath 'content'
 
 $keep = @(
   'arpaname.exe',
@@ -23,11 +23,11 @@ $keep = @(
 
 Install-ChocolateyZipPackage `
   -PackageName 'bind' `
-  -Url 'https://www.isc.org/downloads/file/bind-9-12-1/?version=win-32-bit' `
-  -Checksum '8E7474509846E15CEF966B0A5786FF79DC898EB7F90A83C2109C59FCBAD8C6ED' `
+  -Url 'https://www.isc.org/downloads/file/bind-9-12-3/?version=win-32-bit' `
+  -Checksum '282B244981DB425699D1AEC1DD449F1653385A5A125E4248A37B92DA3E27E304' `
   -ChecksumType 'SHA256' `
-  -Url64 'https://www.isc.org/downloads/file/bind-9-12-1/?version=win-64-bit' `
-  -Checksum64 '8946B29544D97E2217110AEB42D6F86C43625614A9F2DAC4509CA8099D276A46' `
+  -Url64 'https://www.isc.org/downloads/file/bind-9-12-3/?version=win-64-bit' `
+  -Checksum64 '07DA03D7C625C14C8E5CB238C32BA24C395C26C4818EFB5C28BAD32A015B2E71' `
   -ChecksumType64 'SHA256' `
   -UnzipLocation $content `
 
