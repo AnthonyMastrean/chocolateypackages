@@ -17,6 +17,8 @@ This package now provides signed device drivers, which allows you to avoid enabl
     <projectUrl>http://sourceforge.net/projects/com0com/</projectUrl>
     <tags>notsilent notunattended com serial serialport emulator telnet</tags>
     <licenseUrl>http://sourceforge.net/directory/os:windows/license:gpl/freshness:recently-updated/</licenseUrl>
+    <projectSourceUrl>https://sourceforge.net/p/com0com/code/</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/com0com</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/com0com.png</iconUrl>
     <dependencies>
