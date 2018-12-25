@@ -18,6 +18,7 @@
             <fileset dir="." includes="*.nupkg"/>
             <fileset dir="./work/" includes="*.asc"/>
             <fileset dir="./work/" includes="*.zip"/>
+			<fileset dir="./work/" includes="*.jar"/>
             <fileset dir="." includes="*.nuspec"/>
             <fileset dir="." includes="**/*.ps1"/>
         </delete>
@@ -31,7 +32,8 @@
 	<mkdir dir="work"/>
 	<get src="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-${liquibase.version}/liquibase-${liquibase.version}-bin.zip"
              dest="work/liquibase-${liquibase.version}-bin.zip"/>
-    </target>
+    <get src="http://central.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" dest="work/slf4j-api-1.7.25.jar"/>
+	</target>
    
     <target name="load.sha512.as.property" depends="get.sha512" description="Loads the sha512 checksum as a property.">
 		<echo>Generate SHA-512 checksum...</echo>

@@ -25,4 +25,8 @@ Liquibase is an open source, database-independent library for tracking, managing
       <dependency id="jdk8" version="[8.0,)" />
     </dependencies>
   </metadata>
+  <files>
+  <file src="tools\**" target="tools" />
+  <file src="tools\slf4j-api-1.7.25.jar" target="content/lib" />
+</files>
 </package>
