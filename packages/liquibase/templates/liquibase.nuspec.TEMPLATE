@@ -16,7 +16,7 @@ Liquibase is an open source, database-independent library for tracking, managing
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/17c712c0bf345eb3dcb8326049a8198230228008/public/icons/liquibase.png</iconUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/liquibase</packageSourceUrl>
-    <releaseNotes>https://github.com/liquibase/liquibase/releases</releaseNotes>
+    <releaseNotes>https://github.com/liquibase/liquibase/releases/tag/liquibase-parent-@LIQUIBASE_VERSION@</releaseNotes>
     <docsUrl>http://www.liquibase.org/documentation/index.html</docsUrl>
     <bugTrackerUrl>https://liquibase.jira.com/</bugTrackerUrl>
     <projectSourceUrl>https://github.com/liquibase/liquibase</projectSourceUrl>
