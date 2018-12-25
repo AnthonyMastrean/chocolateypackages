@@ -22,7 +22,7 @@ Liquibase is an open source, database-independent library for tracking, managing
     <projectSourceUrl>https://github.com/liquibase/liquibase</projectSourceUrl>
     <mailingListUrl>http://www.liquibase.org/blog/</mailingListUrl>
     <dependencies>
-      <dependency id="javaruntime" version="[8.0,)" />
+      <dependency id="jdk8" version="[8.0,)" />
     </dependencies>
   </metadata>
 </package>
