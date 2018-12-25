@@ -1,7 +1,9 @@
-﻿Install-ChocolateyPackage `
+﻿$version_without_dots = $env:ChocolateyPackageVersion -replace '[.]'
+
+Install-ChocolateyPackage `
   -PackageName 'cheatengine' `
-  -Url 'https://github.com/cheat-engine/cheat-engine/releases/download/v6.8.1/CheatEngine681.exe' `
-  -Checksum '6F795F11FA3983B4779426DD6DCE8346E279B099F62AD4BAB5D246B932E09885' `
+  -Url "https://github.com/cheat-engine/cheat-engine/releases/download/$($env:ChocolateyPackageVersion)/CheatEngine$($version_without_dots).exe" `
+  -Checksum '61a35039e8da357e9d6f06642f417dc897ed9a077f6a99e84b46ada1a211d949' `
   -ChecksumType 'SHA256' `
   -FileType 'EXE' `
   -Silent '/VERYSILENT /NORESTART /NOCANDY'
