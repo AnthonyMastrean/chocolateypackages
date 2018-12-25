@@ -15,4 +15,4 @@ To prepare a new Liquibase release, two ways : manually or helped by
 1. Update Liquibase version in `liquibase.properties`
 2. Run `ant make`
 3. You are done : make a Pull Request (all required files have been generated
-with all requireds fields, including checksums)
+with all requireds fields, including checksums) : ***tools and `nuspec` only***
