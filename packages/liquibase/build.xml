@@ -1,0 +1,63 @@
+<?xml version = "1.0"?>
+<project name = "Liquibase chocolatey package build helper" 
+         default = "info">
+    <target name = "info" description="Show some infos about this build file." depends="load.properties">
+        <echo>Ant build that helps preparing liquibase chocolatey releases.</echo>
+    </target>
+   
+    <target name="load.properties" description = "Load external parametrized properties.">
+        <loadproperties>
+            <file file="liquibase.properties"/>
+        </loadproperties>
+        <echo>Liquibase target version : &lt;${liquibase.version}&gt;</echo>
+    </target>
+   
+    <target name = "clean" description="Clean all build result files.">
+        <echo>Cleaning generated NUGETS generated package (nupkg) and other dynamic build files like *.ps1.</echo>
+        <delete>
+            <fileset dir="." includes="*.nupkg"/>
+            <fileset dir="./work/" includes="*.asc"/>
+            <fileset dir="./work/" includes="*.zip"/>
+            <fileset dir="." includes="*.nuspec"/>
+            <fileset dir="." includes="**/*.ps1"/>
+        </delete>
+		
+    </target>
+	
+   
+    <target name="get.sha512" depends="load.properties"
+		description="Get the SHA512 checksum from Liquibase Github official release.">
+	<echo>Downloading zip distribution file from Github...</echo>
+	<get src="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-${liquibase.version}/liquibase-${liquibase.version}-bin.zip"
+             dest="work/liquibase-${liquibase.version}-bin.zip"/>
+    </target>
+   
+    <target name="load.sha512.as.property" depends="get.sha512" description="Loads the sha512 checksum as a property.">
+		<echo>Generate SHA-512 checksum...</echo>
+		<checksum file="work/liquibase-${liquibase.version}-bin.zip" algorithm="SHA-512" property="sha512"/>
+		<checksum file="work/liquibase-${liquibase.version}-bin.zip" algorithm="SHA-512" fileext=".asc"/>
+        <echo>Got SHA-512 checksum : &lt;${sha512}&gt;</echo>
+    </target>
+    
+    <target name="make"
+            description="Prepare all files for a new Liquibase release."
+            depends="load.sha512.as.property">
+        <echo>Preparing &lt;liquibase.nuspec&gt; file : injecting liquibase version...</echo>
+        <copy file="templates/liquibase.nuspec.TEMPLATE" tofile="liquibase.nuspec"/>
+        <echo>Injecting target liquibase version in nuspec file...</echo>
+        <replace file="liquibase.nuspec" token="@LIQUIBASE_VERSION@" value="${liquibase.version}"/>
+        <echo>nuspec file prepared.</echo>
+        
+        <echo>Preparing &lt;chocolateyInstall.ps1&gt; ...</echo>
+        <copy file="templates/chocolateyInstall.ps1.TEMPLATE" tofile="tools/chocolateyInstall.ps1"/>
+        <replace file="tools/chocolateyInstall.ps1" token="@LIQUIBASE_VERSION@" value="${liquibase.version}"/>
+        <replace file="tools/chocolateyInstall.ps1" token="@SHA512@" value="${sha512}"/>
+        <echo>&lt;chocolateyInstall.ps1&gt; file prepared.</echo>
+        
+        <echo>Preparing &lt;chocolateyUninstall.ps1&gt; ...</echo>
+        <copy file="templates/chocolateyUninstall.ps1.TEMPLATE" tofile="tools/chocolateyUninstall.ps1"/>
+        <replace file="tools/chocolateyUninstall.ps1" token="@LIQUIBASE_VERSION@" value="${liquibase.version}"/>
+        <echo>&lt;chocolateyUninstall.ps1&gt; file prepared.</echo>
+		<echo>All build files prepared.</echo>
+    </target>
+</project>
