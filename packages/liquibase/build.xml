@@ -28,6 +28,7 @@
     <target name="get.sha512" depends="load.properties"
 		description="Get the SHA512 checksum from Liquibase Github official release.">
 	<echo>Downloading zip distribution file from Github...</echo>
+	<mkdir dir="work"/>
 	<get src="https://github.com/liquibase/liquibase/releases/download/liquibase-parent-${liquibase.version}/liquibase-${liquibase.version}-bin.zip"
              dest="work/liquibase-${liquibase.version}-bin.zip"/>
     </target>
