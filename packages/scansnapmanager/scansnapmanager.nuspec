@@ -3,7 +3,7 @@
   <metadata>
     <id>scansnapmanager</id>
     <title>Fujitsu ScanSnap Manager</title>
-    <version>6.5.40</version>
+    <version>6.5.60</version>
     <authors>Fujitsu</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Turn documents into digital data by just pressing the [Scan] button.</summary>
@@ -14,7 +14,7 @@ By converting paper documents cluttering up your desk into PDF or JPEG files, yo
     <tags>digital image scanner pdf jpg</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://rawgit.com/AnthonyMastrean/chocolateypackages/e1e6c68beb5569fb006d3bc7ad6f643311851e4c/public/icons/scansnapmanager.png</iconUrl>
-    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/scansnapmanager</packageSourceUrl>
     <docsUrl>http://www.fujitsu.com/global/support/products/computing/peripheral/scanners/scansnap/manuals/</docsUrl>
     <bugTrackerUrl>http://www.fujitsu.com/global/support/products/computing/peripheral/scanners/contacts/scansnap_contact.html</bugTrackerUrl>
     <releaseNotes>http://www.fujitsu.com/global/products/computing/peripheral/scanners/topics/index.html</releaseNotes>
