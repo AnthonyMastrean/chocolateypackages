@@ -1,4 +1,4 @@
 Uninstall-ChocolateyPackage `
   -PackageName 'moonlight' `
   -FileType 'MSI' `
-  -Silent '{748D7267-E789-493C-85DD-20ECFB0F42CA} /QN'
+  -Silent '{5D59F73B-BBA3-4078-A361-7A61C0BF51DB} /QN'
