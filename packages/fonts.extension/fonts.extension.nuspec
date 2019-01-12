@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>fonts.extension</id>
-    <version>0.1</version>
+    <version>1.0</version>
     <title>fonts.extension</title>
     <authors>Michael Murgolo, Anthony Mastrean</authors>
     <projectUrl>https://github.com/AnthonyMastrean/chocolateypackages/blob/master/packages/fonts.extension</projectUrl>

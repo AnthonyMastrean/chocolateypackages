@@ -17,3 +17,11 @@ You should add the extension package as a dependency to your package.
 ```
 
 ## Cmdlets
+
+### Add-Font
+
+_Coming soon!_
+
+### Remove-Font
+
+_Coming soon!_
