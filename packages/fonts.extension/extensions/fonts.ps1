@@ -1,22 +1,22 @@
 ﻿#########################################################################################
 #   MICROSOFT LEGAL STATEMENT FOR SAMPLE SCRIPTS/CODE
 #########################################################################################
-#   This Sample Code is provided for the purpose of illustration only and is not 
+#   This Sample Code is provided for the purpose of illustration only and is not
 #   intended to be used in a production environment.
 #
-#   THIS SAMPLE CODE AND ANY RELATED INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY 
-#   OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED 
+#   THIS SAMPLE CODE AND ANY RELATED INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY
+#   OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
 #   WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.
 #
-#   We grant You a nonexclusive, royalty-free right to use and modify the Sample Code 
-#   and to reproduce and distribute the object code form of the Sample Code, provided 
-#   that You agree: 
-#   (i)    to not use Our name, logo, or trademarks to market Your software product 
-#          in which the Sample Code is embedded; 
-#   (ii)   to include a valid copyright notice on Your software product in which 
-#          the Sample Code is embedded; and 
-#   (iii)  to indemnify, hold harmless, and defend Us and Our suppliers from and 
-#          against any claims or lawsuits, including attorneys’ fees, that arise 
+#   We grant You a nonexclusive, royalty-free right to use and modify the Sample Code
+#   and to reproduce and distribute the object code form of the Sample Code, provided
+#   that You agree:
+#   (i)    to not use Our name, logo, or trademarks to market Your software product
+#          in which the Sample Code is embedded;
+#   (ii)   to include a valid copyright notice on Your software product in which
+#          the Sample Code is embedded; and
+#   (iii)  to indemnify, hold harmless, and defend Us and Our suppliers from and
+#          against any claims or lawsuits, including attorneys’ fees, that arise
 #          or result from the use or distribution of the Sample Code.
 #########################################################################################
 
@@ -42,15 +42,6 @@
 #requires -Version 2.0
 
 #*******************************************************************
-# Declare Parameters
-#*******************************************************************
-param(
-    [string] $path = "",
-    [switch] $help = $false
-)
-
-
-#*******************************************************************
 # Declare Global Variables and Constants
 #*******************************************************************
 
@@ -74,7 +65,6 @@ $hashFontFileTypes.Add(".otf", " (OpenType)")
 $invocation = (Get-Variable MyInvocation -Scope 0).Value
 $scriptPath = Split-Path $Invocation.MyCommand.Path
 $fontRegistryPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts"
-
 
 #*******************************************************************
 #  Load C# code
@@ -112,11 +102,11 @@ namespace FontResource
 
         public static int AddFont(string fontFilePath) {
             FileInfo fontFile = new FileInfo(fontFilePath);
-            if (!fontFile.Exists) 
+            if (!fontFile.Exists)
             {
-                return 0; 
+                return 0;
             }
-            try 
+            try
             {
                 int retVal = AddFontResource(fontFilePath);
 
@@ -136,11 +126,11 @@ namespace FontResource
 
         public static int RemoveFont(string fontFileName) {
             //FileInfo fontFile = new FileInfo(fontFileName);
-            //if (!fontFile.Exists) 
+            //if (!fontFile.Exists)
             //{
-            //    return false; 
+            //    return false;
             //}
-            try 
+            try
             {
                 int retVal = RemoveFontResource(fontFileName);
 
@@ -398,7 +388,6 @@ namespace FontResource
 '@
 Add-Type $fontCSharpCode
 
-
 #*******************************************************************
 # Declare Functions
 #*******************************************************************
@@ -421,6 +410,37 @@ function Get-SpecialFolder($id)
     $specialFolder
 }
 
+#*******************************************************************
+# Function Get-RegistryStringNameFromValue()
+#
+# Purpose:  Return the Registry value name
+#
+# Input:    $keyPath    Regsitry key drive path
+#           $valueData  Regsitry value sting data
+#
+# Returns:  Registry string value name
+#
+#*******************************************************************
+function Get-RegistryStringNameFromValue([string] $keyPath, [string] $valueData)
+{
+    $pattern = [Regex]::Escape($valueData)
+
+    foreach($property in (Get-ItemProperty $keyPath).PsObject.Properties)
+    {
+        ## Skip the property if it was one PowerShell added
+        if(($property.Name -eq "PSPath") -or
+            ($property.Name -eq "PSChildName"))
+        {
+            continue
+        }
+        ## Search the text of the property
+        $propertyText = "$($property.Value)"
+        if($propertyText -match $pattern)
+        {
+            "$($property.Name)"
+        }
+    }
+}
 
 #*******************************************************************
 # Function Add-SingleFont()
@@ -479,48 +499,8 @@ function Add-SingleFont($filePath)
     }
 }
 
-
 #*******************************************************************
-# Function Show-Usage()
-#
-# Purpose:   Shows the correct usage to the user.
-#
-# Input:     None
-#
-# Output:    Help messages are displayed on screen.
-#
-#*******************************************************************
-function Show-Usage()
-{
-$usage = @'
-Add-Font.ps1
-This script is used to install Windows fonts.
-
-Usage:
-Add-Font.ps1 -help | -path "<Font file or folder path>"
-
-Parameters:
-
-    -help
-     Displays usage information.
-
-    -path
-     May be either the path to a font file to install or the path to a folder 
-     containing font files to install.  Valid file types are .fon, .fnt,
-     .ttf,.ttc, .otf, .mmm, .pbf, and .pfm
-
-Examples:
-    Add-Font.ps1
-    Add-Font.ps1 -path "C:\Custom Fonts\MyFont.ttf"
-    Add-Font.ps1 -path "C:\Custom Fonts"
-'@
-
-$usage
-}
-
-
-#*******************************************************************
-# Function Process-Arguments()
+# Function Add-Font()
 #
 # Purpose: To validate parameters and their values
 #
@@ -529,20 +509,16 @@ $usage
 # Output:  Exit script if parameters are invalid
 #
 #*******************************************************************
-function Process-Arguments()
+function Add-Font()
 {
-    ## Write-host 'Processing Arguments'
+    param(
+        [string] $path = "",
+    )
 
     if ($unnamedArgs.Length -gt 0)
     {
         write-host "The following arguments are not defined:"
         $unnamedArgs
-    }
-
-    if ($help -eq $true) 
-    { 
-        Show-Usage
-        break
     }
 
     if ((Test-Path $path -PathType Leaf) -eq $true)
@@ -588,8 +564,8 @@ function Process-Arguments()
         }
 
         If ($bErrorOccured -eq $true)
-        { 
-            exit 1 
+        {
+            exit 1
         }
         else
         {
@@ -604,11 +580,113 @@ function Process-Arguments()
     }
 }
 
+#*******************************************************************
+# Function Remove-SingleFont()
+#
+# Purpose:  Uninstall a font file
+#
+# Input:    $file    Font file name
+#
+# Returns:  0 - success, 1 - failure
+#
+#*******************************************************************
+function Remove-SingleFont($file)
+{
+    try
+    {
+        $fontFinalPath = Join-Path $fontsFolderPath $file
+        $retVal = [FontResource.AddRemoveFonts]::RemoveFont($fontFinalPath)
+        if ($retVal -eq 0) {
+            Write-Host "Font `'$($file)`' removal failed"
+            Write-Host ""
+            1
+        }
+        else
+        {
+            $fontRegistryvaluename = (Get-RegistryStringNameFromValue $fontRegistryPath $file)
+            Write-Host "Font: $($fontRegistryvaluename)"
+            if ($fontRegistryvaluename -ne "")
+            {
+                Remove-ItemProperty -path $fontRegistryPath -name $fontRegistryvaluename
+            }
+            Remove-Item $fontFinalPath
+            if ($error[0] -ne $null)
+            {
+                Write-Host "An error occured removing $`'$($file)`'"
+                Write-Host ""
+                Write-Host "$($error[0].ToString())"
+                $error.clear()
+            }
+            else
+            {
+                Write-Host "Font `'$($file)`' removed successfully"
+                Write-Host ""
+            }
+            0
+        }
+        ""
+    }
+    catch
+    {
+        Write-Host "An error occured removing `'$($file)`'"
+        Write-Host ""
+        Write-Host "$($error[0].ToString())"
+        Write-Host ""
+        $error.clear()
+        1
+    }
+}
 
 #*******************************************************************
-# Main Script
+# Function Remove-Font()
+#
+# Purpose: To validate parameters and their values
+#
+# Input:   All parameters
+#
+# Output:  Exit script if parameters are invalid
+#
 #*******************************************************************
+function Remove-Font()
+{
+    param(
+        [string] $file = "",
+    )
+
+    if ($unnamedArgs.Length -gt 0)
+    {
+        write-host "The following arguments are not defined:"
+        $unnamedArgs
+    }
+
+    $fontFilePath = Join-Path $fontsFolderPath $file
+    if ((Test-Path $fontFilePath -PathType Leaf) -eq $true)
+    {
+        If ($hashFontFileTypes.ContainsKey((Get-Item $fontFilePath).Extension))
+        {
+            $retVal = Remove-SingleFont $file
+            if ($retVal -ne 0)
+            {
+                exit 1
+            }
+            else
+            {
+                exit 0
+            }
+        }
+        else
+        {
+            "`'$($fontFilePath)`' not a valid font file type"
+            ""
+            exit 1
+        }
+    }
+    else
+    {
+        "`'$($fontFilePath)`' not found"
+        ""
+        exit 1
+    }
+}
 
 $fontsFolderPath = Get-SpecialFolder($CSIDL_FONTS)
-Process-Arguments
-
