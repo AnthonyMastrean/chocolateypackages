@@ -20,25 +20,6 @@
 #          or result from the use or distribution of the Sample Code.
 #########################################################################################
 
-#******************************************************************************
-# File:     Add-Font.ps1
-# Date:     08/28/2013
-# Version:  1.0.1
-#
-# Purpose:  PowerShell script to install Windows fonts.
-#
-# Usage:    Add-Font -help | -path "<Font file or folder path>"
-#
-# Copyright (C) 2010 Microsoft Corporation
-#
-#
-# Revisions:
-# ----------
-# 1.0.0   09/22/2010   Created script.
-# 1.0.1   08/28/2013   Fixed help text.  Added quotes around paths in messages.
-#
-#******************************************************************************
-
 #requires -Version 2.0
 
 #*******************************************************************
@@ -46,7 +27,7 @@
 #*******************************************************************
 
 # Define constants
-set-variable CSIDL_FONTS 0x14 -option constant
+Set-Variable CSIDL_FONTS 0x14 -Option constant
 
 # Create hashtable containing valid font file extensions and text to append to Registry entry name.
 $hashFontFileTypes = @{}
@@ -62,8 +43,6 @@ $hashFontFileTypes.Add(".otf", " (OpenType)")
 #$hashFontFileTypes.Add(".pfm", "")
 
 # Initialize variables
-$invocation = (Get-Variable MyInvocation -Scope 0).Value
-$scriptPath = Split-Path $Invocation.MyCommand.Path
 $fontRegistryPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts"
 
 #*******************************************************************
@@ -443,7 +422,7 @@ function Get-RegistryStringNameFromValue([string] $keyPath, [string] $valueData)
 }
 
 #*******************************************************************
-# Function Add-SingleFont()
+# Function Add-Font()
 #
 # Purpose:  Install a font file
 #
@@ -452,7 +431,7 @@ function Get-RegistryStringNameFromValue([string] $keyPath, [string] $valueData)
 # Returns:  0 - success, 1 - failure
 #
 #*******************************************************************
-function Add-SingleFont($filePath)
+function Add-Font($filePath)
 {
     try
     {
@@ -500,88 +479,7 @@ function Add-SingleFont($filePath)
 }
 
 #*******************************************************************
-# Function Add-Font()
-#
-# Purpose: To validate parameters and their values
-#
-# Input:   All parameters
-#
-# Output:  Exit script if parameters are invalid
-#
-#*******************************************************************
-function Add-Font()
-{
-    param(
-        [string] $path = "",
-    )
-
-    if ($unnamedArgs.Length -gt 0)
-    {
-        write-host "The following arguments are not defined:"
-        $unnamedArgs
-    }
-
-    if ((Test-Path $path -PathType Leaf) -eq $true)
-    {
-        If ($hashFontFileTypes.ContainsKey((Get-Item $path).Extension))
-        {
-            $retVal = Add-SingleFont $path
-            if ($retVal -ne 0)
-            {
-                exit 1
-            }
-            else
-            {
-                exit 0
-            }
-        }
-        else
-        {
-            "`'$($path)`' not a valid font file type"
-            ""
-            exit 1
-        }
-    }
-    elseif ((Test-Path $path -PathType Container) -eq $true)
-    {
-        $bErrorOccured = $false
-        foreach($file in (Get-Childitem $path))
-        {
-
-            if ($hashFontFileTypes.ContainsKey($file.Extension))
-            {
-                $retVal = Add-SingleFont (Join-Path $path $file.Name)
-                if ($retVal -ne 0)
-                {
-                    $bErrorOccured = $true
-                }
-            }
-            else
-            {
-                "`'$(Join-Path $path $file.Name)`' not a valid font file type"
-                ""
-            }
-        }
-
-        If ($bErrorOccured -eq $true)
-        {
-            exit 1
-        }
-        else
-        {
-            exit 0
-        }
-    }
-    else
-    {
-        "`'$($path)`' not found"
-        ""
-        exit 1
-    }
-}
-
-#*******************************************************************
-# Function Remove-SingleFont()
+# Function Remove-Font()
 #
 # Purpose:  Uninstall a font file
 #
@@ -590,7 +488,7 @@ function Add-Font()
 # Returns:  0 - success, 1 - failure
 #
 #*******************************************************************
-function Remove-SingleFont($file)
+function Remove-Font($file)
 {
     try
     {
@@ -634,58 +532,6 @@ function Remove-SingleFont($file)
         Write-Host ""
         $error.clear()
         1
-    }
-}
-
-#*******************************************************************
-# Function Remove-Font()
-#
-# Purpose: To validate parameters and their values
-#
-# Input:   All parameters
-#
-# Output:  Exit script if parameters are invalid
-#
-#*******************************************************************
-function Remove-Font()
-{
-    param(
-        [string] $file = "",
-    )
-
-    if ($unnamedArgs.Length -gt 0)
-    {
-        write-host "The following arguments are not defined:"
-        $unnamedArgs
-    }
-
-    $fontFilePath = Join-Path $fontsFolderPath $file
-    if ((Test-Path $fontFilePath -PathType Leaf) -eq $true)
-    {
-        If ($hashFontFileTypes.ContainsKey((Get-Item $fontFilePath).Extension))
-        {
-            $retVal = Remove-SingleFont $file
-            if ($retVal -ne 0)
-            {
-                exit 1
-            }
-            else
-            {
-                exit 0
-            }
-        }
-        else
-        {
-            "`'$($fontFilePath)`' not a valid font file type"
-            ""
-            exit 1
-        }
-    }
-    else
-    {
-        "`'$($fontFilePath)`' not found"
-        ""
-        exit 1
     }
 }
 
