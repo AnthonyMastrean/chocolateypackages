@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url         = 'https://download.jetbrains.com/idea/ideaIU-2018.3.3.exe'
-$sha256sum   = '3651612e517b76671237f39694eeb14f24b0313108fe8b292dbdd5dd46264b47'
+$url         = 'https://download.jetbrains.com/idea/ideaIU-2018.3.4.exe'
+$sha256sum   = '327d5f64a730469d35008097bc3dab2c46a71e60487bdc9070a32b5fa0fb07e5'
 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $programFiles = (${env:ProgramFiles(x86)}, ${env:ProgramFiles} -ne $null)[0]
