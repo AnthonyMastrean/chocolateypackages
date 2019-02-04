@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>leappadmanager</id>
+    <version>7.5.0</version>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/leappadmanager</packageSourceUrl>
+    <owners>Anthony Mastrean</owners>
+    <title>LeapPad Manager</title>
+    <authors>Deak Phreak, is0Mick</authors>
+    <projectUrl>https://spiffyhacks.com/thread-212-post-1446.html#pid1446</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/AnthonyMastrean/chocolateypackages/e3a5caa50b99e138fb47c8e100111ca5fef0d8dc/public/icons/leappadmanager.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://bitbucket.org/jtriptow/leappad-manager/</projectSourceUrl>
+    <docsUrl>https://spiffyhacks.com/thread-212-post-1446.html#pid1446</docsUrl>
+    <mailingListUrl>https://spiffyhacks.com/thread-212.html</mailingListUrl>
+    <bugTrackerUrl>https://bitbucket.org/jtriptow/leappad-manager/issues</bugTrackerUrl>
+    <tags>leappad leapfrog</tags>
+    <summary>A community created application for managing your LeapFrog LeapPad!</summary>
+    <description>
+A community created application for managing your LeapFrog LeapPad!
+
+*Features:*
+
+ * Application management
+ * Theme maker
+ * Video creator
+    </description>
+  </metadata>
+</package>
