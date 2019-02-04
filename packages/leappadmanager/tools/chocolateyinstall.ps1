@@ -1,5 +1,9 @@
 ﻿$tools = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $content = Join-Path -Path (Split-Path -Parent $tools) -ChildPath content
+$target = Join-Path -Path $content -ChildPath 'LeapPad Manager.exe'
+
+$shortcutdir = @{$true='CommonPrograms';$false='Programs'}[($PSVersionTable.PSVersion -gt '2.0.0.0')]
+$shortcut = Join-Path -Path ([System.Environment]::GetFolderPath($shortcutdir)) -ChildPath 'LeapPad Manager.lnk'
 
 Install-ChocolateyZipPackage `
   -PackageName $env:ChocolateyPackageName `
@@ -10,3 +14,9 @@ Install-ChocolateyZipPackage `
 
 Get-ChildItem -Recurse -File -Path (Join-Path -Path $content -ChildPath files) -Include *.exe `
   | %{ New-Item -Path "$_.ignore" -Type File -Force | Out-Null }
+
+Install-ChocolateyShortcut `
+  -ShortcutFilePath $shortcut `
+  -TargetPath $target
+
+New-Item -Force -Path "$target.ignore" -Type File | Out-Null
