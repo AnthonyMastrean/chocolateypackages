@@ -1,10 +1,28 @@
-﻿Install-ChocolateyPackage `
-    -PackageName 'parsec' `
-    -Url 'https://s3.amazonaws.com/parsec-build/package/parsec-windows32.exe' `
-    -Checksum '1EF14507AF49B87C01C740905B3E7F0FC08170C92E06DB5A6A5AF3B3F0496585' `
-    -ChecksumType 'SHA256' `
-    -Url64 'https://s3.amazonaws.com/parsec-build/package/parsec-windows.exe' `
-    -Checksum64 '405A79D5827969A6ADF284D6C229E3E27C8BB1E0FD8F3C12F1DFED4029DD49F4' `
-    -ChecksumType64 'SHA256' `
-    -FileType 'EXE' `
-    -SilentArgs ''
+﻿$ErrorActionPreference = 'Stop';
+
+if ($PSVersionTable.BuildVersion -lt 6.1) { throw 'Windows 7 and newer required.'}
+
+$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+$url = 'https://s3.amazonaws.com/parsec-build/package/parsec-windows32.exe'
+$url64 = 'https://s3.amazonaws.com/parsec-build/package/parsec-windows.exe'
+
+$packageArgs = @{
+    packageName    = $env:ChocolateyPackageName
+    unzipLocation  = $toolsDir
+    fileType       = 'EXE'
+    url            = $url
+    url64bit       = $url64
+    softwareName   = 'parsec*'
+    checksum       = '1ef14507af49b87c01c740905b3e7f0fc08170c92e06db5a6a5af3b3f0496585'
+    checksumType   = 'sha256'
+    checksum64     = '405a79d5827969a6adf284d6c229e3e27c8bb1e0fd8f3c12f1dfed4029dd49f4'
+    checksumType64 = 'sha256'
+    silentArgs     = ""
+    validExitCodes = @(0)
+}
+
+$ahkExe = 'AutoHotKey'
+$ahkFile = Join-Path $toolsDir "installParsec.ahk"
+$null = Start-Process -FilePath $ahkExe -ArgumentList $ahkFile -PassThru
+ 
+Install-ChocolateyPackage @packageArgs

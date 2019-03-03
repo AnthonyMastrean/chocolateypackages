@@ -24,6 +24,9 @@ We strive to build the best game streaming technology on the market. In our ques
     <docsUrl>https://support.parsecgaming.com/hc/en-us</docsUrl>
     <mailingListUrl>https://support.parsecgaming.com/hc/en-us</mailingListUrl>
     <bugTrackerUrl>https://support.parsecgaming.com/hc/en-us</bugTrackerUrl>
-    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/master/public/icons/parsec.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/master/public/icons/parsec.png</iconUrl>    
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1.30.01" />
+    </dependencies>
   </metadata>
 </package>
