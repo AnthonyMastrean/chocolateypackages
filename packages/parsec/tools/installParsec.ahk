@@ -7,7 +7,8 @@ SetControlDelay -1
  
 winTitleInstall = Parsec Setup
 WinWait, %winTitleInstall%, Installing
-WinMinimize, %winTitleInstall%, Installing
+WinHide, %winTitleInstall%, Installing
 
 WinWait, %winTitleInstall%, controller , 300
 ControlClick , Button2, %winTitleInstall%, controller
+WinHide, %winTitleInstall%, Installing
