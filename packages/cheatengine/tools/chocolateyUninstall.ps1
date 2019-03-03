@@ -2,4 +2,4 @@
   -PackageName 'cheatengine' `
   -FileType 'EXE' `
   -Silent '/VERYSILENT /NORESTART' `
-  -File (Get-UninstallRegistryKey -SoftwareName 'Cheat Engine 6.8.2').UninstallString.Trim('"')
+  -File (Get-UninstallRegistryKey -SoftwareName 'Cheat Engine 6.8.3').UninstallString.Trim('"')
