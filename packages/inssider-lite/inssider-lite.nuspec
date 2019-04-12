@@ -28,7 +28,7 @@ inSSIDer OffLiteice is a WiFi troubleshooting and optimization tool that takes s
 Data provided by inSSIDer Lite will help you make educated decisions about access point placement and channel selection, so you can create a more reliable network without being a certified WiFi expert.
     </description>
     <projectUrl>http://www.metageek.com/products/inssider/</projectUrl>
-    <tags>wifi analyzer notsilent</tags>
+    <tags>wifi analyzer</tags>
     <!-- <licenseUrl></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/AnthonyMastrean/chocolateypackages/master/public/icons/insidder-lite.png</iconUrl>
@@ -37,5 +37,8 @@ Data provided by inSSIDer Lite will help you make educated decisions about acces
     <bugTrackerUrl>https://support.metageek.com/hc/en-us/requests/new</bugTrackerUrl>
     <docsUrl>https://docs.google.com/document/d/1yih9E-T5HJHDhdGfFdaI_MJzb7nc1UvfFmADBtOEAeI/edit</docsUrl>
     <mailingListUrl>https://support.metageek.com/hc/en-us</mailingListUrl>
+    <dependencies>
+        <dependency id="chocolatey-core.extension" version="[1.0,)" />
+    </dependencies>
   </metadata>
 </package>
