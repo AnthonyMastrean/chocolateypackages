@@ -1,7 +1,7 @@
 ﻿Install-ChocolateyPackage `
     -PackageName 'kindlepreviewer' `
     -Url 'https://s3.amazonaws.com/kindlepreviewer3/KindlePreviewerInstaller.exe' `
-    -Checksum '66761F4B49535D10F4D0066631AD14ED7F7E729D0401492710944E9F34A84032' `
+    -Checksum 'E9C4654C52314F72C1CAB0A60871480BF40931B333B84C0D2A33FF544AF12AF4' `
     -ChecksumType 'SHA256' `
     -FileType 'EXE' `
     -SilentArgs '/S'
