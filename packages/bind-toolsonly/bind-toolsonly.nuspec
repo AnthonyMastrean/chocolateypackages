@@ -3,7 +3,7 @@
   <metadata>
     <id>bind-toolsonly</id>
     <title>BIND Tools</title>
-    <version>9.12.4</version>
+    <version>9.14.0</version>
     <authors>ISC</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The most widely used Name Server Software.</summary>
@@ -13,8 +13,8 @@ BIND is open source software that implements the Domain Name System (DNS) protoc
 BIND is by far the most widely used DNS software on the Internet, providing a robust and stable platform on top of which organizations can build distributed computing systems with the knowledge that those systems are fully compliant with published DNS standards.
     </description>
     <projectUrl>http://www.isc.org/software/bind</projectUrl>
-    <releaseNotes>http://ftp.isc.org/isc/bind9/9.12.4/RELEASE-NOTES-bind-9.12.4.html</releaseNotes>
-    <docsUrl>http://ftp.isc.org/isc/bind9/9.12.4/doc/arm/Bv9ARM.pdf</docsUrl>
+    <releaseNotes>http://ftp.isc.org/isc/bind9/9.14.0/RELEASE-NOTES-bind-9.14.0.html</releaseNotes>
+    <docsUrl>http://ftp.isc.org/isc/bind9/9.14.0/doc/arm/Bv9ARM.pdf</docsUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
     <bugTrackerUrl>https://www.isc.org/community/report-bug/</bugTrackerUrl>
     <mailingListUrl>https://www.isc.org/community/mailing-list/</mailingListUrl>
