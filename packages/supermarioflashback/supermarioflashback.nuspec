@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>supermarioflashback</id>
-    <version>0.0.0-demo1</version>
+    <version>0.0.0-sage2018</version>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/blob/master/packages/supermarioflashback</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>Super Mario Flashback</title>
