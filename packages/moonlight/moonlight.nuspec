@@ -3,7 +3,7 @@
   <metadata>
     <id>moonlight</id>
     <title>Moonlight Game Streaming</title>
-    <version>0.8.0</version>
+    <version>0.10.0</version>
     <authors>Moonlight Game Streaming Team</authors>
     <owners>Anthony Mastrean</owners>
     <summary>An open source nVidia gamestream client</summary>
@@ -17,7 +17,7 @@ What does this mean for you? Moonlight allows you to stream your collection of g
     <tags>games streaming admin</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://moonlight-stream.com/</projectUrl>
-    <releaseNotes>https://github.com/moonlight-stream/moonlight-qt/releases/tag/v0.8.0</releaseNotes>
+    <releaseNotes>hhttps://github.com/moonlight-stream/moonlight-qt/releases/tag/v0.10.0</releaseNotes>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/moonlight</packageSourceUrl>
     <projectSourceUrl>https://github.com/moonlight-stream/moonlight-qt</projectSourceUrl>
     <licenseUrl>https://raw.githubusercontent.com/moonlight-stream/moonlight-qt/master/LICENSE</licenseUrl>
