@@ -29,7 +29,7 @@ Data provided by inSSIDer Lite will help you make educated decisions about acces
     </description>
     <projectUrl>http://www.metageek.com/products/inssider/</projectUrl>
     <tags>wifi analyzer</tags>
-    <!-- <licenseUrl></licenseUrl> -->
+    <licenseUrl>https://www.metageek.com/legal/eula/inssider/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/AnthonyMastrean/chocolateypackages/master/public/icons/insidder-lite.png</iconUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/inssider-lite</packageSourceUrl>
