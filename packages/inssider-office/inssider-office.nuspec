@@ -3,7 +3,7 @@
   <metadata>
     <id>inssider-office</id>
     <title>inSSIDer Office</title>
-    <version>4.4.4.1</version>
+    <version>4.4.6.3</version>
     <authors>MetaGeek, LLC</authors>
     <owners>Anthony Mastrean</owners>
     <summary>If you’re experiencing these common WiFi problems at your home, you need inSSIDer.</summary>
@@ -32,7 +32,7 @@ Data provided by inSSIDer Office will help you make educated decisions about acc
     <!-- <licenseUrl></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/6f270696cd751d75acf3da75b595daef15a6633b/public/icons/inssider.png</iconUrl>
-    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/inssider-office</packageSourceUrl>
     <releaseNotes>https://support.metageek.com/hc/en-us/articles/203787834-inSSIDer-Office-Release-Notes</releaseNotes>
     <bugTrackerUrl>https://support.metageek.com/hc/en-us/requests/new</bugTrackerUrl>
     <docsUrl>https://support.metageek.com/hc/en-us/articles/204158620-inSSIDer-Office-User-Guide</docsUrl>
