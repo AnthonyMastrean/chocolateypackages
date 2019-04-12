@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ghidra</id>
-    <version>9.0</version>
+    <version>9.0.2</version>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/ghidra</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>Ghidra</title>
