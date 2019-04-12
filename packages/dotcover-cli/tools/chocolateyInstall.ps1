@@ -4,8 +4,8 @@ $target = Join-Path -Path $content -ChildPath 'dotCover.exe'
 
 Install-ChocolateyZipPackage `
     -PackageName 'dotcover-cli' `
-    -Url 'https://download.jetbrains.com/resharper/JetBrains.dotCover.CommandLineTools.2018.1.zip' `
-    -Checksum 'a0083de070f6af6a9730b1155a2e97b997de195965bf3a1cfe42b0bd3496c587' `
+    -Url 'https://download.jetbrains.com/resharper/ReSharperUltimate.2018.3.4/JetBrains.dotCover.CommandLineTools.2018.3.4.zip' `
+    -Checksum 'a0fb72a6aa70202a8720932c0eb0719fcded488664733184b3ca3d145160b44a' `
     -ChecksumType 'SHA256' `
     -UnzipLocation $content
 
