@@ -5,11 +5,11 @@ $shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'RPCS3
 
 # This package must be installed in a low-privilege location. I could not get
 # it to run in the default %PROGRAMDATA%\Chocolatey\lib location. I was forced
-# to use the old-style "tools" location.
+# to use the "tools" location.
 Install-ChocolateyZipPackage `
   -PackageName 'rpcs3' `
-  -Url 'https://github.com/RPCS3/rpcs3-binaries-win/releases/download/build-225310e04bf54efb92dbe424b2dd222248fb07bc/rpcs3-v0.0.5-7499-225310e0_win64.7z' `
-  -Checksum '5CCC86F4B9D3D88E2728D6772B47B345D7730ACA8124F9143616C23534979253' `
+  -Url 'https://github.com/RPCS3/rpcs3-binaries-win/releases/download/build-f99577114327d59d583119b5ef8c2b30f7cd0f4c/rpcs3-v0.0.6-7981-f9957711_win64.7z' `
+  -Checksum 'F90BAD4979A5B90C8BBE65FB88E1159B3BC43720442CF2C2B2CD4CA2DACC09C2' `
   -ChecksumType 'SHA256' `
   -UnzipLocation $content
 

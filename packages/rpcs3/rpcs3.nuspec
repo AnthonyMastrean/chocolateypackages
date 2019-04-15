@@ -8,7 +8,7 @@
     <title>RPCS3</title>
     <authors>RPCS3 Team</authors>
     <projectUrl>https://rpcs3.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/16a86cdcea9710326d68aaf6746c38f49b85a0ab/public/icons/rpc3.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/AnthonyMastrean/chocolateypackages/master/public/icons/rpcs3.png</iconUrl>
     <licenseUrl>https://github.com/RPCS3/rpcs3/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/RPCS3/rpcs3/</projectSourceUrl>
