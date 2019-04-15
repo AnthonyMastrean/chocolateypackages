@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>rpcs3</id>
-    <version>0.0.5-alpha7499</version>
-    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
+    <version>0.0.6-alpha7981</version>
+    <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/rpcs3</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>RPCS3</title>
     <authors>RPCS3 Team</authors>
     <projectUrl>https://rpcs3.net/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/16a86cdcea9710326d68aaf6746c38f49b85a0ab/public/icons/rpc3.png</iconUrl>
-    <licenseUrl>https://github.com/RPCS3/rpcs3/blob/64a6fbe39ff089d0155a36aeb0d3c6360d223ad9/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/RPCS3/rpcs3/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/RPCS3/rpcs3/</projectSourceUrl>
     <docsUrl>https://rpcs3.net/quickstart</docsUrl>
