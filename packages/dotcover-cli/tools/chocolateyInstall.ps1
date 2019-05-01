@@ -1,6 +1,5 @@
 ﻿$tools = Split-Path -Path $MyInvocation.MyCommand.Definition
 $content = Join-Path -Path (Split-Path -Path $tools) -ChildPath 'content'
-$target = Join-Path -Path $content -ChildPath 'dotCover.exe'
 
 Install-ChocolateyZipPackage `
     -PackageName 'dotcover-cli' `
