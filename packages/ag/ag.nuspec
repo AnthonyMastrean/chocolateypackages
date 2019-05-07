@@ -3,7 +3,7 @@
   <metadata>
     <id>ag</id>
     <title>The Silver Searcher</title>
-    <version>2.1.0.1</version>
+    <version>2.2.0.19</version>
     <authors>Geoff Greer, K. Takata</authors>
     <owners>Anthony Mastrean</owners>
     <summary>The Silver Searcher is like grep or ack, except faster.</summary>
