@@ -1,6 +1,15 @@
 # https://docs.travis-ci.com/user/reference/windows/
 os: windows
-language: bash  # language: java is not yet supported on Travis CI Windows
-install: choco install ant
-env: PATH="/c/Program Files/ant/bin:$PATH"
-script: ant -version
+language: c
+env: 
+  - PACKAGE=ant     BIN_DIR="/c/Program Files/ant/bin"
+  - PACKAGE=openide BIN_DER="/c/Program Files/openide/bin"
+install: 
+  - cd packages/$PACKAGE
+  - choco pack
+  - pwd ; ls -l
+  - choco install $PACKAGE -dv --force -s .
+  - export PATH="$BIN_DER:$PATH"
+script:
+  - $PACKAGE -version
+  - choco uninstall $PACKAGE
