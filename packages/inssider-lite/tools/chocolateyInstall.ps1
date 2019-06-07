@@ -3,5 +3,5 @@
     -FileType 'EXE' `
     -SilentArgs '-s' `
     -Url 'https://metageek.link/inssider-update-url-v1-0-2/inSSIDerSetup.exe' `
-    -Checksum '1262774A0D3E983719C851645CA798FED4830C367A267E26257BFC9F5AAA4C5E' `
+    -Checksum '01F934AB8F89097837BF267568E522E5DE88C47E03B88EAEFC45A119459EAE6F' `
     -ChecksumType 'SHA256'
