@@ -11,7 +11,6 @@ Install-ChocolateyZipPackage `
     -Checksum 'b189c83e58a87319a89e578846af28ae' `
     -UnzipLocation $content
 
-New-Item -Type File -Path "$classic.ignore" -Force | Out-Null
 New-Item -Type File -Path "$tiles.ignore" -Force | Out-Null
 
 Install-ChocolateyShortcut `
