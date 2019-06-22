@@ -7,7 +7,7 @@
     <owners>Netscylla</owners>
     <title>Filelight</title>
     <authors>KDE</authors>
-    <projectUrl>https://www.ghidra-sre.org/</projectUrl>
+    <projectUrl>https://utils.kde.org/projects/filelight/</projectUrl>
     <iconUrl>https://d2.alternativeto.net/dist/icons/filelight_122998.png</iconUrl>
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -19,7 +19,7 @@
 	<description>
 	Filelight allows you to quickly understand exactly where your diskspace is being used by graphically representing your file system as a set of concentric segmented-rings. You can use it to locate hotspots of disk usage and then manipulate those areas using a file manager.
 
-The latest stable release is version 19.04, included in KDE Applications 19.04. Filelight is a free and open source software, available for Linux and similar operating systems under the GNU General Public License (GPL), Version 2.
+The latest stable release for Windows is version 17.12. Filelight is a free and open source software, available for Linux and similar operating systems under the GNU General Public License (GPL), Version 2.
   
     </description>
     <dependencies>
