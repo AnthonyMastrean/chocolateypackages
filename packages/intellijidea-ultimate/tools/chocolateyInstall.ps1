@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url = 'https://download.jetbrains.com/idea/ideaIU-2019.2.exe'
-$sha256sum = 'fb03c4f47e7686bd400aea2dbc25197057941333ac5cfade11b38379e0b7d0ac'
+$url = 'https://download.jetbrains.com/idea/ideaIU-2019.2.1.exe'
+$sha256sum = '8187bb108e5afea78b3fea0fe4f61d61078deaddbff3d06a9a8784b7b050aa61'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 if ([System.Environment]::Is64BitOperatingSystem) {
@@ -20,7 +20,7 @@ if ($pp.InstallDir) {
 
 
 $silentArgs = "/S /CONFIG=$toolsDir\silent.config "
-$silentArgs += "/D=`"$installDir`""
+$silentArgs += "/D=$installDir"
 
 New-Item -ItemType Directory -Force -Path $installDir
 
