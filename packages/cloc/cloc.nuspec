@@ -3,7 +3,7 @@
   <metadata>
     <id>cloc</id>
     <title>Count Lines of Code (CLOC)</title>
-    <version>1.80</version>
+    <version>1.82</version>
     <authors>Al Danial</authors>
     <owners>Anthony Mastrean</owners>
     <summary>Cloc counts blank lines, comment lines, and physical lines of source code in many programming languages.</summary>
@@ -15,7 +15,7 @@ Cloc counts blank lines, comment lines, and physical lines of source code in man
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <bugTrackerUrl>https://github.com/AlDanial/cloc/issues</bugTrackerUrl>
     <docsUrl>https://github.com/AlDanial/cloc#quick-start-</docsUrl>
-    <releaseNotes>https://github.com/AlDanial/cloc/releases/download/1.80/release_notes-1.80.txt</releaseNotes>
+    <releaseNotes>https://github.com/AlDanial/cloc/releases/download/1.82/release_notes-1.82.txt</releaseNotes>
     <projectSourceUrl>https://github.com/AlDanial/cloc</projectSourceUrl>
     <iconUrl>https://cdn.rawgit.com/AnthonyMastrean/chocolateypackages/f02158b13686063faaa826fbeb9ec5e37d2513ce/public/icons/cloc.png</iconUrl>
     <tags>loc sloc cloc count lines code</tags>
