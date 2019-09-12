@@ -10,14 +10,14 @@
     <description>
 The Kindle app is available for most major smartphones, tablets and computers. That means with our free Kindle reading apps, you can buy a Kindle book once, and read it on any device with the Kindle app installed*. You can also read that same Kindle book on a Kindle device if you own one.
     </description>
-    <projectUrl>https://www.amazon.com/gp/digital/fiona/kcp-landing-page</projectUrl>
-    <releaseNotes>https://www.amazon.com/gp/digital/fiona/kcp-landing-page</releaseNotes>
-    <docsUrl>https://www.amazon.com/gp/digital/fiona/kcp-landing-page</docsUrl>
-    <bugTrackerUrl>https://www.amazon.com/gp/help/customer/display.html/ref=hp_ss_v3_ds_t4?ie=UTF8&amp;nodeId=200127470</bugTrackerUrl>
-    <mailingListUrl>https://www.amazon.com/gp/help/customer/forums/kindleqna/ref=hp_ss_qs_v3_dv_kh</mailingListUrl>
+    <projectUrl>https://www.amazon.com/kindle-dbs/fd/kcp</projectUrl>
+    <releaseNotes>https://www.amazon.com/kindle-dbs/fd/kcp</releaseNotes>
+    <docsUrl>https://www.amazon.com/gp/help/customer/display.html?nodeId=G3YXTENMKSKMKG43</docsUrl>
+    <bugTrackerUrl>https://www.amazonforum.com/forums/digital-content/kindle-books?filter-prefix=194</bugTrackerUrl>
+    <mailingListUrl>https://www.amazonforum.com/new-content?filter-prefix=194&filter-thread-search=&filter-date-range-type=1&filter-association-type=1</mailingListUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages</packageSourceUrl>
     <tags>admin amazon kindle</tags>
-    <licenseUrl>http://www.amazon.com/gp/help/customer/display.html/ref=hp_pcland_recterms?nodeId=200506200</licenseUrl>
+    <licenseUrl>https://www.amazon.com/gp/help/customer/display.html?nodeId=200499360</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://raw.githubusercontent.com/AnthonyMastrean/chocolateypackages/master/public/icons/kindle.png</iconUrl>
     <dependencies>
