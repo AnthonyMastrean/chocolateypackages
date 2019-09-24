@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url = 'https://download.jetbrains.com/idea/ideaIU-2019.2.2.exe'
-$sha256sum = '25784b1a33ec975ac2652f527fc6a5bf9fa352769c6d45b68c4f2417b3969e46'
+$url = 'https://download.jetbrains.com/idea/ideaIU-2019.2.3.exe'
+$sha256sum = '4b74c66a3d36ea1179cd53a5a4ef5dc65d14c9c163de3782d8c21f9cc4bf16b4'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 if ([System.Environment]::Is64BitOperatingSystem) {
