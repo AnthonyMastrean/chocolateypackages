@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url = 'https://download.jetbrains.com/idea/ideaIC-2019.2.2.exe'
+$url = 'https://download.jetbrains.com/idea/ideaIC-2019.2.3.exe'
 $sha256sum = 'd2a6c12a74bc765a47af0c9fd677c9dd82bc28dc821de1070a30a34869e47844'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
