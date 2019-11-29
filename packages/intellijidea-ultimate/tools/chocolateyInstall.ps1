@@ -1,7 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url = 'https://download.jetbrains.com/idea/ideaIU-2019.2.4.exe'
-$sha256sum = '8bc0a4287c7daed162b552439e9fd5526e0ac8f02fb4a1f74ff9a41151dbea60'
+$softwareName = 'IntelliJ IDEA*'
+[array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
+
+if ($key.Count -eq 0) {
+    Invoke-Expression -Command $PSScriptRoot\chocolateyUninstall.ps1
+}
+
+$url = 'https://download.jetbrains.com/idea/ideaIU-2019.3.exe'
+$sha256sum = '98a35021533c1e8b3fd5a94a50a8094acfd046c1621981907992551ce6cdd717'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 if ([System.Environment]::Is64BitOperatingSystem) {
@@ -31,7 +38,7 @@ $packageArgs = @{
     url            = $url
     url64bit       = $url
 
-    softwareName   = 'IntelliJ IDEA*'
+    softwareName   = $softwareName
 
     checksum       = $sha256sum
     checksumType   = 'sha256'
