@@ -1,6 +1,6 @@
 ﻿$tools = Split-Path -Path $MyInvocation.MyCommand.Definition
 $package = Split-Path -Path $tools
-$workdir = Join-Path -Path $package -ChildPath 'ghidra_9.1.0'
+$workdir = Join-Path -Path $package -ChildPath 'ghidra_9.1_PUBLIC'
 $target = Join-Path -Path $workdir -ChildPath 'ghidraRun.bat'
 $icon = Join-Path -Path $workdir -ChildPath 'support/ghidra.ico'
 
