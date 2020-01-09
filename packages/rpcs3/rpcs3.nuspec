@@ -1,14 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>rpcs3</id>
-    <version>0.0.6-alpha8135</version>
+    <version>0.0.8-alpha9355</version>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/rpcs3</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>RPCS3</title>
     <authors>RPCS3 Team</authors>
     <projectUrl>https://rpcs3.net/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/AnthonyMastrean/chocolateypackages/master/public/icons/rpcs3.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/AnthonyMastrean/chocolateypackages/master/public/icons/rpcs3.png</iconUrl>
     <licenseUrl>https://github.com/RPCS3/rpcs3/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/RPCS3/rpcs3/</projectSourceUrl>
@@ -38,10 +39,14 @@ In March 2014, Cinema Blend's William Usher wrote "A lot of gamers originally th
     </description>
     <releaseNotes>https://rpcs3.net/blog</releaseNotes>
     <dependencies>
-        <dependency id="vcredist2017" version="[14.0,)" />
-        <!-- All supported versions of Windows meet the minimum requirements. -->
-        <!-- https://support.microsoft.com/en-us/help/179113/how-to-install-the-latest-version-of-directx -->
-        <!-- <dependency id="directx" version="[9.0," /> -->
+      <dependency id="vcredist140" version="14.16" />
+	  <dependency id="openssl" version="1.1.1" />
+      <!-- All supported versions of Windows meet the minimum requirements. -->
+      <!-- https://support.microsoft.com/en-us/help/179113/how-to-install-the-latest-version-of-directx -->
+      <!-- <dependency id="directx" version="[9.0," /> -->
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
