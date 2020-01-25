@@ -3,12 +3,12 @@
 $softwareName = 'IntelliJ IDEA*'
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
-if ($key.Count -eq 0) {
+if ($key.Count -gt 0) {
     Invoke-Expression -Command $PSScriptRoot\chocolateyUninstall.ps1
 }
 
-$url = 'https://download.jetbrains.com/idea/ideaIU-2019.3.1.exe'
-$sha256sum = '5d6ea42f45967b2773e840a6bbff377eb82b013c4eb1601fefbbf25cbc9d3bed'
+$url = 'https://download.jetbrains.com/idea/ideaIU-2019.3.2.exe'
+$sha256sum = 'e0dc6b16602d29d094218a69d82db0d843b6903baa0064c45072c10dc221636a'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 if ([System.Environment]::Is64BitOperatingSystem) {
