@@ -1,12 +1,12 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $package = Split-Path $tools
-$ant_home = Join-Path $package 'apache-ant-1.10.5'
+$ant_home = Join-Path $package 'apache-ant-1.10.6'
 $ant_bat = Join-Path $ant_home 'bin/ant.bat'
 
 Install-ChocolateyZipPackage `
     -PackageName 'ant' `
-    -Url 'https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.5-bin.zip' `
-    -Checksum '2E48F9E429D67708F5690BC307232F08440D01EBE414059292B6543971DA9C7CD259C21533B9163B4DD753321C17BD917ADF8407D03245A0945FC30A4E633163' `
+    -Url 'https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.6-bin.zip' `
+    -Checksum '9ba9467f05f1c7fa7161f857b0085461ce28401a2fe01a8062eec2254eaafc4b239fb3dc9298b5df5f27c2bb64618a8606a6885aa171604c541f4d5fe394b361' `
     -ChecksumType 'SHA512' `
     -UnzipLocation $package
 
