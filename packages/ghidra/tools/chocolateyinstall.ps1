@@ -1,6 +1,6 @@
 ﻿$tools = Split-Path -Path $MyInvocation.MyCommand.Definition
 $package = Split-Path -Path $tools
-$workdir = Join-Path -Path $package -ChildPath 'ghidra_9.1.1_PUBLIC'
+$workdir = Join-Path -Path $package -ChildPath 'ghidra_9.1.2_PUBLIC'
 $target = Join-Path -Path $workdir -ChildPath 'ghidraRun.bat'
 $icon = Join-Path -Path $workdir -ChildPath 'support/ghidra.ico'
 
@@ -9,8 +9,8 @@ $shortcut = Join-Path ([System.Environment]::GetFolderPath($shortcutdir)) 'Ghidr
 
 Install-ChocolateyZipPackage `
     -PackageName 'ghidra' `
-    -Url 'https://ghidra-sre.org/ghidra_9.1.1_PUBLIC_20191218.zip' `
-    -Checksum 'b0d40a4497c66011084e4a639d61ac76da4b4c5cabd62ab63adadb7293b0e506' `
+    -Url 'https://ghidra-sre.org/ghidra_9.1.2_PUBLIC_20200212.zip' `
+    -Checksum 'ebe3fa4e1afd7d97650990b27777bb78bd0427e8e70c1d0ee042aeb52decac61' `
     -ChecksumType 'SHA256' `
     -UnzipLocation $package
 
