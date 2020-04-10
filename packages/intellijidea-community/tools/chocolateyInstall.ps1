@@ -7,8 +7,8 @@ if ($key.Count -gt 0) {
     Invoke-Expression -Command $PSScriptRoot\chocolateyUninstall.ps1
 }
 
-$url = 'https://download.jetbrains.com/idea/ideaIC-2019.3.4.exe'
-$sha256sum = 'b72c532072b75d3b0b73d7d1f1ca496532aca10bc1c2a1049cff1324041e1af3'
+$url = 'https://download.jetbrains.com/idea/ideaIC-2020.1.exe'
+$sha256sum = 'b0b0b1132e2ad761fc3177200ac5549da24aafdfaa71d3081449762ea9c6e9b0'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 if ([System.Environment]::Is64BitOperatingSystem) {
