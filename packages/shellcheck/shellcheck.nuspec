@@ -3,9 +3,9 @@
   <metadata>
     <id>shellcheck</id>
     <title>ShellCheck</title>
-    <version>0.7.0</version>
+    <version>0.7.1</version>
     <authors>Vidar Holen</authors>
-    <owners>Anthony Mastrean</owners>
+    <owners>Anthony Mastrean, Patrick Wyatt</owners>
     <summary>ShellCheck is a GPLv3 tool that gives warnings and suggestions for bash/sh shell scripts.</summary>
     <description>
 The goals of ShellCheck are
@@ -15,7 +15,7 @@ The goals of ShellCheck are
     </description>
     <projectUrl>http://www.shellcheck.net/</projectUrl>
     <tags>shell check lint</tags>
-    <copyright>Copyright 2012-2015, Vidar 'koala_man' Holen and contributors.</copyright>
+    <copyright>Copyright 2012-2020, Vidar 'koala_man' Holen and contributors.</copyright>
     <licenseUrl>https://github.com/koalaman/shellcheck/blob/master/LICENSE</licenseUrl>
     <docsUrl>https://github.com/koalaman/shellcheck/wiki</docsUrl>
     <!-- <mailingListUrl></mailingListUrl> -->
