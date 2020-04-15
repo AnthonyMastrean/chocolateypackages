@@ -4,7 +4,7 @@ $content = Join-Path $package 'cwrsync_5.5.0_x86_free'
 
 Install-ChocolateyZipPackage `
     -PackageName 'rsync' `
-    -Url 'https://web.archive.org/web/20160613105413/https://www.itefix.net/dl/cwRsync_5.5.0_x86_Free.zip' `
+    -Url 'https://itefix.net/dl/free-software/cwrsync_5.5.0_x86_free.zip' `
     -Checksum '37E8EF21AC975D4EE86C9D3BE40C8935E8B9D0BA84E9302FC106B9452296CB85' `
     -ChecksumType 'SHA256' `
     -UnzipLocation $package
