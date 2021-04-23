@@ -2,15 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>stigviewer</id>
-    <version>2.8</version>
+    <version>2.13</version>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/stigviewer</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>STIG Viewer</title>
     <authors>IASE</authors>
-    <projectUrl>https://iase.disa.mil/stigs/Pages/stig-viewing-guidance.aspx</projectUrl>
+    <projectUrl>https://public.cyber.mil/stigs/srg-stig-tools/</projectUrl>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/example.png</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>http://iasecontent.disa.mil/stigs/pdf/STIG_Viewer_2.x_User_Guide_June_2018.pdf</docsUrl>
+    <docsUrl>https://dl.dod.cyber.mil/wp-content/uploads/stigs/pdf/U_STIG_Viewer_2-x_User_Guide_V1R9.pdf</docsUrl>
     <tags>security defense harden</tags>
     <summary>Getting to the content of a XCCDF formatted STIG to read and understand the content is not as easy as opening a .doc or .pdf file and reading it. This is a tool which can be used to view the STIGs</summary>
     <description>
@@ -34,7 +34,7 @@ STIG Viewer features:
 
 NOTE: This feature does not work well if a checklist is generated from multiple STIGs. Special handling is required
     </description>
-    <releaseNotes>https://iasecontent.disa.mil/stigs/pdf/STIG_Viewer_Ver_2.8_Change_Log.pdf</releaseNotes>
+    <releaseNotes>https://dl.dod.cyber.mil/wp-content/uploads/stigs/pdf/U_STIG_Viewer_2-11_Change_Log.pdf</releaseNotes>
     <dependencies>
       <dependency id="jre8" version="[8.0,)" />
       <dependency id="chocolatey-core.extension" version="[1.0,)" />
