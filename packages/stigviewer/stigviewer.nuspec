@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>stigviewer</id>
-    <version>2.13</version>
+    <version>2.14</version>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/stigviewer</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>STIG Viewer</title>
@@ -10,7 +10,7 @@
     <projectUrl>https://public.cyber.mil/stigs/srg-stig-tools/</projectUrl>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/example.png</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://dl.dod.cyber.mil/wp-content/uploads/stigs/pdf/U_STIG_Viewer_2-x_User_Guide_V1R9.pdf</docsUrl>
+    <docsUrl>https://dl.dod.cyber.mil/wp-content/uploads/stigs/pdf/U_STIG_Viewer_2-x_User_Guide_V1R10.pdf</docsUrl>
     <tags>security defense harden</tags>
     <summary>Getting to the content of a XCCDF formatted STIG to read and understand the content is not as easy as opening a .doc or .pdf file and reading it. This is a tool which can be used to view the STIGs</summary>
     <description>
