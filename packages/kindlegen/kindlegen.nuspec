@@ -24,9 +24,7 @@ Highlights of KindleGen functionality
     <projectUrl>http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765211</projectUrl>
     <licenseUrl>http://www.amazon.com/gp/feature.html?docId=1000599251</licenseUrl>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/</packageSourceUrl>
-    <mailingListUrl>http://www.amazon.com/forum/kindle%20publishing?_encoding=UTF8&amp;cdForum=Fx21HB0U7MPK8XI</mailingListUrl>
-    <docsUrl>http://www.amazon.com/gp/feature.html/ref=amb_link_359603402_1?ie=UTF8&amp;docId=1000729511&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=right-4&amp;pf_rd_r=1473N661CTRRKQRFHHCT&amp;pf_rd_t=1401&amp;pf_rd_p=2022792402&amp;pf_rd_i=1000765211</docsUrl>
-    <bugTrackerUrl>https://www.amazon.com/gp/help/customer/contact-us?ie=UTF8&amp;ref_=hp_ss_qs_v3_dv_cu_t2</bugTrackerUrl>
+    <docsUrl>https://wiki.mobileread.com/wiki/KindleGen</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>amazon kindle</tags>
   </metadata>
