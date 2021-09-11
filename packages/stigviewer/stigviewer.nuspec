@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>stigviewer</id>
-    <version>2.14</version>
+    <version>2.15</version>
     <packageSourceUrl>https://github.com/AnthonyMastrean/chocolateypackages/tree/master/packages/stigviewer</packageSourceUrl>
     <owners>Anthony Mastrean</owners>
     <title>STIG Viewer</title>
@@ -38,7 +38,7 @@ STIG Viewer also supports additional functionality using the following features:
 * Under Windows 10, this is in the following directory: %USERPROFILE%\AppData\Local\STIGV_AppData (When clearing the Local Data Cache, Java deletes the folder and the Local Data Cache simultaneously.)
 * The input to the STIG Viewer is XCCDF contained in an XML file. STIG viewer rejects other file types. STIG Viewer is optimized for XCCDF-formatted STIGs produced by DISA for DoD
     </description>
-    <releaseNotes>https://dl.dod.cyber.mil/wp-content/uploads/stigs/pdf/U_STIG_Viewer_2-11_Change_Log.pdf</releaseNotes>
+    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="[1.0,)" />
     </dependencies>
