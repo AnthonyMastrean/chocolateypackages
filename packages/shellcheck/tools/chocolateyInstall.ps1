@@ -1,12 +1,12 @@
 ﻿$tools = Split-Path $MyInvocation.MyCommand.Definition
 $content = Join-Path (Split-Path $tools) 'content'
-$original = Join-Path $content 'shellcheck-v0.7.1.exe'
+$original = Join-Path $content 'shellcheck-v0.8.0.exe'
 $target = Join-Path $content 'shellcheck.exe'
 
 Install-ChocolateyZipPackage `
     -PackageName 'shellcheck' `
-    -Url 'https://github.com/koalaman/shellcheck/releases/download/v0.7.1/shellcheck-v0.7.1.zip' `
-    -Checksum '787163636e0e7bcd411c276cb6c0a2c849e3da5b27849c3b352a0622fb91944e6b986304855750d590f501044d56fa78279cbc4a4cbf0b1fc9981c54df708e4e' `
+    -Url 'https://github.com/koalaman/shellcheck/releases/download/v0.8.0/shellcheck-v0.8.0.zip' `
+    -Checksum 'cc5208d9f8799d792122204196fafb700801b4bae9bbb0a8f8a999f0a13cca1bfad440b96a3746740d85da55901e1d652592490bc196afc8bc0ebd0ae20b9aa1' `
     -ChecksumType 'SHA512' `
     -UnzipLocation $content
 
