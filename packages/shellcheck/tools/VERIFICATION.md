@@ -1,4 +1,4 @@
-﻿# VERIFICATION
+# VERIFICATION
 
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
@@ -9,17 +9,17 @@ Package can be verified by running Powershell and executing the following comman
 
 ### Download the package
 ```
-wget https://github.com/koalaman/shellcheck/releases/download/v0.8.0/shellcheck-v0.8.0.zip -outfile shellcheck-v0.8.0.zip
+wget https://github.com/koalaman/shellcheck/releases/download/v0.9.0/shellcheck-v0.9.0.zip -outfile shellcheck-v0.9.0.zip
 ```
 
 ### Verify the checksum
 ```
-Get-FileHash -Algorithm SHA512 .\shellcheck-v0.8.0.zip | Format-List
+Get-FileHash -Algorithm SHA512 .\shellcheck-v0.9.0.zip | Format-List
 ```
 
 Output
 ```
-Hash : CC5208D9F8799D792122204196FAFB700801B4BAE9BBB0A8F8A999F0A13CCA1BFAD440B96A3746740D85DA55901E1D652592490BC196AFC8BC0EBD0AE20B9AA1
+Hash : 31F415A995864D238E4C286CFD0227DAE3C9BCC6C327B925E182A390C9258A1783F815BA4389D85BEA504CFE62B1BABDC862303F2EF014AF66D4189A42797BD0
 ```
 
 # License
