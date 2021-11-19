@@ -3,13 +3,30 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = 'ag'
-  url            = 'https://github.com/k-takata/the_silver_searcher-win32/releases/download/2017-08-31%2F2.1.0-1/ag-2017-08-31_2.1.0-1-x86.zip'
-  checksum       = '28456A424A30B12BE3BE2B9D427BC67031BC436F87F1100607CFA9A44C1AF95D'
-  url64          = 'https://github.com/k-takata/the_silver_searcher-win32/releases/download/2017-08-31%2F2.1.0-1/ag-2017-08-31_2.1.0-1-x64.zip'
-  checksum64     = '2F0B83E705D6224DF82BE92014726875BEC925C6B56EF84170D1F19EDDFAA439'
+  url            = 'https://github.com/JFLarvoire/the_silver_searcher/releases/download/2.2.5-Windows/ag-2021-11-14-2.2.5-x86.zip'
+  checksum       = 'aee6e795f9c1bf2761318139cbb5ebeafdef99b9eadc82461e190af597860b7f'
+  url64          = 'https://github.com/JFLarvoire/the_silver_searcher/releases/download/2.2.5-Windows/ag-2021-11-14-2.2.5-amd64.zip'
+  checksum64     = 'ecde6ebcbd2d33ab9f50cca0800db4bd2ba183bdb7832a9d0b5ad05a684de958'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   unzipLocation  = $toolsDir
 }
 
+# Check if there are other conflicting packages installed by other package managers
+# Winget registers the package uninstall command in the registry
+if (Test-Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\The Silver Searcher') {
+  Throw "Found another instance of ag installed by Winget.`n Please uninstall it first using 'winget uninstall `"The Silver Searcher`"' and retry.`n"
+}
+# Scoop installs shims, like Chocolatey, in the same directory as scoop.ps1
+foreach ($scoop in (get-command scoop.ps1)) {
+  $dir = (get-item $scoop.Path).DirectoryName
+  $ag = Join-Path $dir ag.exe
+  if (test-path $ag) {
+    Throw "Found another instance of ag installed by Scoop.`n Please uninstall it first using 'scoop uninstall ag' and retry.`n"
+  } else {
+    Write-Verbose "Found a Scoop installation in '$dir', but it does not contain ag.exe."
+  }
+}
+
+# OK, the installation can go on
 Install-ChocolateyZipPackage @packageArgs
