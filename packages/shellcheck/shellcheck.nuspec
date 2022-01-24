@@ -3,7 +3,7 @@
   <metadata>
     <id>shellcheck</id>
     <title>ShellCheck</title>
-    <version>0.8.0</version>
+    <version>0.8.0.1</version>
     <authors>Vidar Holen</authors>
     <owners>Anthony Mastrean, Patrick Wyatt</owners>
     <summary>ShellCheck is a GPLv3 tool that gives warnings and suggestions for bash/sh shell scripts.</summary>
